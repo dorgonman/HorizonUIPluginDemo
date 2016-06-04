@@ -1,4 +1,35 @@
+----------------------------------------------
+              HorizonUIPlugin
+                  1.0.0
+         http://dorgon.horizon-studio.net
+          	dorgonman@hotmail.com
+----------------------------------------------
 
+-----------------------
+System Requirements
+-----------------------
+
+tested UnrealEngine version: 4.11, 4.12
+
+
+-----------------------
+Installation Guide
+-----------------------
+
+put HorizonUIPlugin into YOUR_PROJECT/Plugins folder, 
+and then add module to your project 
+YOUR_PROJECT.Build.cs:
+PublicDependencyModuleNames.AddRange(new string[] { "HorizonUI"});
+
+-----------------------
+User Guide: HorizonFlipbookWidget
+-----------------------
+
+This widget support using PaperFlipbook directly in UMG!
+
+-----------------------
+User Guide: HorizonDialogueMsgTextBlock
+-----------------------
 
 example 1: rich text simple
 
@@ -30,3 +61,46 @@ example 3: padding
  <img filePath="/Game/Item/I_C_Watermellon" size="[100,100]" />
 </text>
 <text>after padding</text>
+
+
+-----------------------
+Technical Details
+-----------------------
+List of Modules:
+HorizonUI (Runtime)
+
+Intended Platform: All Platforms
+Platforms Tested: Win32, Android
+
+Currently has two widget implemented:
+	1. HorizonFlipbookWidget: This widget support using PaperFlipbook directly in UMG!
+	2. HorizonDialogueMsgTextBlock: Combine both rich text and dialogue text function in this widget! 
+	   For rich text feature: you can control text Color, Shadow Color, Font, Font size and padding for each text block.
+	   For dialogue text feature: you can control dialogue speed and whether it will repeated after finish.
+
+Demo Project: https://github.com/dorgonman/HorizonUIPluginDemo
+DemoVideo: https://www.youtube.com/watch?v=GQBd2qAEpCg&feature=youtu.be
+
+-----------------------
+What does your plugin do/What is the intent of your plugin
+-----------------------
+
+This Plugin contains some extension for UMG Widget. 
+	Currently have two widget included:
+	1. HorizonFlipbookWidget
+	2. HorizonDialogueMsgTextBlock
+
+-----------------------
+Contact and Support
+-----------------------
+email: dorgonman@hotmail.com
+
+
+-----------------------
+ Version History
+-----------------------
+
+1.0.0
+- NEW: First Version including core features.
+	 	1. HorizonFlipbookWidget
+	 	2. HorizonDialogueMsgTextBlock
