@@ -1,0 +1,3 @@
+[submodule "Plugins/HorizonUIPlugin"]
+	path = Plugins/HorizonUIPlugin
+	url = https://dorgon@bitbucket.org/horizonstudio/horizonuiplugin.git
