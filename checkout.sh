@@ -1,2 +1,2 @@
-git fetch submodule "git checkout -f master"
-git fetch submodule "git checkout -f pull"
+git foreach submodule "git checkout -f master"
+git foreach submodule "git checkout -f pull"

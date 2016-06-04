@@ -1,1 +1,1 @@
-git fetch submodule "git clean -xfd"
+git foreach submodule "git clean -xfd"
