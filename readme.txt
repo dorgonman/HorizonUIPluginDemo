@@ -62,7 +62,22 @@ example 3: padding
 </text>
 <text>after padding</text>
 
+example 4: special character
+following character will be replaced:
+&nbsp;  == " "
+&quot;  == "\"
+&amp; ==  "&"
+&apos;  =="'"
+&lt;  == "<"
+&gt;   ==">"
 
+sample:
+<text> &nbsp;  == " "</text><br/>
+<text> &quot;  == "\"</text><br/>
+<text> &amp;  ==  "&"</text><br/>
+<text> &apos;"  =="'"</text><br/>
+<text> &lt;  == "&lt;"</text><br/>
+<text> &gt;   =="&gt; "</text><br/>
 -----------------------
 Technical Details
 -----------------------
