@@ -139,8 +139,9 @@ email: dorgonman@hotmail.com
 1.1.0
 - NEW: Add style feature for HorizonDialogueMsgTextBlock
 - FIX: 
-	1. SetOuter to WidgetTree to prevent ensureMsgf popup
-	2. Don't call RebuildSegmentInfoList if it is CreationFromPalette to fix some display bug in UMG Hierarchy.
+	1. Fix Crash when putting a flipbook nested in a button.
+	2. Fix ensureMsgf check fail by set widget outer to WidgetTree.
+	3. Fix some display bug in UMG Hierarchy. Don't call RebuildSegmentInfoList if it is created from palette. 
 - REFACTOR: 
 	1. Move HorizonUI module from Source/HorizonUI to Source/Runtime/HorizonUI
 	2. Rename Blueprint UPROPERTY Category for class members in HorizonFlipbookWidget and HorizonDialogueMsgTextBlock
