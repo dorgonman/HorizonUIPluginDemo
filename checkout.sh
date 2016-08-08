@@ -1,2 +1,4 @@
-git submodule foreach "git checkout -f master"
-git submodule foreach "git pull"
+git checkout -f master
+git pull
+git submodule foreach --recursive "git checkout -f master"
+git submodule foreach --recursive "git pull"
