@@ -139,7 +139,7 @@ email: dorgonman@hotmail.com
 1.2.0
 - NEW: HorizonFlipbookWidget: 
 		Add NumOfLoop that you can specify how much loop this Flipbook will play.
-		Add Method ResetAnimation: After calling this method, flipbook will reset current animation frame and counter of NumOfLoop.
+		Add expose Blueprint Method: ResetAnimation, PlayAnimation, StopAnimation, PauseAnimation, ResumeAnimation.
 
 1.1.0
 - NEW: Add style feature for HorizonDialogueMsgTextBlock
