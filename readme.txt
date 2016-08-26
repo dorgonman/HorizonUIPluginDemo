@@ -135,11 +135,13 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
-
+1.2.1
+- FIX:
+	1. The times HorizonFlipbookWidget NumOfLoop for flipbook animation plays incorrectly.
 1.2.0
 - NEW: HorizonFlipbookWidget: 
 		Add NumOfLoop that you can specify how much loop this Flipbook will play.
-		Add expose Blueprint Method: ResetAnimation, PlayAnimation, StopAnimation, PauseAnimation, ResumeAnimation.
+		Expose Blueprint Method: ResetAnimation, PlayAnimation, StopAnimation, PauseAnimation, ResumeAnimation.
 
 1.1.0
 - NEW: Add style feature for HorizonDialogueMsgTextBlock
