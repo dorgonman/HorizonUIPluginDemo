@@ -7,7 +7,7 @@ public class HorizonUIPluginDemo : ModuleRules
 	public HorizonUIPluginDemo(TargetInfo Target)
 	{
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
-		PublicDependencyModuleNames.AddRange(new string[] { "HorizonUI" });
+		PublicDependencyModuleNames.AddRange(new string[] { "UMG", "HorizonUI" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {   });
 
