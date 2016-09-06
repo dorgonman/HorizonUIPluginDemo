@@ -10,7 +10,7 @@
 
 
 UCLASS()
-class HORIZONUI_API UMyWidgetFunctionLibrary : public UBlueprintFunctionLibrary {
+class UMyWidgetFunctionLibrary : public UBlueprintFunctionLibrary {
 private:
 	GENERATED_BODY()
 public:
