@@ -4,6 +4,7 @@
 
 #pragma once
 #include "UMG.h"
+#include "Horizon/Widget/HorizonDialogueMsgTextBlock.h"
 #include "Horizon/Widget/HorizonFlipbookWidget.h"
 #include "Horizon/Widget/HorizonWidgetFunctionLibrary.h"
 #include "MyWidgetFunctionLibrary.generated.h"
@@ -23,5 +24,14 @@ public:
 		flipbookWidget->SetFlipbookSourceUV(sourceUV);
 		flipbookWidget->SetFlipbookSourceSize(sourceSize);
 	};
+
+
+	UFUNCTION(BlueprintCallable, Category = "HorizonPlugin")
+	static void SetText(const FText& newText, UHorizonDialogueMsgTextBlock* pDialogueWidget)
+	{
+		pDialogueWidget->SetText(newText);
+		pDialogueWidget->RebuildDialogueMsgTextBlock();
+
+	}
 
 };
