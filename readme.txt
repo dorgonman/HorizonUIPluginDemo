@@ -1,6 +1,6 @@
 ----------------------------------------------
               HorizonUIPlugin
-                  1.2.1
+                  1.2.4
          http://dorgon.horizon-studio.net
           	dorgonman@hotmail.com
 ----------------------------------------------
@@ -9,7 +9,7 @@
 System Requirements
 -----------------------
 
-tested UnrealEngine version: 4.11, 4.12
+tested UnrealEngine version: 4.11, 4.12, 4.14, 4.15
 
 
 -----------------------
@@ -135,6 +135,9 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+1.2.4
+- UPDATE: update to engine 4.15
+
 1.2.1
 - FIX:
 	1. The times HorizonFlipbookWidget NumOfLoop for flipbook animation plays incorrectly.
