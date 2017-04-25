@@ -34,4 +34,34 @@ public:
 
 	}
 
+	UFUNCTION(BlueprintCallable, Category = "HorizonPlugin")
+	static void StopDialogue(UHorizonDialogueMsgTextBlock* pDialogueWidget)
+	{
+		if (pDialogueWidget) 
+		{
+		
+			//reset dialogue
+			pDialogueWidget->ResetDialogueMsgText();
+			//stop tick
+			pDialogueWidget->SetIsStartTickDialogueMsg(false);
+		
+		}
+	};
+	UFUNCTION(BlueprintCallable, Category = "HorizonPlugin")
+	static void StartDialogue(UHorizonDialogueMsgTextBlock* pDialogueWidget)
+	{
+		if (pDialogueWidget)
+		{
+			//stop tick
+			pDialogueWidget->SetIsStartTickDialogueMsg(true);
+
+		}
+	};
+
+
+
+
+
+
+
 };
