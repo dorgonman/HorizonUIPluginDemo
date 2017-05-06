@@ -1,3 +1,9 @@
 [submodule "Plugins/HorizonUIPlugin"]
 	path = Plugins/HorizonUIPlugin
 	url = https://horizon-studio.visualstudio.com/DefaultCollection/HorizonPlugin/_git/HorizonUIPlugin
+[submodule "horizon_ci_scripts"]
+	path = horizon_ci_scripts
+	url = https://horizon-studio.visualstudio.com/DefaultCollection/HorizonPlugin/_git/horizon_ci_scripts
+[submodule "ue_ci_scripts"]
+	path = ue_ci_scripts
+	url = https://horizon-studio.visualstudio.com/DefaultCollection/HorizonPlugin/_git/ue_ci_scripts
