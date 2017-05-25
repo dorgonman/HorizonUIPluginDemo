@@ -4,9 +4,11 @@ using UnrealBuildTool;
 
 public class HorizonUIPluginDemo : ModuleRules
 {
-	public HorizonUIPluginDemo(TargetInfo Target)
-	{
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
+	public HorizonUIPluginDemo(ReadOnlyTargetRules Target)
+        : base(Target)
+    {
+        PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+        PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 		PublicDependencyModuleNames.AddRange(new string[] { "UMG", "HorizonUI" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] {   });
