@@ -135,6 +135,10 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+1.3.0
+- UPDATE: update to engine 4.16
+- NEW: implement StartDialogue and StopDialogue for HorizonDialogueMsgTextBlock
+
 1.2.4
 - UPDATE: update to engine 4.15
 
