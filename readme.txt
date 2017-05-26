@@ -1,6 +1,6 @@
 ----------------------------------------------
               HorizonUIPlugin
-                  1.2.4
+                  1.3.0
          http://dorgon.horizon-studio.net
           	dorgonman@hotmail.com
 ----------------------------------------------
@@ -9,7 +9,7 @@
 System Requirements
 -----------------------
 
-tested UnrealEngine version: 4.11, 4.12, 4.14, 4.15
+tested UnrealEngine version: 4.11, 4.12, 4.14, 4.15, 4.16
 
 
 -----------------------
