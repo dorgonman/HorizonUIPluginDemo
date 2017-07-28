@@ -1,6 +1,6 @@
 ----------------------------------------------
               HorizonUIPlugin
-                  1.3.0
+                 4.17.0
          http://dorgon.horizon-studio.net
           	dorgonman@hotmail.com
 ----------------------------------------------
@@ -9,15 +9,14 @@
 System Requirements
 -----------------------
 
-tested UnrealEngine version: 4.11, 4.12, 4.14, 4.15, 4.16
+tested UnrealEngine version: 4.11, 4.12, 4.14, 4.15, 4.16, 4.17
 
 
 -----------------------
 Installation Guide
 -----------------------
 
-put HorizonUIPlugin into YOUR_PROJECT/Plugins folder, 
-and then add module to your project 
+If you want to use plugins in C++, you should add associated module to your project's 
 YOUR_PROJECT.Build.cs:
 PublicDependencyModuleNames.AddRange(new string[] { "HorizonUI"});
 
@@ -135,6 +134,13 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+
+4.17.0
+- UPDATE: update to engine 4.17.0, and plugin's VersionName will also follow engine's version.
+- NEW: implement UHorizonDialogueMsgTextBlock::SetTextAndRebuildDialogue for Blueprints user, please use this method instead of SetText if you want to change Dialogue text at runtime.
+- NEW: implement UHorizonFlipbookWidget::SetFlipbookSource for blueprints user, now you can adjust FlipbookSource UV and Size in blueprint. 
+- *NEW: implement HorizonDialogueTextOverflowWarpMethod for UHorizonDialogueMsgTextBlock. You will be able to select "Normal" or "BreakAll" method, by default, plugin will change default warp method from BreakAll to Normal. Normal Warp method means if the word overflow current line width(for both CJK or non-CJK), it will try move to next line and use BreakAll rule in next line. BreakAll method is plugin's previously implementation, the word will break at any character when text over flow occur.
+
 1.3.0
 - UPDATE: update to engine 4.16
 - NEW: implement StartDialogue and StopDialogue for HorizonDialogueMsgTextBlock
