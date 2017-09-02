@@ -85,7 +85,7 @@ example 3: padding
 example 4: special character
 following character will be replaced:
 &nbsp;  == " "
-&quot;  == "\"
+&quot;  == "
 &amp; ==  "&"
 &apos;  =="'"
 &lt;  == "<"
@@ -93,7 +93,7 @@ following character will be replaced:
 
 sample:
 <text> &nbsp;  == " "</text><br/>
-<text> &quot;  == "\"</text><br/>
+<text> &quot;  == " </text><br/>
 <text> &amp;  ==  "&"</text><br/>
 <text> &apos;"  =="'"</text><br/>
 <text> &lt;  == "&lt;"</text><br/>
