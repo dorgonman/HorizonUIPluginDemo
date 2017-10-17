@@ -1,6 +1,6 @@
 ----------------------------------------------
               HorizonUIPlugin
-                 4.17.0
+                 4.18.0
          http://dorgon.horizon-studio.net
           	dorgonman@hotmail.com
 ----------------------------------------------
@@ -9,7 +9,7 @@
 System Requirements
 -----------------------
 
-tested UnrealEngine version: 4.11, 4.12, 4.14, 4.15, 4.16, 4.17
+tested UnrealEngine version: 4.11, 4.12, 4.14, 4.15, 4.16, 4.18
 
 
 -----------------------
@@ -105,18 +105,21 @@ sample:
 example 5: hyperlink
 
 ```
-<a href="Seg1ClickMessage" bgColor="#555555FF" hoverColor="#FFFF0055" filePath="Blueprint'/Game/UMG/DialogueMsgTextTest/ButtonStyle/BP_DialogueBackgroundButtonStyle1.BP_DialogueBackgroundButtonStyle1'">
+<a href="Seg1ClickMessage" bgColor="#555555FF" hoverColor="#FFFF0055" 
+filePath="Blueprint'/Game/UMG/DialogueMsgTextTest/ButtonStyle/BP_DialogueBackgroundButtonStyle1.BP_DialogueBackgroundButtonStyle1'">
 <text color="#FF0000FF"> Test Click Seg1  </text>
 </a>
 <br />
 
-<a href="Seg2ClickMessage" bgColor="#FF0000FF" hoverColor="#FFFF0055" filePath="Blueprint'/Game/UMG/DialogueMsgTextTest/ButtonStyle/BP_DialogueBackgroundButtonStyle2'">
+<a href="Seg2ClickMessage" bgColor="#FF0000FF" hoverColor="#FFFF0055"
+ filePath="Blueprint'/Game/UMG/DialogueMsgTextTest/ButtonStyle/BP_DialogueBackgroundButtonStyle2'">
 <text color="#00FF00FF"> Test Click Seg2  </text>
 </a>
 
 <br />
 
-<a href="Seg3ClickMessage" bgColor="#FF0000FF" hoverColor="#FFFF0055" filePath="/Game/UMG/DialogueMsgTextTest/ButtonStyle/BP_DialogueBackgroundButtonStyle3">
+<a href="Seg3ClickMessage" bgColor="#FF0000FF" hoverColor="#FFFF0055" 
+filePath="/Game/UMG/DialogueMsgTextTest/ButtonStyle/BP_DialogueBackgroundButtonStyle3">
 <text color="#0000FFFF"> Test Click Seg3  </text>
 </a>
 ```
@@ -129,7 +132,9 @@ Please check WidgetBlueprint'/Game/UMG/DialogueMsgTextTest/Tuto8_HyperText.Tuto8
 example 5: sound
 
 ```
-<text style="MyStyle3">HorizonFlipbookWidget( use tag pfb ) Only Supported by using style:</text><pfb sound="SoundWave'/Engine/VREditor/Sounds/UI/Click_on_Button.Click_on_Button'" soundVolumn="0.5" soundPitch="0.1" soundStartTime="0.05" style="MyStyle4" /> <br/>
+<text style="MyStyle3">HorizonFlipbookWidget( use tag pfb ) Only Supported by using style:</text>
+<pfb sound="SoundWave'/Engine/VREditor/Sounds/UI/Click_on_Button.Click_on_Button'" 
+soundVolumn="0.5" soundPitch="0.1" soundStartTime="0.05" style="MyStyle4" /> <br/>
 <text>
 
 ```
