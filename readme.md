@@ -134,6 +134,10 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+*4.18.0
+- NEW：Implement Hypertext for HorizonDialogueMsgTextBlock：you will be able to use all button's features in dialogue segments.
+- NEW：Implement Hypertext for HorizonDialogueMsgTextBlock
+
 
 *4.17.0
 - UPDATE: update to engine 4.17.0, and plugin's VersionName will also follow engine's version.
