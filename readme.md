@@ -31,18 +31,18 @@ User Guide: HorizonDialogueMsgTextBlock
 -----------------------
 
 example 1: rich text simple
-
+```
 <text color="#77FF77AA" shadowColor="#FF0000FF" shadowOffset="[4,3]">This is rich text simple test:</text>
 <br/>
 <text color="#FF0000AA">This is strawberry:</text><img filePath="Texture2D'/Game/Item/I_C_Strawberry.I_C_Strawberry'" size="[100, 100]" /><br/>
 <text color="#0000FFFF">This is Watermellon:</text><img color="#FF00FF77" filePath="/Game/Item/I_C_Watermellon" size="[100, 100]" /> <br/>
 <text color="#FFFF00FF">This is animated man using material:</text><img filePath="Material'/Game/Material/mat_flipbook.mat_flipbook'" size="[100, 100]" /> <br/>
-
+ ```
 
 note: both Texture2D'/Game/Item/I_C_Strawberry.I_C_Strawberry' and  /Game/Item/I_C_Strawberry.I_C_Strawberry can work correctly
 
 example 1: rich text simple using style feature
-
+```
 <text style="MyStyle0">This is rich text test using style:</text>
 <br/>
 
@@ -54,7 +54,7 @@ example 1: rich text simple using style feature
 <text style="MyStyle5">This is animated man using material:</text><mat style="MyStyle6" /> <br/>
 
 <text style="MyStyle7">HorizonFlipbookWidget(use tag pfb) Only Supported by using style:</text><pfb style="MyStyle7" /> <br/>
-
+```
 
 MyStyle0 ~ MyStyle7 is a array that can be setted in UMG editor under HorizonPlugin/Style section
 ref: https://drive.google.com/file/d/0BwANUSGaSQn-SlJZWUF5LWJHQTA/view?usp=sharing
@@ -63,6 +63,7 @@ By using style="YOUR_STYLE_NAME", you can use the style setting for your RichTex
 *note: HorizonFlipbookWidget can only use style to work correctly. (Use filePath will not compute UV and Size for HorizonFlipbookWidget correctly.)
 
 example 2: rich text font
+```
 <text>This is Default Font</text><br/>
 <text fontPath="/Engine/EngineFonts/Roboto" fontType="Regular" fontSize="30">This is Roboto Regular fontSize=30</text><br/>
 <text fontPath="/Engine/EngineFonts/Roboto" fontType="Italic" color="#FF0000AA">This is Roboto Italic</text><br/>
@@ -70,10 +71,10 @@ example 2: rich text font
 <text fontPath="/Engine/EngineFonts/Roboto" fontType="Light" color="#FFFF00AA">This is Roboto Light</text><br/>
 <text fontPath="/Engine/EngineFonts/RobotoTiny" fontType="Light" color="#FF0A40AA">This is RobotoTinyLight</text><br/>
 
-
+```
 
 example 3: padding
-
+```
 <text fontSize="55">Test case:</text> 
 <text padding-right="5" padding-top="20">
  <text padding-left="5">padding text block</text>
@@ -81,23 +82,58 @@ example 3: padding
  <img filePath="/Game/Item/I_C_Watermellon" size="[100,100]" />
 </text>
 <text>after padding</text>
-
+```
 example 4: special character
 following character will be replaced:
+```
 &nbsp;  == " "
 &quot;  == "
 &amp; ==  "&"
 &apos;  =="'"
 &lt;  == "<"
 &gt;   ==">"
-
+```
 sample:
+```
 <text> &nbsp;  == " "</text><br/>
 <text> &quot;  == " </text><br/>
 <text> &amp;  ==  "&"</text><br/>
 <text> &apos;"  =="'"</text><br/>
 <text> &lt;  == "&lt;"</text><br/>
 <text> &gt;   =="&gt; "</text><br/>
+```
+example 5: hyperlink
+
+```
+<a href="Seg1ClickMessage" bgColor="#555555FF" hoverColor="#FFFF0055" filePath="Blueprint'/Game/UMG/DialogueMsgTextTest/ButtonStyle/BP_DialogueBackgroundButtonStyle1.BP_DialogueBackgroundButtonStyle1'">
+<text color="#FF0000FF"> Test Click Seg1  </text>
+</a>
+<br />
+
+<a href="Seg2ClickMessage" bgColor="#FF0000FF" hoverColor="#FFFF0055" filePath="Blueprint'/Game/UMG/DialogueMsgTextTest/ButtonStyle/BP_DialogueBackgroundButtonStyle2'">
+<text color="#00FF00FF"> Test Click Seg2  </text>
+</a>
+
+<br />
+
+<a href="Seg3ClickMessage" bgColor="#FF0000FF" hoverColor="#FFFF0055" filePath="/Game/UMG/DialogueMsgTextTest/ButtonStyle/BP_DialogueBackgroundButtonStyle3">
+<text color="#0000FFFF"> Test Click Seg3  </text>
+</a>
+```
+
+When you click, you will receive info assigned in href if you bind button's click callback.  
+
+Please check WidgetBlueprint'/Game/UMG/DialogueMsgTextTest/Tuto8_HyperText.Tuto8_HyperText'
+
+
+example 5: sound
+
+```
+<text style="MyStyle3">HorizonFlipbookWidget( use tag pfb ) Only Supported by using style:</text><pfb sound="SoundWave'/Engine/VREditor/Sounds/UI/Click_on_Button.Click_on_Button'" soundVolumn="0.5" soundPitch="0.1" soundStartTime="0.05" style="MyStyle4" /> <br/>
+<text>
+
+```
+
 -----------------------
 Technical Details
 -----------------------
@@ -135,8 +171,10 @@ email: dorgonman@hotmail.com
  Version History
 -----------------------
 *4.18.0
-- NEW：Implement Hypertext for HorizonDialogueMsgTextBlock：you will be able to use all button's features in dialogue segments.
-- NEW：Implement Hypertext for HorizonDialogueMsgTextBlock
+- NEW: Implement Hypertext for HorizonDialogueMsgTextBlock：you will be able to use all button's features in dialogue segments.
+- NEW: Implement Sound trigger for HorizonDialogueMsgTextBlock.
+- FIX: Crash when  tried add a new style and set its color.
+- FIX: Should ignore space at end of line for TextOverflowWarpNormal.(Empty new line bug)
 
 
 *4.17.0
