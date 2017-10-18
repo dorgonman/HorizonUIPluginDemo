@@ -1,6 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "4.17",
+	"EngineAssociation": "4.18",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -14,7 +14,7 @@
 		{
 			"Name": "HorizonUIPlugin",
 			"Enabled": true,
-			"MarketplaceURL": "http://dorgon.horizon-studio.net/"
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/8b94d073d32443b497d4a9e8b1e210f7"
 		}
 	]
 }
