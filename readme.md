@@ -178,6 +178,7 @@ email: dorgonman@hotmail.com
 *4.18.0
 - NEW: Implement Hypertext for HorizonDialogueMsgTextBlock：you will be able to use all button's features in dialogue segments.
 - NEW: Implement Sound trigger for HorizonDialogueMsgTextBlock.
+- NEW: Implement DialogueStyleInfo as Blueprintable UObject: Now you can management all HorizonDialogueSegmentInfoStyle in one or more BP class and apply to all HorizonDialogueMsgTextBlock.
 - FIX: Crash when  tried add a new style and set its color.
 - FIX: Should ignore space at end of line for TextOverflowWarpNormal.(Empty new line bug)
 
