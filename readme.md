@@ -61,7 +61,6 @@ ref: https://drive.google.com/file/d/0BwANUSGaSQn-SlJZWUF5LWJHQTA/view?usp=shari
 
 By using style="YOUR_STYLE_NAME", you can use the style setting for your RichText block. 
 *note: HorizonFlipbookWidget can only use style to work correctly. (Use filePath will not compute UV and Size for HorizonFlipbookWidget correctly.)
-
 example 2: rich text font
 ```
 <text>This is Default Font</text><br/>
@@ -72,7 +71,6 @@ example 2: rich text font
 <text fontPath="/Engine/EngineFonts/RobotoTiny" fontType="Light" color="#FF0A40AA">This is RobotoTinyLight</text><br/>
 
 ```
-
 example 3: padding
 ```
 <text fontSize="55">Test case:</text> 
@@ -103,7 +101,6 @@ sample:
 <text> &gt;   =="&gt; "</text><br/>
 ```
 example 5: hyperlink
-
 ```
 <a href="Seg1ClickMessage" bgColor="#555555FF" hoverColor="#FFFF0055" 
 filePath="Blueprint'/Game/UMG/DialogueMsgTextTest/ButtonStyle/BP_DialogueBackgroundButtonStyle1.BP_DialogueBackgroundButtonStyle1'">
@@ -123,14 +120,9 @@ filePath="/Game/UMG/DialogueMsgTextTest/ButtonStyle/BP_DialogueBackgroundButtonS
 <text color="#0000FFFF"> Test Click Seg3  </text>
 </a>
 ```
-
 When you click, you will receive info assigned in href if you bind button's click callback.  
-
 Please check WidgetBlueprint'/Game/UMG/DialogueMsgTextTest/Tuto8_HyperText.Tuto8_HyperText'
-
-
 example 5: sound
-
 ```
 <text style="MyStyle3">HorizonFlipbookWidget( use tag pfb ) Only Supported by using style:</text>
 <pfb sound="SoundWave'/Engine/VREditor/Sounds/UI/Click_on_Button.Click_on_Button'" 
@@ -138,40 +130,31 @@ soundVolumn="0.5" soundPitch="0.1" soundStartTime="0.05" style="MyStyle4" /> <br
 <text>
 
 ```
-
 -----------------------
 Technical Details
 -----------------------
 List of Modules:
 HorizonUI (Runtime)
-
 Intended Platform: All Platforms
 Platforms Tested: Win32, Android
-
 Currently has two widget implemented:
 	1. HorizonFlipbookWidget: This widget support using PaperFlipbook directly in UMG!
 	2. HorizonDialogueMsgTextBlock: Combine both rich text and dialogue text function in this widget! 
 	   For rich text feature: you can control text Color, Shadow Color, Font, Font size and padding for each text block.
-	   For dialogue text feature: you can control dialogue speed and whether it will repeated after finish.
-
-Demo Project: https://github.com/dorgonman/HorizonUIPluginDemo
-DemoVideo: https://www.youtube.com/watch?v=GQBd2qAEpCg&feature=youtu.be
-
+	   For dialogue text feature: you can control dialogue speed and whether it will repeated after finish.  
+Demo Project: https://github.com/dorgonman/HorizonUIPluginDemo  
+DemoVideo: https://www.youtube.com/watch?v=GQBd2qAEpCg&feature=youtu.be  
 -----------------------
 What does your plugin do/What is the intent of your plugin
------------------------
-
+-----------------------  
 This Plugin contains some extension for UMG Widget. 
 	Currently have two widget included:
 	1. HorizonFlipbookWidget
-	2. HorizonDialogueMsgTextBlock
-
+	2. HorizonDialogueMsgTextBlock  
 -----------------------
 Contact and Support
 -----------------------
-email: dorgonman@hotmail.com
-
-
+email: dorgonman@hotmail.com  
 -----------------------
  Version History
 -----------------------
@@ -181,15 +164,15 @@ email: dorgonman@hotmail.com
 - NEW: Implement DialogueStyleInfo as Blueprintable UObject: Now you can management all HorizonDialogueSegmentInfoStyle in one or more BP class and apply to all HorizonDialogueMsgTextBlock.
 - FIX: Crash when  tried add a new style and set its color.
 - FIX: Should ignore space at end of line for TextOverflowWarpNormal.(Empty new line bug)
-
+- FIX: Duplicate HorizonDialogueMsgTextBlock crash bug
+- FIX: LineWidth when adjust widget anchor
 
 *4.17.0
 - UPDATE: update to engine 4.17.0, and plugin's VersionName will also follow engine's version.
 - FIX: DialogueMsgSpeed crash when set the value to 0
 - NEW: implement UHorizonDialogueMsgTextBlock::SetTextAndRebuildDialogue for Blueprints user, please use this method instead of SetText if you want to change Dialogue text at runtime.
 - NEW: implement UHorizonFlipbookWidget::SetFlipbookSource for blueprints user, now you can adjust FlipbookSource UV and Size in blueprint. 
-- *NEW: implement HorizonDialogueTextOverflowWarpMethod for UHorizonDialogueMsgTextBlock. You will be able to select "Normal" or "BreakAll" method, by default, plugin will change default warp method from BreakAll to Normal. Normal Warp method means if the word overflow current line width(for both CJK or non-CJK), it will try move to next line and use BreakAll rule in next line. BreakAll method is plugin's previously implementation, the word will break at any character when text overflow occur.
-
+- *NEW: implement HorizonDialogueTextOverflowWarpMethod for UHorizonDialogueMsgTextBlock. You will be able to select "Normal" or "BreakAll" method, by default, plugin will change default warp method from BreakAll to Normal. Normal Warp method means if the word overflow current line width(for both CJK or non-CJK), it will try move to next line and use BreakAll rule in next line. BreakAll method is plugin's previously implementation, the word will break at any character when text overflow occur.   
 *1.3.0
 - UPDATE: update to engine 4.16
 - NEW: implement StartDialogue and StopDialogue for HorizonDialogueMsgTextBlock
