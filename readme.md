@@ -133,6 +133,7 @@ soundVolumn="0.5" soundPitch="0.1" soundStartTime="0.05" style="MyStyle4" /> <br
 -----------------------
 Technical Details
 -----------------------
+
 List of Modules:
 HorizonUI (Runtime)
 Intended Platform: All Platforms
@@ -144,20 +145,26 @@ Currently has two widget implemented:
 	   For dialogue text feature: you can control dialogue speed and whether it will repeated after finish.  
 Demo Project: https://github.com/dorgonman/HorizonUIPluginDemo  
 DemoVideo: https://www.youtube.com/watch?v=GQBd2qAEpCg&feature=youtu.be  
+
 -----------------------
 What does your plugin do/What is the intent of your plugin
 -----------------------  
+
 This Plugin contains some extension for UMG Widget. 
 	Currently have two widget included:
 	1. HorizonFlipbookWidget
 	2. HorizonDialogueMsgTextBlock  
+	
 -----------------------
 Contact and Support
 -----------------------
+
 email: dorgonman@hotmail.com  
+
 -----------------------
  Version History
 -----------------------
+
 *4.18.0
 - NEW: Implement Hypertext for HorizonDialogueMsgTextBlock：you will be able to use all button's features in dialogue segments.
 - NEW: Implement Sound trigger for HorizonDialogueMsgTextBlock.
