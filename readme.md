@@ -1,4 +1,4 @@
-![VSTS CI status](https://horizon-studio.visualstudio.com/_apis/public/build/definitions/66d242ac-f17b-4303-9a70-ebb6a52e1525/2/badge)
+![VSTS CI status](https://hsgame.visualstudio.com/_apis/public/build/definitions/aeaa314b-7b56-4733-89fa-67e9bccfb809/2/badge)
 
 ----------------------------------------------
               HorizonUIPlugin
