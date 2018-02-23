@@ -6,7 +6,7 @@ master branch may be unstable since it is in development, please switch to tags,
 
 ----------------------------------------------
               HorizonUIPlugin
-                 4.18.0
+                 4.19.0
          http://dorgon.horizon-studio.net
           	dorgonman@hotmail.com
 ----------------------------------------------
@@ -15,7 +15,7 @@ master branch may be unstable since it is in development, please switch to tags,
 System Requirements
 -----------------------
 
-tested UnrealEngine version: 4.11, 4.12, 4.14, 4.15, 4.16, 4.18
+tested UnrealEngine version: 4.11, 4.12, 4.14, 4.15, 4.16, 4.18, 4.19
 
 
 -----------------------
@@ -170,6 +170,13 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+
+
+*4.19.0
+- NEW: [Auto Page](https://www.youtube.com/watch?v=kbjyGSoLpCk&feature=youtu.be) will split Dialogue Text into multiple pages.
+- NEW: UHorizonDialogueMsgTextBlock::IsDialogueMsgCompleted
+- NEW: UHorizonWidgetFunctionLibrary::GetWidgetFromNameRecursively
+- Refactor C++ Classes folders
 
 *4.18.0
 - NEW: Implement Hypertext for HorizonDialogueMsgTextBlock：you will be able to use all button's features in dialogue segments.
