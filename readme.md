@@ -173,10 +173,11 @@ email: dorgonman@hotmail.com
 
 
 *4.19.0
-- NEW: [Auto Page](https://www.youtube.com/watch?v=kbjyGSoLpCk&feature=youtu.be) will split Dialogue Text into multiple pages.
+- NEW: UHorizonDialogueMsgTextBlock [Auto Page](https://www.youtube.com/watch?v=kbjyGSoLpCk&feature=youtu.be) will split Dialogue Text into multiple pages.
 - NEW: UHorizonDialogueMsgTextBlock::IsDialogueMsgCompleted
 - NEW: UHorizonWidgetFunctionLibrary::GetWidgetFromNameRecursively
 - NEW: UVRegion for UHorizonImage
+- NEW: UHorizonDialogueMsgTextBlock [Justification](https://www.dropbox.com/s/lp9i2qlkcb3j3ut/HorizonUI_HorizonDialogueMsgTextBlock_Justification.png?dl=0) for Left, Right and Center
 - Refactor C++ Classes folders
 
 *4.18.0
