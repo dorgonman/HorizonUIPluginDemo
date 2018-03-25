@@ -179,6 +179,9 @@ email: dorgonman@hotmail.com
 - NEW: UVRegion for UHorizonImage
 - NEW: UHorizonDialogueMsgTextBlock [Justification](https://www.dropbox.com/s/lp9i2qlkcb3j3ut/HorizonUI_HorizonDialogueMsgTextBlock_Justification.png?dl=0) for Left, Right and Center
 - Refactor C++ Classes folders
+- Refactor: Use TSoftObjectPtr for assets refenence in StyleInfo
+- BugFix: SegmentStyleList are overrided by one of StyleInfoClassList
+- BugFix: Style referenced assets are not loaded in some case
 
 *4.18.0
 - NEW: Implement Hypertext for HorizonDialogueMsgTextBlock：you will be able to use all button's features in dialogue segments.
