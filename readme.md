@@ -182,6 +182,7 @@ email: dorgonman@hotmail.com
 - Refactor: Use TSoftObjectPtr for assets refenence in StyleInfo
 - BugFix: SegmentStyleList are overrided by one of StyleInfoClassList
 - BugFix: Style referenced assets are not loaded in some case
+- BugFix: Break all for non english character in TextOverflowWarpNormal_Implement
 
 *4.18.0
 - NEW: Implement Hypertext for HorizonDialogueMsgTextBlock：you will be able to use all button's features in dialogue segments.
