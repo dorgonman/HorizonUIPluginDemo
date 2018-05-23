@@ -1,0 +1,58 @@
+{"frames": {
+
+"artist.png":
+{
+	"frame": {"x":1,"y":1,"w":230,"h":574},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":24,"y":67,"w":230,"h":574},
+	"sourceSize": {"w":300,"h":650},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"designer.png":
+{
+	"frame": {"x":233,"y":1,"w":102,"h":256},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":95,"y":38,"w":102,"h":256},
+	"sourceSize": {"w":300,"h":300},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"I_C_Strawberry.png":
+{
+	"frame": {"x":337,"y":1,"w":31,"h":31},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":1,"w":31,"h":31},
+	"sourceSize": {"w":34,"h":34},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"I_C_Watermellon.png":
+{
+	"frame": {"x":370,"y":1,"w":28,"h":34},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":0,"w":28,"h":34},
+	"sourceSize": {"w":34,"h":34},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"programmer.png":
+{
+	"frame": {"x":400,"y":1,"w":199,"h":636},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":43,"y":1,"w":199,"h":636},
+	"sourceSize": {"w":300,"h":650},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"target": "paper2d", 
+	"image": "sheet_test.png",
+	"format": "RGBA8888",
+	"size": {"w":638,"h":638},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:2fa3363a1f5f601a5fc38d9079de62bb:7be41b37bd2b59aa5f8b692e8af8961e:903153e248e1be9d7d1d5396e5c697ec$"
+}
+}
