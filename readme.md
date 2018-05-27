@@ -170,6 +170,9 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+*4.20.0
+- NEW: Sprite support for HorizonDialogueMsgTextBlock
+- Refactor: Use Emplace instead of Add for TArray
 
 
 *4.19.0
