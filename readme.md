@@ -171,8 +171,12 @@ email: dorgonman@hotmail.com
  Version History
 -----------------------
 *4.20.0
-- NEW: Sprite support for HorizonDialogueMsgTextBlock
-- Refactor: Use Emplace instead of Add for TArray
+- NEW: Sprite support for UHorizonDialogueMsgTextBlock
+- NEW: GlobalTimeDilation Support in UHorizonDialogueMsgTextBlock Tick
+- NEW: UHorizonDialogueMsgTextBlock::GetCurrentPageTextLength
+- BugFix: Fix first line and first word overflow for UHorizonDialogueMsgTextBlock
+- BugFix: Crash when hypertext is click and change text in UHorizonDialogueMsgTextBlock
+- Refactor: Use Emplace instead of Add for TArray for UHorizonDialogueMsgTextBlock
 
 
 *4.19.0
