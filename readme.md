@@ -174,6 +174,7 @@ email: dorgonman@hotmail.com
 - NEW: Sprite support for UHorizonDialogueMsgTextBlock
 - NEW: GlobalTimeDilation Support in UHorizonDialogueMsgTextBlock Tick
 - NEW: UHorizonDialogueMsgTextBlock::GetCurrentPageTextLength
+- NEW: UHorizonDialogueMsgTextBlock::GetPageTextByIndex
 - BugFix: Fix first line and first word overflow for UHorizonDialogueMsgTextBlock
 - BugFix: Crash when hypertext is click and change text in UHorizonDialogueMsgTextBlock
 - Refactor: Use Emplace instead of Add for TArray for UHorizonDialogueMsgTextBlock
