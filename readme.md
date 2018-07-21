@@ -6,7 +6,7 @@ master branch may be unstable since it is in development, please switch to tags,
 
 ----------------------------------------------
               HorizonUIPlugin
-                 4.19.0
+                 4.20.0
          http://dorgon.horizon-studio.net
           	dorgonman@hotmail.com
 ----------------------------------------------
@@ -15,7 +15,7 @@ master branch may be unstable since it is in development, please switch to tags,
 System Requirements
 -----------------------
 
-tested UnrealEngine version: 4.11, 4.12, 4.14, 4.15, 4.16, 4.18, 4.19
+tested UnrealEngine version: 4.11, 4.12, 4.14, 4.15, 4.16, 4.18, 4.19, 4.20
  
 
 -----------------------
