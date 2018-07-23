@@ -3,7 +3,7 @@
 // blog: dorgon.horizon-studio.net
 
 #pragma once
-#include "UMG.h"
+
 #include "HorizonDialogueMsgTextBlock.h"
 #include "HorizonFlipbookWidget.h"
 #include "HorizonWidgetFunctionLibrary.h"
