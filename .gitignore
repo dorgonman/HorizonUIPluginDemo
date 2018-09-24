@@ -12,3 +12,4 @@ Saved
 /.vs/config/applicationhost.config
 /*.db
 /.vs
+*.nupkg
