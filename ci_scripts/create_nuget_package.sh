@@ -1,46 +1,27 @@
 #!/bin/sh
 set -e
+<<LICENSE
 
+LICENSE
+source ~/.bash_profile
 
-
-FEED_NAME="UE4Editor-HorizonPlugin"
-ONLINE_FEED_NAME="//hsgame/azure-devops/${FEED_NAME}"
-nuget sources remove -name ${ONLINE_FEED_NAME} || true
-cmd=" \
-nuget sources Add -Name ${ONLINE_FEED_NAME} -Source https://pkgs.dev.azure.com/hsgame/_packaging/${FEED_NAME}/nuget/v3/index.json \
-"
-
-echo ${cmd}
-eval ${cmd}
-
-
+export UE4_ENGINE_ROOT=${UE4_ENGINE_ROOT}
+export FEED_NAME="UE4Editor-HorizonPlugin"
+export ONLINE_FEED_NAME="//hsgame/azure-devops/${FEED_NAME}"
+export ONLINE_FEED_PATH="https://pkgs.dev.azure.com/hsgame/_packaging/${FEED_NAME}/nuget/v3/index.json"
+export PACKAGE_NAME="UE4Editor-HorizonUIPluginDemo"
+BASE_PATH=$(cd "$(dirname "$0")"; pwd)
+export NUSPEC_FILE_PATH="${BASE_PATH}/package/nuspec/win64/${PACKAGE_NAME}.nuspec"
+echo *************ONLINE_FEED_NAME: ${ONLINE_FEED_NAME}
+echo ************ONLINE_FEED_PATH: ${ONLINE_FEED_PATH}
+echo ************PACKAGE_NAME: ${PACKAGE_NAME}
+echo ************NUSPEC_FILE_PATH: ${NUSPEC_FILE_PATH}
 BASE_PATH=$(cd "$(dirname "$0")"; pwd)
 PROJECT_ROOT=$(cd "${BASE_PATH}/../"; pwd)
-OUTPUT_DIRECTORY="${PROJECT_ROOT}/Intermediate/nuget/"
-rm -rf ${OUTPUT_DIRECTORY}
-mkdir -p ${OUTPUT_DIRECTORY}
-
-
 pushd "${PROJECT_ROOT}"
-	source ${PROJECT_ROOT}/ue_ci_scripts/function/sh/ue_common_include.sh
-	PACKAGE_NAME="UE4Editor-HorizonUIPluginDemo"
-	#-Symbol
-	cmd=" \
-	nuget pack ${PROJECT_ROOT}/ci_scripts/package/nuspec/win64/${PACKAGE_NAME}.nuspec -Verbosity detailed \
-	-BasePath ${PROJECT_ROOT} -OutputDirectory ${OUTPUT_DIRECTORY} -Version 0.0.0.${PROJECT_REVISION}\
-	"
 
-	echo ${cmd}
-	eval ${cmd} 
+	source ue_ci_scripts/function/sh/ue_deploy_function.sh
+	CreateNugetPackage
 
+popd #pushd ${PROJECT_ROOT}
 
-	NUPKG_FILE_NAME=$(find ${OUTPUT_DIRECTORY}/*.nupkg)
-	NUPKG_NAME=${NUPKG_FILE_NAME%.*}
-
-	cmd=" \
-	nuget push -Source ${ONLINE_FEED_NAME} -ApiKey VSTS ${NUPKG_NAME}.nupkg \
-	"
-	echo ${cmd}
-	eval ${cmd}
-
-popd #../

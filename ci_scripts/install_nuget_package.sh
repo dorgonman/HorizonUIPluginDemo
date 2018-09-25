@@ -1,39 +1,24 @@
 #!/bin/sh
 set -e
+<<LICENSE
 
+LICENSE
+source ~/.bash_profile
 
-
-FEED_NAME="UE4Editor-HorizonPlugin"
-ONLINE_FEED_NAME="//hsgame/azure-devops/${FEED_NAME}"
-nuget sources remove -name ${ONLINE_FEED_NAME} || true
-cmd=" \
-nuget sources Add -Name ${ONLINE_FEED_NAME} -Source https://pkgs.dev.azure.com/hsgame/_packaging/${FEED_NAME}/nuget/v3/index.json \
-"
-
-echo ${cmd}
-eval ${cmd}
-
+export UE4_ENGINE_ROOT=${UE4_ENGINE_ROOT}
+export FEED_NAME="UE4Editor-HorizonPlugin"
+export ONLINE_FEED_NAME="//hsgame/azure-devops/${FEED_NAME}"
+export ONLINE_FEED_PATH="https://pkgs.dev.azure.com/hsgame/_packaging/${FEED_NAME}/nuget/v3/index.json"
+export PACKAGE_NAME="UE4Editor-HorizonUIPluginDemo"
+echo *************ONLINE_FEED_NAME: ${ONLINE_FEED_NAME}
+echo ************ONLINE_FEED_PATH: ${ONLINE_FEED_PATH}
+echo ************PACKAGE_NAME: ${PACKAGE_NAME}
 
 BASE_PATH=$(cd "$(dirname "$0")"; pwd)
 PROJECT_ROOT=$(cd "${BASE_PATH}/../"; pwd)
-OUTPUT_DIRECTORY="${PROJECT_ROOT}/Intermediate/nuget/"
-mkdir -p ${OUTPUT_DIRECTORY}
-
-
 pushd "${PROJECT_ROOT}"
-	#source ${PROJECT_ROOT}/ue_ci_scripts/function/sh/ue_common_include.sh
-	PACKAGE_NAME="UE4Editor-HorizonUIPluginDemo"
 
-	cmd=" \
-	nuget install ${PACKAGE_NAME} \
-	-OutputDirectory ${OUTPUT_DIRECTORY} \
-	-Source ${ONLINE_FEED_NAME} \
-	-ExcludeVersion \
-	"
+	source ue_ci_scripts/function/sh/ue_deploy_function.sh
+	InstallNugetPackage
 
-	echo ${cmd}
-	eval ${cmd} 
-
-
-	cp -rf ${OUTPUT_DIRECTORY}/${PACKAGE_NAME}/* ${PROJECT_ROOT}
-popd #../
+popd #pushd ${PROJECT_ROOT}
