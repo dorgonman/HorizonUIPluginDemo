@@ -18,11 +18,7 @@
         <!-- A readme.txt to display when the package is installed -->
   </metadata>
   <files>
-        <file src="Binaries/Win64/UE4Editor-HorizonUIPluginDemo.dll" target="Binaries/Win64/" />
-        <file src="Binaries/Win64/UE4Editor-HorizonUIPluginDemo.pdb" target="Binaries/Win64/" />
-        <file src="Binaries/Win64/UE4Editor.modules" target="Binaries/Win64/" />
-        <file src="Plugins/HorizonUIPlugin/Binaries/Win64/UE4Editor.modules" target="Plugins/HorizonUIPlugin/Binaries/Win64" />
-        <file src="Plugins/HorizonUIPlugin/Binaries/Win64/UE4Editor-HorizonUI.dll" target="Plugins/HorizonUIPlugin/Binaries/Win64" />
-        <file src="Plugins/HorizonUIPlugin/Binaries/Win64/UE4Editor-HorizonUI.pdb" target="Plugins/HorizonUIPlugin/Binaries/Win64" />
+        <file src="Binaries/Win64/UE4Editor**" target="Binaries/Win64/" />
+        <file src="Plugins/HorizonUIPlugin/Binaries/Win64/UE4Editor**" target="Plugins/HorizonUIPlugin/Binaries/Win64/" />
   </files>
 </package>
