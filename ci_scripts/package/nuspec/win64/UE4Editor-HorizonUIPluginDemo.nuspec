@@ -18,7 +18,7 @@
         <!-- A readme.txt to display when the package is installed -->
   </metadata>
   <files>
-        <file src="Binaries/Win64/UE4Editor**" target="Binaries/Win64/" />
-        <file src="Plugins/HorizonUIPlugin/Binaries/Win64/UE4Editor**" target="Plugins/HorizonUIPlugin/Binaries/Win64/" />
+        <file src="Binaries/Win64/UE4Editor**" target="" />
+        <file src="Plugins/HorizonUIPlugin/Binaries/Win64/UE4Editor**" target="" />
   </files>
 </package>
