@@ -11,8 +11,7 @@ export FEED_NAME="hsgame-local"
 export PACKAGE_NAME="UE4Editor-HorizonUIPluginDemo"
 
 
-echo *************ONLINE_FEED_NAME: ${ONLINE_FEED_NAME}
-echo ************ONLINE_FEED_PATH: ${ONLINE_FEED_PATH}
+echo *************FEED_NAME: ${FEED_NAME}
 echo ************PACKAGE_NAME: ${PACKAGE_NAME}
 
 BASE_PATH=$(cd "$(dirname "$0")"; pwd)

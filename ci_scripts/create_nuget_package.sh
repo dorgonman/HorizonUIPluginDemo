@@ -8,6 +8,8 @@ source ~/.bash_profile
 export UE4_ENGINE_ROOT=${UE4_ENGINE_ROOT}
 export NAME="UE4Editor-HorizonPlugin"
 export FEED_NAME="//hsgame/azure-devops/${NAME}"
+export FEED_NAME_LOCAL="hsgame-local"
+export FEED_PATH_LOCAL="//hsgame/UE4-Packaged-build/nuget/hsgame-local/ue4editor-horizonuiplugindemo"
 export FEED_PATH="https://pkgs.dev.azure.com/hsgame/_packaging/${NAME}/nuget/v3/index.json"
 export PACKAGE_NAME="UE4Editor-HorizonUIPluginDemo"
 BASE_PATH=$(cd "$(dirname "$0")"; pwd)
@@ -22,6 +24,7 @@ pushd "${PROJECT_ROOT}"
 
 	source ue_ci_scripts/function/sh/ue_deploy_function.sh
 	CreateNugetPackage
-
+	${PROJECT_ROOT}/ci_scripts/init_nuget_package_local.bat
+	PushNugetPackage
 popd #pushd ${PROJECT_ROOT}
 
