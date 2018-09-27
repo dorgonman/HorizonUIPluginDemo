@@ -1,10 +1,16 @@
 VSTS Build Status: ![VSTS CI status](https://hsgame.visualstudio.com/_apis/public/build/definitions/aeaa314b-7b56-4733-89fa-67e9bccfb809/2/badge)
 [![Azure Artifacts package in feed in ](https://hsgame.feeds.visualstudio.com/_apis/public/Packaging/Feeds/c21392b2-372c-4abe-b6fc-5d7157e82083/Packages/8c72c79e-d5ee-4555-8d0c-13bba3af37b0/Badge)](https://hsgame.visualstudio.com/_Packaging?feed=c21392b2-372c-4abe-b6fc-5d7157e82083&package=8c72c79e-d5ee-4555-8d0c-13bba3af37b0&preferRelease=true&_a=package)
 
+
+
+
 Note: 
 
 master branch may be unstable since it is in development, please switch to tags, for example: release/4.18.0
 
+How to Run Demo Project before purchase:(Only for Win64 editor build)
+1. [Download nuget executable](https://www.nuget.org/downloads) and copy the exe into C:\Windows\system32\ or any place listed in your PATH environment.
+2. Double click
 ----------------------------------------------
               HorizonUIPlugin
                  4.20.0
@@ -128,15 +134,18 @@ filePath="/Game/UMG/DialogueMsgTextTest/ButtonStyle/BP_DialogueBackgroundButtonS
 </a>
 ```
 When you click, you will receive info assigned in href if you bind button's click callback.  
-Please check WidgetBlueprint'/Game/UMG/DialogueMsgTextTest/Tuto8_HyperText.Tuto8_HyperText'
-example 5: sound
+Please check WidgetBlueprint'/Game/UMG/DialogueMsgTextTest/Tuto8_HyperText.Tuto8_HyperText'  
+
+example 5: sound  
+
 ```
 <text style="MyStyle3">HorizonFlipbookWidget( use tag pfb ) Only Supported by using style:</text>
 <pfb sound="SoundWave'/Engine/VREditor/Sounds/UI/Click_on_Button.Click_on_Button'" 
 soundVolumn="0.5" soundPitch="0.1" soundStartTime="0.05" style="MyStyle4" /> <br/>
 <text>
 
-```
+```  
+
 -----------------------
 Technical Details
 -----------------------
