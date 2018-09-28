@@ -1,6 +1,6 @@
 ![VSTS CI status](https://hsgame.visualstudio.com/_apis/public/build/definitions/aeaa314b-7b56-4733-89fa-67e9bccfb809/2/badge)
 
-public feed:  
+public feed: nuget.org  
 
 [![nuget.org package in feed in ](https://img.shields.io/nuget/v/UE4Editor-HorizonUIPluginDemo.svg)](https://www.nuget.org/packages/UE4Editor-HorizonUIPluginDemo/)
 
