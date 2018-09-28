@@ -2,14 +2,14 @@
 <package>
   <metadata>
     <id>UE4Editor-HorizonUIPluginDemo</id>
-    <version>4.20.0.1</version>
-    <authors>dorgon</authors>
-    <owners>dorgon</owners>
+    <version>0.0.0.1</version>
+    <authors>dorgon.chang</authors>
+    <owners>dorgon.chang</owners>
     <licenseUrl>http://dorgon.horizon-studio.net</licenseUrl>
     <projectUrl>https://github.com/dorgonman/HorizonUIPluginDemo</projectUrl>
     <iconUrl>https://github.com/dorgonman/HorizonUIPluginDemo</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>HorizonUIPlugin demo desc</description>
+    <description>HorizonUIPlugin Demo Project Editor dll, no source code, only for Win64 editor</description>
     <releaseNotes>https://github.com/dorgonman/HorizonUIPluginDemo</releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>native cpp</tags>
