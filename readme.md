@@ -3,8 +3,7 @@ VSTS Build Status: ![VSTS CI status](https://hsgame.visualstudio.com/_apis/publi
 [![nuget.org package in feed in ](https://img.shields.io/nuget/v/UE4Editor-HorizonUIPluginDemo.svg)
 
 
-[![Azure Artifacts package in feed in ](https://hsgame.feeds.visualstudio.com/_apis/public/Packaging/Feeds/c21392b2-372c-4abe-b6fc-5d7157e82083/Packages/8c72c79e-d5ee-4555-8d0c-13bba3af37b0/Badge)](https://hsgame.visualstudio.com/_Packaging?feed=c21392b2-372c-4abe-b6fc-5d7157e82083&package=8c72c79e-d5ee-4555-8d0c-13bba3af37b0&preferRelease=true&_a=package)
-
+[![Azure Artifacts package in  feed in ](https://hsgame.feeds.visualstudio.com/_apis/public/Packaging/Feeds/d5ed5eb7-dd62-4af0-a6a4-8862be2b9f7f/Packages/43b17fa6-c52b-479b-a073-848d4d3073a1/Badge)](https://hsgame.visualstudio.com/_Packaging?feed=d5ed5eb7-dd62-4af0-a6a4-8862be2b9f7f&package=43b17fa6-c52b-479b-a073-848d4d3073a1&preferRelease=true&_a=package)
 
 
 
