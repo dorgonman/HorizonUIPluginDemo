@@ -20,5 +20,8 @@
   <files>
         <file src="Binaries/Win64/UE4Editor**" target="" />
         <file src="Plugins/HorizonUIPlugin/Binaries/Win64/UE4Editor**" target="" />
+        <file src="Plugins/HorizonUIPlugin/Config/**" target="" />
+        <file src="Plugins/HorizonUIPlugin/Resources/**" target="" />
+        <file src="Plugins/HorizonUIPlugin/HorizonUIPlugin.uplugin" target="Plugins/HorizonUIPlugin/" />
   </files>
 </package>
