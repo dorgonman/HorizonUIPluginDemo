@@ -1,9 +1,9 @@
-VSTS Build Status: ![VSTS CI status](https://hsgame.visualstudio.com/_apis/public/build/definitions/aeaa314b-7b56-4733-89fa-67e9bccfb809/2/badge)
+![VSTS CI status](https://hsgame.visualstudio.com/_apis/public/build/definitions/aeaa314b-7b56-4733-89fa-67e9bccfb809/2/badge)
 
-[![nuget.org package in feed in ](https://img.shields.io/nuget/v/UE4Editor-HorizonUIPluginDemo.svg)
+public feed: ![nuget.org package in feed in ](https://img.shields.io/nuget/v/UE4Editor-HorizonUIPluginDemo.svg)
 
 
-[![Azure Artifacts package in  feed in ](https://hsgame.feeds.visualstudio.com/_apis/public/Packaging/Feeds/d5ed5eb7-dd62-4af0-a6a4-8862be2b9f7f/Packages/43b17fa6-c52b-479b-a073-848d4d3073a1/Badge)](https://hsgame.visualstudio.com/_Packaging?feed=d5ed5eb7-dd62-4af0-a6a4-8862be2b9f7f&package=43b17fa6-c52b-479b-a073-848d4d3073a1&preferRelease=true&_a=package)
+private feed(only for internal use): [![Azure Artifacts package in  feed in ](https://hsgame.feeds.visualstudio.com/_apis/public/Packaging/Feeds/d5ed5eb7-dd62-4af0-a6a4-8862be2b9f7f/Packages/43b17fa6-c52b-479b-a073-848d4d3073a1/Badge)](https://hsgame.visualstudio.com/_Packaging?feed=d5ed5eb7-dd62-4af0-a6a4-8862be2b9f7f&package=43b17fa6-c52b-479b-a073-848d4d3073a1&preferRelease=true&_a=package)
 
 
 
