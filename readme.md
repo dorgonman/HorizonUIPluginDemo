@@ -1,4 +1,8 @@
 VSTS Build Status: ![VSTS CI status](https://hsgame.visualstudio.com/_apis/public/build/definitions/aeaa314b-7b56-4733-89fa-67e9bccfb809/2/badge)
+
+[![nuget.org package in feed in ](https://img.shields.io/nuget/v/UE4Editor-HorizonUIPluginDemo.svg)
+
+
 [![Azure Artifacts package in feed in ](https://hsgame.feeds.visualstudio.com/_apis/public/Packaging/Feeds/c21392b2-372c-4abe-b6fc-5d7157e82083/Packages/8c72c79e-d5ee-4555-8d0c-13bba3af37b0/Badge)](https://hsgame.visualstudio.com/_Packaging?feed=c21392b2-372c-4abe-b6fc-5d7157e82083&package=8c72c79e-d5ee-4555-8d0c-13bba3af37b0&preferRelease=true&_a=package)
 
 
@@ -10,7 +14,7 @@ master branch may be unstable since it is in development, please switch to tags,
 
 How to Run Demo Project before purchase:(Only for Win64 editor build)
 1. [Download nuget executable](https://www.nuget.org/downloads) and copy the exe into C:\Windows\system32\ or any place listed in your PATH environment.
-2. Double click
+2. Double click install_package_from_nuget.org.bat, and check if UE4Editor-*.dll are installed to Binaries\Win64 and Plugins\HorizonUIPlugin\Binaries\Win64\
 ----------------------------------------------
               HorizonUIPlugin
                  4.20.0
