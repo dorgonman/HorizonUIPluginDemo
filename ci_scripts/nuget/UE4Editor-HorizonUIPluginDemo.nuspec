@@ -12,7 +12,7 @@
     <description>HorizonUIPlugin Demo Project Editor dll, no source code, only for Win64 editor</description>
     <releaseNotes>https://github.com/dorgonman/HorizonUIPluginDemo</releaseNotes>
     <copyright>Copyright 2018</copyright>
-    <tags>native cpp</tags>
+    <tags>Native Cpp UE4 Editor Demo</tags>
     <dependencies>
     </dependencies>
         <!-- A readme.txt to display when the package is installed -->
