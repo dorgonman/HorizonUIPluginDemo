@@ -17,11 +17,11 @@
     </dependencies>
         <!-- A readme.txt to display when the package is installed -->
   </metadata>
-  <files>
+ <files>
         <file src="Binaries/Win64/UE4Editor**" target="" />
-        <file src="Plugins/HorizonUIPlugin/Binaries/Win64/UE4Editor**" target="" />
-        <file src="Plugins/HorizonUIPlugin/Config/**" target="" />
-        <file src="Plugins/HorizonUIPlugin/Resources/**" target="" />
-        <file src="Plugins/HorizonUIPlugin/HorizonUIPlugin.uplugin" target="Plugins/HorizonUIPlugin/" />
+        <file src="Plugins/**/Binaries/Win64/UE4Editor**" target="" />
+        <file src="Plugins/**/Config/**" target="" />
+        <file src="Plugins/**/Resources/**" target="" />
+        <file src="Plugins/**/**.uplugin" target="" />
   </files>
 </package>
