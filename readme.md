@@ -1,4 +1,4 @@
-![VSTS CI status](https://hsgame.visualstudio.com/_apis/public/build/definitions/aeaa314b-7b56-4733-89fa-67e9bccfb809/2/badge)
+![Azure Devops](https://hsgame.visualstudio.com/UE4HorizonPlugin/_apis/build/status/HorizonUIPluginDemo-CI)
 
 public feed: nuget.org  
 
