@@ -196,7 +196,8 @@ email: dorgonman@hotmail.com
 - BugFix: [HorizonDialogueMsgTextBlock] GetCurrentPageTextLength crash when no page
 - Refactor: [HorizonDialogueMsgTextBlock] Remove UCanvasPanel dependency and fix Behavior under SizeBox
 - Refactor: [HorizonDialogueMsgTextBlock] Adjust Warning message when style not found
-
+- Refactor: [HorizonDialogueMsgTextBlock] Put all seperate .cpp code into HorizonDialogueMsgTextBlock.cpp
+- NEW: [UHorizonFlipbookWidget] Remove Dependency from UCanvasPanelSlot* pCanvasPanelSlot, now this widget can be used under any panel widget
 
 *4.20.0  
 - NEW: Sprite support for UHorizonDialogueMsgTextBlock
