@@ -190,81 +190,126 @@ email: dorgonman@hotmail.com
  Version History
 -----------------------
 *4.21.0  
-- NEW: [HorizonDialogueMsgTextBlock] Add OnRebuildDialogueDelegate callback  
-- BugFix: [HorizonDialogueMsgTextBlock] under scalebox
-- BugFix: [HorizonDialogueMsgTextBlock] Didn't advance to next char when segStartCharIndex == segCharIndex
-- BugFix: [HorizonDialogueMsgTextBlock] GetCurrentPageTextLength crash when no page
-- Refactor: [HorizonDialogueMsgTextBlock] Remove UCanvasPanel dependency and fix Behavior under SizeBox
-- Refactor: [HorizonDialogueMsgTextBlock] Adjust Warning message when style not found
-- Refactor: [HorizonDialogueMsgTextBlock] Put all seperate .cpp code into HorizonDialogueMsgTextBlock.cpp
-- NEW: [UHorizonFlipbookWidget] Remove Dependency from UCanvasPanelSlot* pCanvasPanelSlot, now this widget can be used under any panel widget
+
+	New: [HorizonDialogueMsgTextBlock] Add OnRebuildDialogueDelegate callback.  
+
+	BugFix: [HorizonDialogueMsgTextBlock] under scalebox.  
+
+	BugFix: [HorizonDialogueMsgTextBlock] Didn't advance to next char when segStartCharIndex == segCharIndex.  
+
+	BugFix: [HorizonDialogueMsgTextBlock] GetCurrentPageTextLength crash when no page.  
+
+	Refactor: [HorizonDialogueMsgTextBlock] Remove UCanvasPanel dependency and fix Behavior under SizeBox.  
+
+	Refactor: [HorizonDialogueMsgTextBlock] Adjust Warning message when style not found,  
+
+	Refactor: [HorizonDialogueMsgTextBlock] Put all seperate .cpp code into HorizonDialogueMsgTextBlock.cpp.  
+
+	New: [UHorizonFlipbookWidget] Remove Dependency from UCanvasPanelSlot* pCanvasPanelSlot, now this widget can be used under any panel widget.  
+
 
 *4.20.0  
-- NEW: Sprite support for UHorizonDialogueMsgTextBlock
-- NEW: GlobalTimeDilation Support in UHorizonDialogueMsgTextBlock Tick
-- NEW: UHorizonDialogueMsgTextBlock::GetCurrentPageTextLength
-- NEW: UHorizonDialogueMsgTextBlock::GetPageTextByIndex
-- BugFix: Fix first line and first word overflow for UHorizonDialogueMsgTextBlock
-- BugFix: Crash when hypertext is click and change text in UHorizonDialogueMsgTextBlock
-- Refactor: Use Emplace instead of Add for TArray for UHorizonDialogueMsgTextBlock
 
+	New: Sprite support for UHorizonDialogueMsgTextBlock.  
+
+	New: GlobalTimeDilation Support in UHorizonDialogueMsgTextBlock Tick.  
+
+	New: UHorizonDialogueMsgTextBlock::GetCurrentPageTextLength.  
+
+	New: UHorizonDialogueMsgTextBlock::GetPageTextByIndex.  
+
+	BugFix: Fix first line and first word overflow for UHorizonDialogueMsgTextBlock.  
+
+	BugFix: Crash when hypertext is click and change text in UHorizonDialogueMsgTextBlock.  
+
+	Refactor: Use Emplace instead of Add for TArray for UHorizonDialogueMsgTextBlock.  
 
 *4.19.0  
-- NEW: UHorizonDialogueMsgTextBlock [Auto Page](https://www.youtube.com/watch?v=kbjyGSoLpCk&feature=youtu.be) will split Dialogue Text into multiple pages.
-- NEW: UHorizonDialogueMsgTextBlock::IsDialogueMsgCompleted
-- NEW: UHorizonWidgetFunctionLibrary::GetWidgetFromNameRecursively
-- NEW: UVRegion for UHorizonImage
-- NEW: UHorizonDialogueMsgTextBlock [Justification](https://www.dropbox.com/s/lp9i2qlkcb3j3ut/HorizonUI_HorizonDialogueMsgTextBlock_Justification.png?dl=0) for Left, Right and Center
-- Refactor C++ Classes folders
-- Refactor: Use TSoftObjectPtr for assets refenence in StyleInfo
-- BugFix: SegmentStyleList are overrided by one of StyleInfoClassList
-- BugFix: Style referenced assets are not loaded in some case
-- BugFix: Break all for non english character in TextOverflowWarpNormal_Implement
+
+	New: UHorizonDialogueMsgTextBlock [Auto Page](https://www.youtube.com/watch?v=kbjyGSoLpCk&feature=youtu.be) will split Dialogue Text into multiple pages.  
+
+	New: UHorizonDialogueMsgTextBlock::IsDialogueMsgCompleted.  
+
+	New: UHorizonWidgetFunctionLibrary::GetWidgetFromNameRecursively.  
+
+	New: UVRegion for UHorizonImage.  
+
+	New: UHorizonDialogueMsgTextBlock [Justification](https://www.dropbox.com/s/lp9i2qlkcb3j3ut/HorizonUI_HorizonDialogueMsgTextBlock_Justification.png?dl=0) for Left, Right and Center.  
+
+	Refactor: C++ Classes folders Reorganized.  
+
+	Refactor: Use TSoftObjectPtr for assets refenence in StyleInfo.  
+
+	BugFix: SegmentStyleList are overrided by one of StyleInfoClassList.  
+
+	BugFix: Style referenced assets are not loaded in some case.  
+
+	BugFix: Break all for non english character in TextOverflowWarpNormal_Implement.  
+
 
 *4.18.0  
-- NEW: Implement Hypertext for HorizonDialogueMsgTextBlock：you will be able to use all button's features in dialogue segments.
-- NEW: Implement Sound trigger for HorizonDialogueMsgTextBlock.
-- NEW: Implement DialogueStyleInfo as Blueprintable UObject: Now you can management all HorizonDialogueSegmentInfoStyle in one or more BP class and apply to all HorizonDialogueMsgTextBlock.
-- FIX: Crash when  tried add a new style and set its color.
-- FIX: Should ignore space at end of line for TextOverflowWarpNormal.(Empty new line bug)
-- FIX: Duplicate HorizonDialogueMsgTextBlock crash bug
-- FIX: LineWidth when adjust widget anchor
+
+	New: Implement Hypertext for HorizonDialogueMsgTextBlock：you will be able to use all button's features in dialogue segments.
+
+	New: Implement Sound trigger for HorizonDialogueMsgTextBlock.
+
+	New: Implement DialogueStyleInfo as Blueprintable UObject: Now you can management all HorizonDialogueSegmentInfoStyle in one or more BP class and apply to all HorizonDialogueMsgTextBlock.
+
+	New: Crash when  tried add a new style and set its color.
+
+	BugFix: Should ignore space at end of line for TextOverflowWarpNormal.(Empty new line bug)
+
+	BugFix: Duplicate HorizonDialogueMsgTextBlock crash bug
+
+	BugFix: LineWidth when adjust widget anchor
 
 *4.17.0  
-- UPDATE: update to engine 4.17.0, and plugin's VersionName will also follow engine's version.
-- FIX: DialogueMsgSpeed crash when set the value to 0
-- NEW: implement UHorizonDialogueMsgTextBlock::SetTextAndRebuildDialogue for Blueprints user, please use this method instead of SetText if you want to change Dialogue text at runtime.
-- NEW: implement UHorizonFlipbookWidget::SetFlipbookSource for blueprints user, now you can adjust FlipbookSource UV and Size in blueprint. 
-- *NEW: implement HorizonDialogueTextOverflowWarpMethod for UHorizonDialogueMsgTextBlock. You will be able to select "Normal" or "BreakAll" method, by default, plugin will change default warp method from BreakAll to Normal. Normal Warp method means if the word overflow current line width(for both CJK or non-CJK), it will try move to next line and use BreakAll rule in next line. BreakAll method is plugin's previously implementation, the word will break at any character when text overflow occur.   
+	UPDATE: update to engine 4.17.0, and plugin's VersionName will also follow engine's version.
+
+	FIX: DialogueMsgSpeed crash when set the value to 0
+
+	NEW: implement UHorizonDialogueMsgTextBlock::SetTextAndRebuildDialogue for Blueprints user, please use this method instead of SetText if you want to change Dialogue text at runtime.
+	NEW: implement UHorizonFlipbookWidget::SetFlipbookSource for blueprints user, now you can adjust FlipbookSource UV and Size in blueprint. 
+
+	NEW: 
+	implement HorizonDialogueTextOverflowWarpMethod for UHorizonDialogueMsgTextBlock. You will be able to select "Normal" or "BreakAll" method, by default, plugin will change default warp method from BreakAll to Normal. 
+
+	Normal Warp method means if the word overflow current line width(for both CJK or non-CJK), it will try move to next line and use BreakAll rule in next line. BreakAll method is plugin's previously implementation, the word will break at any character when text overflow occur.   
+
 
 *1.3.0  
-- UPDATE: update to engine 4.16
-- NEW: implement StartDialogue and StopDialogue for HorizonDialogueMsgTextBlock
+
+	UPDATE: update to engine 4.16
+	NEW: implement StartDialogue and StopDialogue for HorizonDialogueMsgTextBlock
 
 *1.2.4  
-- UPDATE: update to engine 4.15
+
+	UPDATE: update to engine 4.15
 
 *1.2.1  
-- FIX:
-	1. The times HorizonFlipbookWidget NumOfLoop for flipbook animation plays incorrectly.
-	
+
+	FIX: The times HorizonFlipbookWidget NumOfLoop for flipbook animation plays incorrectly.
+		
 *1.2.0  
-- NEW: HorizonFlipbookWidget: 
-		Add NumOfLoop that you can specify how much loop this Flipbook will play.
-		Expose Blueprint Method: ResetAnimation, PlayAnimation, StopAnimation, PauseAnimation, ResumeAnimation.
+
+	NEW: HorizonFlipbookWidget: 
+		1. Add NumOfLoop that you can specify how much loop this Flipbook will play.
+		2. Expose Blueprint Method: ResetAnimation, PlayAnimation, StopAnimation, PauseAnimation, ResumeAnimation.
 
 *1.1.0  
-- NEW: Add style feature for HorizonDialogueMsgTextBlock
-- FIX: 
-	1. Fix Crash when putting a flipbook nested in a button.
-	2. Fix ensureMsgf check fail by set widget outer to WidgetTree.
-	3. Fix some display bug in UMG Hierarchy. Don't call RebuildSegmentInfoList if it is created from palette. 
-- REFACTOR: 
-	1. Move HorizonUI module from Source/HorizonUI to Source/Runtime/HorizonUI
-	2. Rename Blueprint UPROPERTY Category for class members in HorizonFlipbookWidget and HorizonDialogueMsgTextBlock
-	3. Minor code refactoring
+
+	NEW: Add style feature for HorizonDialogueMsgTextBlock
+	FIX: 
+		1. Fix Crash when putting a flipbook nested in a button.
+		2. Fix ensureMsgf check fail by set widget outer to WidgetTree.
+		3. Fix some display bug in UMG Hierarchy. Don't call RebuildSegmentInfoList if it is created from palette. 
+	REFACTOR: 
+		1. Move HorizonUI module from Source/HorizonUI to Source/Runtime/HorizonUI
+		2. Rename Blueprint UPROPERTY Category for class members in HorizonFlipbookWidget and HorizonDialogueMsgTextBlock
+		3. Minor code refactoring
 
 1.0.0  
-- NEW: First Version including core features.
-	 	1. HorizonFlipbookWidget
-	 	2. HorizonDialogueMsgTextBlock
+
+	NEW: First Version including core features.
+			1. HorizonFlipbookWidget
+			2. HorizonDialogueMsgTextBlock
