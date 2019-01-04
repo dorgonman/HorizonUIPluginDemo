@@ -189,6 +189,10 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+*4.21.1
+	New: [UHorizonDialogueMsgTextBlock] pause and resume dialogue
+	BugFix: RebuildFlipbook
+	BugFix: Rebuild Only check GetCachedGeometry().Size.X > 0
 *4.21.0  
 
 	New: [HorizonDialogueMsgTextBlock] Add OnRebuildDialogueDelegate callback.  
