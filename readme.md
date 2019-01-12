@@ -145,7 +145,7 @@ filePath="/Game/UMG/DialogueMsgTextTest/ButtonStyle/BP_DialogueBackgroundButtonS
 When you click, you will receive info assigned in href if you bind button's click callback.  
 Please check WidgetBlueprint'/Game/UMG/DialogueMsgTextTest/Tuto8_HyperText.Tuto8_HyperText'  
 
-example 5: sound  
+example 6: sound  
 
 ```
 <text style="MyStyle3">HorizonFlipbookWidget( use tag pfb ) Only Supported by using style:</text>
@@ -154,6 +154,18 @@ soundVolumn="0.5" soundPitch="0.1" soundStartTime="0.05" style="MyStyle4" /> <br
 <text>
 
 ```  
+
+example 7: Custom Event && Callback
+
+Please Check WidgetBlueprint'/Game/UMG/DialogueMsgTextTest/Tuto06_EventTrigger.Tuto06_EventTrigger'
+
+```
+<text eventName="Seg1">This is simple test: </text>
+<text eventName="Seg2">12345678910 
+11121314151617181920</text>
+```  
+![Custome Event Usage](https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/master/ScreenShot/HorizonUI_Screenshot9.png)
+
 
 -----------------------
 Technical Details
