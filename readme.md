@@ -189,10 +189,23 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
-*4.21.1
+
+*4.21.2  
+
+	NEW: [UHorizonDialogueMsgTextBlock] CustomEventDelegate will be triggered, if there is an eventName specified in segment tags.  
+
+	BugFix: Fix Sound Triggered multiple time in a segment.
+
+
+
+*4.21.1  
+
 	New: [UHorizonDialogueMsgTextBlock] pause and resume dialogue
+
 	BugFix: RebuildFlipbook
+
 	BugFix: Rebuild Only check GetCachedGeometry().Size.X > 0
+
 *4.21.0  
 
 	New: [HorizonDialogueMsgTextBlock] Add OnRebuildDialogueDelegate callback.  
