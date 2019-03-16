@@ -32,7 +32,7 @@ resources:
       name: UEHorizonBuildScript/azure-pipelines-template
 
 jobs:
-   - template: job/build-game-editor.yml
+   - template: job/build-game-editor.yml@templates
   # - job: 'Build_Game_Editor_And_Push_nupkg'
   #   variables:
   #     - group: ue4-build-var-win-group  # variable group
