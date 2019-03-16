@@ -35,8 +35,6 @@ jobs:
   - job: 'Build_Game_Editor_And_Push_nupkg'
     variables:
       - group: ue4-build-var-win-group  # variable group
-    
-        #Pipeline.UnrealEngineRoot: '$(UE4_ENGINE_ROOT)'   #$(UE4_BUILD_VAR.UE4_ENGINE_ROOT_MAC)
     timeoutInMinutes: 120
   
     pool:
