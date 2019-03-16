@@ -50,7 +50,8 @@ jobs:
       clean: false
 
     - bash: |
-        echo *************Path: ${Path}   
+        echo *************Path: ${Path} 
+        echo *************PATH: ${PATH} 
         git checkout -q -f -B $(Build.SourceBranchName)  $(Build.SourceVersion)
       displayName: 'Update tags and checkout'
       failOnStderr: false
