@@ -56,7 +56,7 @@ jobs:
       displayName: 'Show environments and checkout'
       failOnStderr: false
 
-    - template: set-engine-and-game-version.yml@templates
+    - template: step/set-engine-and-game-version.yml@templates
 
     - powershell: |
         pushd $(Pipeline.GameProjectRoot)/
