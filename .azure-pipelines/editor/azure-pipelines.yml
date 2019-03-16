@@ -50,6 +50,9 @@ jobs:
       clean: false
 
     - bash: |
+        which git
+        which python
+        which powershell
         where git
         where python
         where powershell
