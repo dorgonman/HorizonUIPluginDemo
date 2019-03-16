@@ -50,14 +50,6 @@ jobs:
       clean: false
 
     - bash: |   
-        pushd $(Pipeline.UnrealEngineRoot)/
-          git tag -l | xargs git tag -d
-          git fetch --tags
-        popd
-        pushd $(Pipeline.GameProjectRoot)/
-          git tag -l | xargs git tag -d
-          git fetch --tags
-        popd
         git checkout -q -f -B $(Build.SourceBranchName)  $(Build.SourceVersion)
       displayName: 'Update tags and checkout'
       failOnStderr: false
@@ -67,7 +59,7 @@ jobs:
     - powershell: |
         pushd $(Pipeline.GameProjectRoot)/
           git fetch --prune --tags -q
-          $tagsStr=$(git tag -l --points-at HEAD)
+          $tagsStr=$(git ls-remote --tags origin)   #$(git tag -l --points-at HEAD)
           $currentTags = New-Object System.Collections.Generic.List[System.Object]
           if( $null -ne $tagsStr)
           {
