@@ -112,13 +112,17 @@ jobs:
       displayName: 'Prepare: parameters'
       failOnStderr: true
 
-    # - powershell: |
-    #     git clean -ddfx -f
-    #     git submodule foreach --recursive "git clean -ddfx -f"
-    #     $(Pipeline.UnrealEngineRoot)/Engine/Binaries/DotNET/GitDependencies.exe --force     
-    #   displayName: 'Git Clean and Download GitDependencies'
-    #   failOnStderr: true
-    #   condition: and(succeeded(), eq(variables['Pipeline.bCleanSCM'], 'true'))
+    - powershell: |
+        git clean -ddfx -f
+        git submodule foreach --recursive "git clean -ddfx -f"
+        $EngineGitPathExists = Test-Path "$(Pipeline.UnrealEngineRoot)/.git"
+        if ($EngineGitPathExists -eq $True)
+        {
+            $(Pipeline.UnrealEngineRoot)/Engine/Binaries/DotNET/GitDependencies.exe --force     
+        }
+      displayName: 'Git Clean and Download GitDependencies'
+      failOnStderr: true
+      condition: and(succeeded(), eq(variables['Pipeline.bCleanSCM'], 'true'))
 
     # - bash: |
     #     #!/bin/bash
