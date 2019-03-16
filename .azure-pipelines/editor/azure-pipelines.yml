@@ -36,7 +36,7 @@ jobs:
      parameters:
         #name: 'Build_Win64_Game_Editor'
         #group: 'ue4-build-var-win-group'
-        #pool: 'Default'
+        pool: 'Default'
   # - job: 'Build_Game_Editor_And_Push_nupkg'
   #   variables:
   #     - group: ue4-build-var-win-group  # variable group
