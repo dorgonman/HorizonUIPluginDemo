@@ -32,97 +32,98 @@ resources:
       name: UEHorizonBuildScript/azure-pipelines-template
 
 jobs:
-  - job: 'Build_Game_Editor_And_Push_nupkg'
-    variables:
-      - group: ue4-build-var-win-group  # variable group
-    timeoutInMinutes: 120
+   - template: job/build-game-editor.yml
+  # - job: 'Build_Game_Editor_And_Push_nupkg'
+  #   variables:
+  #     - group: ue4-build-var-win-group  # variable group
+  #   timeoutInMinutes: 120
   
-    pool:
-      name: 'Default'
-      demands:
-        - UE4_BUILD_TOOLS
-    steps:
-    - checkout: self # self represents the repo where the initial Pipelines YAML file was found
-      lfs: true
-      submodules: true
-      clean: $(Pipeline.bCleanSCM)
+  #   pool:
+  #     name: 'Default'
+  #     demands:
+  #       - UE4_BUILD_TOOLS
+  #   steps:
+  #   - checkout: self # self represents the repo where the initial Pipelines YAML file was found
+  #     lfs: true
+  #     submodules: true
+  #     clean: $(Pipeline.bCleanSCM)
 
-    - bash: |
-        where git
-        where python
-        where powershell
-        echo *************PATH: ${PATH} 
-        git checkout -q -f -B $(Build.SourceBranchName)  $(Build.SourceVersion)
-      displayName: 'Show environments and checkout'
-      failOnStderr: false
+  #   - bash: |
+  #       where git
+  #       where python
+  #       where powershell
+  #       echo *************PATH: ${PATH} 
+  #       git checkout -q -f -B $(Build.SourceBranchName)  $(Build.SourceVersion)
+  #     displayName: 'Show environments and checkout'
+  #     failOnStderr: false
 
-    - template: step/set-engine-and-game-version.yml@templates
+  #   - template: step/set-engine-and-game-version.yml@templates
 
-    - powershell: |
-        pushd $(Pipeline.GameProjectRoot)/
-          git fetch --prune --tags -q
-          $tagsStr=$(git ls-remote --tags origin)   #$(git tag -l --points-at HEAD)
-          $currentTags = New-Object System.Collections.Generic.List[System.Object]
-          if( $null -ne $tagsStr)
-          {
-              $currentTags = $tagsStr.Split([Environment]::NewLine)
-              # foreach ($tag in $currentTags) 
-              # {
-              #   echo ******Found Tag: $tag
-              # }
-          }
+  #   - powershell: |
+  #       pushd $(Pipeline.GameProjectRoot)/
+  #         git fetch --prune --tags -q
+  #         $tagsStr=$(git ls-remote --tags origin)   #$(git tag -l --points-at HEAD)
+  #         $currentTags = New-Object System.Collections.Generic.List[System.Object]
+  #         if( $null -ne $tagsStr)
+  #         {
+  #             $currentTags = $tagsStr.Split([Environment]::NewLine)
+  #             # foreach ($tag in $currentTags) 
+  #             # {
+  #             #   echo ******Found Tag: $tag
+  #             # }
+  #         }
 
-          $nugetVersion="editor/hsgame/$(Pipeline.ProjectVersion)"
+  #         $nugetVersion="editor/hsgame/$(Pipeline.ProjectVersion)"
 
-          echo "nugetVersion:$nugetVersion" 
-          if($currentTags.Contains($nugetVersion) ) 
-          {
-            echo "GameEditor already has nugetVersion tag: ${nugetVersion}"
-            echo "##vso[task.setvariable variable=Pipeline.bNugetVersionAlreadyPushed]$True"
+  #         echo "nugetVersion:$nugetVersion" 
+  #         if($currentTags.Contains($nugetVersion) ) 
+  #         {
+  #           echo "GameEditor already has nugetVersion tag: ${nugetVersion}"
+  #           echo "##vso[task.setvariable variable=Pipeline.bNugetVersionAlreadyPushed]$True"
 
-          } 
-          else 
-          {
-            echo "GameEditor need push nugetVersion tag: ${nugetVersion}"
-            echo "##vso[task.setvariable variable=Pipeline.bNugetVersionAlreadyPushed]$False"
-          }
-        popd
+  #         } 
+  #         else 
+  #         {
+  #           echo "GameEditor need push nugetVersion tag: ${nugetVersion}"
+  #           echo "##vso[task.setvariable variable=Pipeline.bNugetVersionAlreadyPushed]$False"
+  #         }
+  #       popd
 
-      displayName: 'Check UE4Editor nuget'
-      failOnStderr: true
+  #     displayName: 'Check UE4Editor nuget'
+  #     failOnStderr: true
 
 
 
     
-    - powershell: |   
-        echo "Pipeline.UnrealEngineRoot: $(Pipeline.UnrealEngineRoot)"
-        echo "Pipeline.GameProjectRoot: $(Pipeline.GameProjectRoot)"
-        echo "Pipeline.ArchivePath: $(Pipeline.ArchivePath)"
-        echo "Pipeline.EngineVersion: $(Pipeline.EngineVersion)"
-        echo "Pipeline.ProjectVersion: $(Pipeline.ProjectVersion)"
-        echo "Pipeline.bNugetVersionAlreadyPushed: $(Pipeline.bNugetVersionAlreadyPushed)"
+  #   - powershell: |   
+  #       echo "Pipeline.UnrealEngineRoot: $(Pipeline.UnrealEngineRoot)"
+  #       echo "Pipeline.GameProjectRoot: $(Pipeline.GameProjectRoot)"
+  #       echo "Pipeline.ArchivePath: $(Pipeline.ArchivePath)"
+  #       echo "Pipeline.EngineVersion: $(Pipeline.EngineVersion)"
+  #       echo "Pipeline.ProjectVersion: $(Pipeline.ProjectVersion)"
+  #       echo "Pipeline.bNugetVersionAlreadyPushed: $(Pipeline.bNugetVersionAlreadyPushed)"
 
-        echo "Build.ArtifactStagingDirectory: $(Build.ArtifactStagingDirectory)"
-        echo "Build.BuildId: $(Build.BuildId)"
-        echo "Build.BuildNumber: $(Build.BuildNumber)"
-        echo "Build.DefinitionVersion: $(Build.DefinitionVersion)"
-        echo "Build.SourceBranchName: $(Build.SourceBranchName)"
-        echo "Build.SourceVersion: $(Build.SourceVersion)"
-        echo "System.DefaultWorkingDirectory: $(System.DefaultWorkingDirectory)"
-      displayName: 'Prepare: parameters'
-      failOnStderr: true
+  #       echo "Build.ArtifactStagingDirectory: $(Build.ArtifactStagingDirectory)"
+  #       echo "Build.BuildId: $(Build.BuildId)"
+  #       echo "Build.BuildNumber: $(Build.BuildNumber)"
+  #       echo "Build.DefinitionVersion: $(Build.DefinitionVersion)"
+  #       echo "Build.SourceBranchName: $(Build.SourceBranchName)"
+  #       echo "Build.SourceVersion: $(Build.SourceVersion)"
+  #       echo "System.DefaultWorkingDirectory: $(System.DefaultWorkingDirectory)"
+  #     displayName: 'Prepare: parameters'
+  #     failOnStderr: true
 
-    - powershell: |
-        git clean -ddfx -f
-        git submodule foreach --recursive "git clean -ddfx -f"
-        $EngineGitPathExists = Test-Path "$(Pipeline.UnrealEngineRoot)/.git"
-        if ($EngineGitPathExists -eq $True)
-        {
-            $(Pipeline.UnrealEngineRoot)/Engine/Binaries/DotNET/GitDependencies.exe --force     
-        }
-      displayName: 'Git Clean and Download GitDependencies'
-      failOnStderr: true
-      condition: and(succeeded(), eq(variables['Pipeline.bCleanSCM'], 'true'))
+  #   - powershell: |
+  #       git clean -ddfx -f
+  #       git submodule foreach --recursive "git clean -ddfx -f"
+  #       $EngineGitPathExists = Test-Path "$(Pipeline.UnrealEngineRoot)/.git"
+  #       if ($EngineGitPathExists -eq $True)
+  #       {
+  #           $(Pipeline.UnrealEngineRoot)/Engine/Binaries/DotNET/GitDependencies.exe --force     
+  #       }
+  #     displayName: 'Git Clean and Download GitDependencies'
+  #     failOnStderr: true
+  #     condition: and(succeeded(), eq(variables['Pipeline.bCleanSCM'], 'true'))
 
     # - bash: |
     #     #!/bin/bash
