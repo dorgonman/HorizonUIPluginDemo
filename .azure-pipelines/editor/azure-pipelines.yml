@@ -45,19 +45,15 @@ jobs:
     - checkout: self # self represents the repo where the initial Pipelines YAML file was found
       lfs: true
       submodules: true
-      clean: false
+      clean: $(Pipeline.bCleanSCM)
 
     - bash: |
-        which git
-        which python
-        which powershell
         where git
         where python
         where powershell
-
         echo *************PATH: ${PATH} 
         git checkout -q -f -B $(Build.SourceBranchName)  $(Build.SourceVersion)
-      displayName: 'Update tags and checkout'
+      displayName: 'Show environments and checkout'
       failOnStderr: false
 
     - template: set-engine-and-game-version.yml@templates
