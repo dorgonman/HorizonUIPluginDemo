@@ -202,11 +202,26 @@ email: dorgonman@hotmail.com
  Version History
 -----------------------
 
+*4.22.0  
+
+	NEW: Implement HorizonDesignableUserWidget, HorizonUserWidget and HorizonButtonUserWidget
+
+	NEW: HorizonButtonUserWidget  
+
+	NEW: [UHorizonDialogueMsgTextBlock] Implement SkipDialogue and SkipCurrentPage
+
+	NEW: [UHorizonDialogueMsgTextBlock] Implement DefaultButtonStyleWidget for href  
+	
+	BugFix: href DefaultButtonStyleWidgetClass should not apply to other block  
+
+	BugFix: [UHorizonDialogueMsgTextBlock] SetTextAndRebuildDialogue Should Build Text only after we get correct CachedGeometry
+
+
 *4.21.2  
 
 	NEW: [UHorizonDialogueMsgTextBlock] CustomEventDelegate will be triggered, if there is an eventName specified in segment tags.  
 
-	BugFix: Fix Sound Triggered multiple time in a segment.
+	NEW: [UHorizonDialogueMsgTextBlock] Implement SkipDialogue and SkipCurrentPage  
 
 
 
