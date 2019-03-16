@@ -66,10 +66,10 @@ jobs:
           if( $null -ne $tagsStr)
           {
               $currentTags = $tagsStr.Split([Environment]::NewLine)
-              foreach ($tag in $currentTags) 
-              {
-                echo ******Found Tag: $tag
-              }
+              # foreach ($tag in $currentTags) 
+              # {
+              #   echo ******Found Tag: $tag
+              # }
           }
 
           $nugetVersion="editor/hsgame/$(Pipeline.ProjectVersion)"
