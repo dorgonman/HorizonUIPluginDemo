@@ -50,7 +50,10 @@ jobs:
       clean: false
 
     - bash: |
-        echo *************Path: ${Path} 
+        where git
+        where python
+        where powershell
+
         echo *************PATH: ${PATH} 
         git checkout -q -f -B $(Build.SourceBranchName)  $(Build.SourceVersion)
       displayName: 'Update tags and checkout'
