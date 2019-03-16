@@ -35,8 +35,8 @@ jobs:
    - template: job/build-game-editor.yml@templates
      parameters:
         #name: 'Build_Win64_Game_Editor'
-        group: 'ue4-build-var-win-group'
-        pool: 'Default'
+        #group: 'ue4-build-var-win-group'
+        #pool: 'Default'
   # - job: 'Build_Game_Editor_And_Push_nupkg'
   #   variables:
   #     - group: ue4-build-var-win-group  # variable group
