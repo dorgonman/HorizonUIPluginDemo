@@ -33,8 +33,8 @@ resources:
 
 jobs:
    - template: job/build-game-editor.yml@templates
-     parameters:
-        name: 'Build_Win64_Game_Editor'
+    #  parameters:
+    #     name: 'Build_Win64_Game_Editor'
         #group: 'ue4-build-var-win-group'
         #pool: 'Default'
   # - job: 'Build_Game_Editor_And_Push_nupkg'
