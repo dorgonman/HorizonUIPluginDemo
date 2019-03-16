@@ -49,7 +49,8 @@ jobs:
       submodules: true
       clean: false
 
-    - bash: |   
+    - bash: |
+        echo *************Path: ${Path}   
         git checkout -q -f -B $(Build.SourceBranchName)  $(Build.SourceVersion)
       displayName: 'Update tags and checkout'
       failOnStderr: false
