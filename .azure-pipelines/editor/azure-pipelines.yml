@@ -77,13 +77,13 @@ jobs:
           echo "nugetVersion:$nugetVersion" 
           if($currentTags.Contains($nugetVersion) ) 
           {
-            echo 'GameEditor already has nugetVersion tag: ${nugetVersion}'
+            echo "GameEditor already has nugetVersion tag: ${nugetVersion}"
             echo "##vso[task.setvariable variable=Pipeline.bNugetVersionAlreadyPushed]$True"
 
           } 
           else 
           {
-            echo 'GameEditor need push nugetVersion tag: ${nugetVersion}'
+            echo "GameEditor need push nugetVersion tag: ${nugetVersion}"
             echo "##vso[task.setvariable variable=Pipeline.bNugetVersionAlreadyPushed]$False"
           }
         popd
