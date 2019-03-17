@@ -59,9 +59,9 @@ jobs:
         name: 'Default'
         demands:
           - UE4_BUILD_TOOLS
-      dependsOn:
-        - 'Build_Win64_GameEditor'
-        - 'Build_Mac_GameEditor'
+      # dependsOn:
+      #   - 'Build_Win64_GameEditor'
+      #   - 'Build_Mac_GameEditor'
 
       steps:
         - checkout: none # self represents the repo where the initial Pipelines YAML file was found
