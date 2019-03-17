@@ -135,23 +135,23 @@ jobs:
                       eq(variables['Pipeline.bNugetVersionAlreadyPushed'], false ), 
                       ne(variables['Pipeline.NugetLocalFeedPath'], '')) 
 
-          # git tag ${tagName} $(Build.SourceVersion)  #    git tag <tagname> <SHA-of-the-commit>
-          # git push origin ${tagName} 
 
-        # - task: NuGetCommand@2
-        #   displayName: 'NuGet push'
-        #   inputs:
-        #     command: 'push'
-        #     packagesToPush: '$(System.ArtifactsDirectory)/Nuget/*.nupkg;
-        #                     !$(System.ArtifactsDirectory)/Nuget/*.symbols.nupkg'
-        #     publishVstsFeed: $(Pipeline.NugetAzureDevopsFeedName)
-        #   condition: and(succeeded(), eq(variables['Pipeline.bNugetVersionAlreadyPushed'], false))
-        # - bash: | 
-        #     pushd $(Pipeline.GameProjectRoot)/
-        #       tagName="editor/hsgame/$(Pipeline.ProjectVersion)"
-        #       git tag ${tagName} $(Build.SourceVersion)
-        #       git push origin ${tagName} 
-        #     popd
-        #   displayName: 'CreateTag and push to remote'
-        #   failOnStderr: false
-        #   condition: and(succeeded(), eq(variables['Pipeline.bNugetVersionAlreadyPushed'], false )) 
+
+        - task: NuGetCommand@2
+          displayName: 'NuGet push'
+          inputs:
+            command: 'push'
+            packagesToPush: '$(System.ArtifactsDirectory)/Nuget/*.nupkg;
+                            !$(System.ArtifactsDirectory)/Nuget/*.symbols.nupkg'
+            publishVstsFeed: $(Pipeline.NugetAzureDevopsFeedName)
+          condition: and(succeeded(), eq(variables['Pipeline.bNugetVersionAlreadyPushed'], false))
+          
+        - bash: | 
+            pushd $(Pipeline.GameProjectRoot)/
+              tagName="editor/hsgame/$(Pipeline.ProjectVersion)"
+              git tag ${tagName} $(Build.SourceVersion)
+              git push origin ${tagName} 
+            popd
+          displayName: 'CreateTag and push to remote'
+          failOnStderr: false
+          condition: and(succeeded(), eq(variables['Pipeline.bNugetVersionAlreadyPushed'], false )) 
