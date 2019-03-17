@@ -97,11 +97,11 @@ jobs:
         - powershell: |
             $basePath="$(System.ArtifactsDirectory)/LocalBuild"
             $outputDirectory="$(System.ArtifactsDirectory)/Nuget"
-            rm ${basePath} -r -fo
-            rm ${outputDirectory} -r -fo
+            rm ${basePath} -r -fo -ErrorAction SilentlyContinue
+            rm ${outputDirectory} -r -fo -ErrorAction SilentlyContinue
             mkdir -p ${basePath}
-            cp -rf drop_win64/* ${basePath} | true
-            cp -rf drop_mac/* ${basePath} | true
+            cp -rf drop_win64/* ${basePath} -ErrorAction SilentlyContinue
+            cp -rf drop_mac/* ${basePath} -ErrorAction SilentlyContinue
             $cmd="nuget pack $(Pipeline.NuspecFilePath) -Verbosity detailed -ForceEnglishOutput" +
                 "-BasePath ${basePath} -OutputDirectory ${outputDirectory} -Version $(Pipeline.ProjectVersion)"
             echo ${cmd}
