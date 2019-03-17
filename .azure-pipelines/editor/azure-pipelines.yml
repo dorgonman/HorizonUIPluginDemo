@@ -37,19 +37,19 @@ resources:
 
 jobs:
     #- ${ if eq(variables['Pipeline.bBuildWin64'], 'true') }:
-    - template: job/build-game-editor.yml@templates
-      parameters:
-          name: 'Build_Win64_GameEditor'
-          group: 'ue4-build-var-win-group'
-          pool: 'Default'
-          platform: 'win64'
+    # - template: job/build-game-editor.yml@templates
+    #   parameters:
+    #       name: 'Build_Win64_GameEditor'
+    #       group: 'ue4-build-var-win-group'
+    #       pool: 'Default'
+    #       platform: 'win64'
 
-    - template: job/build-game-editor.yml@templates
-      parameters:
-          name: 'Build_Mac_GameEditor'
-          group: 'ue4-build-var-mac-group'
-          pool: 'Default-MacOS'
-          platform: 'mac'
+    # - template: job/build-game-editor.yml@templates
+    #   parameters:
+    #       name: 'Build_Mac_GameEditor'
+    #       group: 'ue4-build-var-mac-group'
+    #       pool: 'Default-MacOS'
+    #       platform: 'mac'
 
     - job: 'Create_And_Push_Nuget_Package'
       variables:
@@ -103,13 +103,16 @@ jobs:
             rm ${basePath} -r -fo -ErrorAction SilentlyContinue
             rm ${outputDirectory} -r -fo -ErrorAction SilentlyContinue
             mkdir -p ${basePath}
-            if (drop_win64 -eq $True)
+
+            $dropWin64="$(System.ArtifactsDirectory)/drop_win64/"
+            if ($dropWin64 -eq $True)
             {
-              cp drop_win64/* ${basePath} -force -recurse
+              cp $dropWin64/* ${basePath} -force -recurse
             }
-            if (drop_mac -eq $True)
+            $dropMac="$(System.ArtifactsDirectory)/drop_win64/"
+            if ($dropMac -eq $True)
             {
-              cp drop_mac/* ${basePath} -force -recurse
+              cp $dropMac/* ${basePath} -force -recurse
             }
             $cmd="nuget pack $(Pipeline.NuspecFilePath) -Verbosity detailed -ForceEnglishOutput" +
                 "-BasePath ${basePath} -OutputDirectory ${outputDirectory} -Version $(Pipeline.ProjectVersion)"
