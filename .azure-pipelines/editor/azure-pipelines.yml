@@ -101,7 +101,7 @@ jobs:
             buildType: 'specific'
             project: 'HorizonUIPluginDemo'
             pipeline: 'HorizonUIPluginDemo-Editor-CI-YML'
-            buildId: '4.22.0.284-1160'
+            buildId: '1160'
             downloadPath: '$(System.ArtifactsDirectory)' 
 
         - powershell: |
