@@ -99,9 +99,8 @@ jobs:
         - task: DownloadPipelineArtifact@1
           inputs:
             buildType: 'specific'
-            project: 'HorizonUIPluginDemo'
             pipeline: 'HorizonUIPluginDemo-Editor-CI-YML'
-            buildId: '1160'
+            buildId: 1160
             downloadPath: '$(System.ArtifactsDirectory)' 
 
         - powershell: |
