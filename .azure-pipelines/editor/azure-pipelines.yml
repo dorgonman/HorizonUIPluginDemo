@@ -69,6 +69,9 @@ jobs:
           submodules: true
           clean: false
 
+          
+        - template: step/set-engine-and-game-version.yml@templates
+
         # echo parameters
         - powershell: |   
             echo "Pipeline.UnrealEngineRoot: $(Pipeline.UnrealEngineRoot)"
@@ -100,8 +103,14 @@ jobs:
             rm ${basePath} -r -fo -ErrorAction SilentlyContinue
             rm ${outputDirectory} -r -fo -ErrorAction SilentlyContinue
             mkdir -p ${basePath}
-            cp -rf drop_win64/* ${basePath} -ErrorAction SilentlyContinue
-            cp -rf drop_mac/* ${basePath} -ErrorAction SilentlyContinue
+            if (drop_win64 -eq $True)
+            {
+              cp drop_win64/* ${basePath} -force -recurse
+            }
+            if (drop_mac -eq $True)
+            {
+              cp drop_mac/* ${basePath} -force -recurse
+            }
             $cmd="nuget pack $(Pipeline.NuspecFilePath) -Verbosity detailed -ForceEnglishOutput" +
                 "-BasePath ${basePath} -OutputDirectory ${outputDirectory} -Version $(Pipeline.ProjectVersion)"
             echo ${cmd}
