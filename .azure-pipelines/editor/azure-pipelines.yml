@@ -25,6 +25,8 @@ variables:
       value: '.nuget/HorizonUIPluginDemo.nuspec'
     - name: Pipeline.NugetLocalFeedPath
       value: '//hsgame/UE4-Packaged-build/nuget/hsgame-local/HorizonPlugin'
+    - name: Pipeline.NugetAzureDevopsFeedName
+      value: 'UE4HorizonPlugin'
 
 # ==================settable variable at queue time=============
 #   PipelineInput.bCleanSCM: true
@@ -37,19 +39,19 @@ resources:
 
 jobs:
     #- ${ if eq(variables['Pipeline.bBuildWin64'], 'true') }:
-    # - template: job/build-game-editor.yml@templates
-    #   parameters:
-    #       name: 'Build_Win64_GameEditor'
-    #       group: 'ue4-build-var-win-group'
-    #       pool: 'Default'
-    #       platform: 'win64'
+    - template: job/build-game-editor.yml@templates
+      parameters:
+          name: 'Build_Win64_GameEditor'
+          group: 'ue4-build-var-win-group'
+          pool: 'Default'
+          platform: 'win64'
 
-    # - template: job/build-game-editor.yml@templates
-    #   parameters:
-    #       name: 'Build_Mac_GameEditor'
-    #       group: 'ue4-build-var-mac-group'
-    #       pool: 'Default-MacOS'
-    #       platform: 'mac'
+    - template: job/build-game-editor.yml@templates
+      parameters:
+          name: 'Build_Mac_GameEditor'
+          group: 'ue4-build-var-mac-group'
+          pool: 'Default-MacOS'
+          platform: 'mac'
 
     - job: 'Create_And_Push_Nuget_Package'
       variables:
@@ -59,14 +61,14 @@ jobs:
         name: 'Default'
         demands:
           - UE4_BUILD_TOOLS
-      # dependsOn:
-      #   - 'Build_Win64_GameEditor'
-      #   - 'Build_Mac_GameEditor'
+      dependsOn:
+        - 'Build_Win64_GameEditor'
+        - 'Build_Mac_GameEditor'
 
       steps:
-        - checkout: none # self represents the repo where the initial Pipelines YAML file was found
+        - checkout: self # self represents the repo where the initial Pipelines YAML file was found
           lfs: true
-          submodules: true
+          submodules: false
           clean: false
 
           
@@ -92,17 +94,10 @@ jobs:
           failOnStderr: true
 
         
-        # - task: DownloadPipelineArtifact@1
-        #   inputs:
-        #     buildType: 'current'
-        #     downloadPath: '$(System.ArtifactsDirectory)' 
-        # - task: DownloadPipelineArtifact@1
-        #   inputs:
-        #     buildType: 'specific'
-        #     buildVersionToDownload: '1160'
-        #     pipeline: 'HorizonUIPluginDemo-Editor-CI-YML'
-        #     buildId: '1160'
-        #     downloadPath: '$(System.ArtifactsDirectory)' 
+        - task: DownloadPipelineArtifact@1
+          inputs:
+            buildType: 'current'
+            downloadPath: '$(System.ArtifactsDirectory)' 
 
         - powershell: |
             $basePath="$(System.ArtifactsDirectory)/LocalBuild"
@@ -143,176 +138,20 @@ jobs:
           # git tag ${tagName} $(Build.SourceVersion)  #    git tag <tagname> <SHA-of-the-commit>
           # git push origin ${tagName} 
 
-
-
-
-  #   - task: DownloadPipelineArtifact@1
-  # inputs:
-  #   #buildType: 'current' # Options: current, specific
-  #   #project: # Required when buildType == Specific
-  #   #pipeline: # Required when buildType == Specific
-  #   #specificBuildWithTriggering: false # Optional
-  #   #buildVersionToDownload: 'latest' # Required when buildType == Specific. Options: latest, latestFromBranch, specific
-  #   #branchName: 'refs/heads/master' # Required when buildType == Specific && BuildVersionToDownload == LatestFromBranch
-  #   #buildId: # Required when buildType == Specific && BuildVersionToDownload == Specific 4.22.0.284-1161
-  #   #tags: # Optional
-  #   #artifactName: # Optional
-  #   #itemPattern: '**' # Optional
-  #   #downloadPath: '$(System.ArtifactsDirectory)' 
-  # - job: 'Build_Game_Editor_And_Push_nupkg'
-  #   variables:
-  #     - group: ue4-build-var-win-group  # variable group
-  #   timeoutInMinutes: 120
-  
-  #   pool:
-  #     name: 'Default'
-  #     demands:
-  #       - UE4_BUILD_TOOLS
-  #   steps:
-  #   - checkout: self # self represents the repo where the initial Pipelines YAML file was found
-  #     lfs: true
-  #     submodules: true
-  #     clean: $(Pipeline.bCleanSCM)
-
-  #   - bash: |
-  #       where git
-  #       where python
-  #       where powershell
-  #       echo *************PATH: ${PATH} 
-  #       git checkout -q -f -B $(Build.SourceBranchName)  $(Build.SourceVersion)
-  #     displayName: 'Show environments and checkout'
-  #     failOnStderr: false
-
-  #   - template: step/set-engine-and-game-version.yml@templates
-
-  #   - powershell: |
-  #       pushd $(Pipeline.GameProjectRoot)/
-  #         git fetch --prune --tags -q
-  #         $tagsStr=$(git ls-remote --tags origin)   #$(git tag -l --points-at HEAD)
-  #         $currentTags = New-Object System.Collections.Generic.List[System.Object]
-  #         if( $null -ne $tagsStr)
-  #         {
-  #             $currentTags = $tagsStr.Split([Environment]::NewLine)
-  #             # foreach ($tag in $currentTags) 
-  #             # {
-  #             #   echo ******Found Tag: $tag
-  #             # }
-  #         }
-
-  #         $nugetVersion="editor/hsgame/$(Pipeline.ProjectVersion)"
-
-  #         echo "nugetVersion:$nugetVersion" 
-  #         if($currentTags.Contains($nugetVersion) ) 
-  #         {
-  #           echo "GameEditor already has nugetVersion tag: ${nugetVersion}"
-  #           echo "##vso[task.setvariable variable=Pipeline.bNugetVersionAlreadyPushed]$True"
-
-  #         } 
-  #         else 
-  #         {
-  #           echo "GameEditor need push nugetVersion tag: ${nugetVersion}"
-  #           echo "##vso[task.setvariable variable=Pipeline.bNugetVersionAlreadyPushed]$False"
-  #         }
-  #       popd
-
-  #     displayName: 'Check UE4Editor nuget'
-  #     failOnStderr: true
-
-
-
-    
-  #   - powershell: |   
-  #       echo "Pipeline.UnrealEngineRoot: $(Pipeline.UnrealEngineRoot)"
-  #       echo "Pipeline.GameProjectRoot: $(Pipeline.GameProjectRoot)"
-  #       echo "Pipeline.ArchivePath: $(Pipeline.ArchivePath)"
-  #       echo "Pipeline.EngineVersion: $(Pipeline.EngineVersion)"
-  #       echo "Pipeline.ProjectVersion: $(Pipeline.ProjectVersion)"
-  #       echo "Pipeline.bNugetVersionAlreadyPushed: $(Pipeline.bNugetVersionAlreadyPushed)"
-
-  #       echo "Build.ArtifactStagingDirectory: $(Build.ArtifactStagingDirectory)"
-  #       echo "Build.BuildId: $(Build.BuildId)"
-  #       echo "Build.BuildNumber: $(Build.BuildNumber)"
-  #       echo "Build.DefinitionVersion: $(Build.DefinitionVersion)"
-  #       echo "Build.SourceBranchName: $(Build.SourceBranchName)"
-  #       echo "Build.SourceVersion: $(Build.SourceVersion)"
-  #       echo "System.DefaultWorkingDirectory: $(System.DefaultWorkingDirectory)"
-  #     displayName: 'Prepare: parameters'
-  #     failOnStderr: true
-
-  #   - powershell: |
-  #       git clean -ddfx -f
-  #       git submodule foreach --recursive "git clean -ddfx -f"
-  #       $EngineGitPathExists = Test-Path "$(Pipeline.UnrealEngineRoot)/.git"
-  #       if ($EngineGitPathExists -eq $True)
-  #       {
-  #           $(Pipeline.UnrealEngineRoot)/Engine/Binaries/DotNET/GitDependencies.exe --force     
-  #       }
-  #     displayName: 'Git Clean and Download GitDependencies'
-  #     failOnStderr: true
-  #     condition: and(succeeded(), eq(variables['Pipeline.bCleanSCM'], 'true'))
-
-    # - bash: |
-    #     #!/bin/bash
-    #     BASE_PATH=$(pwd)
-    #     export UE4_ENGINE_ROOT=${BASE_PATH}/$(Pipeline.UnrealEngineRoot)
-    #     RESULT=0
-    #     pushd $(pipeline.GameProjectRoot)/horizon_ci_scripts/ci_scripts/sh/win64/
-    #         ./build_editor_development_job.sh
-    #         RESULT=$?
-    #     popd
-    #     echo "RESULT: ${RESULT}"
-    #     exit ${RESULT}
-    #   displayName: 'Build GameEditor'
-    #   failOnStderr: true
-    #   condition: and(succeeded(), eq(variables['Pipeline.bNugetVersionAlreadyPushed'], false ))
-
-    # - bash: |
-    #     nuspecFilePath=".nuget/MBS.nuspec"
-    #     gameBinaries="$(Pipeline.GameProjectRoot)/"
-    #     localArchivePath="$(Pipeline.GameProjectRoot)/Intermediate/nuget/"
-    #     rm  -rf $localArchivePath  # -r -fo -ErrorAction SilentlyContinue
-    #     cmd="nuget pack $nuspecFilePath -Verbosity detailed -ForceEnglishOutput \
-    #         -BasePath ${gameBinaries} -OutputDirectory ${localArchivePath} -Version $(Pipeline.ProjectVersion)"
-    #     echo $cmd
-    #     eval $cmd
-    #   displayName: 'Create Nuget Package for GameEditor'
-    #   failOnStderr: true
-    #   condition: and(succeeded(), eq(variables['Pipeline.bNugetVersionAlreadyPushed'], false ))
-
-
-    # - powershell: |
-    #     $feedPathLocalPath='\\hsgame\UE4-Packaged-build\nuget\hsgame-local\GameProject'
-    #     nuget init $(System.DefaultWorkingDirectory)/$(Pipeline.GameProjectRoot)/Intermediate/nuget/ $feedPathLocalPath -ForceEnglishOutput
-    #   displayName: 'NuGet push to hsgame-local'
-    #   failOnStderr: true
-    #   condition: and(succeeded(), eq(variables['Pipeline.bNugetVersionAlreadyPushed'], false )) 
-      
-
-    # - task: NuGetCommand@2
-    #   displayName: 'NuGet push'
-    #   inputs:
-    #     command: 'push'
-    #     packagesToPush: '$(System.DefaultWorkingDirectory)/$(Pipeline.GameProjectRoot)/Intermediate/nuget/*.nupkg;
-    #                     !$(System.DefaultWorkingDirectory)/$(Pipeline.GameProjectRoot)/Intermediate/nuget/*.symbols.nupkg'
-    #     publishVstsFeed: 'MBS'
-    #   condition: and(succeeded(), eq(variables['Pipeline.bNugetVersionAlreadyPushed'], false))
-       
-    # - bash: | 
-    #     pushd $(Pipeline.GameProjectRoot)/
-    #       tagName="editor/hsgame/$(Pipeline.ProjectVersion)"
-    #       git tag ${tagName} 
-    #       git push origin ${tagName} 
-    #     popd
-    #   displayName: 'CreateTag and push to remote'
-    #   failOnStderr: false
-    #   condition: and(succeeded(), eq(variables['Pipeline.bNugetVersionAlreadyPushed'], false )) 
-
-
-    # - task: PublishBuildArtifacts@1
-    #   displayName: 'Publish Artifact: drop_local'
-    #   inputs:
-    #     artifactName: 'drop_local'
-    #     publishLocation: 'filePath'
-    #     PathtoPublish: $(pipeline.GameProjectRoot)/Intermediate/nuget/
-    #     targetPath: \\HSGAME\UE4-Packaged-build\azure-devops\MBS\$(Build.BuildNumber)\
-
+        # - task: NuGetCommand@2
+        #   displayName: 'NuGet push'
+        #   inputs:
+        #     command: 'push'
+        #     packagesToPush: '$(System.ArtifactsDirectory)/Nuget/*.nupkg;
+        #                     !$(System.ArtifactsDirectory)/Nuget/*.symbols.nupkg'
+        #     publishVstsFeed: $(Pipeline.NugetAzureDevopsFeedName)
+        #   condition: and(succeeded(), eq(variables['Pipeline.bNugetVersionAlreadyPushed'], false))
+        # - bash: | 
+        #     pushd $(Pipeline.GameProjectRoot)/
+        #       tagName="editor/hsgame/$(Pipeline.ProjectVersion)"
+        #       git tag ${tagName} $(Build.SourceVersion)
+        #       git push origin ${tagName} 
+        #     popd
+        #   displayName: 'CreateTag and push to remote'
+        #   failOnStderr: false
+        #   condition: and(succeeded(), eq(variables['Pipeline.bNugetVersionAlreadyPushed'], false )) 
