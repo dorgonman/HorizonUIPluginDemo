@@ -32,12 +32,12 @@ resources:
       name: UEHorizonBuildScript/azure-pipelines-template
 
 jobs:
-  #  - template: job/build-game-editor.yml@templates
-  #    parameters:
-  #       name: 'Build_Win64_Game_Editor'
-  #       group: 'ue4-build-var-win-group'
-  #       pool: 'Default'
-  #       platform: 'win64'
+   - template: job/build-game-editor.yml@templates
+     parameters:
+        name: 'Build_Win64_Game_Editor'
+        group: 'ue4-build-var-win-group'
+        pool: 'Default'
+        platform: 'win64'
 
    - template: job/build-game-editor.yml@templates
      parameters:
