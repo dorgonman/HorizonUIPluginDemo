@@ -97,8 +97,8 @@ jobs:
         - powershell: |
             $basePath="$(System.ArtifactsDirectory)/LocalBuild"
             $outputDirectory="$(System.ArtifactsDirectory)/Nuget"
-            rm -rf ${basePath}
-            rm -rf ${outputDirectory}
+            rm ${basePath} -r -fo
+            rm ${outputDirectory} -r -fo
             mkdir -p ${basePath}
             cp -rf drop_win64/* ${basePath} | true
             cp -rf drop_mac/* ${basePath} | true
