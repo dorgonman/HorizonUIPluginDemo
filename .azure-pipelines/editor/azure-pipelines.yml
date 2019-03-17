@@ -107,12 +107,12 @@ jobs:
             mkdir -p ${basePath}
 
             $dropWin64="$(System.ArtifactsDirectory)/drop_win64/"
-            if ($dropWin64 -eq $True)
+            if ( (Test-Path $dropWin64) -eq $True)
             {
               cp $dropWin64/* ${basePath} -force -recurse
             }
             $dropMac="$(System.ArtifactsDirectory)/drop_win64/"
-            if ($dropMac -eq $True)
+            if ((Test-Path $dropMac) -eq $True)
             {
               cp $dropMac/* ${basePath} -force -recurse
             }
