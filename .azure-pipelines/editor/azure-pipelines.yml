@@ -21,9 +21,13 @@ variables:
       value: '$(Pipeline.GameProjectRoot)Intermediate/BuildArchive/'
     - name: Pipeline.bNugetVersionAlreadyPushed
       value: 'false'
+    - name: Pipeline.NuspecFilePath
+      value: '.nuget/HorizonUIPluginDemo.nuspec'
+    - name: Pipeline.NugetLocalFeedPath
+      value: '//hsgame/UE4-Packaged-build/nuget/hsgame-local/HorizonPlugin'
 
 # ==================settable variable at queue time=============
-#  Pipeline.bCleanSCM: true
+#   PipelineInput.bCleanSCM: true
 
 resources:
   repositories:
@@ -45,28 +49,81 @@ jobs:
           group: 'ue4-build-var-mac-group'
           pool: 'Default-MacOS'
           platform: 'mac'
-          # dependsOn: 
-          #   - Build_Win64_Game_Editor
 
     - job: 'Create_And_Push_Nuget_Package'
       variables:
         - group: 'ue4-build-var-win-group'  # variable group
-      timeoutInMinutes: 120
-    
+      timeoutInMinutes: 120  
       pool:
         name: 'Default'
         demands:
           - UE4_BUILD_TOOLS
-
       dependsOn:
         - 'Build_Win64_GameEditor'
         - 'Build_Mac_GameEditor'
 
       steps:
+        - checkout: none # self represents the repo where the initial Pipelines YAML file was found
+          lfs: true
+          submodules: true
+          clean: false
+
+        # echo parameters
+        - powershell: |   
+            echo "Pipeline.UnrealEngineRoot: $(Pipeline.UnrealEngineRoot)"
+            echo "Pipeline.GameProjectRoot: $(Pipeline.GameProjectRoot)"
+            echo "Pipeline.ArchivePath: $(Pipeline.ArchivePath)"
+            echo "Pipeline.EngineVersion: $(Pipeline.EngineVersion)"
+            echo "Pipeline.ProjectVersion: $(Pipeline.ProjectVersion)"
+            echo "Pipeline.bNugetVersionAlreadyPushed: $(Pipeline.bNugetVersionAlreadyPushed)"
+
+            echo "Build.ArtifactStagingDirectory: $(Build.ArtifactStagingDirectory)"
+            echo "Build.BuildId: $(Build.BuildId)"
+            echo "Build.BuildNumber: $(Build.BuildNumber)"
+            echo "Build.DefinitionVersion: $(Build.DefinitionVersion)"
+            echo "Build.SourceBranchName: $(Build.SourceBranchName)"
+            echo "Build.SourceVersion: $(Build.SourceVersion)"
+            echo "System.DefaultWorkingDirectory: $(System.DefaultWorkingDirectory)"
+          displayName: 'build-game-editor.yml: echo parameters'
+          failOnStderr: true
+
+        
         - task: DownloadPipelineArtifact@1
           inputs:
             buildType: 'current'
-            downloadPath: '$(System.ArtifactsDirectory)/LocalBuild' 
+            downloadPath: '$(System.ArtifactsDirectory)' 
+
+        - powershell: |
+            $basePath=$(System.ArtifactsDirectory)/LocalBuild
+            $outputDirectory=$(System.ArtifactsDirectory)/Nuget
+            rm -rf ${basePath}
+            rm -rf ${outputDirectory}
+            mkdir -p ${basePath}
+            cp -rf drop_win64/* ${basePath}
+            cp -rf drop_mac/* ${basePath}
+            $cmd="nuget pack $(Pipeline.NuspecFilePath) -Verbosity detailed -ForceEnglishOutput" +
+                "-BasePath ${basePath} -OutputDirectory ${outputDirectory} -Version $(Pipeline.ProjectVersion)"
+            echo ${cmd}
+            iex $cmd
+          displayName: 'Create Nuget Package for GameEditor'
+          failOnStderr: true
+          condition: and(succeeded(), eq(variables['Pipeline.bNugetVersionAlreadyPushed'], false ))
+
+
+
+        # - powershell: |
+        #     $feedPathLocalPath='\\hsgame\UE4-Packaged-build\nuget\hsgame-local\GameProject'
+        #     nuget init $(System.DefaultWorkingDirectory)/$(Pipeline.GameProjectRoot)/Intermediate/nuget/ $(Pipeline.NugetLocalFeedPath) -ForceEnglishOutput
+        #   displayName: 'NuGet push to local feed'
+        #   failOnStderr: true
+        #   condition: and(succeeded(), 
+        #               eq(variables['Pipeline.bNugetVersionAlreadyPushed'], false ), 
+        #               ne(variables['Pipeline.NugetLocalFeedPath'], '')) 
+
+          # git tag ${tagName} $(Build.SourceVersion)  #    git tag <tagname> <SHA-of-the-commit>
+          # git push origin ${tagName} 
+
+
 
 
   #   - task: DownloadPipelineArtifact@1
