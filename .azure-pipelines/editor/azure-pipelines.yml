@@ -45,8 +45,8 @@ jobs:
         group: 'ue4-build-var-mac-group'
         pool: 'Default-MacOS'
         platform: 'mac'
-        dependsOn: 
-          - Build_Win64_Game_Editor
+        # dependsOn: 
+        #   - Build_Win64_Game_Editor
   # - job: 'Build_Game_Editor_And_Push_nupkg'
   #   variables:
   #     - group: ue4-build-var-win-group  # variable group
