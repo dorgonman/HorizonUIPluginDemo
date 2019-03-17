@@ -102,8 +102,8 @@ jobs:
         - powershell: |
             $basePath="$(System.ArtifactsDirectory)/LocalBuild"
             $outputDirectory="$(System.ArtifactsDirectory)/Nuget"
-            rm ${basePath} -r -fo -ErrorAction SilentlyContinue
-            rm ${outputDirectory} -r -fo -ErrorAction SilentlyContinue
+            # rm ${basePath} -r -fo -ErrorAction SilentlyContinue
+            # rm ${outputDirectory} -r -fo -ErrorAction SilentlyContinue
             mkdir -p ${basePath}
 
             $dropWin64="$(System.ArtifactsDirectory)/drop_win64/"
