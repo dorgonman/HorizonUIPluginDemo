@@ -37,19 +37,19 @@ resources:
 
 jobs:
     #- ${ if eq(variables['Pipeline.bBuildWin64'], 'true') }:
-    - template: job/build-game-editor.yml@templates
-      parameters:
-          name: 'Build_Win64_GameEditor'
-          group: 'ue4-build-var-win-group'
-          pool: 'Default'
-          platform: 'win64'
+    # - template: job/build-game-editor.yml@templates
+    #   parameters:
+    #       name: 'Build_Win64_GameEditor'
+    #       group: 'ue4-build-var-win-group'
+    #       pool: 'Default'
+    #       platform: 'win64'
 
-    - template: job/build-game-editor.yml@templates
-      parameters:
-          name: 'Build_Mac_GameEditor'
-          group: 'ue4-build-var-mac-group'
-          pool: 'Default-MacOS'
-          platform: 'mac'
+    # - template: job/build-game-editor.yml@templates
+    #   parameters:
+    #       name: 'Build_Mac_GameEditor'
+    #       group: 'ue4-build-var-mac-group'
+    #       pool: 'Default-MacOS'
+    #       platform: 'mac'
 
     - job: 'Create_And_Push_Nuget_Package'
       variables:
@@ -59,9 +59,9 @@ jobs:
         name: 'Default'
         demands:
           - UE4_BUILD_TOOLS
-      dependsOn:
-        - 'Build_Win64_GameEditor'
-        - 'Build_Mac_GameEditor'
+      # dependsOn:
+      #   - 'Build_Win64_GameEditor'
+      #   - 'Build_Mac_GameEditor'
 
       steps:
         - checkout: none # self represents the repo where the initial Pipelines YAML file was found
@@ -92,10 +92,10 @@ jobs:
           failOnStderr: true
 
         
-        - task: DownloadPipelineArtifact@1
-          inputs:
-            buildType: 'current'
-            downloadPath: '$(System.ArtifactsDirectory)' 
+        # - task: DownloadPipelineArtifact@1
+        #   inputs:
+        #     buildType: 'current'
+        #     downloadPath: '$(System.ArtifactsDirectory)' 
         # - task: DownloadPipelineArtifact@1
         #   inputs:
         #     buildType: 'specific'
@@ -121,7 +121,7 @@ jobs:
             {
               cp $dropMac/* ${basePath} -force -recurse
             }
-            $cmd="nuget pack $(Pipeline.NuspecFilePath) -Verbosity detailed -ForceEnglishOutput" +
+            $cmd="nuget pack $(Pipeline.NuspecFilePath) -Verbosity detailed -ForceEnglishOutput " +
                 "-BasePath ${basePath} -OutputDirectory ${outputDirectory} -Version $(Pipeline.ProjectVersion)"
             echo ${cmd}
             iex $cmd
