@@ -32,21 +32,56 @@ resources:
       name: UEHorizonBuildScript/azure-pipelines-template
 
 jobs:
-   - template: job/build-game-editor.yml@templates
-     parameters:
-        name: 'Build_Win64_Game_Editor'
-        group: 'ue4-build-var-win-group'
-        pool: 'Default'
-        platform: 'win64'
+    - template: job/build-game-editor.yml@templates
+      parameters:
+          name: 'build-win64-game-editor'
+          group: 'ue4-build-var-win-group'
+          pool: 'Default'
+          platform: 'win64'
 
-   - template: job/build-game-editor.yml@templates
-     parameters:
-        name: 'Build_Mac_Game_Editor'
-        group: 'ue4-build-var-mac-group'
-        pool: 'Default-MacOS'
-        platform: 'mac'
-        # dependsOn: 
-        #   - Build_Win64_Game_Editor
+    - template: job/build-game-editor.yml@templates
+      parameters:
+          name: 'build-mac-game-editor'
+          group: 'ue4-build-var-mac-group'
+          pool: 'Default-MacOS'
+          platform: 'mac'
+          # dependsOn: 
+          #   - Build_Win64_Game_Editor
+
+    - job: 'create-and-push-nuget-package'
+      variables:
+        - group: 'ue4-build-var-win-group'  # variable group
+      timeoutInMinutes: 120
+    
+      pool:
+        name: 'Default'
+        demands:
+          - UE4_BUILD_TOOLS
+
+      dependsOn:
+        - 'build-win64-game-editor'
+        - 'build-mac-game-editor'
+
+      steps:
+        - task: DownloadPipelineArtifact@1
+          inputs:
+            buildType: 'current'
+            downloadPath: '$(System.ArtifactsDirectory)/LocalBuild' 
+
+
+  #   - task: DownloadPipelineArtifact@1
+  # inputs:
+  #   #buildType: 'current' # Options: current, specific
+  #   #project: # Required when buildType == Specific
+  #   #pipeline: # Required when buildType == Specific
+  #   #specificBuildWithTriggering: false # Optional
+  #   #buildVersionToDownload: 'latest' # Required when buildType == Specific. Options: latest, latestFromBranch, specific
+  #   #branchName: 'refs/heads/master' # Required when buildType == Specific && BuildVersionToDownload == LatestFromBranch
+  #   #buildId: # Required when buildType == Specific && BuildVersionToDownload == Specific
+  #   #tags: # Optional
+  #   #artifactName: # Optional
+  #   #itemPattern: '**' # Optional
+  #   #downloadPath: '$(System.ArtifactsDirectory)' 
   # - job: 'Build_Game_Editor_And_Push_nupkg'
   #   variables:
   #     - group: ue4-build-var-win-group  # variable group
