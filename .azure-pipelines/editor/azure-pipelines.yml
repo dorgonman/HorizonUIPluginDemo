@@ -92,9 +92,15 @@ jobs:
           failOnStderr: true
 
         
+        # - task: DownloadPipelineArtifact@1
+        #   inputs:
+        #     buildType: 'current'
+        #     downloadPath: '$(System.ArtifactsDirectory)' 
         - task: DownloadPipelineArtifact@1
           inputs:
-            buildType: 'current'
+            buildType: 'specific'
+            pipeline: 'HorizonUIPluginDemo-Editor-CI-YML'
+            buildId: '4.22.0.284-1160'
             downloadPath: '$(System.ArtifactsDirectory)' 
 
         - powershell: |
@@ -147,7 +153,7 @@ jobs:
   #   #specificBuildWithTriggering: false # Optional
   #   #buildVersionToDownload: 'latest' # Required when buildType == Specific. Options: latest, latestFromBranch, specific
   #   #branchName: 'refs/heads/master' # Required when buildType == Specific && BuildVersionToDownload == LatestFromBranch
-  #   #buildId: # Required when buildType == Specific && BuildVersionToDownload == Specific
+  #   #buildId: # Required when buildType == Specific && BuildVersionToDownload == Specific 4.22.0.284-1161
   #   #tags: # Optional
   #   #artifactName: # Optional
   #   #itemPattern: '**' # Optional
