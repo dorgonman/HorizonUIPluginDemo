@@ -9,6 +9,8 @@ trigger:
     include:
       - Source/*
       - Plugins/*
+      - Content/*
+      - /*.uproject
 
 variables:
     - name: Pipeline.EngineVersion 
