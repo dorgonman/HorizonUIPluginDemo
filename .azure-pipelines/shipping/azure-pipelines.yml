@@ -34,73 +34,7 @@ resources:
 jobs:
     #- ${ if eq(variables['Pipeline.bBuildWin64'], 'true') }:
 
-    #*****************Build: windows-agent
-    - template: job/build.yml@templates
-      parameters:
-          name: 'Build_Win64_Plugin'
-          group: 'ue4-build-var-win-group'
-          pool: 'Default'
-          platform: 'win64'
-          target: 'plugin'
-          config: 'shipping'
+    - template: job/verify-plugin-build.yml@templates
 
 
-    - template: job/build.yml@templates
-      parameters:
-          name: 'Build_Android_Plugin'
-          group: 'ue4-build-var-win-group'
-          pool: 'Default'
-          platform: 'android'
-          target: 'plugin'
-          config: 'shipping'
-
-    - template: job/build.yml@templates
-      parameters:
-          name: 'Build_Win64_Standalone'
-          group: 'ue4-build-var-win-group'
-          pool: 'Default'
-          platform: 'win64'
-          target: 'standalone'
-          config: 'shipping'
-
-    - template: job/build.yml@templates
-      parameters:
-          name: 'Build_Android_Standalone'
-          group: 'ue4-build-var-win-group'
-          pool: 'Default'
-          platform: 'android'
-          target: 'standalone'
-          config: 'shipping'
-
-
-
-    # *****************Build: mac-agent
-
-    - template: job/build.yml@templates
-      parameters:
-          name: 'Build_Mac_Plugin'
-          group: 'ue4-build-var-mac-group'
-          pool: 'Default-MacOS'
-          platform: 'mac'
-          target: 'plugin'
-          config: 'shipping'
-
-    - template: job/build.yml@templates
-      parameters:
-          name: 'Build_IOS_Plugin'
-          group: 'ue4-build-var-mac-group'
-          pool: 'Default-MacOS'
-          platform: 'ios'
-          target: 'plugin'
-          config: 'shipping'
-    # - template: job/build.yml@templates
-    #   parameters:
-    #       name: 'Build_Mac_Standalone'
-    #       group: 'ue4-build-var-mac-group'
-    #       pool: 'Default-MacOS'
-    #       platform: 'mac'
-    #       target: 'standalone'
-    #       config: 'shipping'
-
-
-
+    #git push --mirror $(Parameters.github_push_mirror_url)
