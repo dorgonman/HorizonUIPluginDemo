@@ -1,16 +1,106 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+name: $(Date:yyyyMMdd).$(Rev:.r)
 
-pool:
-  vmImage: 'Ubuntu 16.04'
+trigger:
+  batch: true
+  branches:
+    include:
+      - master
+  paths:
+    include:
+      - Source/*
+      - Plugins/*
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+variables:
+    - name: Pipeline.EngineVersion 
+      value: '0.0.0.0'
+    - name: Pipeline.ProjectVersion
+      value: '0.0.0.0'
+    - name:  Pipeline.GameProjectRoot
+      value: '.'
+    - name: Pipeline.ArchivePath
+      value: '$(Pipeline.GameProjectRoot)/Intermediate/BuildArchive/'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+
+# ==================settable variable at queue time=============
+#   PipelineInput.bCleanSCM: true
+
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: UEHorizonBuildScript/azure-pipelines-template
+
+# verify-plugin-build
+jobs:
+    #- ${ if eq(variables['Pipeline.bBuildWin64'], 'true') }:
+
+    #*****************Build: windows-agent
+    - template: job/build.yml@templates
+      parameters:
+          name: 'Build_Win64_Plugin'
+          group: 'ue4-build-var-win-group'
+          pool: 'Default'
+          platform: 'win64'
+          target: 'plugin'
+          config: 'shipping'
+
+
+    - template: job/build.yml@templates
+      parameters:
+          name: 'Build_Android_Plugin'
+          group: 'ue4-build-var-win-group'
+          pool: 'Default'
+          platform: 'android'
+          target: 'plugin'
+          config: 'shipping'
+
+    - template: job/build.yml@templates
+      parameters:
+          name: 'Build_Win64_Standalone'
+          group: 'ue4-build-var-win-group'
+          pool: 'Default'
+          platform: 'win64'
+          target: 'standalone'
+          config: 'shipping'
+
+    - template: job/build.yml@templates
+      parameters:
+          name: 'Build_Android_Standalone'
+          group: 'ue4-build-var-win-group'
+          pool: 'Default'
+          platform: 'android'
+          target: 'standalone'
+          config: 'shipping'
+
+
+
+    # *****************Build: mac-agent
+
+    - template: job/build.yml@templates
+      parameters:
+          name: 'Build_Mac_Plugin'
+          group: 'ue4-build-var-mac-group'
+          pool: 'Default-MacOS'
+          platform: 'mac'
+          target: 'plugin'
+          config: 'shipping'
+
+    - template: job/build.yml@templates
+      parameters:
+          name: 'Build_IOS_Plugin'
+          group: 'ue4-build-var-mac-group'
+          pool: 'Default-MacOS'
+          platform: 'ios'
+          target: 'plugin'
+          config: 'shipping'
+    # - template: job/build.yml@templates
+    #   parameters:
+    #       name: 'Build_Mac_Standalone'
+    #       group: 'ue4-build-var-mac-group'
+    #       pool: 'Default-MacOS'
+    #       platform: 'mac'
+    #       target: 'standalone'
+    #       config: 'shipping'
+
+
+
