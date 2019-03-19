@@ -1,12 +1,12 @@
-![Azure Devops](https://hsgame.visualstudio.com/UE4HorizonPlugin/_apis/build/status/HorizonUIPluginDemo-CI)
+[![Build Status](https://hsgame.visualstudio.com/UE4HorizonPlugin/_apis/build/status/HorizonUI/HorizonUIPluginDemo-Shipping-CI?branchName=master)](https://hsgame.visualstudio.com/UE4HorizonPlugin/_build/latest?definitionId=24&branchName=master)
 
 public feed: nuget.org  
 
-[![nuget.org package in feed in ](https://img.shields.io/nuget/v/UE4Editor-HorizonUIPluginDemo.svg)](https://www.nuget.org/packages/UE4Editor-HorizonUIPluginDemo/)
+[![nuget.org package in feed in ](https://img.shields.io/nuget/v/HorizonUIPluginDemo.svg)](https://www.nuget.org/packages/HorizonUIPluginDemo/)
 
 private feed(only for internal use): 
 
-[![Azure Artifacts package in  feed in ](https://hsgame.feeds.visualstudio.com/_apis/public/Packaging/Feeds/d5ed5eb7-dd62-4af0-a6a4-8862be2b9f7f/Packages/43b17fa6-c52b-479b-a073-848d4d3073a1/Badge)](https://hsgame.visualstudio.com/_Packaging?feed=d5ed5eb7-dd62-4af0-a6a4-8862be2b9f7f&package=43b17fa6-c52b-479b-a073-848d4d3073a1&preferRelease=true&_a=package)
+[![HorizonUIPluginDemo package in UE4HorizonPlugin feed in Azure Artifacts](https://hsgame.feeds.visualstudio.com/_apis/public/Packaging/Feeds/319fdc64-73ff-4910-b3b8-2ee206a67a49/Packages/bcb204d6-38c1-4f26-8e5d-5cf6904a10f9/Badge)](https://hsgame.visualstudio.com/UE4HorizonPlugin/_packaging?_a=package&feed=319fdc64-73ff-4910-b3b8-2ee206a67a49&package=bcb204d6-38c1-4f26-8e5d-5cf6904a10f9&preferRelease=true)
 
 
 
@@ -22,7 +22,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
   
 ----------------------------------------------
               HorizonUIPlugin
-                 4.21.0
+                 4.22.0
          http://dorgon.horizon-studio.net
           	dorgonman@hotmail.com
 ----------------------------------------------
@@ -31,7 +31,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 System Requirements
 -----------------------
 
-Supported UnrealEngine version: 4.11-4.21
+Supported UnrealEngine version: 4.11-4.22
  
 
 -----------------------
