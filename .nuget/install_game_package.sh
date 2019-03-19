@@ -18,9 +18,26 @@ pushd ${OUTPUT_DIRECTORY}/${PACKAGE_NAME}
 popd
 
 
-BASE_PATH=$(cd "$(dirname "$0")"; pwd)
-SCRIPT_PATH=$(cd ${BASE_PATH}/../horizon_ci_scripts/ci_scripts/sh/nuget/; pwd)
-pushd ${SCRIPT_PATH}
-./install_package.sh
-popd
+if [ -n "${PACKAGE_VERISON}" ]; then
+    INSTALL_VERSION="-Version ${PACKAGE_VERISON}"
 
+else
+    INSTALL_VERSION=' '
+    # echo "[Error] Can't find nuget version tag here:"
+    # echo "[Error] ${OUTPUT_DIRECTORY}/${PACKAGE_NAME}"
+    # pushd ${OUTPUT_DIRECTORY}/${PACKAGE_NAME}  > /dev/null
+    #     info=$(git show --oneline -s)
+    #     echo "[Error] ${info}"
+    # popd > /dev/null
+    # exit 1 
+fi
+
+cmd=" \
+    nuget install ${PACKAGE_NAME} ${INSTALL_VERSION} \
+    -OutputDirectory ${OUTPUT_DIRECTORY} -PackageSaveMode nuspec \
+    -Source ${FEED_NAME} \
+    -ExcludeVersion -ForceEnglishOutput  \
+    "
+#-Verbosity detailed
+echo ${cmd}
+eval ${cmd} 

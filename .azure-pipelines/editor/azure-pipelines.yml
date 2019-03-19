@@ -22,8 +22,6 @@ variables:
       value: '$(Pipeline.GameProjectRoot)/Intermediate/BuildArchive/'
     - name: Pipeline.bNugetVersionAlreadyPushed
       value: 'false'
-    - name: Pipeline.NuspecFilePath
-      value: '.nuget/HorizonUIPluginDemo.nuspec'
     - name: Pipeline.NugetLocalFeedPath
       value: '\\\\hsgame\\UE4-Packaged-build\\nuget\\hsgame-local\\HorizonPlugin'
     - name: Pipeline.NugetAzureDevopsFeedName
