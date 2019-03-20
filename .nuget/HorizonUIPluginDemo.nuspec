@@ -9,7 +9,7 @@
     <projectUrl>https://github.com/dorgonman/HorizonUIPluginDemo</projectUrl>
     <iconUrl>https://i.imgur.com/8dfwtEQ.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>HorizonUIPlugin Demo Project Editor dll, no source code, only for Win64 editor</description>
+    <description>HorizonUIPlugin Demo Project Editor dll, no source code, only for Win64 and mac editor</description>
     <releaseNotes>https://github.com/dorgonman/HorizonUIPluginDemo</releaseNotes>
     <copyright>Copyright 2018</copyright>
     <tags>Native Cpp UE4 Editor Demo</tags>
