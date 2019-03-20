@@ -16,8 +16,9 @@ master branch may be unstable since it is in development, please switch to tags,
 
 How to Run Demo Project before purchase:(Only for Win64 editor build, no source code)
 1. [Download nuget executable](https://www.nuget.org/downloads) and copy the exe into C:\Windows\system32\ or any place listed in your PATH environment.
-2. Double click install_package_from_nuget.org.bat, and check if UE4Editor-*.dll are installed to Binaries\Win64 and Plugins\HorizonUIPlugin\Binaries\Win64\
-3. Double click HorizonUIPluginDemo.uproject  
+2. Install [Git for Windows](https://gitforwindows.org/)
+3. Double click install_package_from_nuget.org.sh, and check if UE4Editor-*.dll are installed to Binaries\Win64 and Plugins\HorizonUIPlugin\Binaries\Win64\
+4. Double click HorizonUIPluginDemo.uproject  
 
   
 ----------------------------------------------
