@@ -1,4 +1,4 @@
-$projectRoot=$(Resolve-Path -Path "../../../")
+$projectRoot=$(Resolve-Path -Path "$PSScriptRoot\..\..\..\")
 
 . "$projectRoot\ue_ci_scripts\function\ps1\az\devops.ps1"
 

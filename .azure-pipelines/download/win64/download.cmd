@@ -1,0 +1,1 @@
+Powershell -executionpolicy remotesigned -File download.ps1
