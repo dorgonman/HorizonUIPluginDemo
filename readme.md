@@ -205,6 +205,8 @@ email: dorgonman@hotmail.com
  Version History
 -----------------------
 
+*4.22.1  
+	BugFix: Size to Content not working
 *4.22.0  
 
 	NEW: Implement HorizonDesignableUserWidget, HorizonUserWidget and HorizonButtonUserWidget
