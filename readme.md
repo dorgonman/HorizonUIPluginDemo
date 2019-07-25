@@ -219,7 +219,7 @@ email: dorgonman@hotmail.com
 
 	NEW: [UHorizonDialogueMsgTextBlock] Implement DefaultButtonStyleWidget for href  
 
-	NEW: [UHorizonDialogueMsgTextBlock] implement Wait for Dialogue Segment, ex: <text wait="2.5">1234</text> will wail 2.5 second before display msg.    	
+	NEW: [UHorizonDialogueMsgTextBlock] implement Wait for Dialogue Segment, ex: <text wait="2.5">1234</text> will wait 2.5 second before display next msg block.    	
 	BugFix: href DefaultButtonStyleWidgetClass should not apply to other block  
 
 	BugFix: [UHorizonDialogueMsgTextBlock] SetTextAndRebuildDialogue Should Build Text only after we get correct CachedGeometry  
