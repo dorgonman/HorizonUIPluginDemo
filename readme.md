@@ -205,6 +205,10 @@ email: dorgonman@hotmail.com
  Version History
 -----------------------
 
+*4.23.0  
+
+	BugFix: Size to Content not working  
+
 *4.22.1  
 
 	BugFix: Size to Content not working  
