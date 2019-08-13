@@ -207,7 +207,9 @@ email: dorgonman@hotmail.com
 
 *4.23.0  
 
-	BugFix: Size to Content not working  
+	BugFix: Size to Content not working   
+	
+	BugFix: Fix using Flipbook in UHorizonDialogueMsgTextBlock  
 
 *4.22.1  
 
