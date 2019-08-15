@@ -211,6 +211,8 @@ email: dorgonman@hotmail.com
 	
 	BugFix: Fix using Flipbook in UHorizonDialogueMsgTextBlock  
 
+    Bugfix: [UHorizonDialogueMsgTextBlock] remove DefaultButtonStyleWidgetClass
+
 *4.22.1  
 
 	BugFix: Size to Content not working  
