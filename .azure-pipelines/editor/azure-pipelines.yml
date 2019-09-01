@@ -46,6 +46,7 @@ jobs:
           group: 'ue4-build-var-win-group'
           pool: 'Default'
           platform: 'win64'
+          bRunAutomationTest: true
 
     - template: job/build-game-editor.yml@templates
       parameters:
