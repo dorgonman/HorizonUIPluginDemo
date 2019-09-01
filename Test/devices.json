@@ -1,0 +1,17 @@
+[
+	{
+		"Name" : "Dorgon_Win64",
+		"Platform" : "Win64",
+		"Address" : "192.168.228.97",
+		"Role" : "Client",
+		"Available" : "00:00-24:00"
+	},
+	{
+		"Name" : "Dorgon_Android",
+		"Platform" : "Android",
+		"Address" : "192.168.100.8",
+		"Role" : "Client",
+		"Available" : "00:00-24:00"
+	}
+	
+]

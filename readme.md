@@ -11,6 +11,8 @@ private feed(only for internal use):
 [![HorizonUIPluginDemo package in UE4HorizonPlugin feed in Azure Artifacts](https://feeds.dev.azure.com/hsgame/_apis/public/Packaging/Feeds/319fdc64-73ff-4910-b3b8-2ee206a67a49/Packages/bcb204d6-38c1-4f26-8e5d-5cf6904a10f9/Badge)](https://dev.azure.com/hsgame/UE4HorizonPlugin/_packaging?_a=package&feed=319fdc64-73ff-4910-b3b8-2ee206a67a49&package=bcb204d6-38c1-4f26-8e5d-5cf6904a10f9&preferRelease=true)
 
 
+[Automation Test Result](http://horizon-studio.net/ue4/HorizonUIPluginDemo_test/)
+
 
 Note: 
 
