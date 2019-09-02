@@ -10,6 +10,7 @@ public class HorizonUIPluginDemo : ModuleRules
         PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
         PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 		PublicDependencyModuleNames.AddRange(new string[] { "UMG", "HorizonUI" });
+        PrivateDependencyModuleNames.AddRange(new string[] { "Gauntlet"});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {   });
 
