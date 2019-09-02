@@ -7,3 +7,6 @@
 [submodule "horizon_ci_scripts"]
 	path = horizon_ci_scripts
 	url = https://hsgame.visualstudio.com/UEHorizonBuildScript/_git/horizon_ci_scripts
+[submodule "Test/Report"]
+	path = Test/Report
+	url = https://hsgame.visualstudio.com/UE4HorizonPlugin/_git/HorizonUIPluginDemo_TestReport
