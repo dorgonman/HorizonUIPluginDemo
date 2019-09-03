@@ -12,7 +12,7 @@ using System.IO.Compression;
 namespace UE4Game
 {
 
-	public class HorizonUIPluginDemoDefaultTestConfig : UE4TestConfig
+	public class HorizonUIPluginDemoTestConfig : UE4TestConfig
 	{
 		/// <summary>
 		/// Map to use
@@ -36,16 +36,16 @@ namespace UE4Game
 	
 		}
 	}
-	public class HorizonUIPluginDemoDefaultTest : UnrealTestNode<HorizonUIPluginDemoDefaultTestConfig>
+	public class HorizonUIPluginDemoTest : UnrealTestNode<HorizonUIPluginDemoTestConfig>
 	{
-		public HorizonUIPluginDemoDefaultTest(UnrealTestContext InContext) : base(InContext)
+		public HorizonUIPluginDemoTest(UnrealTestContext InContext) : base(InContext)
 		{
 		}
 
-		public override HorizonUIPluginDemoDefaultTestConfig GetConfiguration()
+		public override HorizonUIPluginDemoTestConfig GetConfiguration()
 		{
 			// just need a single client
-			HorizonUIPluginDemoDefaultTestConfig Config = base.GetConfiguration();
+			HorizonUIPluginDemoTestConfig Config = base.GetConfiguration();
 			Config.MaxDuration = 5 * 600;		// 5min should be plenty
 			int ClientCount = Context.TestParams.ParseValue("numclients", 1);
 			bool WithServer = Context.TestParams.ParseParam("server");
@@ -71,7 +71,7 @@ namespace UE4Game
 
 			//var SnapshotSummary = new UnrealSnapshotSummary<UnrealHealthSnapshot>(ClientArtifacts.AppInstance.StdOut);
 
-			//Log.Info("HorizonUIPluginDemoDefaultTest Performance Report");
+			//Log.Info("HorizonUIPluginDemoTest Performance Report");
 			//Log.Info(SnapshotSummary.ToString());
 
 			base.CreateReport(Result, Contex, Build, Artifacts, ArtifactPath);
@@ -90,7 +90,7 @@ namespace UE4Game
 			//	if (Directory.Exists(FPSChartsDir))
 			//	{
 			//		ZipFile.CreateFromDirectory(FPSChartsDir, FpsChartsZipPath);
-   //                 string DestFileName = "HorizonUIPluginDemoDefaultTest-" + PlatformString + ".zip";
+   //                 string DestFileName = "HorizonUIPluginDemoTest-" + PlatformString + ".zip";
    //                 string DestZipFile = Path.Combine(UploadFolder, DestFileName);
 			//		File.Copy(FpsChartsZipPath, DestZipFile);
 			//	}

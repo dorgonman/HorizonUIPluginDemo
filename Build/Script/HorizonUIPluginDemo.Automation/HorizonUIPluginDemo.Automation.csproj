@@ -63,7 +63,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="HelloWorld.Automation.cs" />
-    <Compile Include="HorizonUIPluginDemoDefaultTest.cs" />
+    <Compile Include="HorizonUIPluginDemoTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
