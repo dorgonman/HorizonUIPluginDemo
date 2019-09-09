@@ -21,7 +21,9 @@ namespace UE4Game
 		
 		[AutoParam]
 		public string AdditionalCommandLine = "";
-
+		
+		[AutoParam]
+		public string ExecCmds = "automation SetMinimumPriority Critical;List;RunTests Plugin+Project.FunctionalTests;Quit";
         
 
         /// <summary>
@@ -31,6 +33,8 @@ namespace UE4Game
         public override void ApplyToConfig(UnrealAppConfig AppConfig, UnrealSessionRole ConfigRole, IEnumerable<UnrealSessionRole> OtherRoles)
 		{
 			base.ApplyToConfig(AppConfig, ConfigRole, OtherRoles);
+
+			AppConfig.CommandLine += "-ExecCmds=\"" + ExecCmds + "\"";
 			AppConfig.CommandLine += AdditionalCommandLine;
 			
 	
