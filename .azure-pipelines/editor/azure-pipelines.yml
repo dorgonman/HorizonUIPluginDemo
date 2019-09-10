@@ -28,8 +28,7 @@ variables:
       value: 'UE4HorizonPlugin'
     - name: Pipeline.NugetOutputDirectory
       value: '$(System.ArtifactsDirectory)/Nuget'
-    - name: Pipeline.TestAutomation.LocalReportPath
-      value: 'Test/HorizonUIPluginDemo_test'
+
 
 #scp -r C:/inetpub/wwwroot/${PROJECT_NAME}_test horizor6@horizon-studio.net:/home1/horizor6/www/ue4/
 # ==================settable variable at queue time=============
