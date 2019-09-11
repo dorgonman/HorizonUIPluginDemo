@@ -1,9 +1,9 @@
 {
 	"name": "FunctionalUIScreenshotTest_Tuto02_RichTextSimple",
 	"context": "UIScreenshotTestMap",
-	"notes": "Tuto01",
-	"id": "D721448A462BAF4B29E6A49C980803C3",
-	"commit": "8243293",
+	"notes": "",
+	"id": "F11BD2EE4260B3099CB3EBA1BA4794BF",
+	"commit": "",
 	"width": 1920,
 	"height": 1080,
 	"rhi": "D3D11",
