@@ -37,6 +37,8 @@ jobs:
     #- ${ if eq(variables['Pipeline.bBuildWin64'], 'true') }:
 
     - template: job/verify-plugin-build.yml@templates
+      parameters: 
+          bRunAutomationTest: true
 
     - template: job/upload-sonarqube.yml@templates
       parameters:
