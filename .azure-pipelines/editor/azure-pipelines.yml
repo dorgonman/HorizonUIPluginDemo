@@ -12,22 +12,14 @@ trigger:
       - ./*.uproject
 
 variables:
-    - name: Pipeline.EngineVersion 
-      value: '0.0.0.0'
-    - name: Pipeline.ProjectVersion
-      value: '0.0.0.0'
     - name:  Pipeline.GameProjectRoot
       value: '.'
     - name: Pipeline.ArchivePath
       value: '$(Pipeline.GameProjectRoot)/Intermediate/BuildArchive/'
-    - name: Pipeline.bNugetVersionAlreadyPushed
-      value: 'false'
     - name: Pipeline.NugetLocalFeedPath
       value: '\\\\hsgame\\UE4-Packaged-build\\nuget\\hsgame-local\\HorizonPlugin'
     - name: Pipeline.NugetAzureDevopsFeedName
       value: 'UE4HorizonPlugin'
-    - name: Pipeline.NugetOutputDirectory
-      value: '$(System.ArtifactsDirectory)/Nuget'
 
 
 #scp -r C:/inetpub/wwwroot/${PROJECT_NAME}_test horizor6@horizon-studio.net:/home1/horizor6/www/ue4/
