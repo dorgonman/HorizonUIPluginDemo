@@ -25,8 +25,8 @@ echo packageName: ${packageName}
 echo FEED_NAME: ${FEED_NAME}
 pushd ${projectRoot}
     git fetch --prune --tags origin
-    git tag -l --points-at HEAD
-    packageVersion=$(git tag -l --points-at HEAD | grep -a "editor" | grep -Eo '[.0-9]*{1,9}') || true
+	git describe --tags --abbrev=0 --match=editor/* 
+	packageVersion=$(git describe --tags --abbrev=0 --match=editor/*  | grep -a "editor" | grep -Eo '[.0-9]*{1,9}') || true
 popd
 
 
