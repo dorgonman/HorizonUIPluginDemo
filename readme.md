@@ -27,7 +27,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
   
 ----------------------------------------------
               HorizonUIPlugin
-                 4.23.0
+                 4.24.0
          http://dorgon.horizon-studio.net
           	dorgonman@hotmail.com
 ----------------------------------------------
@@ -36,7 +36,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 System Requirements
 -----------------------
 
-Supported UnrealEngine version: 4.11-4.23
+Supported UnrealEngine version: 4.11-4.24
  
 
 -----------------------
@@ -206,6 +206,18 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+
+
+*4.24.0  
+
+	New: [HorizonRadioButton]   
+
+	New: [UHorizonDialogueMsgTextBlock] Implement CharAdvancedDelegate, so user can add the typewriter sound in this callback.  
+
+
+	BugFix: [UHorizonDialogueMsgTextBlock] Should not call AddBackgroundButton if segInfo.HypertextReference not set
+	
+
 
 *4.23.0  
 

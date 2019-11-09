@@ -9,6 +9,10 @@ public class HorizonUIPluginDemoEditorTarget : TargetRules
     {
 		Type = TargetType.Editor;
         ExtraModuleNames.AddRange(new string[] { "HorizonUIPluginDemo" });
+        DefaultBuildSettings = BuildSettingsVersion.V2;
+        bUsePCHFiles = false;
+        bUseSharedPCHs = false;
+        bUseUnityBuild = false;
     }
 
 }

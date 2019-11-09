@@ -4,9 +4,9 @@
 
 #pragma once
 
-#include "HorizonDialogueMsgTextBlock.h"
-#include "HorizonFlipbookWidget.h"
-#include "HorizonWidgetFunctionLibrary.h"
+#include "Widget/Components/HorizonDialogueMsgTextBlock.h"
+#include "Widget/Components/HorizonFlipbookWidget.h"
+#include "Widget/HorizonWidgetFunctionLibrary.h"
 #include "MyWidgetFunctionLibrary.generated.h"
 
 
