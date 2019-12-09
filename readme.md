@@ -165,7 +165,7 @@ example 7: Custom Event && Callback
 Please Check WidgetBlueprint'/Game/UMG/DialogueMsgTextTest/Tuto06_EventTrigger.Tuto06_EventTrigger'
 
 ```
-<text eventName="Seg1">This is simple test: </text>
+<text eventName="Seg1", eventPayload="{"A":"Data1", "B":"Data2"}">This is simple test: </text>
 <text eventName="Seg2">12345678910 
 11121314151617181920</text>
 ```  
@@ -179,7 +179,7 @@ Technical Details
 List of Modules:
 HorizonUI (Runtime)
 Intended Platform: All Platforms
-Platforms Tested: Win32, Android
+Platforms Tested: Win64, Android
 Currently has two widget implemented:
 	1. HorizonFlipbookWidget: This widget support using PaperFlipbook directly in UMG!
 	2. HorizonDialogueMsgTextBlock: Combine both rich text and dialogue text function in this widget! 
@@ -214,6 +214,9 @@ email: dorgonman@hotmail.com
 
 	New: [UHorizonDialogueMsgTextBlock] Implement CharAdvancedDelegate, so user can add the typewriter sound in this callback.  
 
+	New: [UHorizonDialogueMsgTextBlock] Add eventPayload for custom evnet(see example 7)
+
+	New: [UHorizonDialogueMsgTextBlock] Use CreateDialogueImage, CreateDialogueFlipbook, CreateDialogueTextBlock instead of NewObject for each DialogueBlockInfo, so it can be customizable in child class.  
 
 	BugFix: [UHorizonDialogueMsgTextBlock] Should not call AddBackgroundButton if segInfo.HypertextReference not set
 	
