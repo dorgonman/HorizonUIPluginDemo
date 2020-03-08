@@ -15,8 +15,6 @@ trigger:
 variables:
     - name:  Pipeline.GameProjectRoot
       value: '.'
-    - name: Pipeline.ArchivePath
-      value: '$(Pipeline.GameProjectRoot)/Intermediate/BuildArchive/'
 
 
 # ==================settable variable at queue time=============
