@@ -16,7 +16,7 @@ private feed(only for internal use):
 
 Note: 
 
-master branch may be unstable since it is in development, please switch to tags, for example: editor/hsgame/4.23.0.290
+master branch may be unstable since it is in development, please switch to tags, for example: editor/hsgame/4.25.0.290
 
 How to Run Demo Project before purchase:(Only for Win64 editor build, no source code)
 1. [Download nuget executable](https://www.nuget.org/downloads) and copy the exe into C:\Windows\system32\ or any place listed in your PATH environment.
@@ -27,7 +27,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
   
 ----------------------------------------------
               HorizonUIPlugin
-                 4.24.0
+                 4.25.0
          http://dorgon.horizon-studio.net
           	dorgonman@hotmail.com
 ----------------------------------------------
@@ -36,7 +36,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 System Requirements
 -----------------------
 
-Supported UnrealEngine version: 4.11-4.24
+Supported UnrealEngine version: 4.11-4.25
  
 
 -----------------------
@@ -206,6 +206,29 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+*4.25.0  
+Update to 4.25
+
+	New: [UHorizonDialogueMsgTextBlock] Move semantics version of SetTextAndRebuildDialogue
+
+	New: [UHorizonWidgetFunctionLibrary] GetUserIndex
+
+	New: [UHorizonWidgetFunctionLibrary] IsChildWidget
+
+	New: [UHorizonWidgetFunctionLibrary] Implement ContainWidgetType
+
+	New: [HorizonWidgetFunctionLibrary] GetInputMode
+
+	New: [UHorizonWidgetFunctionLibrary] Implement ContainWidgetType
+
+	New: [UHorizonWidgetFunctionLibrary] ContainWidgetType
+
+	New: Implement UHorizonButtonUserWidget::NativeOnFocusReceived for Button_Main focus
+
+	BugFix: bFocusOnHovered should trigger OnButtonFocusDelegate && OnButtonFocusLostDelegate
+
+	New: Implement HorizonTileView
+
 
 
 *4.24.0  
