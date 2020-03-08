@@ -57,4 +57,4 @@ jobs:
           platform: 'win64'
           dependsOn:
             - 'Build_Win64_GameEditor'
-            - 'Build_Mac_GameEditor'
+            #- 'Build_Mac_GameEditor'
