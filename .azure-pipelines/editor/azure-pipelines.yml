@@ -42,12 +42,12 @@ jobs:
           platform: 'win64'
           bRunAutomationTest: true
 
-    # - template: job/build-game-editor.yml@templates
-    #   parameters:
-    #       name: 'Build_Mac_GameEditor'
-    #       group: 'ue4-build-var-mac-group'
-    #       pool: 'Default-MacOS'
-    #       platform: 'mac'
+    - template: job/build-game-editor.yml@templates
+      parameters:
+          name: 'Build_Mac_GameEditor'
+          group: 'ue4-build-var-mac-group'
+          pool: 'Default-MacOS'
+          platform: 'mac'
 
     - template: job/create-and-push-nuget-package.yml@templates
       parameters:
