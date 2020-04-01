@@ -17,7 +17,8 @@ public class HorizonUIPluginDemo : ModuleRules
 		PrivateDependencyModuleNames.AddRange(new string[] {   });
 
 
-		string ProjectPath = Path.GetFullPath(Path.Combine(ModuleDirectory, "../../../../"));
+		string ProjectPath = Path.GetFullPath(Path.Combine(ModuleDirectory, "../../"));
+		Log.TraceInformation(ProjectPath);
 		if(Target.ProjectFile != null)
 		{
 			ProjectPath = Path.GetDirectoryName(Target.ProjectFile.ToString());
