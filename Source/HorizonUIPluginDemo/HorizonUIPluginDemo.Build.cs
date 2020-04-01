@@ -18,14 +18,13 @@ public class HorizonUIPluginDemo : ModuleRules
 
 
 		string ProjectPath = Path.GetFullPath(Path.Combine(ModuleDirectory, "../../"));
-		Log.TraceInformation(ProjectPath);
 		if(Target.ProjectFile != null)
 		{
 			ProjectPath = Path.GetDirectoryName(Target.ProjectFile.ToString());
 
 		}
 
-		AdditionalPropertiesForReceipt.Add("AndroidPlugin", Path.Combine(ProjectPath, "Source", "Game_UPL.xml"));
+		AdditionalPropertiesForReceipt.Add("AndroidPlugin", Path.Combine(ProjectPath, "Source", "Game_APL.xml"));
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
