@@ -1,6 +1,8 @@
 // Created by dorgon, all right reserved.
-
+using System;
+using System.IO;
 using UnrealBuildTool;
+using Tools.DotNETCommon;
 
 public class HorizonUIPluginDemo : ModuleRules
 {
@@ -13,6 +15,16 @@ public class HorizonUIPluginDemo : ModuleRules
         PrivateDependencyModuleNames.AddRange(new string[] { "Gauntlet"});
 
 		PrivateDependencyModuleNames.AddRange(new string[] {   });
+
+
+		string ProjectPath = Path.GetFullPath(Path.Combine(ModuleDirectory, "../../../../"));
+		if(Target.ProjectFile != null)
+		{
+			ProjectPath = Path.GetDirectoryName(Target.ProjectFile.ToString());
+
+		}
+
+		AdditionalPropertiesForReceipt.Add("AndroidPlugin", Path.Combine(ProjectPath, "Source", "Game_UPL.xml"));
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });

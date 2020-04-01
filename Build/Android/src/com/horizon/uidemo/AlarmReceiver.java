@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.YourCompany.HorizonUIPluginDemo;
+package com.horizon.uidemo;
 
 import com.google.android.vending.expansion.downloader.DownloaderClientMarshaller;
 

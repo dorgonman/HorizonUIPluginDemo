@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- XML -->
+<root xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- Gradle Properties -->
+<gradleProperties>
+<insert>
+ANDROID_BUILD_TOOLS_GRADLE_VERSION=com.android.tools.build:gradle:3.5.3
+</insert>
+</gradleProperties>
+</root>
