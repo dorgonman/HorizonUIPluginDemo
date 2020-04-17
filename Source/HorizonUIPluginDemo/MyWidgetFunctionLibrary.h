@@ -17,13 +17,6 @@ private:
 public:
 
 
-	UFUNCTION(BlueprintCallable, Category = "HorizonPlugin|WidgetHelper")
-	static void SetFlipbook(UHorizonFlipbookWidget* flipbookWidget, const TArray<FVector2D>& sourceUV,
-			const TArray<FVector2D>& sourceSize)
-	{
-		flipbookWidget->SetFlipbookSourceUV(sourceUV);
-		flipbookWidget->SetFlipbookSourceSize(sourceSize);
-	};
 
 
 	UFUNCTION(BlueprintCallable, Category = "HorizonPlugin")
