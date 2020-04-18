@@ -206,6 +206,7 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+
 *4.25.0  
 Update to 4.25
 
@@ -223,11 +224,17 @@ Update to 4.25
 
 	New: [UHorizonWidgetFunctionLibrary] ContainWidgetType
 
-	New: Implement UHorizonButtonUserWidget::NativeOnFocusReceived for Button_Main focus
+	New: [UHorizonButtonUserWidget] Implement UHorizonButtonUserWidget::NativeOnFocusReceived for Button_Main focus
 
-	BugFix: bFocusOnHovered should trigger OnButtonFocusDelegate && OnButtonFocusLostDelegate
+	BugFix: [UHorizonButtonUserWidget] bFocusOnHovered should trigger OnButtonFocusDelegate && OnButtonFocusLostDelegate
 
-	New: Implement HorizonTileView
+	New: [HorizonTileView]
+
+	Refactor: [HorizonFlipbookWidget] Inherited from UImage instead of UCanvasPanel
+
+	Refactor: [UHorizonFlipbookWidget] Use SlateAtlasData for SourceUV and SourceSize, so we don't need to bake at editor time anymore
+
+
 
 
 
