@@ -220,10 +220,6 @@ Update to 4.25
 
 	New: [HorizonWidgetFunctionLibrary] GetInputMode
 
-	New: [UHorizonWidgetFunctionLibrary] Implement ContainWidgetType
-
-	New: [UHorizonWidgetFunctionLibrary] ContainWidgetType
-
 	New: [UHorizonButtonUserWidget] Implement UHorizonButtonUserWidget::NativeOnFocusReceived for Button_Main focus
 
 	BugFix: [UHorizonButtonUserWidget] bFocusOnHovered should trigger OnButtonFocusDelegate && OnButtonFocusLostDelegate
