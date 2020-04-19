@@ -22,9 +22,15 @@ variables:
       value: 'UE4HorizonPlugin'
 
 
-#scp -r C:/inetpub/wwwroot/${PROJECT_NAME}_test horizor6@horizon-studio.net:/home1/horizor6/www/ue4/
-# ==================settable variable at queue time=============
-#   PipelineInput.bCleanSCM: true
+parameters:
+  - name: bCleanSCM
+    displayName: Pipeline bCleanSCM
+    type: boolean
+    default: false
+    values:
+    - true
+    - false
+
 
 resources:
   repositories:
@@ -32,15 +38,16 @@ resources:
       type: git
       name: UEHorizonBuildScript/azure-pipelines-template
 
-jobs:
-    #- ${ if eq(variables['Pipeline.bBuildWin64'], 'true') }:
+stages:
+  - stage: Build
+    jobs:
     - template: job/build-game-editor.yml@templates
       parameters:
           name: 'Build_Win64_GameEditor'
           group: 'ue4-build-var-win-group'
           pool: 'Default'
           platform: 'win64'
-          bRunAutomationTest: true
+          bCleanSCM: ${{ parameters.bCleanSCM }}
 
     - template: job/build-game-editor.yml@templates
       parameters:
@@ -48,13 +55,22 @@ jobs:
           group: 'ue4-build-var-mac-group'
           pool: 'Default-MacOS'
           platform: 'mac'
+          bCleanSCM: ${{ parameters.bCleanSCM }}
+    
+  - stage: Test
+    jobs: 
+    - template: job/upload-sonarqube.yml@templates
+      parameters:
+          name: 'Upload_SonarQube'
+          group: 'ue4-build-var-win-group'
+          pool: 'Default'
+          platform: 'win64'
 
+  - stage: Deploy
+    jobs:
     - template: job/create-and-push-nuget-package.yml@templates
       parameters:
           name: 'Create_And_Push_Nuget_Package'
           group: 'ue4-build-var-win-group'
           pool: 'Default'
           platform: 'win64'
-          dependsOn:
-            - 'Build_Win64_GameEditor'
-            - 'Build_Mac_GameEditor'
