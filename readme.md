@@ -230,6 +230,9 @@ Update to 4.25
 
 	Refactor: [UHorizonFlipbookWidget] Use SlateAtlasData for SourceUV and SourceSize, so we don't need to bake at editor time anymore
 
+ 	[Refactor][UHorizonFlipbookWidget] Expose Tick to public
+
+ 	[BugFix][HorizonFlipbookWidget] ResetAnimation should set to first frame
 
 
 
