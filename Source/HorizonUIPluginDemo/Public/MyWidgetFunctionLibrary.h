@@ -7,6 +7,7 @@
 #include "Widget/Components/HorizonDialogueMsgTextBlock.h"
 #include "Widget/Components/HorizonFlipbookWidget.h"
 #include "Widget/HorizonWidgetFunctionLibrary.h"
+#include "Components/Image.h"
 #include "MyWidgetFunctionLibrary.generated.h"
 
 
@@ -52,9 +53,27 @@ public:
 	};
 
 
+	UFUNCTION(BlueprintCallable, Category = "HorizonPlugin")
+	static void SetImage(UImage* InImage, const FSoftObjectPath& InResourceObjectPath)
+	{
+		if (InImage)
+		{
+			auto pObj = InResourceObjectPath.TryLoad();
+			if (pObj)
+			{
+				FSlateBrush newBrush = InImage->Brush;
+				newBrush.SetResourceObject(pObj);
+				InImage->SetBrush(newBrush);
 
-
+			}
+			else
+			{
+				InImage->SetVisibility(ESlateVisibility::Collapsed);
+			}
+		}
+	}
 
 
 
 };
+
