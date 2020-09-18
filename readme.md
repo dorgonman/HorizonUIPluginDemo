@@ -5,12 +5,7 @@
 public feed: nuget.org  
 
 [![nuget.org package in feed in ](https://img.shields.io/nuget/v/HorizonUIPluginDemo.svg)](https://www.nuget.org/packages/HorizonUIPluginDemo/)
-
-private feed(only for internal use): 
-
-[![HorizonUIPluginDemo package in UE4HorizonPlugin feed in Azure Artifacts](https://feeds.dev.azure.com/hsgame/_apis/public/Packaging/Feeds/319fdc64-73ff-4910-b3b8-2ee206a67a49/Packages/bcb204d6-38c1-4f26-8e5d-5cf6904a10f9/Badge)](https://dev.azure.com/hsgame/UE4HorizonPlugin/_packaging?_a=package&feed=319fdc64-73ff-4910-b3b8-2ee206a67a49&package=bcb204d6-38c1-4f26-8e5d-5cf6904a10f9&preferRelease=true)
-
-
+  
 [Automation Test Result](http://horizon-studio.net/ue4/HorizonUIPluginDemo_TestReport/)
 
 
@@ -27,7 +22,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
   
 ----------------------------------------------
               HorizonUIPlugin
-                 4.25.0
+                 4.26.0
          http://dorgon.horizon-studio.net
           	dorgonman@hotmail.com
 ----------------------------------------------
@@ -36,7 +31,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 System Requirements
 -----------------------
 
-Supported UnrealEngine version: 4.11-4.25
+Supported UnrealEngine version: 4.11-4.26
  
 
 -----------------------
@@ -172,6 +167,75 @@ Please Check WidgetBlueprint'/Game/UMG/DialogueMsgTextTest/Tuto06_EventTrigger.T
 ![Custome Event Usage](https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/master/ScreenShot/HorizonUI_Screenshot9.png)
 
 
+
+example 7: RubyText  
+
+```
+<text style="test">
+<text>Test &nbsp;</text>
+<text ruby.text="furigana">RubyText</text>
+<br/>
+
+<text ruby.text="ふ">振</text>
+<text>り</text>
+<text ruby.text="がな">仮名</text>
+<br/>
+
+<text ruby.text="ㄨㄛˇㄕˋ">我是</text>
+<text ruby.text="變態">紳士</text>
+</text>
+```  
+
+
+
+
+example 8: Decorator  
+
+We can implement our own logic in Decorator, ex: Load InputIcon from DataTable.
+  
+```
+<text> Please press &nbsp;</text>
+<img eventPayload="ConfirmIcon" padding-top="-15"/>
+<text> &nbsp; to start </text>
+```  
+![Decorator1](https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/master/ScreenShot/Decorator/Decorator1.png)  
+
+![Decorator2](https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/master/ScreenShot/Decorator/Decorator2.png)  
+
+![Decorator3](https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/master/ScreenShot/Decorator/Decorator3.png)  
+
+  
+  
+example 9: New Page Tag  
+  
+  
+```
+<p style="Page1">
+<text>Page1 Test </text>
+<br/>
+<text>Page1.1 </text>
+<br/>
+<text>Page1.2 </text>
+
+</p>
+
+<p style="Page2">
+<text>Page2 Test</text>
+<br/>
+<text>Page2.1 </text>
+<br/>
+<text>Page2.2 </text>
+
+</p>
+<p style="Page3">
+<text>Page3 Test</text>
+<br/>
+<text>Page3.1 </text>
+<br/>
+<text>Page3.2 </text>
+</p>
+```  
+
 -----------------------
 Technical Details
 -----------------------
@@ -206,6 +270,41 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+
+*4.26.0  
+  
+* AB#1714 [New][HorizonDialogueMsgTextBlock] Implement NewPage tag <p>
+
+* AB#1713 [New][HorizonDialogueMsgTextBlock] Add bForceRebuildDialogueMsgText as workaround that geometry.Size.X is 0 in some case
+
+* [BugFix][HorizonFlipbookWidget] GetPaletteCategory
+
+* [BugFix] Fix AddBackgroundButton BlockSize
+
+* [BugFix][HorizonDialogueMsgTextBlock] Flipbook should be able loaded using filePath
+
+* [New][HorizonDialogueMsgTextBlock] Implement PreBuildDecoration
+
+* [New][HorizonDialogueMsgTextBlock] RubyText Implmenetation
+
+
+* [BugFix][HotFix][HorizonDialogueMsgTextBlock] Don't crash
+
+* [BugFix][HorizonDialogueMsgTextBlock] Fix Create BlockInfo's CurrentLineWidth calculation when Decoration change block size
+
+* [BugFix][HorizonButton] RemoveDynamic before AddDynamic for delegates
+
+* [Refactor][HorizonDialogueMsgTextBlock] Add meta = (TitleProperty = "StyleName") for SegmentStyleList
+
+* [UHorizonDialogueMsgTextBlock] RebuildBlockInfoDecoration to public
+
+* AB#1621 [New][UHorizonDialogueMsgTextBlock] Implement HorizonDialogueMsgDecorator
+
+* [Refactor] Coding style
+
+* Implement HorizonMultiToggleButtonWidget
+
+
 
 *4.25.0  
 Update to 4.25
