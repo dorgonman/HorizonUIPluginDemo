@@ -272,7 +272,9 @@ email: dorgonman@hotmail.com
 -----------------------
 
 *4.26.0  
-  
+
+* AB#1758 GITHUB#6 [BugFix] Remove empty line with only space and skip space char at beginning of line for some edge case  
+    
 * AB#1714 [New][HorizonDialogueMsgTextBlock] Implement NewPage tag <p>
 
 * AB#1713 [New][HorizonDialogueMsgTextBlock] Add bForceRebuildDialogueMsgText as workaround that geometry.Size.X is 0 in some case
