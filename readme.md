@@ -273,6 +273,10 @@ email: dorgonman@hotmail.com
 
 *4.26.0  
 
+* AB#1777 [Refactor] Fix Typo from EHorizonDialogueTextOverflowWarpMethod to EHorizonDialogueTextOverflowWrapMethod
+
+* AB#1776 [New][HorizonDialogueMsgTextBlock] Russian OverflowWrap support
+
 * AB#1758 GITHUB#6 [BugFix] Remove empty line with only space and skip space char at beginning of line for some edge case  
     
 * AB#1714 [New][HorizonDialogueMsgTextBlock] Implement NewPage tag <p>
