@@ -310,6 +310,16 @@ email: dorgonman@hotmail.com
 
 * Implement HorizonMultiToggleButtonWidget
 
+* AB#1783 [BugFix][HorizonDialogueMsgTextBlock] Fix SkipDialogue, NextDialogueMsgPage and PrevDialogueMsgPage didn't work as intend
+
+	1. Should not call SetDialogueMsgPage if current page didn't change
+	2. SetDialogueMsgPage should reset CurrentDialogueLineIndex to StartLineIndex ,CurrentDialogueBlockIndex to 0 and CurrentCharIndex to  0
+	3. SetIsStartTickDialogueMsg should has bShouldResetDialogue, that user can choose when to reset dialogue index.
+
+* [New] Expose FHorizonDialogueBlockInfo and FHorizonDialogueLineInfo to BP and adjust category
+
+
+* [Refactor][HorizonMultiToggleButtonWidget] Adjust Some assumption and api usage
 
 
 *4.25.0  
