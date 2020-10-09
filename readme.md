@@ -14,10 +14,8 @@ Note:
 master branch may be unstable since it is in development, please switch to tags, for example: editor/hsgame/4.25.0.290
 
 How to Run Demo Project before purchase:(Only for Win64 editor build, no source code)
-1. [Download nuget executable](https://www.nuget.org/downloads) and copy the exe into C:\Windows\system32\ or any place listed in your PATH environment.
-2. Install [Git for Windows](https://gitforwindows.org/)
-3. Double click install_package_from_nuget.org.sh, and check if UE4Editor-*.dll are installed to Binaries\Win64 and Plugins\HorizonUIPlugin\Binaries\Win64\
-4. Double click HorizonUIPluginDemo.uproject  
+1. Double click install_game_package_from_nuget_org.cmd, and check if UE4Editor-*.dll are installed to Binaries\Win64 and Plugins\HorizonUIPlugin\Binaries\Win64\
+2. Double click HorizonUIPluginDemo.uproject  
 
   
 ----------------------------------------------
