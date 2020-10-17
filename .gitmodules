@@ -1,12 +1,12 @@
 [submodule "Plugins/HorizonUIPlugin"]
 	path = Plugins/HorizonUIPlugin
-	url = https://hsgame.visualstudio.com/UE4HorizonPlugin/_git/HorizonUIPlugin
+	url = https://hsgame@dev.azure.com/hsgame/UE4HorizonPlugin/_git/HorizonUIPlugin
 [submodule "ue_ci_scripts"]
 	path = ue_ci_scripts
-	url = https://hsgame.visualstudio.com/EpicGames/_git/ue_ci_scripts
+	url = https://hsgame@dev.azure.com/hsgame/EpicGames/_git/ue_ci_scripts
 [submodule "horizon_ci_scripts"]
 	path = horizon_ci_scripts
-	url = https://hsgame.visualstudio.com/EpicGames/_git/horizon_ci_scripts
+	url = https://hsgame@dev.azure.com/hsgame/EpicGames/_git/horizon_ci_scripts
 [submodule "Test/Report"]
 	path = Test/Report
-	url = https://hsgame.visualstudio.com/UE4HorizonPlugin/_git/HorizonUIPluginDemo_TestReport
+	url = https://hsgame@dev.azure.com/hsgame/UE4HorizonPlugin/_git/HorizonUIPluginDemo_TestReport
