@@ -1,7 +1,5 @@
 [Marketplace](https://www.unrealengine.com/marketplace/en-US/horizon-ui-plugin) 
 
-[![Build Status](https://hsgame.visualstudio.com/UE4HorizonPlugin/_apis/build/status/HorizonUI/HorizonUIPluginDemo-Shipping-CI?branchName=master)](https://hsgame.visualstudio.com/UE4HorizonPlugin/_build/latest?definitionId=24&branchName=master)
-
 public feed: nuget.org  
 
 [![nuget.org package in feed in ](https://img.shields.io/nuget/v/HorizonUIPluginDemo.svg)](https://www.nuget.org/packages/HorizonUIPluginDemo/)
