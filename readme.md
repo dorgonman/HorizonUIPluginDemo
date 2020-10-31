@@ -269,15 +269,15 @@ email: dorgonman@hotmail.com
 
 *4.26.0  
 
-* AB#1777 [Refactor] Fix Typo from EHorizonDialogueTextOverflowWarpMethod to EHorizonDialogueTextOverflowWrapMethod
+* [Refactor] Fix Typo from EHorizonDialogueTextOverflowWarpMethod to EHorizonDialogueTextOverflowWrapMethod
 
-* AB#1776 [New][HorizonDialogueMsgTextBlock] Russian OverflowWrap support
+* [New][HorizonDialogueMsgTextBlock] Russian OverflowWrap support
 
-* AB#1758 GITHUB#6 [BugFix] Remove empty line with only space and skip space char at beginning of line for some edge case  
+* GITHUB#6 [BugFix] Remove empty line with only space and skip space char at beginning of line for some edge case  
     
-* AB#1714 [New][HorizonDialogueMsgTextBlock] Implement NewPage tag <p>
+* [New][HorizonDialogueMsgTextBlock] Implement NewPage tag <p>
 
-* AB#1713 [New][HorizonDialogueMsgTextBlock] Add bForceRebuildDialogueMsgText as workaround that geometry.Size.X is 0 in some case
+* [New][HorizonDialogueMsgTextBlock] Add bForceRebuildDialogueMsgText as workaround that geometry.Size.X is 0 in some case
 
 * [BugFix][HorizonFlipbookWidget] GetPaletteCategory
 
@@ -289,31 +289,31 @@ email: dorgonman@hotmail.com
 
 * [New][HorizonDialogueMsgTextBlock] RubyText Implmenetation
 
-
 * [BugFix][HotFix][HorizonDialogueMsgTextBlock] Don't crash
 
 * [BugFix][HorizonDialogueMsgTextBlock] Fix Create BlockInfo's CurrentLineWidth calculation when Decoration change block size
 
-* [BugFix][HorizonButton] RemoveDynamic before AddDynamic for delegates
+* [BugFix][HorizonButton] RemoveDynamic before AddDynamic for delegates  
+
+* [BugFix][HorizonDialogueMsgTextBlock] Fix auto page padding bugs
 
 * [Refactor][HorizonDialogueMsgTextBlock] Add meta = (TitleProperty = "StyleName") for SegmentStyleList
 
 * [UHorizonDialogueMsgTextBlock] RebuildBlockInfoDecoration to public
 
-* AB#1621 [New][UHorizonDialogueMsgTextBlock] Implement HorizonDialogueMsgDecorator
+* [New][UHorizonDialogueMsgTextBlock] Implement HorizonDialogueMsgDecorator
 
 * [Refactor] Coding style
 
-* Implement HorizonMultiToggleButtonWidget
+* [New] Implement HorizonMultiToggleButtonWidget
 
-* AB#1783 [BugFix][HorizonDialogueMsgTextBlock] Fix SkipDialogue, NextDialogueMsgPage and PrevDialogueMsgPage didn't work as intend
+* [BugFix][HorizonDialogueMsgTextBlock] Fix SkipDialogue, NextDialogueMsgPage and PrevDialogueMsgPage didn't work as intend
 
 	1. Should not call SetDialogueMsgPage if current page didn't change
 	2. SetDialogueMsgPage should reset CurrentDialogueLineIndex to StartLineIndex ,CurrentDialogueBlockIndex to 0 and CurrentCharIndex to  0
 	3. SetIsStartTickDialogueMsg should has bShouldResetDialogue, that user can choose when to reset dialogue index.
 
 * [New] Expose FHorizonDialogueBlockInfo and FHorizonDialogueLineInfo to BP and adjust category
-
 
 * [Refactor][HorizonMultiToggleButtonWidget] Adjust Some assumption and api usage
 
