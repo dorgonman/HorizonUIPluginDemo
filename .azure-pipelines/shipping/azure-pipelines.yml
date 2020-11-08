@@ -59,7 +59,7 @@ resources:
   repositories:
     - repository: templates
       type: git
-      name: UEHorizonBuildScript/azure-pipelines-template
+      name: EpicGames/azure-pipelines-template
 
 # verify-plugin-build
 jobs:
