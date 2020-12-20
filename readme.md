@@ -267,6 +267,13 @@ email: dorgonman@hotmail.com
  Version History
 -----------------------
 
+*4.26.1  
+
+* [BugFix][HorizonDialogueMsgTextBlock] AutoPage line should fill up entire page
+
+* [HorizonDialogueMsgTextBlock] Implement GetNumPage and SkipCurrentDialoguePage when DialogueMsgSpeed less then 0
+
+
 *4.26.0  
 
 * [Refactor] Fix Typo from EHorizonDialogueTextOverflowWarpMethod to EHorizonDialogueTextOverflowWrapMethod
