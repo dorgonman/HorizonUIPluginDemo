@@ -1,4 +1,6 @@
-[Marketplace](https://www.unrealengine.com/marketplace/en-US/horizon-ui-plugin) 
+[Marketplace](https://www.unrealengine.com/marketplace/en-US/horizon-ui-plugin)
+
+[![Build Status](https://dev.azure.com/hsgame/UE4HorizonPlugin/_apis/build/status/HorizonUI/HorizonUIPluginDemo-Shipping-CI?repoName=HorizonUIPluginDemo&branchName=main)](https://dev.azure.com/hsgame/UE4HorizonPlugin/_build/latest?definitionId=24&repoName=HorizonUIPluginDemo&branchName=main)
 
 public feed: nuget.org  
 
