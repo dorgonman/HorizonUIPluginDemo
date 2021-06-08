@@ -20,7 +20,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
   
 ----------------------------------------------
               HorizonUIPlugin
-                 4.26.0
+                 4.27.0
          http://dorgon.horizon-studio.net
           	dorgonman@hotmail.com
 ----------------------------------------------
@@ -29,7 +29,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 System Requirements
 -----------------------
 
-Supported UnrealEngine version: 4.11-4.26
+Supported UnrealEngine version: 4.11-4.27
  
 
 -----------------------
@@ -268,6 +268,44 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+
+*4.27.0 
+
+* AB#2120 [New][HorizonWidgetFunctionLibrary] Implement SetInputMode
+
+* AB#2117 [HorizonMultiToggleButtonWidget] Change HorizonMultiToggleButtonState's TextColor to White
+
+* AB#2118 [HorizonTileView] Remove constructor, so inherited class can use default constructor without compiler error
+
+* AB#1990 [BugFix][HorizonRadioButtonUserWidge] Should not get multiple checked radio button when use IsChecked in OnCheckedDelegate
+
+* AB#1957 [BugFix] Set HorizonButton, HorizonMultiToggleButton, and HorizonRadioButton as bIsFocusable and Visible by default
+
+* AB#1954 AB#1955 AB#1956 [BugFix] Fix widget callbacks added multiple times by move binding to NativeOnInitialized
+
+* AB#1952 [New][HorizonDialogueMsgTextBlock] Implement Force setter for SetShadowColorAndOpacity, SetShadowOffset, SetFont, SetJustification, and SetDialogueMsgSpeed.
+
+* AB#1950 AB#1951 [BugFix][HorizonDialogueMsgTextBlock] OnDialoguePageEndFunction and OnDialogueMsgLoopFunction not work as expected
+
+* AB#1949 [New][HorizonTileView] Implement OnRefreshDesignerItems, so we don't need to implement it in every child widget
+
+* AB#1948 [New][HorizonTileView] Expose GetNumGeneratedChildren from slate
+
+* AB#1947 [New][TileView] Expose IsPendingRefresh to TileView Widget from slate
+
+* AB#1944 [New][HorizonTileView] Focus EntryWidget when HandleListEntryHovered
+
+* AB#1943 [New][HorizonTileView] Implement NavigateToAndSelectIndex
+
+* AB#1937 [New][HorizonFlipbookWidget] Implement OnAnimationStart and OnAnimationFinished
+
+* AB#1941 [Bugfix] Failed to load /Script/HorizonUI.HorizonDialogueMsgTextBlock Referenced by WidgetTree
+
+* AB#1877 [BugFix][HorizonDialogueMsgTextBlock] AutoPage line should fill up entire page
+
+* AB#1862 AB#1863 [HorizonDialogueMsgTextBlock] Implement GetNumPage and SkipCurrentDialoguePage when DialogueMsgSpeed less then 0
+
+
 
 *4.26.1  
 
