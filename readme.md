@@ -305,7 +305,7 @@ email: dorgonman@hotmail.com
 
 * AB#1862 AB#1863 [HorizonDialogueMsgTextBlock] Implement GetNumPage and SkipCurrentDialoguePage when DialogueMsgSpeed less then 0
 
-
+* AB#2177 [BugFix] TextOverflowWarpNormal should break segment text to next line
 
 *4.26.1  
 
