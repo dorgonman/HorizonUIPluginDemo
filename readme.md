@@ -307,6 +307,8 @@ email: dorgonman@hotmail.com
 
 * AB#2177 [BugFix] TextOverflowWarpNormal should break segment text to next line
 
+* AB#2186 [New] Add SCOPED_NAMED_EVENT_TEXT and DECLARE_SCOPE_CYCLE_COUNTER to some functions for performance measure
+
 *4.26.1  
 
 * [BugFix][HorizonDialogueMsgTextBlock] AutoPage line should fill up entire page
