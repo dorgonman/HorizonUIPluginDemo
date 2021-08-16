@@ -309,6 +309,17 @@ email: dorgonman@hotmail.com
 
 * AB#2186 [New] Add SCOPED_NAMED_EVENT_TEXT and DECLARE_SCOPE_CYCLE_COUNTER to some functions for performance measure
 
+* [Refactor] Remove Deprecated code
+
+* [BugFix] Hotfix Explicit PCH compile error
+
+* AB#2233 [Optimization] Add PrivatePCHHeaderFile to .Build.cs to optimizae build speed
+
+* [New][Build] PublicDefinitions.Add("WITH_HORIZONUI=1")
+
+
+
+
 *4.26.1  
 
 * [BugFix][HorizonDialogueMsgTextBlock] AutoPage line should fill up entire page
