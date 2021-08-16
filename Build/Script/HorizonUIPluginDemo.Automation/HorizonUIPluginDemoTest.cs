@@ -34,7 +34,7 @@ namespace UE4Game
 		{
 			base.ApplyToConfig(AppConfig, ConfigRole, OtherRoles);
 
-			AppConfig.CommandLine += " -ExecCmds=\"" + ExecCmds + "\" ";
+			AppConfig.CommandLine += " -ExecCmds=\"" + ExecCmds + "\"  -FORCELOGFLUSH";
 			AppConfig.CommandLine += AdditionalCommandLine;
 			
 	
