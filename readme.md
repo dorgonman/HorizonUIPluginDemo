@@ -20,7 +20,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
   
 ----------------------------------------------
               HorizonUIPlugin
-                 4.27.0
+                 5.0.0
          http://dorgon.horizon-studio.net
           	dorgonman@hotmail.com
 ----------------------------------------------
@@ -29,7 +29,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 System Requirements
 -----------------------
 
-Supported UnrealEngine version: 4.11-4.27
+Supported UnrealEngine version: 4.11-5.0
  
 
 -----------------------
@@ -268,6 +268,27 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+
+*5.0.0 
+
+* [BugFix] Fix UE5 compile warning and error and refactor UnrealFileSystem
+
+* AB#2384 [BugFix][HorizonDialogueMsgTextBlock] Fix wrong widgetWidth
+
+* [Refactor] Remove Deprecated code
+
+* [BugFix] Hotfix Explicit PCH compile error
+
+* AB#2233 [Optimization] Add PrivatePCHHeaderFile to .Build.cs to optimizae build speed
+
+* [New][Build] PublicDefinitions.Add("WITH_HORIZONUI=1")
+
+* Refactor HORIZONUI_STRINGIZE
+
+* AB#2186 [New] Add SCOPED_NAMED_EVENT_TEXT and DECLARE_SCOPE_CYCLE_COUNTER to some functions for performance measure
+
+* AB#2177 [BugFix] TextOverflowWarpNormal should break segment text to next line
+
 
 *4.27.0 
 
