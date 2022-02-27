@@ -24,3 +24,5 @@ EditorOpenOrder.log
 LastCoverageResults.log
 Releases
 .scannerwork
+/Build/Script/**/bin/
+/Build/Script/**/obj/

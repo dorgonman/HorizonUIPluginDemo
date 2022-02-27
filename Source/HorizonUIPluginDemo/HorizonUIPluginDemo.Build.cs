@@ -2,8 +2,6 @@
 using System;
 using System.IO;
 using UnrealBuildTool;
-using Tools.DotNETCommon;
-
 public class HorizonUIPluginDemo : ModuleRules
 {
 	public HorizonUIPluginDemo(ReadOnlyTargetRules Target)

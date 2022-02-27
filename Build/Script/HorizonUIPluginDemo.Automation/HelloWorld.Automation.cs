@@ -2,9 +2,9 @@ using System;
 using AutomationTool;
 
 
-namespace AutomationTool
+namespace UnrealBuildBase
 {
-	class HorizonUIHelloWorld : BuildCommand
+    class HorizonUIHelloWorld : BuildCommand
 	{
 		public override ExitCode Execute()
 		{

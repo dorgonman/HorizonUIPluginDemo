@@ -2,7 +2,6 @@
 
 using UnrealBuildTool;
 using System.Collections.Generic;
-using Tools.DotNETCommon;
 
 public class HorizonUIPluginDemoTarget : TargetRules
 {
