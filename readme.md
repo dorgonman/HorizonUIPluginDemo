@@ -289,6 +289,10 @@ email: dorgonman@hotmail.com
 
 * AB#2177 [BugFix] TextOverflowWarpNormal should break segment text to next line
 
+* [New] Expose LoadTexture2DImplement
+
+* [New][WidgetFunctionLibrary] Add bInHideCursorDuringCapture param to SetInputMode
+
 
 *4.27.0 
 
