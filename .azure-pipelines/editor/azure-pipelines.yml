@@ -38,7 +38,7 @@ stages:
     - template: job/build-game-editor.yml@templates
       parameters:
           name: 'Build_Win64_GameEditor'
-          group: 'ue4-build-var-win-group'
+          group: 'unreal-build-var-win-group'
           pool: 'Default'
           platform: 'win64'
           bCleanSCM: ${{ parameters.bCleanSCM }}
@@ -47,7 +47,7 @@ stages:
     - template: job/build-game-editor.yml@templates
       parameters:
           name: 'Build_Mac_GameEditor'
-          group: 'ue4-build-var-mac-group'
+          group: 'unreal-build-var-mac-group'
           pool: 'Default-MacOS'
           platform: 'mac'
           bCleanSCM: ${{ parameters.bCleanSCM }}
@@ -58,6 +58,6 @@ stages:
     - template: job/create-and-push-nuget-package.yml@templates
       parameters:
           name: 'Create_And_Push_Nuget_Package'
-          group: 'ue4-build-var-win-group'
+          group: 'unreal-build-var-win-group'
           pool: 'Default'
           platform: 'win64'
