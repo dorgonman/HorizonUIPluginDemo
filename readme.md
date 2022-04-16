@@ -243,9 +243,9 @@ Here is example:
 
 ```
 <text>With SpaceDecorator,</text>
-<text>Msg1,</text>
-<text>Msg2</text>
-<text tag="NoSpaceR">and Msg3</text>
+<text>Msg1, </text>
+<text tag="NoSpaceR">Msg2 </text>
+<text tag="NoSpace">, and Msg3 </text>
 <text tag="NoSpaceL">.</text>
 ```
 
