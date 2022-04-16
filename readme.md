@@ -162,7 +162,7 @@ Please Check WidgetBlueprint'/Game/UMG/DialogueMsgTextTest/Tuto06_EventTrigger.T
 <text eventName="Seg2">12345678910 
 11121314151617181920</text>
 ```  
-![Custome Event Usage](https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/master/ScreenShot/HorizonUI_Screenshot9.png)
+![Custome Event Usage](https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/main/ScreenShot/HorizonUI_Screenshot9.png)
 
 
 
@@ -196,11 +196,11 @@ We can implement our own logic in Decorator, ex: Load InputIcon from DataTable.
 <img eventPayload="ConfirmIcon" padding-top="-15"/>
 <text> &nbsp; to start </text>
 ```  
-![Decorator1](https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/master/ScreenShot/Decorator/Decorator1.png)  
+![Decorator1](https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/main/ScreenShot/Decorator/Decorator1.png)  
 
-![Decorator2](https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/master/ScreenShot/Decorator/Decorator2.png)  
+![Decorator2](https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/main/ScreenShot/Decorator/Decorator2.png)  
 
-![Decorator3](https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/master/ScreenShot/Decorator/Decorator3.png)  
+![Decorator3](https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/main/ScreenShot/Decorator/Decorator3.png)  
 
   
   
@@ -233,6 +233,47 @@ example 9: New Page Tag
 <text>Page3.2 </text>
 </p>
 ```  
+
+
+example 10: Space Decorator  
+
+We can use HorizonDialogueMsgSpaceDecorator to automatically append space between segment without using \&nbsp;
+
+Here is example:
+
+```
+<text>With SpaceDecorator,</text>
+<text>Msg1,</text>
+<text>Msg2</text>
+<text tag="NoSpaceR">and Msg3</text>
+<text tag="NoSpaceL">.</text>
+```
+
+Possible tag are: NoSpaceR, NoSpaceL and NoSpace.
+NoSpace means we apply NoSpaceR and NoSpaceL rule at same time.
+![SpaceDecorator](https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/main/ScreenShot/Decorator/Decorator_DialogueTextSpace.png)
+
+
+example 11: Text Replace Decorator: Read value from CurveTable
+
+Decorator also help you reading External Source and put the value into your text. Please check this demo project to see how to implement it for your project.
+
+Basically, we should create a Blueprint that inherited from DemoDialogueMsgReplaceDecorator, and configure your game data there, see /Game/UMG/DialogueMsgTextTest/Decorator/BP_MsgReplaceCurveTableDecorator:  
+
+![MsgReplaceCurveTable](https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/main/ScreenShot/Decorator/Decorator_MsgReplaceCurveTable.png)
+
+After apply the decorator, you will get following result:
+
+```
+<text>The Message with special character '$' will be replaced by finding value in eventPayLoad from CurveTable(</text>
+<text tag="NoSpace" eventPayLoad="Default.HorizonUIDemoAttributeSet.Health, 1.4">$</text>
+<text>), and we can have multiple blocks and Decorators</text>
+<img eventPayload="ConfirmIcon" padding-top="-15" size="[100, 100]/>
+<text tag="NoSpaceL">.</text>
+```
+
+![MsgReplaceCurveTableResult](https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/main/ScreenShot/Decorator/Decorator_MsgReplaceCurveTable_Result.png)  
+
 
 -----------------------
 Technical Details
