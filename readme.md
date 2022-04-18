@@ -20,7 +20,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
   
 ----------------------------------------------
               HorizonUIPlugin
-                 5.0.0
+                 5.1.0
          http://dorgon.horizon-studio.net
           	dorgonman@hotmail.com
 ----------------------------------------------
@@ -29,7 +29,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 System Requirements
 -----------------------
 
-Supported UnrealEngine version: 4.11-5.0
+Supported UnrealEngine version: 4.11-5.1
  
 
 -----------------------
@@ -242,15 +242,20 @@ We can use HorizonDialogueMsgSpaceDecorator to automatically append space betwee
 Here is example:
 
 ```
-<text>With SpaceDecorator,</text>
+<text tag="WithSpaceL">With SpaceDecorator,</text>
 <text>Msg1, </text>
-<text tag="NoSpaceR">Msg2 </text>
-<text tag="NoSpace">, and Msg3 </text>
+<text>Msg2, </text>
+<text>and Msg3 </text>
 <text tag="NoSpaceL">.</text>
 ```
 
-Possible tag are: NoSpaceR, NoSpaceL and NoSpace.
-NoSpace means we apply NoSpaceR and NoSpaceL rule at same time.
+Possible tag are: NoSpaceR, NoSpaceL and NoSpace, WithSpaceL, WithSpaceR, WithSpace.
+NoSpace means we apply NoSpaceR and NoSpaceL rule at same time to the segment.
+WithSpace means we apply WithSpaceR and WithSpaceL rule at same time to the segment.
+
+Generally we will want to create Blueprint that inherited from HorizonDialogueMsgSpaceDecorator, 
+so we can adjust FirstLineSpaceL and Space property to Fullwidth/Halfwidth space character, the properties are FText so they can also be localized for different language using Unreal Localization tool. (ex: English use Halfwidth and Chinese use Fullwidth)
+
 ![SpaceDecorator](https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/main/ScreenShot/Decorator/Decorator_DialogueTextSpace.png)
 
 
@@ -309,6 +314,7 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+
 
 *5.0.0 
 
