@@ -20,7 +20,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
   
 ----------------------------------------------
               HorizonUIPlugin
-                 5.1.0
+                 5.0.1
          http://dorgon.horizon-studio.net
           	dorgonman@hotmail.com
 ----------------------------------------------
@@ -314,6 +314,16 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+
+
+*5.0.1 
+
+* [BugFix][HorizonDialogueMsgTextBlock] Fix MemoryLeak when parse segmentStr using FXmlFile
+
+* [New][DialogueMsgTextBlock] Implement SpaceDecorator and Add Tag param to Segment
+
+* [New][DialogueMsgTextBlock] Add BuildSegment call for Decorator class and rename BuildDecoration to BuildBlockDecoration
+
 
 
 *5.0.0 
