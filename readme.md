@@ -20,7 +20,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
   
 ----------------------------------------------
               HorizonUIPlugin
-                 5.0.1
+                 5.1.0
          http://dorgon.horizon-studio.net
           	dorgonman@hotmail.com
 ----------------------------------------------
@@ -280,6 +280,11 @@ After apply the decorator, you will get following result:
 ![MsgReplaceCurveTableResult](https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/main/ScreenShot/Decorator/Decorator_MsgReplaceCurveTable_Result.png)  
 
 
+example 12: Change Dialogue Speed
+
+<text speed="0.01"> Loading</text>
+<text speed="1"> ...</text>
+
 -----------------------
 Technical Details
 -----------------------
@@ -288,7 +293,7 @@ List of Modules:
 HorizonUI (Runtime)
 Intended Platform: All Platforms
 Platforms Tested: Win64, Android
-Currently has two widget implemented:
+Widget Introduction:
 	1. HorizonFlipbookWidget: This widget support using PaperFlipbook directly in UMG!
 	2. HorizonDialogueMsgTextBlock: Combine both rich text and dialogue text function in this widget! 
 	   For rich text feature: you can control text Color, Shadow Color, Font, Font size and padding for each text block.
@@ -301,9 +306,6 @@ What does your plugin do/What is the intent of your plugin
 -----------------------  
 
 This Plugin contains some extension for UMG Widget. 
-	Currently have two widget included:
-	1. HorizonFlipbookWidget
-	2. HorizonDialogueMsgTextBlock  
 	
 -----------------------
 Contact and Support
@@ -314,6 +316,17 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+
+*5.1.0 
+
+* [New][HorizonDialogueMsgTextBlock][MsgSpaceDecorator] SpaceDecorator bWithSpaceL should skip Non-Alphabetic character
+
+* [Refactor][HorizonDialogueMsgTextBlock] Refactor TextOverflowWarpNormal CodePoint check
+
+* [Refactor][MsgTextBlock] Refactor BlueprintCallable to BlueprintPure and constness
+
+* [New][HorizonDialogueMsgTextBlock] Implement BlinkingCursor
+
 
 
 *5.0.1 
