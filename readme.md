@@ -327,6 +327,8 @@ email: dorgonman@hotmail.com
 
 * [New][HorizonDialogueMsgTextBlock] Implement BlinkingCursor
 
+* [New][DialogueMsgTextBlock] Implement Size to content support
+
 
 
 *5.0.1 
