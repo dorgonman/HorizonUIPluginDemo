@@ -329,6 +329,8 @@ email: dorgonman@hotmail.com
 
 * [New][DialogueMsgTextBlock] Implement Size to content support
 
+* [New][DialogueMsgTextBlock] Implement VerticalPanel support with VerticalAlignment
+
 
 
 *5.0.1 
