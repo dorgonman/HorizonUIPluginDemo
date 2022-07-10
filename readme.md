@@ -331,7 +331,7 @@ email: dorgonman@hotmail.com
 
 * [New][DialogueMsgTextBlock] Implement VerticalPanel support with VerticalAlignment
 
-
+* [New][TileView] Support focus and button events for ItemWidget and Reroute Input to TileView
 
 *5.0.1 
 
