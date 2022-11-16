@@ -10,7 +10,7 @@ public class HorizonUIPluginDemoTarget : TargetRules
 		Type = TargetType.Game;
         ExtraModuleNames.AddRange(new string[] { "HorizonUIPluginDemo" });
         DefaultBuildSettings = BuildSettingsVersion.V2;
-        ShadowVariableWarningLevel = WarningLevel.Error;
+        // ShadowVariableWarningLevel = WarningLevel.Error;
         IncludeOrderVersion = EngineIncludeOrderVersion.Unreal5_1;
     }
 
