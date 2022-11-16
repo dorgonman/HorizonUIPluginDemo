@@ -32,8 +32,8 @@ bool UDemoDialogueInputIconDecorator::Run_Implementation(UHorizonDialogueMsgText
 			{
 				UMyWidgetFunctionLibrary::SetImage(pImage, pInputIcon->KeyboardAndMouse);
 			}
-#elif PLATFORM_XBOXONE
-			UMyWidgetFunctionLibrary::SetImage(pImage, pInputIcon->XBoxController);
+// #elif PLATFORM_XBOXONE
+// 			UMyWidgetFunctionLibrary::SetImage(pImage, pInputIcon->XBoxController);
 #endif
 			if (!InSegInfo.ImageSize.IsSet())
 			{
