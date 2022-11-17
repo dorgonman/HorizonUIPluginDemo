@@ -1,5 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <EngineRoot>$(UNREAL_ENGINE_ROOT)</EngineRoot>
     <TargetFramework>net6.0-windows</TargetFramework>
     <Configuration Condition=" '$(Configuration)' == '' ">Development</Configuration>
     <OutputType>Library</OutputType>
@@ -14,7 +15,7 @@
     <DebugType>pdbonly</DebugType>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
     <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
-    <OutputPath>..\..\..\..\Engine\Binaries\DotNET\AutomationTool\AutomationScripts\</OutputPath>
+    <OutputPath>$(EngineRoot)\Engine\Binaries\DotNET\AutomationTool\AutomationScripts\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Development|AnyCPU' ">
     <DefineConstants>$(DefineConstants);TRACE</DefineConstants>
@@ -31,12 +32,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Engine\Source\Programs\Shared\EpicGames.Build\EpicGames.Build.csproj" PrivateAssets="all" />
-    <ProjectReference Include="..\..\..\..\Engine\Source\Programs\Shared\EpicGames.Core\EpicGames.Core.csproj" PrivateAssets="all" />
-    <ProjectReference Include="..\..\..\..\Engine\Source\Programs\UnrealBuildTool\UnrealBuildTool.csproj" PrivateAssets="all" />
-    <ProjectReference Include="..\..\..\..\Engine\Source\Programs\AutomationTool\AutomationUtils\AutomationUtils.Automation.csproj" PrivateAssets="all" />
-    <ProjectReference Include="..\..\..\..\Engine\Source\Programs\AutomationTool\Scripts\AutomationScripts.Automation.csproj" PrivateAssets="all" />
-    <ProjectReference Include="..\..\..\..\Engine\Source\Programs\AutomationTool\Gauntlet\Gauntlet.Automation.csproj" PrivateAssets="all" />  
+    <ProjectReference Include="$(EngineRoot)\Engine\Source\Programs\Shared\EpicGames.Build\EpicGames.Build.csproj" PrivateAssets="all" />
+    <ProjectReference Include="$(EngineRoot)\Engine\Source\Programs\Shared\EpicGames.Core\EpicGames.Core.csproj" PrivateAssets="all" />
+    <ProjectReference Include="$(EngineRoot)\Engine\Source\Programs\UnrealBuildTool\UnrealBuildTool.csproj" PrivateAssets="all" />
+    <ProjectReference Include="$(EngineRoot)\Engine\Source\Programs\AutomationTool\AutomationUtils\AutomationUtils.Automation.csproj" PrivateAssets="all" />
+    <ProjectReference Include="$(EngineRoot)\Engine\Source\Programs\AutomationTool\Scripts\AutomationScripts.Automation.csproj" PrivateAssets="all" />
+    <ProjectReference Include="$(EngineRoot)\Engine\Source\Programs\AutomationTool\Gauntlet\Gauntlet.Automation.csproj" PrivateAssets="all" />  
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
