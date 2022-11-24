@@ -281,9 +281,10 @@ After apply the decorator, you will get following result:
 
 
 example 12: Change Dialogue Speed
-
+```
 <text speed="0.01"> Loading</text>
 <text speed="1"> ...</text>
+```
 
 -----------------------
 Technical Details
