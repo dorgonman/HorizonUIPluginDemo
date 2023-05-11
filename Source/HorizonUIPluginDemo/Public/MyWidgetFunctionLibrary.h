@@ -4,10 +4,17 @@
 
 #pragma once
 
+// Core
+#include "Misc/EngineVersionComparison.h"
+
+// UMG
+#include "Components/Image.h"
+
+// HorizonUI
 #include "Widget/Components/HorizonDialogueMsgTextBlock.h"
 #include "Widget/Components/HorizonFlipbookWidget.h"
 #include "Widget/HorizonWidgetFunctionLibrary.h"
-#include "Components/Image.h"
+// Demo
 #include "MyWidgetFunctionLibrary.generated.h"
 
 
@@ -17,42 +24,6 @@ private:
 	GENERATED_BODY()
 public:
 
-
-
-
-	UFUNCTION(BlueprintCallable, Category = "HorizonPlugin")
-	static void SetText(const FText& newText, UHorizonDialogueMsgTextBlock* pDialogueWidget)
-	{
-		pDialogueWidget->SetText(newText);
-		pDialogueWidget->RebuildDialogueMsgTextBlock();
-
-	}
-
-	UFUNCTION(BlueprintCallable, Category = "HorizonPlugin")
-	static void StopDialogue(UHorizonDialogueMsgTextBlock* pDialogueWidget)
-	{
-		if (pDialogueWidget) 
-		{
-		
-			//reset dialogue
-			pDialogueWidget->ResetDialogueMsgText();
-			//stop tick
-			pDialogueWidget->SetIsStartTickDialogueMsg(false);
-		
-		}
-	};
-	UFUNCTION(BlueprintCallable, Category = "HorizonPlugin")
-	static void StartDialogue(UHorizonDialogueMsgTextBlock* pDialogueWidget)
-	{
-		if (pDialogueWidget)
-		{
-			//stop tick
-			pDialogueWidget->SetIsStartTickDialogueMsg(true);
-
-		}
-	};
-
-
 	UFUNCTION(BlueprintCallable, Category = "HorizonPlugin")
 	static void SetImage(UImage* InImage, const FSoftObjectPath& InResourceObjectPath)
 	{
@@ -61,7 +32,12 @@ public:
 			auto pObj = InResourceObjectPath.TryLoad();
 			if (pObj)
 			{
+				
+#if UE_VERSION_OLDER_THAN(5,2,0)
 				FSlateBrush newBrush = InImage->Brush;
+#else
+				FSlateBrush newBrush = InImage->GetBrush();
+#endif
 				newBrush.SetResourceObject(pObj);
 				InImage->SetBrush(newBrush);
 

@@ -37,7 +37,12 @@ bool UDemoDialogueInputIconDecorator::Run_Implementation(UHorizonDialogueMsgText
 #endif
 			if (!InSegInfo.ImageSize.IsSet())
 			{
+				
+#if UE_VERSION_OLDER_THAN(5,2,0)
 				auto pPaperSprite = Cast<UPaperSprite>(pImage->Brush.GetResourceObject());
+#else
+				auto pPaperSprite = Cast<UPaperSprite>(pImage->GetBrush().GetResourceObject());
+#endif
 				if (pPaperSprite)
 				{
 					FSlateAtlasData&& atlasData = pPaperSprite->GetSlateAtlasData();

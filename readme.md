@@ -1,6 +1,6 @@
 [Marketplace](https://www.unrealengine.com/marketplace/en-US/horizon-ui-plugin)
 
-[![Build Status](https://dev.azure.com/hsgame/UE4HorizonPlugin/_apis/build/status/HorizonUI/HorizonUIPluginDemo-Shipping-CI?repoName=HorizonUIPluginDemo&branchName=main)](https://dev.azure.com/hsgame/UE4HorizonPlugin/_build/latest?definitionId=24&repoName=HorizonUIPluginDemo&branchName=main)
+[![Build Status](https://dev.azure.com/hsgame/UEHorizonPlugin/_apis/build/status/HorizonUI/HorizonUIPluginDemo-Shipping-CI?repoName=HorizonUIPluginDemo&branchName=main)](https://dev.azure.com/hsgame/UEHorizonPlugin/_build/latest?definitionId=24&repoName=HorizonUIPluginDemo&branchName=main)
 
 public feed: nuget.org  
 
@@ -20,7 +20,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
   
 ----------------------------------------------
               HorizonUIPlugin
-                 5.1.0
+                 5.2.0
          http://dorgon.horizon-studio.net
           	dorgonman@hotmail.com
 ----------------------------------------------
@@ -29,7 +29,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 System Requirements
 -----------------------
 
-Supported UnrealEngine version: 4.11-5.1
+Supported UnrealEngine version: 4.11-5.2
  
 
 -----------------------
@@ -286,6 +286,14 @@ example 12: Change Dialogue Speed
 <text speed="1"> ...</text>
 ```
 
+
+example 13: Wait Message
+```
+<text>1234</text>
+<text wait="2.5">5678</text>
+```
+It will display 1234 first, wait for 2.5 seconds and then display 5678.
+
 -----------------------
 Technical Details
 -----------------------
@@ -317,6 +325,18 @@ email: dorgonman@hotmail.com
 -----------------------
  Version History
 -----------------------
+
+*5.2.0
+
+* [HorizonTileView] Implement RequestListRefresh
+
+* [HorizonListViewItemWidget] Implement IsHovered by checking if Button_ClickArea is focused
+
+* [New][HorizonTileView] Remove PreviousSelectedItem from selection when NavigateToAndSelectIndex < 0
+
+* [New][HorizonDialogueMsgTextBlock] Implement Dynamic SizeBox Override and SetTextAndRebuildDialogueImmediately
+
+
 
 *5.1.0 
 

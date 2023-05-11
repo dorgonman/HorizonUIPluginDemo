@@ -23,7 +23,7 @@ namespace UnrealGame
 		public string AdditionalCommandLine = "";
 		
 		[AutoParam]
-		public string ExecCmds = "automation SetMinimumPriority Critical;RunTests Filter:Plugin+Filter:_Game+Filter:Project.Functional Tests;Quit";
+		public string ExecCmds = "automation List;RunTests StartsWith:Plugin+StartsWith:_Game+StartsWith:Project.Functional Tests;Quit";
         
         /// <summary>
         /// Applies these options to the provided app config

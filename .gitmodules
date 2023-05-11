@@ -7,6 +7,3 @@
 [submodule "horizon_ci_scripts"]
 	path = horizon_ci_scripts
 	url = https://hsgame@dev.azure.com/hsgame/EpicGames/_git/horizon_ci_scripts
-[submodule "Test/Report"]
-	path = Test/Report
-	url = https://hsgame@dev.azure.com/hsgame/UEHorizonPlugin/_git/HorizonUIPluginDemo_TestReport
