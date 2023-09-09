@@ -9,7 +9,7 @@ public class HorizonUIPluginDemoEditorTarget : TargetRules
     {
 		Type = TargetType.Editor;
         ExtraModuleNames.AddRange(new string[] { "HorizonUIPluginDemo" });
-        DefaultBuildSettings = BuildSettingsVersion.V2;
+        DefaultBuildSettings = BuildSettingsVersion.Latest;
         IncludeOrderVersion = EngineIncludeOrderVersion.Latest;
         // StrictIncludes for Plugin Demo Build to check if all source files have self-contained headers
         // -NoPCH -NoSharedPCH -DisableUnity

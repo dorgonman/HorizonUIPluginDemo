@@ -26,3 +26,5 @@ Releases
 .scannerwork
 /Build/Script/**/bin/
 /Build/Script/**/obj/
+/.vsconfig
+/Build/Script/HorizonUIPluginDemo.Automation/*.props
