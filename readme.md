@@ -341,6 +341,8 @@ email: dorgonman@hotmail.com
 
 * [HorizonTileView] Implement RefreshBehavior
 
+* [BugFix][HorizonDialogueMsgTextBlock] Should Skip LineSegment start with NewLine(\n)
+
 
 *5.3.0
 
