@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <EngineRoot>$(UNREAL_ENGINE_ROOT)</EngineRoot>
     <TargetFramework>net6.0</TargetFramework>

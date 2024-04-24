@@ -1,5 +1,6 @@
 using System;
 using AutomationTool;
+using Microsoft.Extensions.Logging;
 
 
 namespace UnrealBuildBase
@@ -8,7 +9,7 @@ namespace UnrealBuildBase
 	{
 		public override ExitCode Execute()
 		{
-			LogInformation("HorizonUI Hello World");
+			Logger.LogInformation("HorizonUI Hello World");
 
 			return ExitCode.Success;
 		}

@@ -20,7 +20,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
   
 ----------------------------------------------
               HorizonUIPlugin
-                 5.3.0
+                 5.4.0
          http://dorgon.horizon-studio.net
           	dorgonman@hotmail.com
 ----------------------------------------------
@@ -29,7 +29,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 System Requirements
 -----------------------
 
-Supported UnrealEngine version: 4.11-5.3
+Supported UnrealEngine version: 4.11-5.4
  
 
 -----------------------
@@ -326,10 +326,25 @@ email: dorgonman@hotmail.com
  Version History
 -----------------------
 
+
+*5.4.0
+
+* AB#2992 [BugFix][DialogueMsgTextBlock] Fix MatreialInstance not supported
+
+* [Refactor] Fix typo: BuildSegmentDecoration
+
+* AB#2986 [BugFix] Fix Warning: Property ObjectProperty contains short type name
+
+* AB#2966 [BugFix][DialogueMsg] PageIndex should always >= 0, or it will crash
+
+* [Refactor] Use ObjectPtr instead of RawPointer
+
+* [HorizonTileView] Implement RefreshBehavior
+
+
 *5.3.0
 
 	Update to 5.3.0
-
 
 *5.2.0
 
