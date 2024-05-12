@@ -14,7 +14,8 @@ trigger:
 variables:
     - name:  Pipeline.GameProjectRoot
       value: '.'
-
+    - name: AZP_AGENT_ALLOW_WORK_DIRECTORY_REPOSITORIES
+      value: "true"
 
 parameters:
   - name: bCleanSCM
@@ -43,6 +44,7 @@ stages:
           platform: 'win64'
           bCleanSCM: ${{ parameters.bCleanSCM }}
           projectName: HorizonUIDemo
+          checkoutPath: ../mount/ssd/_azvcs/Horizon/UIPluginDemo
 
     - template: job/build-game-editor.yml@templates
       parameters:
@@ -52,6 +54,7 @@ stages:
           platform: 'mac'
           bCleanSCM: ${{ parameters.bCleanSCM }}
           projectName: HorizonUIDemo
+          checkoutPath: ../mount/ssd/_azvcs/Horizon/UIPluginDemo
 
   - stage: Deploy
     jobs:
