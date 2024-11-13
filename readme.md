@@ -350,6 +350,9 @@ email: dorgonman@hotmail.com
 
 * [BugFix][HorizonDialogueMsgTextBlock] Should Skip LineSegment start with NewLine(\n)
 
+* [New][DialogueMsgTextBlock] Implement Force Rebuild option to SetTextAndRebuildDialogue
+
+
 
 *5.3.0
 
