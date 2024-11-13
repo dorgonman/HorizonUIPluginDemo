@@ -28,3 +28,7 @@ Releases
 /Build/Script/**/obj/
 /.vsconfig
 /Build/Script/HorizonUIPluginDemo.Automation/*.props
+/Build/Android/src/com/epicgames/ue4/DownloadShim.java
+/Build/Android/src/com/horizon/uidemo/OBBData.java
+/Build/Android/src/com/epicgames/unreal/DownloadShim.java
+/Build/Android/src/com/horizon/uidemo/DownloaderActivity.java
