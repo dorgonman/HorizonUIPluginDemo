@@ -1,5 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <UNREAL_ENGINE_ROOT Condition="'$(UNREAL_ENGINE_ROOT)' == ''">C:\Mount\s\EpicGames\Installed\UE_5.7\</UNREAL_ENGINE_ROOT>
     <EngineRoot>$(UNREAL_ENGINE_ROOT)</EngineRoot>
     <TargetFramework>net8.0</TargetFramework>
     <Configuration Condition=" '$(Configuration)' == '' ">Development</Configuration>
