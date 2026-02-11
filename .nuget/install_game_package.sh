@@ -6,11 +6,7 @@ pushd ..
     projectFileName=$(find *.uproject)
     projectName=${projectFileName%.*}
 
-    NUGET=${projectRoot}/ue_ci_scripts/bin/Win64/nuget/nuget
-    if [ ! -f "$NUGET" ]
-    then
-        NUGET=nuget
-    fi
+    NUGET=nuget
 popd
 packageName=${projectName}
 

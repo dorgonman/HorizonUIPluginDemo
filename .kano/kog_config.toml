@@ -1,0 +1,4 @@
+KOG_DISABLE_SECRET_GATE = '1'
+
+[ai.model]
+selection = 'copilot/gpt-5-mini'

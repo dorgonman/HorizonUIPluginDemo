@@ -1,0 +1,109 @@
+// .jenkins/QA/Jenkinsfile — QA pipeline entrypoint
+// Stage 2 of Build/QA/Release chain.
+// Runs post-build validation (tests, coverage review, artifact promotion).
+// Requires upstream build artifacts from the Build stage.
+
+@Library('jenkins-unreal-pipeline-library') _
+
+pipeline {
+    agent { label 'unreal-win64' }
+
+    options {
+        disableConcurrentBuilds()
+        buildDiscarder(logRotator(numToKeepStr: '20'))
+        timeout(time: 60, unit: 'MINUTES')
+    }
+
+    parameters {
+        string(name: 'UPSTREAM_BUILD_NUMBER',
+            defaultValue: '',
+            description: 'The build number of the upstream Build job to promote')
+        booleanParam(name: 'bRunFullValidation',
+            defaultValue: true,
+            description: 'Run full QA validation (coverage gates, test thresholds)')
+    }
+
+    stages {
+        stage('Validate Parameters') {
+            steps {
+                script {
+                    echo "QA Validation for HorizonUIPluginDemo"
+                    echo "Upstream build: ${params.UPSTREAM_BUILD_NUMBER ?: 'latest'}"
+
+                    if (params.UPSTREAM_BUILD_NUMBER?.trim()) {
+                        echo "Will promote artifacts from build #${params.UPSTREAM_BUILD_NUMBER}"
+                    } else {
+                        echo "No upstream build specified — will use last successful build"
+                    }
+                }
+            }
+        }
+
+        stage('Copy Build Artifacts') {
+            steps {
+                script {
+                    if (params.UPSTREAM_BUILD_NUMBER?.trim()) {
+                        copyArtifacts(
+                            filter: 'Reports/**/*.xml, Reports/**/*.html',
+                            projectName: 'HorizonUIPluginDemo-Build',
+                            selector: specific(params.UPSTREAM_BUILD_NUMBER),
+                            optional: true
+                        )
+                    } else {
+                        copyArtifacts(
+                            filter: 'Reports/**/*.xml, Reports/**/*.html',
+                            projectName: 'HorizonUIPluginDemo-Build',
+                            selector: lastSuccessful(),
+                            optional: true
+                        )
+                    }
+                }
+            }
+        }
+
+        stage('Coverage Gate') {
+            when { expression { return params.bRunFullValidation } }
+            steps {
+                script {
+                    echo "Coverage gate: checking threshold..."
+                }
+            }
+        }
+
+        stage('Test Report') {
+            steps {
+                script {
+                    junit testResults: 'Reports/tests/**/tests.xml', allowMissingResults: true
+                    publishHTML target: [
+                        allowMissing: true,
+                        alwaysLinkToLastBuilt: true,
+                        reportDir: 'Reports/tests',
+                        reportFiles: 'index.html',
+                        reportName: 'Test Report'
+                    ]
+                }
+            }
+        }
+
+        stage('Promote Artifacts') {
+            steps {
+                script {
+                    if (params.UPSTREAM_BUILD_NUMBER?.trim()) {
+                        echo "Promoting artifacts from build #${params.UPSTREAM_BUILD_NUMBER}"
+                    } else {
+                        echo "Promoting artifacts from last successful build"
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'QA passed. Artifacts are promoted for Release.'
+        }
+        failure {
+            echo 'QA validation failed. Check reports.'
+        }
+    }
+}

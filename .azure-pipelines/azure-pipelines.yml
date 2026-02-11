@@ -29,7 +29,14 @@ parameters:
     - false
 
   - name: bBuildWin64
-    displayName: Pipeline bBuildWin64
+    displayName: Pipeline bBuildWin64 (Standalone)
+    type: boolean
+    default: true
+    values:
+    - true
+    - false
+  - name: bBuildPluginWin64
+    displayName: Pipeline bBuildPluginWin64 (Plugin)
     type: boolean
     default: true
     values:
@@ -68,12 +75,13 @@ jobs:
     #- ${ if eq(variables['Pipeline.bBuildWin64'], 'true') }:
 
     - template: job/verify-plugin-build.yml@templates
-      parameters: 
-          bRunAutomationTest: true
-          bCleanSCM: ${{ parameters.bCleanSCM }}
-          bBuildWin64: ${{ parameters.bBuildWin64 }}
-          bBuildAndroid: ${{ parameters.bBuildAndroid }}
-          bBuildMac: ${{ parameters.bBuildMac }}
-          bBuildIOS: ${{ parameters.bBuildIOS }}
-          projectName: HorizonUIPluginDemo
-          checkoutPath: ../mount/ssd/_azvcs/Horizon/UIPluginDemo
+      parameters:
+        bRunAutomationTest: true
+        bCleanSCM: ${{ parameters.bCleanSCM }}
+        bBuildWin64: ${{ parameters.bBuildWin64 }}
+        bBuildPluginWin64: ${{ parameters.bBuildPluginWin64 }}
+        bBuildAndroid: ${{ parameters.bBuildAndroid }}
+        bBuildMac: ${{ parameters.bBuildMac }}
+        bBuildIOS: ${{ parameters.bBuildIOS }}
+        projectName: HorizonUIPluginDemo
+        checkoutPath: ../mount/ssd/_azvcs/Horizon/UIPluginDemo

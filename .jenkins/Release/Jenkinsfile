@@ -1,0 +1,150 @@
+// .jenkins/Release/Jenkinsfile — Release pipeline entrypoint
+// Stage 3 of Build/QA/Release chain.
+// Mirrors Azure DevOps "Deploy" stage:
+//   - GitHub sync (git tag + push)
+//   - Nuget package publish
+//   - Manual approval gate before publishing
+
+@Library('jenkins-unreal-pipeline-library') _
+
+pipeline {
+    agent { label 'unreal-win64' }
+
+    options {
+        disableConcurrentBuilds()
+        buildDiscarder(logRotator(numToKeepStr: '20'))
+        timeout(time: 90, unit: 'MINUTES')
+    }
+
+    parameters {
+        string(name: 'UPSTREAM_BUILD_NUMBER',
+            defaultValue: '',
+            description: 'The build number of the upstream QA-promoted build to release')
+        booleanParam(name: 'bPublishNuget',
+            defaultValue: true,
+            description: 'Publish Nuget package to the feed')
+        booleanParam(name: 'bSyncGitHub',
+            defaultValue: true,
+            description: 'Sync a git tag to the remote GitHub repository')
+    }
+
+    stages {
+        stage('Setup') {
+            steps {
+                script {
+                    echo "Release pipeline for HorizonUIPluginDemo"
+                    echo "Upstream build: ${params.UPSTREAM_BUILD_NUMBER ?: 'latest'}"
+                }
+            }
+        }
+
+        stage('Approval Gate') {
+            steps {
+                script {
+                    def description = "Release HorizonUIPluginDemo " +
+                        "Build: ${params.UPSTREAM_BUILD_NUMBER ?: 'latest'}, " +
+                        "Publish Nuget: ${params.bPublishNuget}, " +
+                        "Sync GitHub: ${params.bSyncGitHub}"
+                    timeout(time: 7, unit: 'DAYS') {
+                        input id: 'ReleaseApproval',
+                            message: 'Approve or reject this release',
+                            ok: 'Approve',
+                            submitter: 'dorgon.chang@horizon-studio.net'
+                    }
+                }
+            }
+        }
+
+        stage('Copy Artifacts') {
+            steps {
+                script {
+                    def upstreamSelector = params.UPSTREAM_BUILD_NUMBER?.trim()                         ? specific(params.UPSTREAM_BUILD_NUMBER)                         : lastSuccessful()
+
+                    copyArtifacts(
+                        filter: 'Reports/**/*.xml, Intermediate/BuildArchive/**/*',
+                        projectName: 'HorizonUIPluginDemo-Build',
+                        selector: upstreamSelector,
+                        optional: false
+                    )
+                }
+            }
+        }
+
+        stage('Resolve Version') {
+            steps {
+                script {
+                    def gameVersion = powershell(
+                        script: 'Get-Content $env:WORKSPACE/Config/DefaultGame.ini | Where-Object { $_.Split("=")[0] -eq "ProjectVersion" } | ForEach-Object { $_.Split("=", 2)[1].Trim() }',
+                        returnStdout: true
+                    ).trim()
+                    currentBuild.displayName = "v${gameVersion}_${BUILD_NUMBER}"
+                    echo "Resolved game version: ${gameVersion}"
+                }
+            }
+        }
+
+        stage('Sync GitHub') {
+            when { expression { return params.bSyncGitHub } }
+            steps {
+                script {
+                    def version = currentBuild.displayName.replace('v', '').split('_')[0]
+                    def tagName = "editor/${version}"
+                    echo "Creating git tag: ${tagName} at ${env.GIT_COMMIT}"
+
+                    powershell(script: "git config user.name 'Kano Horizon CI'; git config user.email 'ci@horizon-studio.net'; git tag '${tagName}' ${env.GIT_COMMIT}; git push origin ${tagName} -v")
+                }
+            }
+        }
+
+        stage('Publish Nuget') {
+            when { expression { return params.bPublishNuget } }
+            steps {
+                script {
+                    def nuspecFile = powershell(
+                        script: 'Get-ChildItem -Path $env:WORKSPACE -Include *.nuspec -Recurse | Select-Object -First 1 | ForEach-Object { $_.FullName }',
+                        returnStdout: true
+                    ).trim()
+
+                    if (!nuspecFile) {
+                        error "No .nuspec file found in workspace"
+                    }
+
+                    echo "Found nuspec: ${nuspecFile}"
+
+                    def gameVersion = currentBuild.displayName.replace('v', '').split('_')[0]
+
+                    def packScript = "\$outputDir = Join-Path \$env:WORKSPACE 'Nuget'; " +
+                        "New-Item -ItemType Directory -Force -Path \$outputDir | Out-Null; " +
+                        "\$basePath = Join-Path \$env:WORKSPACE 'Intermediate/BuildArchive'; " +
+                        "nuget pack '${nuspecFile}' -ForceEnglishOutput -BasePath \$basePath " +
+                        "-OutputDirectory \$outputDir -Version '${gameVersion}' -Properties NoWarn=NU5104"
+                    powershell(script: packScript)
+
+                    withCredentials([string(credentialsId: 'nuget-horizonia-api-key', variable: 'NUGET_API_KEY')]) {
+                        def pushScript = "\$nugetDir = Join-Path \$env:WORKSPACE 'Nuget'; " +
+                            "\$nupkg = Get-ChildItem -Path \$nugetDir -Filter *.nupkg | Select-Object -First 1; " +
+                            "nuget push \$nupkg.FullName -Source https://api.nuget.org/v3/index.cshtml -ApiKey \$env:NUGET_API_KEY"
+                        powershell(script: pushScript)
+                    }
+                }
+            }
+        }
+
+        stage('Archive Release') {
+            steps {
+                script {
+                    archiveArtifacts artifacts: 'Intermediate/BuildArchive/**/*, Reports/**/*', fingerprint: true, allowMissing: true
+                }
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'Release published successfully.'
+        }
+        failure {
+            echo 'Release pipeline failed. Check logs.'
+        }
+    }
+}

@@ -1,0 +1,22 @@
+# Project-Level Backlog Configuration
+# This file is source-of-truth and should be committed.
+
+[defaults]
+auto_refresh = true
+skill_developer = false
+
+[shared.cache]
+root = ".kano/cache/backlog"
+
+[shared.vector]
+enabled = true
+backend = "sqlite"
+path = ".kano/cache/backlog/vector"
+collection = "backlog"
+metric = "cosine"
+
+# Product registration for global backlog
+[products.HorizonUIPluginDemo]
+name = "HorizonUIPluginDemo"
+prefix = "HR"
+backlog_root = "C:/Users/dorgon.chang/.agents/skills/kano/_kano/backlog/products/HorizonUIPluginDemo"

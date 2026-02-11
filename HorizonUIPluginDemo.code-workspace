@@ -2,6 +2,18 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "H:/EpicGames/Installed/UE_5.7"
+		},
+		{
+			"path": "../../UnrealEngine"
+		},
+		{
+			"path": "../jenkins-unreal-pipeline-library"
+		},
+		{
+			"path": "../../_External/Jenkinsfiles"
 		}
 	],
 	"settings": {}

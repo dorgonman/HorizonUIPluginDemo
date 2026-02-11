@@ -62,6 +62,10 @@
 				"Mac",
 				"Linux"
 			]
+		},
+		{
+			"Name":"OpenXRVisionOS",
+			"Enabled": false
 		}
 	]
 }

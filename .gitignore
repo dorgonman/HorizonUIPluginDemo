@@ -32,3 +32,14 @@ Releases
 /Build/Android/src/com/horizon/uidemo/OBBData.java
 /Build/Android/src/com/epicgames/unreal/DownloadShim.java
 /Build/Android/src/com/horizon/uidemo/DownloaderActivity.java
+/.kano/cache
+/Build/Script/utilities/__pycache__/*.pyc
+"/.kano/"
+"nul"
+"/Plugins/VisualStudioTools/"
+.kano/tmp
+/.sisyphus/
+/Build/**/obj
+/Build/**./obj/
+/Build/**/obj/
+Script/platform/win64/standalone/.kano/
