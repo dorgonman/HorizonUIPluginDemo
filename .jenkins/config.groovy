@@ -35,10 +35,10 @@ def projectConfig() {
 
         // === Build Intermediate Paths ===
         // Resolved relative to projectRoot at runtime; exported as env vars by unrealPipeline
-        buildArchiveRoot:   'Intermediate/BuildArchive',
-        buildPackageRoot:   'Intermediate/BuildPackage',
-        buildPluginRoot:    'Intermediate/BuildPlugin',
-        buildUgsRoot:       'Intermediate/BuildUGS',
+        buildArchiveArtifactRoot: 'Intermediate/BuildArchive',
+        buildPackageArtifactRoot: 'Intermediate/BuildPackage',
+        buildPluginArtifactRoot: 'Intermediate/BuildPlugin',
+        buildUgsArtifactRoot:    'Intermediate/BuildUGS',
 
         // === build toggles ===
         bCleanSCM:          false,
