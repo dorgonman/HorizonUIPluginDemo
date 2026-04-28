@@ -11,6 +11,7 @@ pipeline {
     }
 
     parameters {
+        string name: 'BUILD_BRANCH', defaultValue: 'main', description: 'Git branch to build (for example: main or release/5.7)'
         booleanParam(name: 'bBuildUGSStageWin64', defaultValue: true, description: 'Run UGS stage for Win64 (produces aggregatable artifacts)')
         booleanParam(name: 'bBuildUGSStageMac', defaultValue: true, description: 'Run UGS stage for Mac (produces aggregatable artifacts)')
         booleanParam(name: 'bBuildUGSStageLinux', defaultValue: false, description: 'Run UGS stage for Linux (produces aggregatable artifacts)')
@@ -79,6 +80,7 @@ pipeline {
                         bBuildUGSStageWin64: params.bBuildUGSStageWin64,
                         bBuildUGSStageMac: params.bBuildUGSStageMac,
                         bBuildUGSStageLinux: params.bBuildUGSStageLinux,
+                        buildBranch: params.BUILD_BRANCH?.trim() ?: 'main',
                         bInstallPrerequisites: params.bInstallPrerequisites,
                         bCreateNuGetPackage: params.bCreateNuGetPackage,
                         bPrepareNuGetPackage: params.bPrepareNuGetPackage || params.bCreateNuGetPackage || params.bDeployNuGetPackage,
