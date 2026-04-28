@@ -1,13 +1,18 @@
 // .jenkins/Build/UGSBuild.Jenkinsfile
-// Thin consumer entrypoint for the UGSBuild config.
-
-@Library('jenkins-unreal-pipeline-library') _
+// Project-owned UGS pipeline entrypoint.
+//
+// This job intentionally does not call the shared unrealPipeline() UGS orchestration:
+// the shared path wraps producer outputs under Staging/<Platform>, creates test/coverage
+// report folders for non-test UGS stages, and can invoke the Mac producer twice.  UGS
+// staging artifacts are already platform-partitioned below Binaries/ and Plugins/, so the
+// aggregate workspace should merge producer stashes directly at ArchiveForUGS/Staging/.
 
 pipeline {
     agent { label 'built-in' }
 
     options {
         skipDefaultCheckout(true)
+        disableConcurrentBuilds()
     }
 
     parameters {
@@ -28,75 +33,129 @@ pipeline {
     }
 
     stages {
-        stage('UGS Pipeline') {
+        stage('Build UGS Producers') {
             steps {
                 script {
-                    def cfg = [
-                        projectRoot: '.',
-                        sharedLibraryName: 'jenkins-unreal-pipeline-library',
-                        windowsAgentLabel: 'unreal-win64',
-                        macAgentLabel: 'unreal-mac',
-                        linuxAgentLabel: 'unreal-linux',
-                        win64StandaloneAgentLabel: '',
-                        macStandaloneAgentLabel: '',
-                        linuxStandaloneAgentLabel: '',
-                        win64UgsAgentLabel: '',
-                        macUgsAgentLabel: '',
-                        linuxUgsAgentLabel: '',
-                        scriptRoot: 'Build',
-                        reportRoot: 'Intermediate/BuildArchive/Reports',
-                        slug: 'HorizonUIPluginDemo',
-                        workspaceSlot: 'UGSBuild',
-                        win64SharedWorkspaceRoot: 'C:/_agent/_jenkins/agent/workspace/HorizonPlugin',
-                        macSharedWorkspaceRoot: '/Users/Shared/jenkins/agent/workspace/HorizonPlugin',
-                        linuxSharedWorkspaceRoot: '/var/jenkins/home/ws/HorizonPlugin',
-                        buildArchiveRoot: 'Intermediate/BuildArchive',
-                        buildPackageRoot: 'Intermediate/BuildPackage',
-                        buildPluginRoot: 'Intermediate/BuildPlugin',
-                        buildUgsRoot: 'Intermediate/BuildUGS',
-                        nugetOutputDir: 'Intermediate/BuildUGS/NuGet',
-                        aggregateAgentLabel: 'unreal-win64',
-                        deployWorkspace: '',
-                        bRunBuildGraphAggregation: false,
-                        bRunTestStandaloneWin64: false,
-                        coverageFormat: ['xml', 'html'],
-                        pluginName: 'HorizonUIPlugin',
-                        projectName: 'HorizonUIPluginDemo',
-                        uprojectPath: 'HorizonUIPluginDemo.uproject',
-                        nugetFeed: 'https://api.nuget.org/v3/index.json',
-                        unrealHordeServer: 'http://unrealhorde.local/',
-                        bSkipOrchestratorCheckout: true,
-                    ]
-                    def config = unrealConfig(cfg + [
-                        bRunBuildPhase: true,
-                        bRunAggregatePhase: true,
-                        bRunPrepareDeployPhase: false,
-                        bRunDeployPhase: false,
-                        bBuildStandaloneWin64: false,
-                        bBuildPluginWin64: false,
-                        bBuildStandaloneMac: false,
-                        bBuildStandaloneLinux: false,
-                        bBuildUGSStage: true,
-                        bBuildUGSStageWin64: params.bBuildUGSStageWin64,
-                        bBuildUGSStageMac: params.bBuildUGSStageMac,
-                        bBuildUGSStageLinux: params.bBuildUGSStageLinux,
-                        buildBranch: params.BUILD_BRANCH?.trim() ?: 'main',
-                        bInstallPrerequisites: params.bInstallPrerequisites,
-                        bCreateNuGetPackage: params.bCreateNuGetPackage,
-                        bPrepareNuGetPackage: params.bPrepareNuGetPackage || params.bCreateNuGetPackage || params.bDeployNuGetPackage,
-                        bDeployNuGetPackage: params.bDeployNuGetPackage,
-                        bDeployPerforce: false,
-                        bRunTestStandaloneWin64: false,
-                        bDeployUnrealHordeServer: params.bDeployUnrealHordeServer,
-                        nugetFeed: params.NUGET_FEED_URL?.trim() ?: cfg.nugetFeed,
-                        unrealHordeServer: params.HORDE_SERVER_URL?.trim() ?: cfg.unrealHordeServer,
-                        buildConfiguration: 'UGSBuild',
-                        workspaceSlot: "UGSBuild",
-                        win64SharedWorkspaceRoot: params.WIN64_SHARED_WORKSPACE_ROOT?.trim() ?: cfg.win64SharedWorkspaceRoot,
-                        macSharedWorkspaceRoot: params.MAC_SHARED_WORKSPACE_ROOT?.trim() ?: cfg.macSharedWorkspaceRoot,
-                        linuxSharedWorkspaceRoot: params.LINUX_SHARED_WORKSPACE_ROOT?.trim() ?: cfg.linuxSharedWorkspaceRoot,
-                    ])
-                    unrealPipeline(config)
+                    def branchName = params.BUILD_BRANCH?.trim() ?: 'main'
+                    def win64Root = params.WIN64_SHARED_WORKSPACE_ROOT?.trim() ?: 'C:/_agent/_jenkins/agent/workspace/HorizonPlugin'
+                    def macRoot = params.MAC_SHARED_WORKSPACE_ROOT?.trim() ?: '/Users/Shared/jenkins/agent/workspace/HorizonPlugin'
+                    def linuxRoot = params.LINUX_SHARED_WORKSPACE_ROOT?.trim() ?: '/var/jenkins/home/ws/HorizonPlugin'
+                    def producers = [:]
+
+                    if (params.bBuildUGSStageWin64) {
+                        producers['Win64-UGS'] = {
+                            node('unreal-win64') {
+                                ws("${win64Root}/HorizonUIPluginDemo/UGSBuild") {
+                                    cleanWs()
+                                    checkout scm
+                                    bat "bash -lc \"git fetch origin '+refs/heads/*:refs/remotes/origin/*' && git checkout -B '${branchName}' 'origin/${branchName}' && git submodule update --init --recursive\""
+                                    bat "bash -lc \"rm -rf './Intermediate/BuildUGS/ArchiveForUGS/Staging'\""
+                                    withEnv(["UGS_BRANCH=${branchName}"]) {
+                                        bat "bash -lc \"cd 'Build/Base' && pixi run ugs-stage\""
+                                    }
+                                    dir('Intermediate/BuildUGS') {
+                                        archiveArtifacts artifacts: 'ArchiveForUGS/Staging/**', fingerprint: true, allowEmptyArchive: false
+                                    }
+                                    stash name: 'win64-ugs-artifacts', includes: 'Intermediate/BuildUGS/ArchiveForUGS/Staging/**', useDefaultExcludes: false
+                                }
+                            }
+                        }
+                    }
+
+                    if (params.bBuildUGSStageMac) {
+                        producers['Mac-UGS'] = {
+                            node('unreal-mac') {
+                                ws("${macRoot}/HorizonUIPluginDemo/UGSBuild") {
+                                    cleanWs()
+                                    checkout scm
+                                    sh "git fetch origin '+refs/heads/*:refs/remotes/origin/*' && git checkout -B '${branchName}' 'origin/${branchName}' && git submodule update --init --recursive"
+                                    sh "rm -rf './Intermediate/BuildUGS/ArchiveForUGS/Staging'"
+                                    withEnv(["UGS_BRANCH=${branchName}", 'PATH=/Users/dorgon.chang/.pixi/bin:/Users/dorgon.chang/.local/bin:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin']) {
+                                        sh "cd 'Build/Base' && pixi run ugs-stage"
+                                    }
+                                    dir('Intermediate/BuildUGS') {
+                                        archiveArtifacts artifacts: 'ArchiveForUGS/Staging/**', fingerprint: true, allowEmptyArchive: false
+                                    }
+                                    stash name: 'mac-ugs-artifacts', includes: 'Intermediate/BuildUGS/ArchiveForUGS/Staging/**', useDefaultExcludes: false
+                                }
+                            }
+                        }
+                    }
+
+                    if (params.bBuildUGSStageLinux) {
+                        producers['Linux-UGS'] = {
+                            node('unreal-linux') {
+                                ws("${linuxRoot}/HorizonUIPluginDemo/UGSBuild") {
+                                    cleanWs()
+                                    checkout scm
+                                    sh "git fetch origin '+refs/heads/*:refs/remotes/origin/*' && git checkout -B '${branchName}' 'origin/${branchName}' && git submodule update --init --recursive"
+                                    sh "rm -rf './Intermediate/BuildUGS/ArchiveForUGS/Staging'"
+                                    withEnv(["UGS_BRANCH=${branchName}"]) {
+                                        sh "cd 'Build/Base' && pixi run ugs-stage"
+                                    }
+                                    dir('Intermediate/BuildUGS') {
+                                        archiveArtifacts artifacts: 'ArchiveForUGS/Staging/**', fingerprint: true, allowEmptyArchive: false
+                                    }
+                                    stash name: 'linux-ugs-artifacts', includes: 'Intermediate/BuildUGS/ArchiveForUGS/Staging/**', useDefaultExcludes: false
+                                }
+                            }
+                        }
+                    }
+
+                    if (producers.isEmpty()) {
+                        error('Select at least one UGS producer platform.')
+                    }
+
+                    parallel producers
+                }
+            }
+        }
+
+        stage('Aggregate') {
+            agent { label 'unreal-win64' }
+            steps {
+                script {
+                    def branchName = params.BUILD_BRANCH?.trim() ?: 'main'
+                    def win64Root = params.WIN64_SHARED_WORKSPACE_ROOT?.trim() ?: 'C:/_agent/_jenkins/agent/workspace/HorizonPlugin'
+                    ws("${win64Root}/HorizonUIPluginDemo/Deploy") {
+                        cleanWs()
+                        checkout scm
+                        bat "bash -lc \"git fetch origin '+refs/heads/*:refs/remotes/origin/*' && git checkout -B '${branchName}' 'origin/${branchName}' && git submodule update --init --recursive\""
+
+                        if (params.bBuildUGSStageWin64) {
+                            unstash 'win64-ugs-artifacts'
+                        }
+                        if (params.bBuildUGSStageMac) {
+                            unstash 'mac-ugs-artifacts'
+                        }
+                        if (params.bBuildUGSStageLinux) {
+                            unstash 'linux-ugs-artifacts'
+                        }
+
+                        if (params.bCreateNuGetPackage || params.bPrepareNuGetPackage || params.bDeployNuGetPackage) {
+                            withEnv([
+                                "UGS_BRANCH=${branchName}",
+                                "UGS_PREBUILT_ARCHIVE_STAGING_DIR=${pwd()}/Intermediate/BuildUGS/ArchiveForUGS/Staging",
+                                "UGS_NUGET_OUTPUT_DIR=${pwd()}/Intermediate/BuildUGS/NuGet",
+                                "UGS_NUGET_SOURCE=${params.NUGET_FEED_URL?.trim() ?: 'https://api.nuget.org/v3/index.json'}"
+                            ]) {
+                                bat "bash -lc \"mkdir -p 'Intermediate/BuildUGS/NuGet' && cd 'Build/Base' && pixi run ugs-nuget-pack\""
+                            }
+                        }
+
+                        if (params.bDeployNuGetPackage) {
+                            withEnv([
+                                "UGS_BRANCH=${branchName}",
+                                "UGS_PREBUILT_ARCHIVE_STAGING_DIR=${pwd()}/Intermediate/BuildUGS/ArchiveForUGS/Staging",
+                                "UGS_NUGET_OUTPUT_DIR=${pwd()}/Intermediate/BuildUGS/NuGet",
+                                "UGS_NUGET_SOURCE=${params.NUGET_FEED_URL?.trim() ?: 'https://api.nuget.org/v3/index.json'}"
+                            ]) {
+                                bat "bash -lc \"cd 'Build/Base' && pixi run ugs-nuget-push\""
+                            }
+                        }
+
+                        archiveArtifacts artifacts: 'Intermediate/BuildUGS/**', fingerprint: true, allowEmptyArchive: false
+                    }
                 }
             }
         }

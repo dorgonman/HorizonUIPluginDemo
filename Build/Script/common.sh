@@ -83,7 +83,7 @@ build_is_installed_build() {
 # =============================================================================
 # Helper: collect and validate all platform build metadata from staging
 # =============================================================================
-# Finds all Build/Metadata/build_metadata.json under the staging root,
+# Finds all Build/Metadata/*.json under the staging root,
 # validates that all RevisionHash values are identical (inconsistent platforms =
 # broken build pipeline), and returns the platform list + shared hash.
 #
@@ -98,15 +98,18 @@ _ugs_collect_and_validate_staging_metadata() {
     [[ -z "${staging_base}" ]] && { echo "Staging base dir required." >&2; return 1; }
     local metadata_files platform_list revision_hash first_hash mismatched platforms
 
-    # Find all platform metadata files
+    # Prefer the merged aggregate layout: Staging/Build/Metadata/<Platform>_<Target>.json.
+    # Older producer stashes may still contain either Staging/Build/Metadata/build_metadata.json
+    # for a single platform or Staging/<Platform>/Build/Metadata/build_metadata.json after
+    # a shared-library relocation, so keep those as compatibility fallbacks.
     shopt -s nullglob
-    metadata_files=("${staging_base}"/*/Build/Metadata/build_metadata.json)
+    metadata_files=("${staging_base}/Build/Metadata"/*.json)
     if [[ ${#metadata_files[@]} -eq 0 ]]; then
-        metadata_files=("${staging_base}/Build/Metadata/build_metadata.json")
+        metadata_files=("${staging_base}"/*/Build/Metadata/build_metadata.json)
     fi
     shopt -u nullglob
 
-    [[ ${#metadata_files[@]} -eq 0 ]] && { echo "No build_metadata.json found under ${staging_base}/<Platform>/Build/Metadata/ or ${staging_base}/Build/Metadata/" >&2; return 1; }
+    [[ ${#metadata_files[@]} -eq 0 ]] && { echo "No metadata json found under ${staging_base}/Build/Metadata/ or ${staging_base}/<Platform>/Build/Metadata/" >&2; return 1; }
 
     first_hash=""
     platform_list=""
@@ -191,6 +194,50 @@ build_resolve_env_value_with_secret_fallback() {
 
 build_default_ugs_archive_staging_dir() {
     printf '%s\n' "$(build_project_root)/Intermediate/BuildUGS/ArchiveForUGS/Staging"
+}
+
+build_require_prebuilt_ugs_staging_dir() {
+    local quiet candidate explicit_stage_dir default_stage_dir
+    quiet="${1:-false}"
+    explicit_stage_dir="${UGS_PREBUILT_ARCHIVE_STAGING_DIR:-}"
+    default_stage_dir="$(build_default_ugs_archive_staging_dir)"
+
+    for candidate in "${explicit_stage_dir}" "${default_stage_dir}"; do
+        [[ -n "${candidate}" ]] || continue
+        if [[ -d "${candidate}" ]] && compgen -G "${candidate%/}/*" > /dev/null; then
+            shopt -s nullglob
+            local metadata_files=("${candidate}/Build/Metadata"/*.json)
+            if [[ ${#metadata_files[@]} -eq 0 ]]; then
+                metadata_files=("${candidate}"/*/Build/Metadata/build_metadata.json)
+            fi
+            shopt -u nullglob
+
+            if [[ ${#metadata_files[@]} -gt 0 ]]; then
+                printf '%s\n' "${candidate}"
+                return 0
+            fi
+
+            if [[ "${quiet}" != "true" ]]; then
+                echo "UGS staging directory exists but metadata not found under: ${candidate}/Build/Metadata/" >&2
+                echo "This may indicate an incomplete Stage phase. Run stage.sh to complete the assembly." >&2
+            fi
+            return 1
+        fi
+
+        if [[ -n "${explicit_stage_dir}" && "${candidate}" == "${explicit_stage_dir}" ]]; then
+            if [[ "${quiet}" != "true" ]]; then
+                echo "UGS staging directory not found or empty (explicit env var): ${explicit_stage_dir}" >&2
+                echo "Populate that directory first, or unset UGS_PREBUILT_ARCHIVE_STAGING_DIR to use the default staging path." >&2
+            fi
+            return 1
+        fi
+    done
+
+    if [[ "${quiet}" != "true" ]]; then
+        echo "UGS staging directory not found or empty: ${default_stage_dir}" >&2
+        echo "Run stage.sh first, or set UGS_PREBUILT_ARCHIVE_STAGING_DIR to an assembled staging directory." >&2
+    fi
+    return 1
 }
 
 build_default_ugs_nuspec_path() {
@@ -354,35 +401,38 @@ build_run_ugs_nuget_pack() {
 
     mkdir -p "${metadata_output_dir}"
 
-    # Collect platform metadata from staging.
-    # In UGS staging, metadata lives at Build/Metadata/build_metadata.json.
-    # If platform directories exist (separate staging), find metadata there.
-    # If single staging dir (all platforms merged), find metadata at root level.
+    # Collect platform metadata from staging.  Aggregated UGS staging stores
+    # side-by-side platform metadata under Build/Metadata/*.json.
     local metadata_files
     shopt -s nullglob
-    # Try platform-specific staging first: Staging/<Platform>/Build/Metadata/
-    metadata_files=("${prebuilt_stage_dir}"/*/Build/Metadata/build_metadata.json)
-    # If none found, fall back to single staging: Staging/Build/Metadata/
+    metadata_files=("${prebuilt_stage_dir}/Build/Metadata"/*.json)
     if [[ ${#metadata_files[@]} -eq 0 ]]; then
-        metadata_files=("${prebuilt_stage_dir}/Build/Metadata/build_metadata.json")
+        metadata_files=("${prebuilt_stage_dir}"/*/Build/Metadata/build_metadata.json)
     fi
     shopt -u nullglob
 
     if [[ ${#metadata_files[@]} -eq 0 ]]; then
-        echo "[build_run_ugs_nuget_pack] No build_metadata.json found under ${prebuilt_stage_dir}" >&2
+        echo "[build_run_ugs_nuget_pack] No metadata json found under ${prebuilt_stage_dir}" >&2
     else
         for metadata_file in "${metadata_files[@]}"; do
             local platform_name
-            # For Staging/<Platform>/Build/Metadata/build_metadata.json
-            if [[ "${metadata_file}" == *"/"*"/Build/Metadata/build_metadata.json" ]]; then
+            platform_name="$(python - "${metadata_file}" <<'PY'
+import json, pathlib, sys
+data = json.loads(pathlib.Path(sys.argv[1]).read_text(encoding="utf-8", errors="ignore"))
+print(data.get("TargetPlatform") or pathlib.Path(sys.argv[1]).stem.split("_")[0])
+PY
+)"
+            if [[ -z "${platform_name}" || "${platform_name}" == "build" ]]; then
+                # Compatibility path: Staging/<Platform>/Build/Metadata/build_metadata.json
                 platform_name="$(basename "$(dirname "$(dirname "$(dirname "${metadata_file}")")")")"
-            else
-                # Single staging: Staging/Build/Metadata/build_metadata.json
-                # Use parent directory of Build/Metadata as platform
-                platform_name="$(basename "$(dirname "$(dirname "${metadata_file}")")")"
             fi
-            echo "[build_run_ugs_nuget_pack] Copying ${metadata_file} -> ${metadata_output_dir}/${platform_name}.json"
-            cp "${metadata_file}" "${metadata_output_dir}/${platform_name}.json"
+
+            if [[ "$(basename "${metadata_file}")" == "build_metadata.json" ]]; then
+                cp "${metadata_file}" "${metadata_output_dir}/${platform_name}.json"
+            else
+                cp "${metadata_file}" "${metadata_output_dir}/$(basename "${metadata_file}")"
+            fi
+            echo "[build_run_ugs_nuget_pack] Collected metadata side-car for ${platform_name}: ${metadata_file}"
         done
     fi
 }
