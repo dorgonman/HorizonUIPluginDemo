@@ -207,7 +207,10 @@ pipeline {
                             }
                         }
 
-                        archiveArtifacts artifacts: 'Intermediate/BuildUGS/**', fingerprint: true, allowEmptyArchive: false
+                        if (params.bCreateNuGetPackage || params.bPrepareNuGetPackage || params.bDeployNuGetPackage) {
+                            archiveArtifacts artifacts: 'Intermediate/BuildUGS/NuGet/*.nupkg,Intermediate/BuildUGS/NuGet/build_metadata/*.json', fingerprint: true, allowEmptyArchive: false
+                        }
+                        archiveArtifacts artifacts: 'Intermediate/BuildUGS/ArchiveForUGS/Staging/Build/Metadata/*.json', fingerprint: true, allowEmptyArchive: false
                     }
                 }
             }
