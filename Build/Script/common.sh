@@ -85,9 +85,9 @@ build_is_installed_build() {
 # =============================================================================
 # Finds all Build/Metadata/*.json under the staging root,
 # validates that all RevisionHash values are identical (inconsistent platforms =
-# broken build pipeline), and returns the platform list + shared hash.
+# broken build pipeline), and returns the platform list, shared hash, and shared GameVersion.
 #
-# Output (on success): "<platform1,platform2,...> <RevisionHash>"
+# Output (on success): "<platform1,platform2,...> <RevisionHash> <GameVersion>"
 # Output (on failure): "" to stdout, error message to stderr, return 1
 #
 # Args:
@@ -96,7 +96,7 @@ build_is_installed_build() {
 _ugs_collect_and_validate_staging_metadata() {
     local staging_base="${1:-}"
     [[ -z "${staging_base}" ]] && { echo "Staging base dir required." >&2; return 1; }
-    local metadata_files platform_list revision_hash first_hash mismatched platforms
+    local metadata_files platform_list revision_hash game_version first_hash first_game_version mismatched version_mismatched
 
     # Prefer the merged aggregate layout: Staging/Build/Metadata/<Platform>_<Target>.json.
     # Older producer stashes may still contain either Staging/Build/Metadata/build_metadata.json
@@ -112,49 +112,65 @@ _ugs_collect_and_validate_staging_metadata() {
     [[ ${#metadata_files[@]} -eq 0 ]] && { echo "No metadata json found under ${staging_base}/Build/Metadata/ or ${staging_base}/<Platform>/Build/Metadata/" >&2; return 1; }
 
     first_hash=""
+    first_game_version=""
     platform_list=""
     mismatched=""
+    version_mismatched=""
 
     for metadata_file in "${metadata_files[@]}"; do
-        local this_platform this_hash
-        this_platform="$(python - "${metadata_file}" <<'PY'
+        local this_platform this_hash this_game_version
+        read -r this_platform this_hash this_game_version < <(python - "${metadata_file}" <<'PY_META'
 import json, sys, pathlib
+
 data = json.loads(pathlib.Path(sys.argv[1]).read_text(encoding="utf-8", errors="ignore"))
-print(data.get("TargetPlatform", ""))
-PY
-)"
-        this_hash="$(python - "${metadata_file}" <<'PY'
-import json, sys, pathlib
-data = json.loads(pathlib.Path(sys.argv[1]).read_text(encoding="utf-8", errors="ignore"))
-print(data.get("RevisionHash", ""))
-PY
-)"
+print(data.get("TargetPlatform", ""), data.get("RevisionHash", ""), data.get("GameVersion", ""))
+PY_META
+)
 
         if [[ -z "${first_hash}" ]]; then
             first_hash="${this_hash}"
+            first_game_version="${this_game_version}"
             revision_hash="${this_hash}"
+            game_version="${this_game_version}"
             platform_list="${this_platform}"
         else
             if [[ "${this_hash}" != "${first_hash}" ]]; then
-                mismatched="${mismatched}  ${this_platform}: ${this_hash}\n"
+                printf -v mismatched '%s  %s: %s\n' "${mismatched}" "${this_platform}" "${this_hash}"
+            fi
+            if [[ "${this_game_version}" != "${first_game_version}" ]]; then
+                printf -v version_mismatched '%s  %s: %s\n' "${version_mismatched}" "${this_platform}" "${this_game_version}"
             fi
             platform_list="${platform_list},${this_platform}"
         fi
     done
 
     if [[ -n "${mismatched}" ]]; then
-        echo "ERROR: RevisionHash mismatch across platforms — inconsistent build." >&2
+        echo "ERROR: RevisionHash mismatch across platforms - inconsistent build." >&2
         echo "All platforms must be built from the same source revision." >&2
         echo "Platform          RevisionHash" >&2
         echo "${mismatched}" | while read -r line; do [[ -n "${line}" ]] && echo "  ${line}" >&2; done
         return 1
     fi
 
+    if [[ -n "${version_mismatched}" ]]; then
+        echo "ERROR: GameVersion mismatch across platforms - inconsistent package version." >&2
+        echo "All platforms must be packaged with the same GameVersion." >&2
+        echo "Platform          GameVersion" >&2
+        echo "${version_mismatched}" | while read -r line; do [[ -n "${line}" ]] && echo "  ${line}" >&2; done
+        return 1
+    fi
+
+    if [[ -z "${game_version}" ]]; then
+        echo "ERROR: GameVersion missing from UGS metadata; cannot derive NuGet package version." >&2
+        return 1
+    fi
+
     echo "[ugs_nuget_pack] Collected metadata from platforms: ${platform_list}" >&2
     echo "[ugs_nuget_pack] RevisionHash: ${revision_hash}" >&2
+    echo "[ugs_nuget_pack] GameVersion: ${game_version}" >&2
 
-    # Output: "<platform_list> <revision_hash>"
-    printf '%s\n' "${platform_list} ${revision_hash}"
+    # Output: "<platform_list> <revision_hash> <game_version>"
+    printf '%s\n' "${platform_list} ${revision_hash} ${game_version}"
 }
 
 # =============================================================================
@@ -317,12 +333,13 @@ build_run_ugs_nuget_pack() {
     # mean two platforms were built from different source commits — reject the
     # pack rather than publishing a broken artifact.
     # -------------------------------------------------------------------------
-    local prebuilt_stage_dir metadata_result platforms revision_hash
+    local prebuilt_stage_dir metadata_result platforms revision_hash game_version
     prebuilt_stage_dir="$(build_require_prebuilt_ugs_staging_dir)" || return 1
 
     if metadata_result="$(_ugs_collect_and_validate_staging_metadata "${prebuilt_stage_dir}")"; then
-        read -r platforms revision_hash <<< "${metadata_result}"
+        read -r platforms revision_hash game_version <<< "${metadata_result}"
         echo "[build_run_ugs_nuget_pack] Cross-platform RevisionHash check passed (${platforms})" >&2
+        echo "[build_run_ugs_nuget_pack] NuGet package version from metadata: ${game_version}" >&2
     else
         echo "[build_run_ugs_nuget_pack] FAILED: RevisionHash mismatch — cannot pack inconsistent build." >&2
         return 1
@@ -359,12 +376,10 @@ build_run_ugs_nuget_pack() {
     extra_args+=("-Set:PrebuiltArchiveStagingDir=$(build_to_engine_arg_path "${prebuilt_stage_dir}")")
 
     # Version is the only dynamic metadata; all others live in the nuspec file.
-    [[ -n "${UGS_NUGET_PACKAGE_VERSION:-}" ]] && extra_args+=("-Set:NugetPackageVersion=${UGS_NUGET_PACKAGE_VERSION}")
-
-    # TargetPlatform + RevisionHash are included in the NuGet package filename
-    # so that distinct platform builds and distinct commits produce distinct packages.
-    [[ -n "${platforms:-}" ]]      && extra_args+=("-Set:NugetPackageTargetPlatform=${platforms}")
-    [[ -n "${revision_hash:-}" ]]  && extra_args+=("-Set:NugetPackageRevisionHash=${revision_hash}")
+    # Prefer an explicit override, otherwise derive from merged UGS Build/Metadata.
+    local nuget_package_version
+    nuget_package_version="${UGS_NUGET_PACKAGE_VERSION:-${game_version}}"
+    extra_args+=("-Set:NugetPackageVersion=${nuget_package_version}")
 
     # Optional overrides
     extra_args+=("-Set:EditorTarget=$(build_resolve_editor_target)")

@@ -7,6 +7,40 @@
 // staging artifacts are already platform-partitioned below Binaries/ and Plugins/, so the
 // aggregate workspace should merge producer stashes directly at ArchiveForUGS/Staging/.
 
+void sparseCheckoutForBranch(String branchName, List<String> sparsePaths, boolean initBuildBaseSubmodule) {
+    checkout([
+        $class: 'GitSCM',
+        branches: [[name: "*/${branchName}"]],
+        doGenerateSubmoduleConfigurations: false,
+        extensions: [
+            [$class: 'CloneOption', noTags: false, reference: '', shallow: false, timeout: 30],
+            [$class: 'SparseCheckoutPaths', sparseCheckoutPaths: sparsePaths.collect { [path: it] }],
+            [$class: 'SubmoduleOption', disableSubmodules: true, parentCredentials: true, recursiveSubmodules: false, trackingSubmodules: false]
+        ],
+        userRemoteConfigs: scm.userRemoteConfigs
+    ])
+
+    if (initBuildBaseSubmodule) {
+        bat 'bash -lc "git submodule sync -- Build/Base && git submodule update --init --depth 1 -- Build/Base"'
+    }
+}
+
+String readProjectVersionForBuildName(String projectRoot) {
+    String version = '0.0.0'
+    String defaultGameIni = "${projectRoot}/Config/DefaultGame.ini"
+    if (fileExists(defaultGameIni)) {
+        def matcher = readFile(defaultGameIni) =~ /(?m)^\s*ProjectVersion\s*=\s*(.+?)\s*$/
+        if (matcher) {
+            version = matcher[0][1].trim()
+            def parts = version.tokenize('.')
+            if (parts.size() >= 3) {
+                version = parts[0..2].join('.')
+            }
+        }
+    }
+    return version
+}
+
 pipeline {
     agent { label 'built-in' }
 
@@ -33,6 +67,19 @@ pipeline {
     }
 
     stages {
+        stage('Set Build Name') {
+            steps {
+                script {
+                    def branchName = params.BUILD_BRANCH?.trim() ?: 'main'
+                    cleanWs()
+                    sparseCheckoutForBranch(branchName, ['Config/DefaultGame.ini'], false)
+                    def gameVersion = readProjectVersionForBuildName('.')
+                    currentBuild.displayName = "v${gameVersion}_${env.BUILD_NUMBER}"
+                    echo "Build name set to: ${currentBuild.displayName}"
+                }
+            }
+        }
+
         stage('Build UGS PCB Producers') {
             steps {
                 script {
@@ -119,8 +166,14 @@ pipeline {
                     def win64Root = params.WIN64_SHARED_WORKSPACE_ROOT?.trim() ?: 'C:/_agent/_jenkins/agent/workspace/HorizonPlugin'
                     ws("${win64Root}/HorizonUIPluginDemo/Deploy") {
                         cleanWs()
-                        checkout scm
-                        bat "bash -lc \"git fetch origin '+refs/heads/*:refs/remotes/origin/*' && git checkout -B '${branchName}' 'origin/${branchName}' && git submodule update --init --recursive\""
+                        sparseCheckoutForBranch(branchName, [
+                            '.gitmodules',
+                            'Build/Base',
+                            'Build/Script',
+                            '.nuget',
+                            'Config/DefaultGame.ini',
+                            'HorizonUIPluginDemo.uproject'
+                        ], true)
 
                         if (params.bBuildUGSStageWin64) {
                             unstash 'win64-ugs-artifacts'
