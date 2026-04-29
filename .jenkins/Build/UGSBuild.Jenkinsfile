@@ -33,7 +33,7 @@ pipeline {
     }
 
     stages {
-        stage('Build UGS Producers') {
+        stage('Build UGS PCB Producers') {
             steps {
                 script {
                     def branchName = params.BUILD_BRANCH?.trim() ?: 'main'
