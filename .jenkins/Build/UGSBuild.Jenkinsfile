@@ -1,4 +1,7 @@
 // .jenkins/Build/UGSBuild.Jenkinsfile
+
+@Library('jenkins-unreal-pipeline-library') _
+
 // Project-owned UGS pipeline entrypoint.
 //
 // This job intentionally does not call the shared unrealPipeline() UGS orchestration:
@@ -208,9 +211,9 @@ pipeline {
                         }
 
                         if (params.bCreateNuGetPackage || params.bPrepareNuGetPackage || params.bDeployNuGetPackage) {
-                            archiveArtifacts artifacts: 'Intermediate/BuildUGS/NuGet/*.nupkg,Intermediate/BuildUGS/NuGet/build_metadata/*.json', fingerprint: true, allowEmptyArchive: false
+                            unrealArchiveUgsArtifacts(archiveNuGet: true)
                         }
-                        archiveArtifacts artifacts: 'Intermediate/BuildUGS/ArchiveForUGS/Staging/Build/Metadata/*.json', fingerprint: true, allowEmptyArchive: false
+
                     }
                 }
             }
