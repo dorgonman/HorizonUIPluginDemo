@@ -216,9 +216,38 @@ build_require_prebuilt_ugs_staging_dir() {
     local quiet candidate explicit_stage_dir default_stage_dir
     quiet="${1:-false}"
     explicit_stage_dir="${UGS_PREBUILT_ARCHIVE_STAGING_DIR:-}"
+
+    if [[ -n "${explicit_stage_dir}" ]]; then
+        if [[ -d "${explicit_stage_dir}" ]] && compgen -G "${explicit_stage_dir%/}/*" > /dev/null; then
+            shopt -s nullglob
+            local explicit_metadata_files=("${explicit_stage_dir}/Build/Metadata"/*.json)
+            if [[ ${#explicit_metadata_files[@]} -eq 0 ]]; then
+                explicit_metadata_files=("${explicit_stage_dir}"/*/Build/Metadata/build_metadata.json)
+            fi
+            shopt -u nullglob
+
+            if [[ ${#explicit_metadata_files[@]} -gt 0 ]]; then
+                printf '%s\n' "${explicit_stage_dir}"
+                return 0
+            fi
+
+            if [[ "${quiet}" != "true" ]]; then
+                echo "UGS staging directory exists but metadata not found under: ${explicit_stage_dir}/Build/Metadata/" >&2
+                echo "This may indicate an incomplete Stage phase. Run stage.sh to complete the assembly." >&2
+            fi
+            return 1
+        fi
+
+        if [[ "${quiet}" != "true" ]]; then
+            echo "UGS staging directory not found or empty (explicit env var): ${explicit_stage_dir}" >&2
+            echo "Populate that directory first, or unset UGS_PREBUILT_ARCHIVE_STAGING_DIR to use the default staging path." >&2
+        fi
+        return 1
+    fi
+
     default_stage_dir="$(build_default_ugs_archive_staging_dir)"
 
-    for candidate in "${explicit_stage_dir}" "${default_stage_dir}"; do
+    for candidate in "${default_stage_dir}"; do
         [[ -n "${candidate}" ]] || continue
         if [[ -d "${candidate}" ]] && compgen -G "${candidate%/}/*" > /dev/null; then
             shopt -s nullglob
@@ -240,13 +269,6 @@ build_require_prebuilt_ugs_staging_dir() {
             return 1
         fi
 
-        if [[ -n "${explicit_stage_dir}" && "${candidate}" == "${explicit_stage_dir}" ]]; then
-            if [[ "${quiet}" != "true" ]]; then
-                echo "UGS staging directory not found or empty (explicit env var): ${explicit_stage_dir}" >&2
-                echo "Populate that directory first, or unset UGS_PREBUILT_ARCHIVE_STAGING_DIR to use the default staging path." >&2
-            fi
-            return 1
-        fi
     done
 
     if [[ "${quiet}" != "true" ]]; then
@@ -262,6 +284,70 @@ build_default_ugs_nuspec_path() {
 
 build_default_ugs_nuget_output_dir() {
     printf '%s\n' "$(build_project_root)/Intermediate/BuildUGS/NuGet"
+}
+
+build_resolve_ugs_nuspec_path() {
+    local candidate search_root nuspec_files
+
+    for candidate in "${UGS_NUGET_NUSPEC_PATH:-}" "${KANOBUILD_GRAPH_NUSPEC_PATH:-}"; do
+        [[ -n "${candidate}" ]] || continue
+        if [[ -f "${candidate}" ]]; then
+            printf '%s\n' "${candidate}"
+            return 0
+        fi
+    done
+
+    # Deploy/aggregate scripts run from Build/Base in a sparse checkout. Search
+    # nearby workspace roots for .nuget/*.nuspec without requiring a .uproject.
+    for search_root in "$(pwd)" "$(pwd)/.." "$(pwd)/../.." "$(pwd)/../../.."; do
+        shopt -s nullglob
+        nuspec_files=("${search_root}/.nuget"/*.nuspec)
+        shopt -u nullglob
+        if [[ ${#nuspec_files[@]} -gt 0 ]]; then
+            printf '%s\n' "${nuspec_files[0]}"
+            return 0
+        fi
+    done
+
+    if [[ -n "${PROJECT_NAME:-}" ]]; then
+        candidate="$(build_default_ugs_nuspec_path 2>/dev/null || true)"
+        if [[ -n "${candidate}" && -f "${candidate}" ]]; then
+            printf '%s\n' "${candidate}"
+            return 0
+        fi
+    fi
+
+    echo "Unable to locate a NuGet .nuspec. Set UGS_NUGET_NUSPEC_PATH explicitly." >&2
+    return 1
+}
+
+build_resolve_ugs_nuget_output_dir() {
+    if [[ -n "${UGS_NUGET_OUTPUT_DIR:-}" ]]; then
+        printf '%s\n' "${UGS_NUGET_OUTPUT_DIR}"
+        return 0
+    fi
+
+    build_default_ugs_nuget_output_dir
+}
+
+build_resolve_ugs_nuget_exe() {
+    printf '%s\n' "${UGS_NUGET_EXE:-${NUGET_EXE:-nuget.exe}}"
+}
+
+build_nuspec_package_id() {
+    local nuspec_path="${1}"
+    python - "${nuspec_path}" <<'PY'
+import pathlib
+import sys
+import xml.etree.ElementTree as ET
+
+root = ET.parse(sys.argv[1]).getroot()
+ns = ''
+if root.tag.startswith('{'):
+    ns = root.tag.split('}', 1)[0] + '}'
+node = root.find(f'.//{ns}id')
+print(node.text.strip() if node is not None and node.text else pathlib.Path(sys.argv[1]).stem)
+PY
 }
 
 # -----------------------------------------------------------------------------
@@ -322,10 +408,6 @@ build_run_ugs_stage() {
 # defined in the .nuspec file. Only NuspecPath + NugetPackageVersion are needed;
 # all other options are derived from the nuspec at pack time.
 build_run_ugs_nuget_pack() {
-    build_prepare_context
-    build_require_env_var "UGS_BRANCH"
-    build_prepare_ugs_project_paths
-
     # -------------------------------------------------------------------------
     # Pre-pack cross-platform consistency check
     # Collect all platform build_metadata.json from staging and verify that
@@ -345,18 +427,8 @@ build_run_ugs_nuget_pack() {
         return 1
     fi
 
-    local project_root_native engine_root_native workspace_root_dir archive_workspace_root_dir
-    project_root_native="$(build_native_path "${REAL_PROJECT_ROOT}")"
-    engine_root_native="$(build_native_path "${UNREAL_ENGINE_ROOT}")"
-    workspace_root_dir="$(_ugs_resolve_workspace_root "${project_root_native}" "${engine_root_native}")"
-    archive_workspace_root_dir="$(_ugs_resolve_archive_workspace_root "${project_root_native}" "${engine_root_native}")"
-
-    local example_graph
-    example_graph="$(resolve_build_editor_and_tools_buildgraph_path "${UNREAL_ENGINE_ROOT}")"
-
-    # Auto-detect nuspec: $(build_project_root)/.nuget/${PROJECT_NAME}.nuspec
     local nuspec_path
-    nuspec_path="$(build_default_ugs_nuspec_path)"
+    nuspec_path="$(build_resolve_ugs_nuspec_path)"
     if [[ -f "${nuspec_path}" ]]; then
         echo "[build_run_ugs_nuget_pack] Using nuspec: ${nuspec_path}"
     else
@@ -364,39 +436,22 @@ build_run_ugs_nuget_pack() {
         return 1
     fi
 
-    local extra_args=()
-    extra_args+=("-Set:ProjectRootDir=${project_root_native}")
-    extra_args+=("-Set:WorkspaceRootDir=${workspace_root_dir}")
-    extra_args+=("-Set:ArchiveWorkspaceRootDir=${archive_workspace_root_dir}")
-    extra_args+=("-Set:UnrealEngineRootDir=${engine_root_native}")
-    extra_args+=("-Set:UProjectPath=${UGS_UPROJECT_PATH}")
-    extra_args+=("-Set:UProjectRelativePath=${UGS_UPROJECT_RELATIVE_PATH}")
-    extra_args+=("-Set:NuspecPath=$(build_to_engine_arg_path "${nuspec_path}")")
-    extra_args+=("-Branch=${UGS_BRANCH}")
-    extra_args+=("-Set:PrebuiltArchiveStagingDir=$(build_to_engine_arg_path "${prebuilt_stage_dir}")")
-
     # Version is the only dynamic metadata; all others live in the nuspec file.
     # Prefer an explicit override, otherwise derive from merged UGS Build/Metadata.
-    local nuget_package_version
+    local nuget_package_version nuget_output_dir nuget_exe
     nuget_package_version="${UGS_NUGET_PACKAGE_VERSION:-${game_version}}"
-    extra_args+=("-Set:NugetPackageVersion=${nuget_package_version}")
+    nuget_output_dir="$(build_resolve_ugs_nuget_output_dir)"
+    nuget_exe="$(build_resolve_ugs_nuget_exe)"
 
-    # Optional overrides
-    extra_args+=("-Set:EditorTarget=$(build_resolve_editor_target)")
-    [[ -n "${UGS_ARCHIVE_NAME:-}" ]] && extra_args+=("-Set:ArchiveName=${UGS_ARCHIVE_NAME}")
-    [[ -n "${UGS_NUGET_OUTPUT_DIR:-}" ]] && extra_args+=("-Set:NugetOutputDir=$(build_to_engine_arg_path "${UGS_NUGET_OUTPUT_DIR}")")
+    mkdir -p "${nuget_output_dir}"
 
-    if [[ -f "${UNREAL_ENGINE_ROOT}/Engine/Build/InstalledBuild.txt" ]] && ! build_is_source_build "${UNREAL_ENGINE_ROOT}"; then
-        echo "[build_run_ugs_nuget_pack] InstalledBuild detected: switching to InstalledBuild compile path (Spawn+Tag, no manifest validation)" >&2
-        extra_args+=("-Set:BuildTools=false")
-        extra_args+=("-Set:InstalledBuild=true")
-    fi
-
-    build_run_engine_buildgraph \
-        "${example_graph}" \
-        "Pack NuGet" \
-        "${UNREAL_ENGINE_ROOT}" \
-        "${extra_args[@]}" \
+    echo "[build_run_ugs_nuget_pack] Packing with ${nuget_exe}" >&2
+    "${nuget_exe}" pack "${nuspec_path}" \
+        -ForceEnglishOutput \
+        -BasePath "${prebuilt_stage_dir}" \
+        -OutputDirectory "${nuget_output_dir}" \
+        -Version "${nuget_package_version}" \
+        -Properties NoWarn=NU5104 \
         "$@"
 
     # -------------------------------------------------------------------------
@@ -410,8 +465,7 @@ build_run_ugs_nuget_pack() {
     #
     # CI can then read per-platform metadata from these side-car files.
     # -------------------------------------------------------------------------
-    local nuget_output_dir metadata_output_dir
-    nuget_output_dir="${UGS_NUGET_OUTPUT_DIR:-$(build_default_ugs_nuget_output_dir)}"
+    local metadata_output_dir
     metadata_output_dir="${nuget_output_dir}/build_metadata"
 
     mkdir -p "${metadata_output_dir}"
@@ -450,6 +504,71 @@ PY
             echo "[build_run_ugs_nuget_pack] Collected metadata side-car for ${platform_name}: ${metadata_file}"
         done
     fi
+}
+
+# -----------------------------------------------------------------------------
+# Override: build_run_ugs_nuget_push
+# -----------------------------------------------------------------------------
+# Deploy-phase NuGet push is metadata/package driven. It must not call
+# build_prepare_context because sparse deploy workspaces intentionally do not
+# contain a .uproject or full project checkout.
+build_run_ugs_nuget_push() {
+    local prebuilt_stage_dir nuspec_path output_dir package_id package_version package_file
+    prebuilt_stage_dir="$(build_require_prebuilt_ugs_staging_dir)" || return 1
+    nuspec_path="$(build_resolve_ugs_nuspec_path)"
+    output_dir="$(build_resolve_ugs_nuget_output_dir)"
+    [[ -f "${nuspec_path}" ]] || { echo "NuSpec file not found: ${nuspec_path}" >&2; return 1; }
+
+    local source_var_names api_key_var_names nuget_source nuget_api_key
+    source_var_names="${UGS_NUGET_SOURCE_CANDIDATES:-UGS_NUGET_SOURCE NUGET_SOURCE FEED_NAME}"
+    api_key_var_names="${UGS_NUGET_API_KEY_CANDIDATES:-UGS_NUGET_API_KEY NUGET_API_KEY}"
+
+    nuget_source=""
+    nuget_api_key=""
+    # shellcheck disable=SC2086
+    if ! nuget_source="$(build_resolve_env_value_with_secret_fallback ${source_var_names} 2>/dev/null)"; then
+        nuget_source=""
+    fi
+    # shellcheck disable=SC2086
+    if ! nuget_api_key="$(build_resolve_env_value_with_secret_fallback ${api_key_var_names} 2>/dev/null)"; then # gitleaks:allow
+        nuget_api_key=""
+    fi
+
+    [[ -n "${nuget_source}" ]] || { echo "Missing NuGet source. Set one of: ${source_var_names}" >&2; return 1; }
+    [[ -n "${nuget_api_key}" ]] || { echo "Missing NuGet API key. Set one of: ${api_key_var_names}" >&2; return 1; }
+
+    package_id="${UGS_NUGET_PACKAGE_ID:-$(build_nuspec_package_id "${nuspec_path}")}"
+    package_version="${UGS_NUGET_PACKAGE_VERSION:-}"
+    if [[ -z "${package_version}" ]]; then
+        local metadata_result platforms revision_hash game_version
+        if metadata_result="$(_ugs_collect_and_validate_staging_metadata "${prebuilt_stage_dir}")"; then
+            read -r platforms revision_hash game_version <<< "${metadata_result}"
+            package_version="${game_version}"
+        fi
+    fi
+
+    if [[ -n "${package_version}" && -f "${output_dir}/${package_id}.${package_version}.nupkg" ]]; then
+        package_file="${output_dir}/${package_id}.${package_version}.nupkg"
+    else
+        shopt -s nullglob
+        local package_files=("${output_dir}"/*.nupkg)
+        shopt -u nullglob
+        if [[ ${#package_files[@]} -eq 1 ]]; then
+            package_file="${package_files[0]}"
+        else
+            echo "Unable to identify NuGet package under ${output_dir}. Run nuget_pack.sh first or set UGS_NUGET_PACKAGE_VERSION." >&2
+            return 1
+        fi
+    fi
+
+    local nuget_exe
+    nuget_exe="$(build_resolve_ugs_nuget_exe)"
+    echo "[build_run_ugs_nuget_push] Pushing ${package_file} to ${nuget_source}" >&2
+    "${nuget_exe}" push "${package_file}" \
+        -Source "${nuget_source}" \
+        -ApiKey "${nuget_api_key}" \
+        -NonInteractive \
+        "$@"
 }
 
 # -----------------------------------------------------------------------------
