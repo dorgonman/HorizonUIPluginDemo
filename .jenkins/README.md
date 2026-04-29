@@ -11,6 +11,7 @@ The following Jenkinsfiles serve as entrypoints for different CI/CD needs:
 - `.jenkins/Build/Test.Jenkinsfile` — Test-focused package build config.
 - `.jenkins/Build/Shipping.Jenkinsfile` — Shipping/plugin distribution build config.
 - `.jenkins/Build/UGSBuild.Jenkinsfile` — UGS pipeline entrypoint with explicit Build, PrepareDeploy, and Deploy phases.
+- `.jenkins/BuildAgent/InstallPrerequisites.PipelineScript.groovy` — Embedded Pipeline Script for the BuildAgent prerequisite installation job.
 
 ## Configuration Guide
 

@@ -30,32 +30,23 @@ pipeline {
     parameters {
         // === Standalone / Server Matrix ===
         booleanParam name: 'bBuildStandaloneWin64', defaultValue: true, description: 'Build Win64 standalone target'
-        // booleanParam name: 'bBuildServerWin64', defaultValue: false, description: 'Build Win64 server target'
         booleanParam name: 'bBuildStandaloneAndroid', defaultValue: true, description: 'Build Android standalone target'
-        // booleanParam name: 'bBuildStandaloneIOS', defaultValue: false, description: 'Build iOS standalone target (requires Mac agent + Apple Developer Plan)'
-        // booleanParam name: 'bBuildStandaloneMac', defaultValue: false, description: 'Build Mac standalone target (requires Mac agent + Apple Developer Plan)'
-        // booleanParam name: 'bBuildServerMac', defaultValue: false, description: 'Build Mac server target (requires Mac agent + Apple Developer Plan)'
-        // booleanParam name: 'bBuildStandaloneXSX', defaultValue: false, description: 'Build Xbox Series X standalone target'
-        // booleanParam name: 'bBuildStandalonePS5', defaultValue: false, description: 'Build PlayStation 5 standalone target'
-        // booleanParam name: 'bBuildStandaloneSwitch2', defaultValue: false, description: 'Build Nintendo Switch 2 standalone target'
-        // booleanParam name: 'bBuildStandaloneLinux', defaultValue: false, description: 'Build Linux standalone target'
-        // booleanParam name: 'bBuildServerLinux', defaultValue: false, description: 'Build Linux server target'
+        booleanParam name: 'bBuildStandaloneIOS', defaultValue: false, description: 'Build iOS standalone target (requires Mac agent + Apple Developer Plan)'
+        booleanParam name: 'bBuildStandaloneMac', defaultValue: false, description: 'Build Mac standalone target (requires Mac agent)'
+        booleanParam name: 'bBuildStandaloneLinux', defaultValue: false, description: 'Build Linux standalone target'
 
         // === Plugin Booleans ===
         booleanParam name: 'bBuildPluginWin64', defaultValue: true, description: 'Build Win64 Plugin Shipping'
-        // booleanParam name: 'bBuildPluginAndroid', defaultValue: false, description: 'Build Android Plugin Shipping'
+        booleanParam name: 'bBuildPluginAndroid', defaultValue: true, description: 'Build Android Plugin Shipping (requires Win64 agent + AutoSDK)'
         booleanParam name: 'bBuildPluginIOS', defaultValue: true, description: 'Build iOS Plugin Shipping (requires Mac agent + Apple Developer Plan)'
         booleanParam name: 'bBuildPluginMac', defaultValue: true, description: 'Build Mac Plugin Shipping (requires Mac agent + Apple Developer Plan)'
-        // booleanParam name: 'bBuildPluginXSX', defaultValue: false, description: 'Build Xbox Series X Plugin Shipping'
-        // booleanParam name: 'bBuildPluginPS5', defaultValue: false, description: 'Build PS5 Plugin Shipping'
-        // booleanParam name: 'bBuildPluginSwitch2', defaultValue: false, description: 'Build Switch 2 Plugin Shipping'
         booleanParam name: 'bBuildPluginLinux', defaultValue: false, description: 'Build Linux Plugin Shipping'
 
         // === Test ===
         booleanParam name: 'bRunTestStandaloneWin64', defaultValue: true, description: 'Run Win64 standalone tests'
 
         // === Prerequisites ===
-        booleanParam name: 'bInstallPrerequisites', defaultValue: true, description: 'Install prerequisites before building (runs Build/Base/install-prerequisites.sh)'
+        booleanParam name: 'bInstallPrerequisites', defaultValue: false, description: 'Install prerequisites before building (runs Build/Base/install-prerequisites.sh)'
 
         // === Clean ===
         booleanParam name: 'bCleanSCM', defaultValue: false, description: 'Run git checkout -f -- . && git clean -ddfx . to wipe all unstaged changes before building (also applies to submodules)'
@@ -106,7 +97,12 @@ pipeline {
                         bCleanSCM: params.bCleanSCM,
                         bInstallPrerequisites: params.bInstallPrerequisites,
                         bBuildStandaloneWin64: params.bBuildStandaloneWin64,
+                        bBuildStandaloneAndroid: params.bBuildStandaloneAndroid,
+                        bBuildStandaloneIOS: params.bBuildStandaloneIOS,
+                        bBuildStandaloneMac: params.bBuildStandaloneMac,
+                        bBuildStandaloneLinux: params.bBuildStandaloneLinux,
                         bBuildPluginWin64: params.bBuildPluginWin64,
+                        bBuildPluginAndroid: params.bBuildPluginAndroid,
                         bBuildPluginIOS: params.bBuildPluginIOS,
                         bBuildPluginMac: params.bBuildPluginMac,
                         bBuildPluginLinux: params.bBuildPluginLinux,
