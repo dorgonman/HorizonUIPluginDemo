@@ -45,6 +45,9 @@ pipeline {
         // === Test ===
         booleanParam name: 'bRunTestStandaloneWin64', defaultValue: true, description: 'Run Win64 standalone tests'
 
+        // === FailFast ===
+        booleanParam name: 'bFailFast', defaultValue: false, description: 'Abort all parallel branches when any one fails (default: off — all branches complete regardless)'
+
         // === Prerequisites ===
         booleanParam name: 'bInstallPrerequisites', defaultValue: false, description: 'Install prerequisites before building (runs Build/Base/install-prerequisites.sh)'
 
@@ -107,6 +110,7 @@ pipeline {
                         bBuildPluginMac: params.bBuildPluginMac,
                         bBuildPluginLinux: params.bBuildPluginLinux,
                         bRunTestStandaloneWin64: params.bRunTestStandaloneWin64,
+                        bFailFast: params.bFailFast,
                         win64SharedWorkspaceRoot: params.WIN64_SHARED_WORKSPACE_ROOT?.trim() ?: cfg.win64SharedWorkspaceRoot,
                         macSharedWorkspaceRoot: params.MAC_SHARED_WORKSPACE_ROOT?.trim() ?: cfg.macSharedWorkspaceRoot,
                         linuxSharedWorkspaceRoot: params.LINUX_SHARED_WORKSPACE_ROOT?.trim() ?: cfg.linuxSharedWorkspaceRoot,
