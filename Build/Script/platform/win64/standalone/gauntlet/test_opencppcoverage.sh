@@ -2,7 +2,7 @@
 # Build/Script/platform/win64/standalone/gauntlet/test_opencppcoverage.sh
 # Local override for gauntlet test execution with OpenCppCoverage.
 # Delegates to Build/Base/.../gauntlet/test_opencppcoverage.sh
-# then copies ctest-report.xml to the path expected by unrealTest.groovy:
+# then writes tests.xml to the path expected by unrealTest.groovy:
 #   ${KANO_TEST_XML:-Reports/tests/${slug}/tests.xml}
 
 set -euo pipefail
@@ -31,14 +31,3 @@ elif [[ -f "${_report_dir}/index.json" ]]; then
     "${_python}" "${_converter}" --from-path "${_report_dir}/index.json" --to-path "${_dest_dir}/tests.xml"
 fi
 
-# Copy OpenCppCoverage output to the Cobertura path expected by unrealTest.groovy.
-_coverage_src="$(build_test_coverage_report_directory)/${PROJECT_NAME:-HorizonUIPluginDemo}Test/cobertura.xml"
-_coverage_dest="${KANO_COVERAGE_XML:-Reports/coverage/${PROJECT_NAME:-HorizonUIPluginDemo}/cobertura.xml}"
-if [[ -f "${_coverage_src}" ]]; then
-    _coverage_src_norm="$(printf '%s' "${_coverage_src}" | tr '\\' '/')"
-    _coverage_dest_norm="$(printf '%s' "${_coverage_dest}" | tr '\\' '/')"
-    if [[ "${_coverage_src_norm}" != "${_coverage_dest_norm}" ]]; then
-        mkdir -p "$(dirname "${_coverage_dest}")"
-        cp -f "${_coverage_src}" "${_coverage_dest}"
-    fi
-fi
