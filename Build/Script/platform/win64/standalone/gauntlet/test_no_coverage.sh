@@ -12,18 +12,22 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 # then down to Build/Base/Script/... (workspace is now Build/PackagedBuild/ which is 1 level deeper than before)
 source "${SCRIPT_DIR}/../../../../../Base/Script/platform/win64/standalone/gauntlet/test_no_coverage.sh"
 
-# Copy ctest-report.xml to the JUnit path expected by unrealTest.groovy.
-# The base script places ctest-report.xml at:
-#   ${PROJECT_ROOT}/Intermediate/BuildArchive/AutomationTest/Report/<platform>/<config>/<buildKind>/Result/
-# But unrealTest.groovy expects tests.xml at:
-#   Reports/tests/${slug}/tests.xml  (via KANO_TEST_XML env var)
-#
-# KANO_TEST_XML is set by kano_report_init_layout() inside build_render_static_reports(),
-# but build_generate_test_static_report() only reads ctest-report.xml and writes HTML —
-# it does NOT copy ctest-report.xml → tests.xml. We fix that here.
+# Copy Unreal's automation report to the JUnit path expected by unrealTest.groovy.
 _report_dir="$(build_test_result_report_directory)"
 _dest_dir="${KANO_TEST_REPORT_DIR:-Reports/tests/${PROJECT_NAME:-HorizonUIPluginDemo}}"
 mkdir -p "${_dest_dir}"
 if [[ -f "${_report_dir}/ctest-report.xml" ]]; then
     cp -f "${_report_dir}/ctest-report.xml" "${_dest_dir}/tests.xml"
+elif [[ -f "${_report_dir}/index.json" ]]; then
+    _converter="$(build_test_report_converter_path)"
+    _python="$(build_python_command)"
+    "${_python}" "${_converter}" --from-path "${_report_dir}/index.json" --to-path "${_dest_dir}/tests.xml"
+fi
+
+# Copy OpenCppCoverage output to the Cobertura path expected by unrealTest.groovy.
+_coverage_src="$(build_test_coverage_report_directory)/${PROJECT_NAME:-HorizonUIPluginDemo}Test/cobertura.xml"
+_coverage_dest="${KANO_COVERAGE_XML:-Reports/coverage/${PROJECT_NAME:-HorizonUIPluginDemo}/cobertura.xml}"
+if [[ -f "${_coverage_src}" ]]; then
+    mkdir -p "$(dirname "${_coverage_dest}")"
+    cp -f "${_coverage_src}" "${_coverage_dest}"
 fi

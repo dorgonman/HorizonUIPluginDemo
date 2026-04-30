@@ -12,10 +12,22 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 # then down to Build/Base/Script/...
 source "${SCRIPT_DIR}/../../../../../Base/Script/platform/win64/standalone/gauntlet/test_opencppcoverage.sh"
 
-# Copy ctest-report.xml to the JUnit path expected by unrealTest.groovy.
+# Copy Unreal's automation report to the JUnit path expected by unrealTest.groovy.
 _report_dir="$(build_test_result_report_directory)"
 _dest_dir="${KANO_TEST_REPORT_DIR:-Reports/tests/${PROJECT_NAME:-HorizonUIPluginDemo}}"
 mkdir -p "${_dest_dir}"
 if [[ -f "${_report_dir}/ctest-report.xml" ]]; then
     cp -f "${_report_dir}/ctest-report.xml" "${_dest_dir}/tests.xml"
+elif [[ -f "${_report_dir}/index.json" ]]; then
+    _converter="$(build_test_report_converter_path)"
+    _python="$(build_python_command)"
+    "${_python}" "${_converter}" --from-path "${_report_dir}/index.json" --to-path "${_dest_dir}/tests.xml"
+fi
+
+# Copy OpenCppCoverage output to the Cobertura path expected by unrealTest.groovy.
+_coverage_src="$(build_test_coverage_report_directory)/${PROJECT_NAME:-HorizonUIPluginDemo}Test/cobertura.xml"
+_coverage_dest="${KANO_COVERAGE_XML:-Reports/coverage/${PROJECT_NAME:-HorizonUIPluginDemo}/cobertura.xml}"
+if [[ -f "${_coverage_src}" ]]; then
+    mkdir -p "$(dirname "${_coverage_dest}")"
+    cp -f "${_coverage_src}" "${_coverage_dest}"
 fi
