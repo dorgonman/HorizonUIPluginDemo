@@ -19,7 +19,11 @@ mkdir -p "${_dest_dir}"
 if [[ -f "${_report_dir}/ctest-report.xml" ]]; then
     cp -f "${_report_dir}/ctest-report.xml" "${_dest_dir}/tests.xml"
 elif [[ -f "${_report_dir}/index.json" ]]; then
-    _converter="$(build_test_report_converter_path)"
+    # Converter lives under Build/Base/Script/tools/ in the Build/Base submodule.
+    # The submodule's common.sh build_test_report_converter_path() still resolves
+    # to the old "utilities/" path on the workspace copy. Use a direct path to
+    # the actual converter in the Build/Base submodule root instead.
+    _converter="${SCRIPT_DIR}/../../../../../../Base/Script/tools/unreal_json_to_ctest.py"
     _python="$(build_python_command)"
     "${_python}" "${_converter}" --from-path "${_report_dir}/index.json" --to-path "${_dest_dir}/tests.xml"
 fi
