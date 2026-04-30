@@ -84,6 +84,7 @@ def projectConfig() {
         bDeployUnrealHordeServer: false,
         unrealHordeServer:  'http://unrealhorde.local/',
         hordeToken:        '',  // Set via HORDE_TOKEN Jenkins parameter; empty here
+        hordeGitStreamRepo: 'https://dev.azure.com/kanohorizonia/UEHorizonPlugin/_git/HorizonUIPluginDemo',  // Repo URL for Horde stream ID (without trailing .git)
 
         // === Plugin-specific ===
         pluginName:         'HorizonUIPlugin',
