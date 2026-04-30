@@ -43,3 +43,4 @@ Releases
 /Build/**./obj/
 /Build/**/obj/
 Script/platform/win64/standalone/.kano/
+/nul

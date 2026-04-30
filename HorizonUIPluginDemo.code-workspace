@@ -10,10 +10,7 @@
 			"path": "../../UnrealEngine"
 		},
 		{
-			"path": "../jenkins-unreal-pipeline-library"
-		},
-		{
-			"path": "../../_External/Jenkinsfiles"
+			"path": "C:/Users/dorgon.chang/.agents/skills/kano/kano-jenkins-skill"
 		}
 	],
 	"settings": {}
