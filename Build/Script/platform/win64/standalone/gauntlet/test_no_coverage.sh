@@ -8,7 +8,9 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
-source "${SCRIPT_DIR}/../../../../../../Base/Script/platform/win64/standalone/gauntlet/test_no_coverage.sh"
+# From Build/Script/platform/win64/standalone/gauntlet/, go up 6 levels to project root,
+# then down to Build/Base/Script/... (workspace is now Build/PackagedBuild/ which is 1 level deeper than before)
+source "${SCRIPT_DIR}/../../../../../Base/Script/platform/win64/standalone/gauntlet/test_no_coverage.sh"
 
 # Copy ctest-report.xml to the JUnit path expected by unrealTest.groovy.
 # The base script places ctest-report.xml at:
