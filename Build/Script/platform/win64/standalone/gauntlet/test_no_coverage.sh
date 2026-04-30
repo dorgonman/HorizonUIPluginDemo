@@ -35,6 +35,10 @@ fi
 _coverage_src="$(build_test_coverage_report_directory)/${PROJECT_NAME:-HorizonUIPluginDemo}Test/cobertura.xml"
 _coverage_dest="${KANO_COVERAGE_XML:-Reports/coverage/${PROJECT_NAME:-HorizonUIPluginDemo}/cobertura.xml}"
 if [[ -f "${_coverage_src}" ]]; then
-    mkdir -p "$(dirname "${_coverage_dest}")"
-    cp -f "${_coverage_src}" "${_coverage_dest}"
+    _coverage_src_norm="$(printf '%s' "${_coverage_src}" | tr '\\' '/')"
+    _coverage_dest_norm="$(printf '%s' "${_coverage_dest}" | tr '\\' '/')"
+    if [[ "${_coverage_src_norm}" != "${_coverage_dest_norm}" ]]; then
+        mkdir -p "$(dirname "${_coverage_dest}")"
+        cp -f "${_coverage_src}" "${_coverage_dest}"
+    fi
 fi
