@@ -19,21 +19,11 @@ mkdir -p "${_dest_dir}"
 if [[ -f "${_report_dir}/ctest-report.xml" ]]; then
     cp -f "${_report_dir}/ctest-report.xml" "${_dest_dir}/tests.xml"
 elif [[ -f "${_report_dir}/index.json" ]]; then
-    _converter=""
     _project_root="${PROJECT_ROOT:-$(build_project_root)}"
-    _converter_candidates=(
-        "${_project_root}/Build/Base/Script/tools/unreal_json_to_ctest.py"
-        "${_project_root}/Build/PackagedBuild/Build/Base/Script/tools/unreal_json_to_ctest.py"
-    )
-    for _candidate in "${_converter_candidates[@]}"; do
-        if [[ -f "${_candidate}" ]]; then
-            _converter="${_candidate}"
-            break
-        fi
-    done
+    _converter="${_project_root}/Build/Base/Script/tools/unreal_json_to_ctest.py"
 
-    if [[ -z "${_converter}" ]]; then
-        echo "ERROR: unreal_json_to_ctest.py not found under PROJECT_ROOT=${_project_root}" >&2
+    if [[ ! -f "${_converter}" ]]; then
+        echo "ERROR: unreal_json_to_ctest.py not found at ${_converter}" >&2
         exit 2
     fi
 
