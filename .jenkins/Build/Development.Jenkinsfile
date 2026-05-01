@@ -43,7 +43,10 @@ pipeline {
         booleanParam name: 'bBuildPluginLinux', defaultValue: false, description: 'Build Linux Plugin Shipping'
 
         // === Test ===
-        booleanParam name: 'bRunTestStandaloneWin64', defaultValue: true, description: 'Run Win64 standalone tests'
+        booleanParam name: 'bRunTestWin64Standalone', defaultValue: true, description: 'Run Win64 standalone tests'
+
+        // === Artifact archival ===
+        booleanParam name: 'bArchiveTar', defaultValue: true, description: 'Archive PrepareDeploy tar/manifest artifacts. Disable for fast test/coverage iterations.'
 
         // === FailFast ===
         booleanParam name: 'bFailFast', defaultValue: false, description: 'Abort all parallel branches when any one fails (default: off — all branches complete regardless)'
@@ -109,7 +112,8 @@ pipeline {
                         bBuildPluginIOS: params.bBuildPluginIOS,
                         bBuildPluginMac: params.bBuildPluginMac,
                         bBuildPluginLinux: params.bBuildPluginLinux,
-                        bRunTestStandaloneWin64: params.bRunTestStandaloneWin64,
+                        bRunTestWin64Standalone: params.bRunTestWin64Standalone,
+                        bArchiveTar: params.bArchiveTar,
                         bFailFast: params.bFailFast,
                         win64SharedWorkspaceRoot: params.WIN64_SHARED_WORKSPACE_ROOT?.trim() ?: cfg.win64SharedWorkspaceRoot,
                         macSharedWorkspaceRoot: params.MAC_SHARED_WORKSPACE_ROOT?.trim() ?: cfg.macSharedWorkspaceRoot,
