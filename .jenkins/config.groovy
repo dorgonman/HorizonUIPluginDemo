@@ -26,7 +26,7 @@ def projectConfig() {
 
         // === Consumer metadata ===
         scriptRoot:         'Build',
-        reportRoot:         'Intermediate/BuildArchive/Reports',
+        reportRoot:         'Intermediate/BuildPackage',
         slug:               'HorizonUIPluginDemo',
         workspaceSlot:      'Package',
         win64SharedWorkspaceRoot: 'C:/_agent/_jenkins/agent/workspace/HorizonPlugin',

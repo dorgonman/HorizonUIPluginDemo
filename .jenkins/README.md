@@ -36,10 +36,11 @@ Windows Jenkins jobs use the shared workspace owned by the shared library. Consu
 
 The pipeline generates and archives reports in the following locations:
 
-- **Test XML**: `Intermediate/BuildArchive/Reports/tests/<slug>/tests.xml`
-- **Coverage XML**: `Intermediate/BuildArchive/Reports/coverage/<slug>/cobertura.xml`
-- **Coverage HTML**: `Intermediate/BuildArchive/Reports/coverage/<slug>/report-html/index.html`
-- **Consolidated Dashboard**: `Intermediate/BuildArchive/Reports/index.html`
+- **Standalone test report site**: `Intermediate/BuildPackage/<Platform>/<Branch>/<Revision>/<Configuration>/StandaloneTestReport/index.html`
+- **Test XML**: `Intermediate/BuildPackage/<Platform>/<Branch>/<Revision>/<Configuration>/StandaloneTestReport/Result/junit-report.xml`
+- **Coverage XML**: `Intermediate/BuildPackage/<Platform>/<Branch>/<Revision>/<Configuration>/StandaloneTestReport/Coverage/<slug>Test/cobertura.xml`
+- **Coverage HTML**: `Intermediate/BuildPackage/<Platform>/<Branch>/<Revision>/<Configuration>/StandaloneTestReport/Coverage/<slug>Test/report-html/index.html`
+- **Archived report tar**: `Intermediate/BuildArchive/<Project>-<Platform>-<Configuration>-StandaloneTestReport.tar`
 
 ## Jenkins Admin Setup
 
