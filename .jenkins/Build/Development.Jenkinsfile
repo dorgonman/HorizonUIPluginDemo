@@ -48,6 +48,19 @@ pipeline {
         // === Artifact archival ===
         booleanParam name: 'bArchiveTar', defaultValue: true, description: 'Archive PrepareDeploy tar/manifest artifacts. Disable for fast test/coverage iterations.'
 
+        // === Sentry Deploy Symbols ===
+        booleanParam name: 'bDeploySentrySymbols', defaultValue: false, description: 'After standalone builds, create Sentry release/deploy records and upload debug symbols'
+        string name: 'SENTRY_CREDENTIAL_ID', defaultValue: 'SENTRY_AUTH_INFO', description: 'Jenkins username/password credential: username=SENTRY_URL, password=SENTRY_AUTH_TOKEN'
+        string name: 'SENTRY_ORG', defaultValue: '', description: 'Sentry organization slug for this project'
+        string name: 'SENTRY_PROJECT', defaultValue: '', description: 'Sentry project slug for this project'
+        string name: 'SENTRY_ENVIRONMENT', defaultValue: 'dev', description: 'Sentry deploy environment name'
+
+        // === PreCompileEngine ===
+        booleanParam name: 'bCopyPreCompileEngine', defaultValue: false, description: 'Copy CustomBuildEvent/PreCompileEngine/* to UNREAL_ENGINE_ROOT/ before building'
+
+        // === PreArchive ===
+        string name: 'PRE_ARCHIVE_COPY_STEP', defaultValue: '', description: 'Step name under CustomBuildEvent/PreArchive/ (e.g. ForDev). If empty, PreArchive copy is skipped.'
+
         // === FailFast ===
         booleanParam name: 'bFailFast', defaultValue: false, description: 'Abort all parallel branches when any one fails (default: off — all branches complete regardless)'
 
@@ -114,6 +127,13 @@ pipeline {
                         bBuildPluginLinux: params.bBuildPluginLinux,
                         bRunTestWin64Standalone: params.bRunTestWin64Standalone,
                         bArchiveTar: params.bArchiveTar,
+                        bDeploySentrySymbols: params.bDeploySentrySymbols,
+                        sentryCredentialId: params.SENTRY_CREDENTIAL_ID?.trim() ?: cfg.sentryCredentialId,
+                        sentryOrg: params.SENTRY_ORG?.trim() ?: cfg.sentryOrg,
+                        sentryProject: params.SENTRY_PROJECT?.trim() ?: cfg.sentryProject,
+                        sentryEnvironment: params.SENTRY_ENVIRONMENT?.trim() ?: cfg.sentryEnvironment,
+                        bCopyPreCompileEngine: params.bCopyPreCompileEngine,
+                        preArchiveCopyStep: params.PRE_ARCHIVE_COPY_STEP?.trim() ?: cfg.preArchiveCopyStep,
                         bFailFast: params.bFailFast,
                         win64SharedWorkspaceRoot: params.WIN64_SHARED_WORKSPACE_ROOT?.trim() ?: cfg.win64SharedWorkspaceRoot,
                         macSharedWorkspaceRoot: params.MAC_SHARED_WORKSPACE_ROOT?.trim() ?: cfg.macSharedWorkspaceRoot,
