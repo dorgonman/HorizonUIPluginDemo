@@ -49,10 +49,10 @@ pipeline {
         booleanParam name: 'bArchiveTar', defaultValue: true, description: 'Archive PrepareDeploy tar/manifest artifacts. Disable for fast test/coverage iterations.'
 
         // === Sentry Deploy Symbols ===
-        booleanParam name: 'bDeploySentrySymbols', defaultValue: false, description: 'After standalone builds, create Sentry release/deploy records and upload debug symbols'
+        booleanParam name: 'bDeploySentrySymbols', defaultValue: true, description: 'After standalone builds, create Sentry release/deploy records and upload debug symbols'
         string name: 'SENTRY_CREDENTIAL_ID', defaultValue: 'SENTRY_AUTH_INFO', description: 'Jenkins username/password credential: username=SENTRY_URL, password=SENTRY_AUTH_TOKEN'
-        string name: 'SENTRY_ORG', defaultValue: '', description: 'Sentry organization slug for this project'
-        string name: 'SENTRY_PROJECT', defaultValue: '', description: 'Sentry project slug for this project'
+        string name: 'SENTRY_ORG', defaultValue: 'kanohorizonia', description: 'Sentry organization slug for this project'
+        string name: 'SENTRY_PROJECT', defaultValue: 'horizonuiplugindemo', description: 'Sentry project slug for this project'
         string name: 'SENTRY_ENVIRONMENT', defaultValue: 'dev', description: 'Sentry deploy environment name'
 
         // === PreCompileEngine ===
