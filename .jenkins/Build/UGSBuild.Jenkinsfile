@@ -3,6 +3,11 @@
 
 @Library('jenkins-unreal-pipeline-library') _
 
+env.GIT_CONFIG_COUNT = '1'
+env.GIT_CONFIG_KEY_0 = 'credential.useHttpPath'
+env.GIT_CONFIG_VALUE_0 = 'true'
+env.PATH = "C:\\Program Files\\Git\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\dorgon.chang\\.pixi\\bin;C:\\Windows\\System32;C:\\Windows;C:\\Windows\\System32\\Wbem;${env.PATH}"
+
 properties([
     parameters([
         booleanParam(name: 'bDeploySentrySymbols', defaultValue: true, description: 'After standalone builds, create Sentry release/deploy records and upload debug symbols'),
