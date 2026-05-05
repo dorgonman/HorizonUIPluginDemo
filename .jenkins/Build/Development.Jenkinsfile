@@ -59,10 +59,10 @@ pipeline {
         string name: 'SENTRY_ENVIRONMENT', defaultValue: 'dev', description: 'Sentry deploy environment name'
 
         // === PreCompileEngine ===
-        booleanParam name: 'bCopyPreCompileEngine', defaultValue: false, description: 'Copy CustomBuildEvent/PreCompileEngine/* to UNREAL_ENGINE_ROOT/ before building'
+        booleanParam name: 'bCopyPreCompileEngine', defaultValue: true, description: 'Copy CustomBuildEvent/PreCompileEngine/* to UNREAL_ENGINE_ROOT/ before building'
 
         // === PreArchive ===
-        string name: 'PRE_ARCHIVE_COPY_STEP', defaultValue: '', description: 'Step name under CustomBuildEvent/PreArchive/ (e.g. ForDev). If empty, PreArchive copy is skipped.'
+        string name: 'PRE_ARCHIVE_COPY_STEP', defaultValue: 'Default', description: 'Step name under CustomBuildEvent/PreArchive/ (e.g. ForDev). If empty, PreArchive copy is skipped.'
 
         // === FailFast ===
         booleanParam name: 'bFailFast', defaultValue: false, description: 'Abort all parallel branches when any one fails (default: off — all branches complete regardless)'
