@@ -6,6 +6,7 @@
 pipeline {
     environment {
         SENTRY_AUTH_INFO = credentials('SENTRY_AUTH_INFO')
+        WSLENV = 'SENTRY_AUTH_TOKEN/u:SENTRY_URL/u:SENTRY_AUTH_INFO_USR/u:SENTRY_AUTH_INFO_PSW/u:SENTRY_ORG/u:SENTRY_PROJECT/u:SENTRY_FOREIGN_PROJECT/u'
     }
 
     agent { label 'built-in' }
