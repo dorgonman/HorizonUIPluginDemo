@@ -7,7 +7,7 @@ pipeline {
     environment {
         UNREAL_BUILD_MACHINE = '1'
         SENTRY_AUTH_INFO = credentials('SENTRY_AUTH_INFO')
-        PATH+GIT_BASH = 'C:\\Program Files\\Git\\bin;C:\\Program Files\\Git\\usr\\bin'
+        PATH = "C:\\Program Files\\Git\\bin;C:\\Program Files\\Git\\usr\\bin;${env.PATH}"
     }
 
     agent { label 'built-in' }
