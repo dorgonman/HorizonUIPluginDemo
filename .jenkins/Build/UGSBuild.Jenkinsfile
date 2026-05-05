@@ -85,7 +85,7 @@ def cfg = [
     sentryForeignProject: 'unrealengine',
     sentryEnvironment: 'dev',
     bUploadToUnrealHordeServer: false,
-    bDeployUnrealHordeServer: false,
+    bDeployUnrealHordeServer: true,
     unrealHordeServer: 'http://unrealhorde.local/',
     hordeToken: '',
     hordeGitStreamRepo: 'https://dev.azure.com/kanohorizonia/UEHorizonPlugin/_git/HorizonUIPluginDemo',
