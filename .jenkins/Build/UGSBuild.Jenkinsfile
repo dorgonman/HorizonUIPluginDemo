@@ -4,6 +4,10 @@
 @Library('jenkins-unreal-pipeline-library') _
 
 pipeline {
+    environment {
+        SENTRY_AUTH_INFO = credentials('SENTRY_AUTH_INFO')
+    }
+
     agent { label 'built-in' }
 
     options {

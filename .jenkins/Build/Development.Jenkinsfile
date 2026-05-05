@@ -6,6 +6,7 @@
 pipeline {
     environment {
         UNREAL_BUILD_MACHINE = '1'
+        SENTRY_AUTH_INFO = credentials('SENTRY_AUTH_INFO')
     }
 
     agent { label 'built-in' }
