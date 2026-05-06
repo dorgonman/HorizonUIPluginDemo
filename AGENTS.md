@@ -12,7 +12,9 @@ From repo root (Git Bash on Windows):
 
 ## Build Commands
 
-**ALL shell scripts MUST be run via pixi.** This ensures consistent toolchain versions (pixi-managed environments) regardless of the developer's local setup.
+**⚠️ RULE: ALWAYS use `pixi run <task>` instead of running scripts directly with `bash`.**
+**Pixi ensures consistent toolchain versions (python, jq, git, etc.) regardless of local setup.**
+**Direct `bash` invocation bypasses pixi-managed environment and causes hard-to-diagnose tool-not-found errors.**
 
 ```sh
 cd Build/Base
@@ -34,17 +36,24 @@ pixi run <task>
 
 **Source Engine Location:** `D:/_work/UnrealEngine` (set via `UNREAL_ENGINE_ROOT` env var)
 
+### Pixi Task Discovery
+
+```sh
+cd Build/Base
+pixi task list          # List all available tasks
+pixi info               # Show pixi environment info
+```
+
 ## Test Commands
 
 **Run full test suite:**
 ```sh
-./Build/Base/Script/platform/win64/editor/gauntlet/test_no_coverage.sh
+cd Build/Base && pixi run standalone-test-opencppcoverage
 ```
 
 **Run single automation test:**
 ```sh
-export EXTRA_PARAMETERS='-ExecCmds="Automation RunTests Plugin.SmokeTest.HorizonUI.Success; Quit"'
-AUTOMATION_TEST_FILTER='Plugin.SmokeTest.HorizonUI.Success' ./Build/Base/Script/platform/win64/editor/gauntlet/test_no_coverage.sh
+cd Build/Base && EXTRA_PARAMETERS='-ExecCmds="Automation RunTests Plugin.SmokeTest.HorizonUI.Success; Quit"' pixi run standalone-test-no-coverage
 ```
 
 Available tests:
