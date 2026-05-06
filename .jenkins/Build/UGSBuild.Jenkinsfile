@@ -95,15 +95,27 @@ def cfg = [
     uprojectPath: 'HorizonUIPluginDemo.uproject',
 ]
 
-def config = unrealConfig(cfg + [
-    bDeploySentrySymbols: params.bDeploySentrySymbols,
+// NOTE: Jenkins job XML may be missing <defaultValue> for SENTRY_* params even
+// when the Groovy file specifies them. This can cause Jenkins to pass null or ""
+// for these parameters on every build, silently overriding cfg defaults.
+// The explicit " ?: cfg.X" fallback below guards against this by preferring
+// cfg defaults when the Jenkins-supplied value is null/empty/blank.
+def resolvedParams = [
+    bDeploySentrySymbols:              params.bDeploySentrySymbols,
     bDeploySentryForeignUnrealEngineSymbols: params.bDeploySentryForeignUnrealEngineSymbols,
-    bDeploySentryBundleSources: params.bDeploySentryBundleSources,
-    sentryCredentialId: params.SENTRY_CREDENTIAL_ID?.trim() ?: cfg.sentryCredentialId,
-    sentryOrg: params.SENTRY_ORG?.trim() ?: cfg.sentryOrg,
-    sentryProject: params.SENTRY_PROJECT?.trim() ?: cfg.sentryProject,
-    sentryForeignProject: params.SENTRY_FOREIGN_PROJECT?.trim() ?: cfg.sentryForeignProject,
-    sentryEnvironment: params.SENTRY_ENVIRONMENT?.trim() ?: cfg.sentryEnvironment,
-])
+    bDeploySentryBundleSources:        params.bDeploySentryBundleSources,
+    sentryCredentialId:                params.SENTRY_CREDENTIAL_ID?.trim() ?: cfg.sentryCredentialId,
+    sentryOrg:                         params.SENTRY_ORG?.trim() ?: cfg.sentryOrg,
+    sentryProject:                     params.SENTRY_PROJECT?.trim() ?: cfg.sentryProject,
+    sentryForeignProject:              params.SENTRY_FOREIGN_PROJECT?.trim() ?: cfg.sentryForeignProject,
+    sentryEnvironment:                params.SENTRY_ENVIRONMENT?.trim() ?: cfg.sentryEnvironment,
+]
+// Boolean params: Jenkins passes null when no defaultValue is set in the job XML.
+// When null, fall back to cfg default (which is the authoritative value).
+resolvedParams.bDeploySentrySymbols              = resolvedParams.bDeploySentrySymbols              ?: cfg.bDeploySentrySymbols
+resolvedParams.bDeploySentryForeignUnrealEngineSymbols = resolvedParams.bDeploySentryForeignUnrealEngineSymbols ?: cfg.bDeploySentryForeignUnrealEngineSymbols
+resolvedParams.bDeploySentryBundleSources         = resolvedParams.bDeploySentryBundleSources         ?: cfg.bDeploySentryBundleSources
+
+def config = unrealConfig(cfg + resolvedParams)
 
 unrealUgsBuildPipeline(config: config)
