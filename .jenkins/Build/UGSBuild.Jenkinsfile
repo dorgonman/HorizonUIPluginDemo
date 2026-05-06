@@ -10,7 +10,7 @@ env.GIT_CONFIG_VALUE_0 = 'true'
 properties([
     parameters([
         booleanParam(name: 'bDeploySentrySymbols', defaultValue: true, description: 'After standalone builds, create Sentry release/deploy records and upload debug symbols'),
-        booleanParam(name: 'bDeploySentryForeignSymbols', defaultValue: true, description: 'Also upload foreign symbols such as Unreal Engine PDBs to SENTRY_FOREIGN_PROJECT'),
+        booleanParam(name: 'bDeploySentryForeignUnrealEngineSymbols', defaultValue: false, description: 'Also upload Unreal Engine editor symbols to SENTRY_FOREIGN_PROJECT'),
         booleanParam(name: 'bDeploySentryBundleSources', defaultValue: true, description: 'Run sentry-cli difutil bundle-sources and upload source context with debug symbols. Enable only for projects allowed to upload source code.'),
         string(name: 'SENTRY_CREDENTIAL_ID', defaultValue: 'SENTRY_AUTH_INFO', description: 'Jenkins username/password credential: username=SENTRY_URL, password=SENTRY_AUTH_TOKEN'),
         string(name: 'SENTRY_ORG', defaultValue: 'kanohorizonia', description: 'Sentry organization slug for this project'),
@@ -77,6 +77,7 @@ def cfg = [
     coverageFormat: ['xml', 'html'],
     buildConfiguration: 'Development',
     bDeploySentrySymbols: true,
+    bDeploySentryForeignUnrealEngineSymbols: false,
     bCopyPreCompileEngine: true,
     preArchiveCopyStep: 'Default',
     sentryCredentialId: 'SENTRY_AUTH_INFO',
@@ -96,7 +97,7 @@ def cfg = [
 
 def config = unrealConfig(cfg + [
     bDeploySentrySymbols: params.bDeploySentrySymbols,
-    bDeploySentryForeignSymbols: params.bDeploySentryForeignSymbols,
+    bDeploySentryForeignUnrealEngineSymbols: params.bDeploySentryForeignUnrealEngineSymbols,
     bDeploySentryBundleSources: params.bDeploySentryBundleSources,
     sentryCredentialId: params.SENTRY_CREDENTIAL_ID?.trim() ?: cfg.sentryCredentialId,
     sentryOrg: params.SENTRY_ORG?.trim() ?: cfg.sentryOrg,

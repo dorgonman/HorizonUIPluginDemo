@@ -81,6 +81,7 @@ def projectConfig() {
         coverageFormat:     ['xml', 'html'],
         buildConfiguration: 'Development',
         bDeploySentrySymbols: true,
+        bDeploySentryForeignUnrealEngineSymbols: false,
         bCopyPreCompileEngine: true,
         preArchiveCopyStep: 'Default',
         sentryCredentialId: 'SENTRY_AUTH_INFO',
