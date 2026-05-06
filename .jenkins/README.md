@@ -8,6 +8,7 @@ The following Jenkinsfiles serve as entrypoints for different CI/CD needs:
 
 - `.jenkins/Jenkinsfile` — Primary all-in-one pipeline (Build + Test).
 - `.jenkins/Build/Development.Jenkinsfile` — Development build, test, and report artifact producer.
+- `.jenkins/QA/Jenkinsfile` — QA rerun pipeline; consumes `Build/Development` Standalone tar artifacts, optionally unpacks them, then runs Gauntlet Test → Publish HTML without rebuilding.
 - `.jenkins/Build/UGSBuild.Jenkinsfile` — UGS artifact and NuGet package producer.
 - `.jenkins/Release/Jenkinsfile` — Release deploy pipeline; consumes Development + UGSBuild artifacts, pushes NuGet, and publishes curated public GitHub Pages content.
 
@@ -19,7 +20,8 @@ Global settings are managed in `.jenkins/config.groovy`. Key parameters include:
 - `projectRoot`: The path to the project root, currently `.` so the shared library can relocate the workspace safely.
 - `unrealHordeServer`: Default Horde URL for UGS-related publishing, default `http://unrealhorde.local/`.
 - `bBuildStandalone<Platform>` / `bBuildServer<Platform>`: Target-specific build toggles for the build matrix.
-- `bRunTestStandaloneWin64`: Runs the Win64 standalone test job.
+- `bRunTestWin64Standalone`: Runs the Win64 standalone test job.
+- QA rerun parameters: `bConsumeUpstreamStandaloneTar` copies/unpacks the upstream Build artifact tar; `bRunTestWin64Standalone` selects the currently implemented rerun platform.
 - Coverage is derived internally by the shared library. It is no longer a user-facing Jenkins parameter.
 
 ## Adding a New Platform
@@ -57,6 +59,7 @@ The following steps are required before the first run:
    - `cobertura`
    - `htmlpublisher`
    - `git`
+   - `copyartifact`
 
 ## Release Deploy
 
