@@ -9,7 +9,7 @@ pipeline {
     agent {
         node {
             label 'unreal-win64'
-            customWorkspace "${sharedWorkspaceRoot}/HorizonPlugin/HorizonUIPluginDemo/Package"
+            customWorkspace "${sharedWorkspaceRoot}/HorizonPlugin/HorizonUIPluginDemo/Build/PackagedBuild"
         }
     }
 
