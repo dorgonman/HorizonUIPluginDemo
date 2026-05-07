@@ -575,6 +575,7 @@ build_run_ugs_nuget_push() {
 # Override: build_run_ugs_perforce
 # -----------------------------------------------------------------------------
 build_run_ugs_perforce() {
+    local KANOBUILD_SKIP_SUBST="${KANOBUILD_SKIP_SUBST:-1}"
     build_prepare_context
     build_require_env_var "UGS_BRANCH"
     build_prepare_ugs_project_paths
@@ -624,6 +625,7 @@ build_run_ugs_perforce() {
 }
 
 build_run_upload_to_horde() {
+    local KANOBUILD_SKIP_SUBST="${KANOBUILD_SKIP_SUBST:-1}"
     build_prepare_context
     build_require_env_var "UGS_BRANCH"
     build_prepare_ugs_project_paths
