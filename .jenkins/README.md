@@ -10,7 +10,7 @@ The following Jenkinsfiles serve as entrypoints for different CI/CD needs:
 - `.jenkins/Build/Development.Jenkinsfile` — Development build, test, and report artifact producer.
 - `.jenkins/QA/Jenkinsfile` — QA rerun pipeline; consumes `Build/Development` Standalone tar artifacts, optionally unpacks them, then runs Gauntlet Test → Publish HTML without rebuilding.
 - `.jenkins/Build/UGSBuild.Jenkinsfile` — UGS artifact and NuGet package producer.
-- `.jenkins/Release/Jenkinsfile` — Release deploy pipeline; consumes Development + UGSBuild artifacts, pushes NuGet, and publishes curated public GitHub Pages content.
+- `.jenkins/Release/Publish.Jenkinsfile` — Release publish pipeline; consumes Development + UGSBuild artifacts, syncs GitHub, pushes NuGet, and publishes curated public GitHub Pages content.
 
 ## Configuration Guide
 
@@ -63,7 +63,7 @@ The following steps are required before the first run:
 
 ## Release Deploy
 
-`.jenkins/Release/Jenkinsfile` is intentionally thin and delegates orchestration to `unrealReleaseDeployPipeline()` in the shared Jenkins library.
+`.jenkins/Release/Publish.Jenkinsfile` is intentionally thin and delegates orchestration to `unrealReleaseDeployPipeline()` in the shared Jenkins library.
 
 The deploy job consumes:
 

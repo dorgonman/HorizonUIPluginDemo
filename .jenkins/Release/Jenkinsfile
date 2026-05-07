@@ -1,7 +1,0 @@
-// .jenkins/Release/Jenkinsfile — release deploy entrypoint.
-// Replaces former approval-gate + git-tag + NuGet-publish stages.
-// Delegates to shared library for artifact consumption, NuGet push,
-// and GitHub Pages publish with public-coverage filtering.
-@Library('jenkins-unreal-pipeline-library') _
-
-unrealReleaseDeployPipeline()
