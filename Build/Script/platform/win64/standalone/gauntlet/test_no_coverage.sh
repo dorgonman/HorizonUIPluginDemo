@@ -15,11 +15,26 @@ HOST_PLATFORM="${HOST_PLATFORM:-Win64}"
 TARGET_PLATFORM="${TARGET_PLATFORM:-Win64}"
 TARGET_CONFIGURATION="${TARGET_CONFIGURATION:-Development}"
 KANOBUILD_GAUNTLET_BUILD_KIND="${KANOBUILD_GAUNTLET_BUILD_KIND:-Standalone}"
-KANOBUILD_GAUNTLET_TEST_BUILD_PATH="${KANOBUILD_GAUNTLET_TEST_BUILD_PATH:--build=local}"
+_gauntlet_test_build_path_env="${KANOBUILD_GAUNTLET_TEST_BUILD_PATH:--build=local}"
 KANOBUILD_GAUNTLET_ENABLE_COVERAGE="${KANOBUILD_GAUNTLET_ENABLE_COVERAGE:-false}"
 
+# Convert the -build= path to a proper Windows absolute path for UAT.
+# The KANOBUILD_GAUNTLET_TEST_BUILD_PATH may contain an MSYS-style absolute path
+# (e.g., /c/agent/workspace/.../qa-input/HorizonUIPluginDemo/Binaries) which UAT on
+# Windows cannot resolve due to mixed separator issues. Convert to Windows format
+# by cd'ing to the parent directory and using pwd -W.
+if [[ "${_gauntlet_test_build_path_env}" != "-build=local" ]]; then
+    _build_arg_path="${_gauntlet_test_build_path_env#-build=}"  # strip -build= prefix
+    _build_parent="$(cd "${_build_arg_path}" 2>/dev/null && pwd -W)"  # Windows-format parent dir
+    if [[ -n "${_build_parent}" ]]; then
+        _gauntlet_test_build_path_env="-build=${_build_parent}"
+        echo "Converted -build= path to Windows format: ${_gauntlet_test_build_path_env}"
+    fi
+fi
+
 export HOST_PLATFORM TARGET_PLATFORM TARGET_CONFIGURATION
-export KANOBUILD_GAUNTLET_BUILD_KIND KANOBUILD_GAUNTLET_TEST_BUILD_PATH KANOBUILD_GAUNTLET_ENABLE_COVERAGE
+export KANOBUILD_GAUNTLET_BUILD_KIND KANOBUILD_GAUNTLET_TEST_BUILD_PATH="${_gauntlet_test_build_path_env}"
+export KANOBUILD_GAUNTLET_ENABLE_COVERAGE
 export KANOBUILD_RENDER_REPORTS=1
 
 set +e
