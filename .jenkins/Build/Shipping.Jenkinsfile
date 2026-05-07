@@ -19,7 +19,7 @@ pipeline {
         booleanParam name: 'bBuildServerWin64', defaultValue: false, description: 'Build Win64 server target'
         booleanParam name: 'bBuildStandaloneAndroid', defaultValue: false, description: 'Build Android standalone target'
         booleanParam name: 'bBuildServerAndroid', defaultValue: false, description: 'Build Android server target (unsupported)'
-        booleanParam name: 'bBuildStandaloneIOS', defaultValue: false, description: 'Build iOS standalone target (requires Mac agent)'
+        booleanParam name: 'bBuildStandaloneIOS', defaultValue: false, description: 'Build iOS standalone target (requires Mac agent + Apple Developer Cert)'
         booleanParam name: 'bBuildServerIOS', defaultValue: false, description: 'Build iOS server target (unsupported)'
         booleanParam name: 'bBuildStandaloneMac', defaultValue: false, description: 'Build Mac standalone target (requires Mac agent)'
         booleanParam name: 'bBuildServerMac', defaultValue: false, description: 'Build Mac server target (requires Mac agent)'
@@ -42,8 +42,6 @@ pipeline {
         booleanParam name: 'bBuildPluginSwitch2', defaultValue: false, description: 'Build Switch 2 Plugin Shipping'
         booleanParam name: 'bBuildPluginLinux', defaultValue: false, description: 'Build Linux Plugin Shipping'
 
-        // === Test ===
-        booleanParam name: 'bRunTestStandaloneWin64', defaultValue: false, description: 'Run Win64 standalone tests'
     }
 
     stages {
@@ -79,8 +77,6 @@ pipeline {
                         bBuildPluginPS5: params.bBuildPluginPS5,
                         bBuildPluginSwitch2: params.bBuildPluginSwitch2,
                         bBuildPluginLinux: params.bBuildPluginLinux,
-                        // Test
-                        bRunTestStandaloneWin64: params.bRunTestStandaloneWin64,
                         // Config
                         buildConfiguration: 'Shipping',
                     ])
