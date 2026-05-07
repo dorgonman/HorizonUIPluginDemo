@@ -57,14 +57,13 @@ namespace UnrealGame
 			if (ClientCount > 0)
 			{
 				Config.RequireRoles(UnrealTargetRole.Client, ClientCount);
+				UnrealTestRole ClientRole = Config.RequireRole(UnrealTargetRole.Client);
 			}
 
 			if (WithServer)
 			{
 				Config.RequireRoles(UnrealTargetRole.Server, 1);
 			}
-
-			UnrealTestRole ClientRole = Config.RequireRole(UnrealTargetRole.Client);
 
 			return Config;
 		}
