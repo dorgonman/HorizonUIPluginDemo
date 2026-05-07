@@ -78,6 +78,7 @@ pipeline {
                         bBuildPluginSwitch2: params.bBuildPluginSwitch2,
                         bBuildPluginLinux: params.bBuildPluginLinux,
                         // Config
+                        bRunTestWin64Standalone: false,  // Shipping cannot run automation tests
                         buildConfiguration: 'Shipping',
                     ])
                     unrealPipeline(config)
