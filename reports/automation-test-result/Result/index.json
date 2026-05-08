@@ -1,4 +1,4 @@
-﻿{
+{
 	"devices": [
 		{
 			"deviceName": "PC-DORGONCHANG-",
@@ -21,7 +21,7 @@
 	"failed": 0,
 	"notRun": 0,
 	"inProcess": 0,
-	"totalDuration": 19.390224456787109,
+	"totalDuration": 19.39022445678711,
 	"comparisonExported": true,
 	"comparisonExportDirectory": "H:/EpicGames/Installed/UE_5.7/HorizonUIPluginDemo/Intermediate/BuildPackage/Win64/main/588/Development/StandaloneTestReport/Result/imageCompare/51494982",
 	"tests": [
@@ -33,7 +33,7 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.0061650015413761139,
+			"duration": 0.006165001541376114,
 			"dateTime": "2026.05.08-03.33.40",
 			"entries": [],
 			"warnings": 0,
@@ -93,7 +93,7 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.0096831023693084717,
+			"duration": 0.009683102369308472,
 			"dateTime": "2026.05.08-03.33.42",
 			"entries": [],
 			"warnings": 0,
@@ -108,7 +108,7 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.0097079984843730927,
+			"duration": 0.009707998484373093,
 			"dateTime": "2026.05.08-03.33.43",
 			"entries": [],
 			"warnings": 0,
@@ -123,7 +123,7 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.0053430981934070587,
+			"duration": 0.005343098193407059,
 			"dateTime": "2026.05.08-03.33.43",
 			"entries": [],
 			"warnings": 0,
@@ -138,7 +138,7 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.0065326020121574402,
+			"duration": 0.00653260201215744,
 			"dateTime": "2026.05.08-03.33.43",
 			"entries": [],
 			"warnings": 0,
@@ -153,7 +153,7 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.0066820010542869568,
+			"duration": 0.006682001054286957,
 			"dateTime": "2026.05.08-03.33.43",
 			"entries": [],
 			"warnings": 0,
@@ -168,7 +168,7 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.0050328001379966736,
+			"duration": 0.005032800137996674,
 			"dateTime": "2026.05.08-03.33.44",
 			"entries": [],
 			"warnings": 0,
@@ -183,12 +183,11 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 1.0499410629272461,
+			"duration": 1.049941062927246,
 			"dateTime": "2026.05.08-03.33.44",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -206,10 +205,10 @@
 					"iD": "FA86691443700046E2A60FB531C3F0ED",
 					"name": "UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -222,12 +221,11 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.53893899917602539,
+			"duration": 0.5389389991760254,
 			"dateTime": "2026.05.08-03.33.46",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -245,10 +243,10 @@
 					"iD": "F56F5CE743C0044BE644EAA577ABB137",
 					"name": "UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -265,8 +263,7 @@
 			"dateTime": "2026.05.08-03.33.47",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -284,10 +281,10 @@
 					"iD": "4044B4BB458D42AA6DF6D8B00A2CDA8A",
 					"name": "UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -300,12 +297,11 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.47172260284423828,
+			"duration": 0.4717226028442383,
 			"dateTime": "2026.05.08-03.33.48",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -323,10 +319,10 @@
 					"iD": "A54A9ACD4E215C33AA706FBB5C25A804",
 					"name": "UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -339,12 +335,11 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.43654569983482361,
+			"duration": 0.4365456998348236,
 			"dateTime": "2026.05.08-03.33.49",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -362,10 +357,10 @@
 					"iD": "4D752CBE4ACDC6F7CAA063960F527E2B",
 					"name": "UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -382,8 +377,7 @@
 			"dateTime": "2026.05.08-03.33.51",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -401,10 +395,10 @@
 					"iD": "D2E5566E456761282BC3DBA03E7B9777",
 					"name": "UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -417,12 +411,11 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.66458207368850708,
+			"duration": 0.6645820736885071,
 			"dateTime": "2026.05.08-03.33.52",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_AutoPageLine' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -440,10 +433,10 @@
 					"iD": "DDC7224E4978D9303F73638DD82B9121",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_AutoPageLine",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_AutoPageLine/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_AutoPageLine/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_AutoPageLine/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_AutoPageLine/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -460,8 +453,7 @@
 			"dateTime": "2026.05.08-03.33.53",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_AutopagePadding' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -479,10 +471,10 @@
 					"iD": "3EAC963B4A4B8B38CF15C09828019717",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_AutopagePadding",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_AutopagePadding/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_AutopagePadding/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_AutopagePadding/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_AutopagePadding/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -495,12 +487,11 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.53209692239761353,
+			"duration": 0.5320969223976135,
 			"dateTime": "2026.05.08-03.33.54",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_EdgeCaseTest' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -518,10 +509,10 @@
 					"iD": "265DC68E45C660A8640991943D9CE1E3",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_EdgeCaseTest",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_EdgeCaseTest/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_EdgeCaseTest/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_EdgeCaseTest/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_EdgeCaseTest/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -538,8 +529,7 @@
 			"dateTime": "2026.05.08-03.33.55",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -557,10 +547,10 @@
 					"iD": "A644EB114930667768C9B184044658E8",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -577,8 +567,7 @@
 			"dateTime": "2026.05.08-03.33.56",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto01_Simple' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -596,10 +585,10 @@
 					"iD": "4BF1A0404FEAA6DA98E98CBECEC76308",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto01_Simple",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto01_Simple/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto01_Simple/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto01_Simple/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto01_Simple/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -612,12 +601,11 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.64059090614318848,
+			"duration": 0.6405909061431885,
 			"dateTime": "2026.05.08-03.33.57",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple' was similar!  Global Difference = 0.004076, Max Local Difference = 0.132668",
 						"context": "",
@@ -635,10 +623,10 @@
 					"iD": "646E705343F3B8A2FEED48A050B06E46",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -651,12 +639,11 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.55246239900588989,
+			"duration": 0.5524623990058899,
 			"dateTime": "2026.05.08-03.33.58",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto03_RichTextFont' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -674,10 +661,10 @@
 					"iD": "7459CC1A4F44B018DE0EB19C1E972736",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto03_RichTextFont",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto03_RichTextFont/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto03_RichTextFont/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto03_RichTextFont/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto03_RichTextFont/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -694,8 +681,7 @@
 			"dateTime": "2026.05.08-03.34.00",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding' was similar!  Global Difference = 0.000306, Max Local Difference = 0.030575",
 						"context": "",
@@ -713,10 +699,10 @@
 					"iD": "043C13AE40348C84B34F6F94EF40E747",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -733,8 +719,7 @@
 			"dateTime": "2026.05.08-03.34.01",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -752,10 +737,10 @@
 					"iD": "21FE18A540F7C2F4CF611D81D59BEDBA",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -768,12 +753,11 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 1.2034760713577271,
+			"duration": 1.203476071357727,
 			"dateTime": "2026.05.08-03.34.02",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto06_EventTrigger' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -791,10 +775,10 @@
 					"iD": "D5195B1C4EFD6661E1E7F98EFAEE6655",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto06_EventTrigger",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto06_EventTrigger/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto06_EventTrigger/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto06_EventTrigger/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto06_EventTrigger/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -807,12 +791,11 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.33871901035308838,
+			"duration": 0.3387190103530884,
 			"dateTime": "2026.05.08-03.34.04",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp' was similar!  Global Difference = 0.001545, Max Local Difference = 0.049527",
 						"context": "",
@@ -830,10 +813,10 @@
 					"iD": "30991E6444AAAF68BEF0B6A7978833BB",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -846,12 +829,11 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.63170337677001953,
+			"duration": 0.6317033767700195,
 			"dateTime": "2026.05.08-03.34.05",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText' was similar!  Global Difference = 0.000402, Max Local Difference = 0.035301",
 						"context": "",
@@ -869,10 +851,10 @@
 					"iD": "8FAF965E4DC3A98984DCCD9818A70C75",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -889,8 +871,7 @@
 			"dateTime": "2026.05.08-03.34.06",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound' was similar!  Global Difference = 0.000531, Max Local Difference = 0.041522",
 						"context": "",
@@ -908,10 +889,10 @@
 					"iD": "AB45D5BF48F91C585DBA54AF98408FF2",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -924,12 +905,11 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.67930179834365845,
+			"duration": 0.6793017983436584,
 			"dateTime": "2026.05.08-03.34.08",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto10_StyleInfo' was similar!  Global Difference = 0.004548, Max Local Difference = 0.183738",
 						"context": "",
@@ -947,10 +927,10 @@
 					"iD": "D84968EA4E5FE5C70F431BB9A78F3884",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto10_StyleInfo",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto10_StyleInfo/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto10_StyleInfo/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto10_StyleInfo/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto10_StyleInfo/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -967,8 +947,7 @@
 			"dateTime": "2026.05.08-03.34.09",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto11_AutoPage' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -986,10 +965,10 @@
 					"iD": "8C67EB1949A95C9DDA958097226FD2FC",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto11_AutoPage",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto11_AutoPage/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto11_AutoPage/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto11_AutoPage/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto11_AutoPage/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -1002,12 +981,11 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.99075567722320557,
+			"duration": 0.9907556772232056,
 			"dateTime": "2026.05.08-03.34.11",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -1025,10 +1003,10 @@
 					"iD": "F495F51343083D8E66A2D98D70123DD3",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -1041,12 +1019,11 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.52105158567428589,
+			"duration": 0.5210515856742859,
 			"dateTime": "2026.05.08-03.34.13",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto13_Justification' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -1064,10 +1041,10 @@
 					"iD": "90F836C94D69E02B543B45AA84C73AB9",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto13_Justification",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto13_Justification/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto13_Justification/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto13_Justification/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto13_Justification/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -1080,12 +1057,11 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.55060392618179321,
+			"duration": 0.5506039261817932,
 			"dateTime": "2026.05.08-03.34.14",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto14_SpriteSheet' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -1103,10 +1079,10 @@
 					"iD": "E90F247A4296BCFC5E8C5B8129A36E4E",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto14_SpriteSheet",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto14_SpriteSheet/Windows/D3D12_SM6/Delta.png",
-						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto14_SpriteSheet/Windows/D3D12_SM6/Incoming.png"
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto14_SpriteSheet/Windows/D3D12_SM6/Incoming.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto14_SpriteSheet/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -1119,12 +1095,11 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.40880760550498962,
+			"duration": 0.4088076055049896,
 			"dateTime": "2026.05.08-03.34.15",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -1142,10 +1117,10 @@
 					"iD": "DBB119144177F2AB40EDAE935CBD7D93",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox/Windows/D3D12_SM6/Delta.png",
-						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox/Windows/D3D12_SM6/Incoming.png"
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox/Windows/D3D12_SM6/Incoming.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -1158,12 +1133,11 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.61344879865646362,
+			"duration": 0.6134487986564636,
 			"dateTime": "2026.05.08-03.34.16",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto16_RubyText' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -1181,10 +1155,10 @@
 					"iD": "04C1FDE2489F8F1895E7329D394D9483",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto16_RubyText",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto16_RubyText/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto16_RubyText/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto16_RubyText/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto16_RubyText/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -1201,8 +1175,7 @@
 			"dateTime": "2026.05.08-03.34.17",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto17_Decorator' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -1220,10 +1193,10 @@
 					"iD": "700663804B773A9AAD8AAEB609EEC688",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto17_Decorator",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto17_Decorator/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto17_Decorator/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto17_Decorator/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto17_Decorator/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -1236,12 +1209,11 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.53701508045196533,
+			"duration": 0.5370150804519653,
 			"dateTime": "2026.05.08-03.34.19",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto18_NewPageTag' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -1259,10 +1231,10 @@
 					"iD": "98BD987A4D089CF509EA948E138F6096",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto18_NewPageTag",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto18_NewPageTag/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto18_NewPageTag/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto18_NewPageTag/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto18_NewPageTag/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]
@@ -1275,12 +1247,11 @@
 			"deviceInstance": [
 				"E1C2549644ED8A2B462C8BB358C6AA0C"
 			],
-			"duration": 0.55816400051116943,
+			"duration": 0.5581640005111694,
 			"dateTime": "2026.05.08-03.34.20",
 			"entries": [
 				{
-					"event":
-					{
+					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto20_Binlker' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
@@ -1298,10 +1269,10 @@
 					"iD": "9E5A9C63487D109BCCEC78B3BE97E16D",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto20_Binlker",
 					"type": "Comparison",
-					"files":
-					{
+					"files": {
 						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto20_Binlker/Windows/D3D12_SM6/Incoming.png",
-						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto20_Binlker/Windows/D3D12_SM6/Delta.png"
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto20_Binlker/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto20_Binlker/Windows/D3D12_SM6/Approved.png"
 					}
 				}
 			]

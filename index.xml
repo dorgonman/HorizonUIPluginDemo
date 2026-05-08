@@ -10,31 +10,31 @@
     <link>https://dorgonman.github.io/HorizonUIPluginDemo/coverage</link>
     <guid>https://dorgonman.github.io/HorizonUIPluginDemo/coverage</guid>
     <description>Coverage Summary This page intentionally exposes public-safe coverage metrics only. HTML source browsers, native provider pages, and per-source-code views are removed before publishing.</description>
-    <pubDate>Fri, 08 May 2026 07:53:56 GMT</pubDate>
+    <pubDate>Fri, 08 May 2026 11:45:15 GMT</pubDate>
   </item><item>
     <title>HorizonUIPluginDemo Technical Release</title>
     <link>https://dorgonman.github.io/HorizonUIPluginDemo/</link>
     <guid>https://dorgonman.github.io/HorizonUIPluginDemo/</guid>
     <description>HorizonUIPluginDemo Technical Release Public release notes and quality signals for the Horizon UI plugin demo. This site is generated from the Jenkins Release/Publish pipeline.</description>
-    <pubDate>Fri, 08 May 2026 07:53:56 GMT</pubDate>
+    <pubDate>Fri, 08 May 2026 11:45:15 GMT</pubDate>
   </item><item>
     <title>Automation Test Results</title>
     <link>https://dorgonman.github.io/HorizonUIPluginDemo/testing</link>
     <guid>https://dorgonman.github.io/HorizonUIPluginDemo/testing</guid>
     <description>Automation Test Results Generated from Unreal Automation output at 2026.05.08-03.34.21. Parsed Unreal Automation JSON artifact reports/automation-test-result/Result/index.json.</description>
-    <pubDate>Fri, 08 May 2026 07:53:56 GMT</pubDate>
+    <pubDate>Fri, 08 May 2026 11:45:15 GMT</pubDate>
   </item><item>
     <title>readme</title>
     <link>https://dorgonman.github.io/HorizonUIPluginDemo/readme</link>
     <guid>https://dorgonman.github.io/HorizonUIPluginDemo/readme</guid>
     <description>Marketplace public feed: nuget.org Automation Test Result Note: master branch may be unstable since it is in development, please switch to tags, for example: editor/hsgame/4.25.0.290 ...</description>
-    <pubDate>Fri, 08 May 2026 07:53:56 GMT</pubDate>
+    <pubDate>Fri, 08 May 2026 11:45:15 GMT</pubDate>
   </item><item>
     <title>project-readme</title>
     <link>https://dorgonman.github.io/HorizonUIPluginDemo/project-readme</link>
     <guid>https://dorgonman.github.io/HorizonUIPluginDemo/project-readme</guid>
     <description>Marketplace public feed: nuget.org Automation Test Result Note: master branch may be unstable since it is in development, please switch to tags, for example: editor/hsgame/4.25.0.290 ...</description>
-    <pubDate>Fri, 08 May 2026 07:53:56 GMT</pubDate>
+    <pubDate>Fri, 08 May 2026 11:45:15 GMT</pubDate>
   </item>
     </channel>
   </rss>
