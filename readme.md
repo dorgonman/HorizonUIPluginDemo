@@ -1,12 +1,12 @@
 [Marketplace](https://www.unrealengine.com/marketplace/en-US/horizon-ui-plugin)
 
-[![Build Status](https://dev.azure.com/hsgame/UEHorizonPlugin/_apis/build/status/HorizonUI/HorizonUIPluginDemo-Shipping-CI?repoName=HorizonUIPluginDemo&branchName=main)](https://dev.azure.com/hsgame/UEHorizonPlugin/_build/latest?definitionId=24&repoName=HorizonUIPluginDemo&branchName=main)
+[Technical Release Site](http://ue-horizonuiplugin.kanohorizonia.com/)  
+[Automation Tests](http://ue-horizonuiplugin.kanohorizonia.com/testing.html)  
+[Coverage Summary](http://ue-horizonuiplugin.kanohorizonia.com/coverage.html)
 
 public feed: nuget.org  
 
 [![nuget.org package in feed in ](https://img.shields.io/nuget/v/HorizonUIPluginDemo.svg)](https://www.nuget.org/packages/HorizonUIPluginDemo/)
-  
-[Automation Test Result](http://horizon-studio.net/ue4/HorizonUIPluginDemo_TestReport/)
 
 
 Note: 
