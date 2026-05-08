@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>project-readme</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM Plex Mono&amp;family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;display=swap"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta property="og:title" content="project-readme"/><meta property="og:description" content="Marketplace public feed: nuget.org Automation Test Result Note: master branch may be unstable since it is in development, please switch to tags, for example: editor/hsgame/4.25.0.290 ..."/><meta property="og:image" content="https://dorgonman.github.io/HorizonUIPluginDemo/static/og-image.png"/><meta property="og:width" content="1200"/><meta property="og:height" content="675"/><link rel="icon" href="./static/icon.png"/><meta name="description" content="Marketplace public feed: nuget.org Automation Test Result Note: master branch may be unstable since it is in development, please switch to tags, for example: editor/hsgame/4.25.0.290 ..."/><meta name="generator" content="Quartz"/><link href="./index.css" rel="stylesheet" type="text/css" spa-preserve/><script src="./prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("./static/contentIndex.json").then(data => data.json())</script></head><body data-slug="project-readme"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href=".">HorizonUIPluginDemo Release</a></h2><div class="spacer mobile-only"></div><div class="search"><button class="search-button" id="search-button"><p>Search</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div id="search-container"><div id="search-space"><input autocomplete="off" id="search-bar" name="search" type="text" aria-label="Search for something" placeholder="Search for something"/><div id="search-layout" data-preview="true"></div></div></div></div><button class="darkmode" id="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="Dark mode"><title>Dark mode</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="Light mode"><title>Light mode</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button><div class="explorer desktop-only"><button type="button" id="explorer" data-behavior="collapse" data-collapsed="collapsed" data-savestate="true" data-tree="[]" aria-controls="explorer-content" aria-expanded="false"><h2>Explorer</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="explorer-content"><ul class="overflow" id="explorer-ul"><li><div class="folder-outer open"><ul style="padding-left:0;" class="content" data-folderul><li><div class="folder-outer "><ul style="padding-left:0;" class="content" data-folderul></ul></div></li><li><a href="./project-readme" data-for="project-readme">project-readme</a></li><li><a href="./readme" data-for="readme">readme</a></li></ul></div></li><li id="explorer-end"></li></ul></div></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="./">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>project-readme</a></div></nav><h1 class="article-title">project-readme</h1><p show-comma="true" class="content-meta"><span>May 08, 2026</span><span>13 min read</span></p></div></div><article class="popover-hint"><p><a href="https://www.unrealengine.com/marketplace/en-US/horizon-ui-plugin" class="external">Marketplace<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="https://dev.azure.com/hsgame/UEHorizonPlugin/_build/latest?definitionId=24&amp;repoName=HorizonUIPluginDemo&amp;branchName=main" class="external"><img src="https://dev.azure.com/hsgame/UEHorizonPlugin/_apis/build/status/HorizonUI/HorizonUIPluginDemo-Shipping-CI?repoName=HorizonUIPluginDemo&amp;branchName=main" alt="Build Status"/><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>public feed: nuget.org</p>
+<p><a href="https://www.nuget.org/packages/HorizonUIPluginDemo/" class="external"><img src="https://img.shields.io/nuget/v/HorizonUIPluginDemo.svg" alt="nuget.org package in feed in "/><svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p><a href="http://horizon-studio.net/ue4/HorizonUIPluginDemo_TestReport/" class="external">Automation Test Result<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>Note:</p>
+<p>master branch may be unstable since it is in development, please switch to tags, for example: editor/hsgame/4.25.0.290</p>
+<p>How to Run Demo Project before purchase:(Only for Win64 editor build, no source code)</p>
+<ol>
+<li>
+<p>Double click install_game_package_from_nuget_org.cmd, and check if UE4Editor-*.dll are installed to Binaries\Win64 and Plugins\HorizonUIPlugin\Binaries\Win64\</p>
+</li>
+<li>
+<p>Double click HorizonUIPluginDemo.uproject</p>
+</li>
+</ol>
+<hr/>
+<pre><code>          HorizonUIPlugin
+             5.7.0
+     http://dorgon.horizon-studio.net
+      	dorgonman@hotmail.com
+</code></pre>
+<hr/>
+<hr/>
+<h2 id="system-requirements">System Requirements<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#system-requirements" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>Supported UnrealEngine version: 4.11-5.7</p>
+<hr/>
+<h2 id="installation-guide">Installation Guide<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#installation-guide" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>If you want to use plugins in C++, you should add associated module to your project’s
+YOUR_PROJECT.Build.cs:
+PublicDependencyModuleNames.AddRange(new string[] { “HorizonUI”});</p>
+<hr/>
+<h2 id="user-guide-horizonflipbookwidget">User Guide: HorizonFlipbookWidget<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-guide-horizonflipbookwidget" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>This widget support using PaperFlipbook directly in UMG!</p>
+<hr/>
+<h2 id="user-guide-horizondialoguemsgtextblock">User Guide: HorizonDialogueMsgTextBlock<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#user-guide-horizondialoguemsgtextblock" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>example 1: rich text simple</p>
+<pre><code>&lt;text color=&quot;#77FF77AA&quot; shadowColor=&quot;#FF0000FF&quot; shadowOffset=&quot;[4,3]&quot;>This is rich text simple test:&lt;/text>
+&lt;br/>
+&lt;text color=&quot;#FF0000AA&quot;>This is strawberry:&lt;/text>&lt;img filePath=&quot;Texture2D'/Game/Item/I_C_Strawberry.I_C_Strawberry'&quot; size=&quot;[100, 100]&quot; />&lt;br/>
+&lt;text color=&quot;#0000FFFF&quot;>This is Watermellon:&lt;/text>&lt;img color=&quot;#FF00FF77&quot; filePath=&quot;/Game/Item/I_C_Watermellon&quot; size=&quot;[100, 100]&quot; /> &lt;br/>
+&lt;text color=&quot;#FFFF00FF&quot;>This is animated man using material:&lt;/text>&lt;img filePath=&quot;Material'/Game/Material/mat_flipbook.mat_flipbook'&quot; size=&quot;[100, 100]&quot; /> &lt;br/>
+</code></pre>
+<p>note: both Texture2D’/Game/Item/I_C_Strawberry.I_C_Strawberry’ and  /Game/Item/I_C_Strawberry.I_C_Strawberry can work correctly</p>
+<p>example 1: rich text simple using style feature</p>
+<pre><code>&lt;text style=&quot;MyStyle0&quot;>This is rich text test using style:&lt;/text>
+&lt;br/>
+
+&lt;text style=&quot;MyStyle1&quot;>This is strawberry:&lt;/text>&lt;img style=&quot;MyStyle2&quot; />&lt;br/>
+
+&lt;text style=&quot;MyStyle3&quot;>This is Watermellon:&lt;/text>&lt;img style=&quot;MyStyle4&quot;/> &lt;br/>
+
+
+&lt;text style=&quot;MyStyle5&quot;>This is animated man using material:&lt;/text>&lt;mat style=&quot;MyStyle6&quot; /> &lt;br/>
+
+&lt;text style=&quot;MyStyle7&quot;>HorizonFlipbookWidget(use tag pfb) Only Supported by using style:&lt;/text>&lt;pfb style=&quot;MyStyle7&quot; /> &lt;br/>
+</code></pre>
+<p>MyStyle0 ~ MyStyle7 is a array that can be setted in UMG editor under HorizonPlugin/Style section
+ref: <a href="https://drive.google.com/file/d/0BwANUSGaSQn-SlJZWUF5LWJHQTA/view?usp=sharing" class="external">https://drive.google.com/file/d/0BwANUSGaSQn-SlJZWUF5LWJHQTA/view?usp=sharing<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<p>By using style=“YOUR_STYLE_NAME”, you can use the style setting for your RichText block.
+*note: HorizonFlipbookWidget can only use style to work correctly. (Use filePath will not compute UV and Size for HorizonFlipbookWidget correctly.)
+example 2: rich text font</p>
+<pre><code>&lt;text>This is Default Font&lt;/text>&lt;br/>
+&lt;text fontPath=&quot;/Engine/EngineFonts/Roboto&quot; fontType=&quot;Regular&quot; fontSize=&quot;30&quot;>This is Roboto Regular fontSize=30&lt;/text>&lt;br/>
+&lt;text fontPath=&quot;/Engine/EngineFonts/Roboto&quot; fontType=&quot;Italic&quot; color=&quot;#FF0000AA&quot;>This is Roboto Italic&lt;/text>&lt;br/>
+&lt;text fontPath=&quot;/Engine/EngineFonts/Roboto&quot; fontType=&quot;Bold Italic&quot;  fontSize=&quot;40&quot; color=&quot;#FF3366AA&quot;>This is Roboto Bold Italic fontSize=40&lt;/text>&lt;br/>
+&lt;text fontPath=&quot;/Engine/EngineFonts/Roboto&quot; fontType=&quot;Light&quot; color=&quot;#FFFF00AA&quot;>This is Roboto Light&lt;/text>&lt;br/>
+&lt;text fontPath=&quot;/Engine/EngineFonts/RobotoTiny&quot; fontType=&quot;Light&quot; color=&quot;#FF0A40AA&quot;>This is RobotoTinyLight&lt;/text>&lt;br/>
+
+</code></pre>
+<p>example 3: padding</p>
+<pre><code>&lt;text fontSize=&quot;55&quot;>Test case:&lt;/text> 
+&lt;text padding-right=&quot;5&quot; padding-top=&quot;20&quot;>
+ &lt;text padding-left=&quot;5&quot;>padding text block&lt;/text>
+ &lt;img filePath=&quot;/Game/Material/mat_flipbook&quot;/>
+ &lt;img filePath=&quot;/Game/Item/I_C_Watermellon&quot; size=&quot;[100,100]&quot; />
+&lt;/text>
+&lt;text>after padding&lt;/text>
+</code></pre>
+<p>example 4: special character
+following character will be replaced:</p>
+<pre><code>&amp;nbsp;  == &quot; &quot;
+&amp;quot;  == &quot;
+&amp;amp; ==  &quot;&amp;&quot;
+&amp;apos;  ==&quot;'&quot;
+&amp;lt;  == &quot;&lt;&quot;
+&amp;gt;   ==&quot;>&quot;
+</code></pre>
+<p>sample:</p>
+<pre><code>&lt;text> &amp;nbsp;  == &quot; &quot;&lt;/text>&lt;br/>
+&lt;text> &amp;quot;  == &quot; &lt;/text>&lt;br/>
+&lt;text> &amp;amp;  ==  &quot;&amp;&quot;&lt;/text>&lt;br/>
+&lt;text> &amp;apos;&quot;  ==&quot;'&quot;&lt;/text>&lt;br/>
+&lt;text> &amp;lt;  == &quot;&amp;lt;&quot;&lt;/text>&lt;br/>
+&lt;text> &amp;gt;   ==&quot;&amp;gt; &quot;&lt;/text>&lt;br/>
+</code></pre>
+<p>example 5: hyperlink</p>
+<pre><code>&lt;a href=&quot;Seg1ClickMessage&quot; bgColor=&quot;#555555FF&quot; hoverColor=&quot;#FFFF0055&quot; 
+filePath=&quot;Blueprint'/Game/UMG/DialogueMsgTextTest/ButtonStyle/BP_DialogueBackgroundButtonStyle1.BP_DialogueBackgroundButtonStyle1'&quot;>
+&lt;text color=&quot;#FF0000FF&quot;> Test Click Seg1  &lt;/text>
+&lt;/a>
+&lt;br />
+
+&lt;a href=&quot;Seg2ClickMessage&quot; bgColor=&quot;#FF0000FF&quot; hoverColor=&quot;#FFFF0055&quot;
+ filePath=&quot;Blueprint'/Game/UMG/DialogueMsgTextTest/ButtonStyle/BP_DialogueBackgroundButtonStyle2'&quot;>
+&lt;text color=&quot;#00FF00FF&quot;> Test Click Seg2  &lt;/text>
+&lt;/a>
+
+&lt;br />
+
+&lt;a href=&quot;Seg3ClickMessage&quot; bgColor=&quot;#FF0000FF&quot; hoverColor=&quot;#FFFF0055&quot; 
+filePath=&quot;/Game/UMG/DialogueMsgTextTest/ButtonStyle/BP_DialogueBackgroundButtonStyle3&quot;>
+&lt;text color=&quot;#0000FFFF&quot;> Test Click Seg3  &lt;/text>
+&lt;/a>
+</code></pre>
+<p>When you click, you will receive info assigned in href if you bind button’s click callback.<br/>
+Please check WidgetBlueprint’/Game/UMG/DialogueMsgTextTest/Tuto8_HyperText.Tuto8_HyperText’</p>
+<p>example 6: sound</p>
+<pre><code>&lt;text style=&quot;MyStyle3&quot;>HorizonFlipbookWidget( use tag pfb ) Only Supported by using style:&lt;/text>
+&lt;pfb sound=&quot;SoundWave'/Engine/VREditor/Sounds/UI/Click_on_Button.Click_on_Button'&quot; 
+soundVolumn=&quot;0.5&quot; soundPitch=&quot;0.1&quot; soundStartTime=&quot;0.05&quot; style=&quot;MyStyle4&quot; /> &lt;br/>
+&lt;text>
+
+</code></pre>
+<p>example 7: Custom Event &amp;&amp; Callback</p>
+<p>Please Check WidgetBlueprint’/Game/UMG/DialogueMsgTextTest/Tuto06_EventTrigger.Tuto06_EventTrigger’</p>
+<pre><code>&lt;text eventName=&quot;Seg1&quot;, eventPayload=&quot;{&quot;A&quot;:&quot;Data1&quot;, &quot;B&quot;:&quot;Data2&quot;}&quot;>This is simple test: &lt;/text>
+&lt;text eventName=&quot;Seg2&quot;>12345678910 
+11121314151617181920&lt;/text>
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/main/ScreenShot/HorizonUI_Screenshot9.png" alt="Custome Event Usage"/></p>
+<p>example 7: RubyText</p>
+<pre><code>&lt;text style=&quot;test&quot;>
+&lt;text>Test &amp;nbsp;&lt;/text>
+&lt;text ruby.text=&quot;furigana&quot;>RubyText&lt;/text>
+&lt;br/>
+
+&lt;text ruby.text=&quot;ふ&quot;>振&lt;/text>
+&lt;text>り&lt;/text>
+&lt;text ruby.text=&quot;がな&quot;>仮名&lt;/text>
+&lt;br/>
+
+&lt;text ruby.text=&quot;ㄨㄛˇㄕˋ&quot;>我是&lt;/text>
+&lt;text ruby.text=&quot;變態&quot;>紳士&lt;/text>
+&lt;/text>
+</code></pre>
+<p>example 8: Decorator</p>
+<p>We can implement our own logic in Decorator, ex: Load InputIcon from DataTable.</p>
+<pre><code>&lt;text> Please press &amp;nbsp;&lt;/text>
+&lt;img eventPayload=&quot;ConfirmIcon&quot; padding-top=&quot;-15&quot;/>
+&lt;text> &amp;nbsp; to start &lt;/text>
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/main/ScreenShot/Decorator/Decorator1.png" alt="Decorator1"/></p>
+<p><img src="https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/main/ScreenShot/Decorator/Decorator2.png" alt="Decorator2"/></p>
+<p><img src="https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/main/ScreenShot/Decorator/Decorator3.png" alt="Decorator3"/></p>
+<p>example 9: New Page Tag</p>
+<pre><code>&lt;p style=&quot;Page1&quot;>
+&lt;text>Page1 Test &lt;/text>
+&lt;br/>
+&lt;text>Page1.1 &lt;/text>
+&lt;br/>
+&lt;text>Page1.2 &lt;/text>
+
+&lt;/p>
+
+&lt;p style=&quot;Page2&quot;>
+&lt;text>Page2 Test&lt;/text>
+&lt;br/>
+&lt;text>Page2.1 &lt;/text>
+&lt;br/>
+&lt;text>Page2.2 &lt;/text>
+
+&lt;/p>
+&lt;p style=&quot;Page3&quot;>
+&lt;text>Page3 Test&lt;/text>
+&lt;br/>
+&lt;text>Page3.1 &lt;/text>
+&lt;br/>
+&lt;text>Page3.2 &lt;/text>
+&lt;/p>
+</code></pre>
+<p>example 10: Space Decorator</p>
+<p>We can use HorizonDialogueMsgSpaceDecorator to automatically append space between segment without using &amp;nbsp;</p>
+<p>Here is example:</p>
+<pre><code>&lt;text tag=&quot;WithSpaceL&quot;>With SpaceDecorator,&lt;/text>
+&lt;text>Msg1, &lt;/text>
+&lt;text>Msg2, &lt;/text>
+&lt;text>and Msg3 &lt;/text>
+&lt;text tag=&quot;NoSpaceL&quot;>.&lt;/text>
+</code></pre>
+<p>Possible tag are: NoSpaceR, NoSpaceL and NoSpace, WithSpaceL, WithSpaceR, WithSpace.
+NoSpace means we apply NoSpaceR and NoSpaceL rule at same time to the segment.
+WithSpace means we apply WithSpaceR and WithSpaceL rule at same time to the segment.</p>
+<p>Generally we will want to create Blueprint that inherited from HorizonDialogueMsgSpaceDecorator,
+so we can adjust FirstLineSpaceL and Space property to Fullwidth/Halfwidth space character, the properties are FText so they can also be localized for different language using Unreal Localization tool. (ex: English use Halfwidth and Chinese use Fullwidth)</p>
+<p><img src="https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/main/ScreenShot/Decorator/Decorator_DialogueTextSpace.png" alt="SpaceDecorator"/></p>
+<p>example 11: Text Replace Decorator: Read value from CurveTable</p>
+<p>Decorator also help you reading External Source and put the value into your text. Please check this demo project to see how to implement it for your project.</p>
+<p>Basically, we should create a Blueprint that inherited from DemoDialogueMsgReplaceDecorator, and configure your game data there, see /Game/UMG/DialogueMsgTextTest/Decorator/BP_MsgReplaceCurveTableDecorator:</p>
+<p><img src="https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/main/ScreenShot/Decorator/Decorator_MsgReplaceCurveTable.png" alt="MsgReplaceCurveTable"/></p>
+<p>After apply the decorator, you will get following result:</p>
+<pre><code>&lt;text>The Message with special character '$' will be replaced by finding value in eventPayLoad from CurveTable(&lt;/text>
+&lt;text tag=&quot;NoSpace&quot; eventPayLoad=&quot;Default.HorizonUIDemoAttributeSet.Health, 1.4&quot;>$&lt;/text>
+&lt;text>), and we can have multiple blocks and Decorators&lt;/text>
+&lt;img eventPayload=&quot;ConfirmIcon&quot; padding-top=&quot;-15&quot; size=&quot;[100, 100]/>
+&lt;text tag=&quot;NoSpaceL&quot;>.&lt;/text>
+</code></pre>
+<p><img src="https://raw.githubusercontent.com/dorgonman/HorizonUIPluginDemo/main/ScreenShot/Decorator/Decorator_MsgReplaceCurveTable_Result.png" alt="MsgReplaceCurveTableResult"/></p>
+<p>example 12: Change Dialogue Speed</p>
+<pre><code>&lt;text speed=&quot;0.01&quot;> Loading&lt;/text>
+&lt;text speed=&quot;1&quot;> ...&lt;/text>
+</code></pre>
+<p>example 13: Wait Message</p>
+<pre><code>&lt;text>1234&lt;/text>
+&lt;text wait=&quot;2.5&quot;>5678&lt;/text>
+</code></pre>
+<p>It will display 1234 first, wait for 2.5 seconds and then display 5678.</p>
+<hr/>
+<h2 id="technical-details">Technical Details<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#technical-details" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>List of Modules:
+HorizonUI (Runtime)
+Intended Platform: All Platforms
+Platforms Tested: Win64, Android
+Widget Introduction:
+1. HorizonFlipbookWidget: This widget support using PaperFlipbook directly in UMG!
+2. HorizonDialogueMsgTextBlock: Combine both rich text and dialogue text function in this widget!
+For rich text feature: you can control text Color, Shadow Color, Font, Font size and padding for each text block.
+For dialogue text feature: you can control dialogue speed and whether it will repeated after finish.<br/>
+Demo Project: <a href="https://github.com/dorgonman/HorizonUIPluginDemo" class="external">https://github.com/dorgonman/HorizonUIPluginDemo<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a><br/>
+DemoVideo: <a href="https://www.youtube.com/watch?v=GQBd2qAEpCg&amp;feature=youtu.be" class="external">https://www.youtube.com/watch?v=GQBd2qAEpCg&amp;feature=youtu.be<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h2 id="what-does-your-plugin-dowhat-is-the-intent-of-your-plugin">What does your plugin do/What is the intent of your plugin<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#what-does-your-plugin-dowhat-is-the-intent-of-your-plugin" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>This Plugin contains some extension for UMG Widget.</p>
+<hr/>
+<h2 id="contact-and-support">Contact and Support<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#contact-and-support" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>email: <a href="mailto:dorgonman@hotmail.com" class="external">dorgonman@hotmail.com<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></p>
+<hr/>
+<h2 id="version-history">Version History<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#version-history" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p>*5.7.0</p>
+<pre><code>Upgrade to 5.7.0
+</code></pre>
+<p>*5.6.0</p>
+<pre><code>Upgrade to 5.6.0
+</code></pre>
+<p>*5.5.0</p>
+<ul>
+<li>
+<p>Add EditorCustomVirtualPath</p>
+</li>
+<li>
+<p>[BugFix] Fix SetTextAndRebuildDialogue and intermediate issues for the rvalue reference version.</p>
+</li>
+<li>
+<p>[New][DialogueMsgTextBlock] Implement Force Rebuild option to SetTextAndRebuildDialogue</p>
+</li>
+</ul>
+<p>*5.4.0</p>
+<ul>
+<li>
+<p>AB#2992 [BugFix][DialogueMsgTextBlock] Fix MatreialInstance not supported</p>
+</li>
+<li>
+<p>[Refactor] Fix typo: BuildSegmentDecoration</p>
+</li>
+<li>
+<p>AB#2986 [BugFix] Fix Warning: Property ObjectProperty contains short type name</p>
+</li>
+<li>
+<p>AB#2966 [BugFix][DialogueMsg] PageIndex should always >= 0, or it will crash</p>
+</li>
+<li>
+<p>[Refactor] Use ObjectPtr instead of RawPointer</p>
+</li>
+<li>
+<p>[HorizonTileView] Implement RefreshBehavior</p>
+</li>
+<li>
+<p>[BugFix][HorizonDialogueMsgTextBlock] Should Skip LineSegment start with NewLine(\n)</p>
+</li>
+<li>
+<p>[New][DialogueMsgTextBlock] Implement Force Rebuild option to SetTextAndRebuildDialogue</p>
+</li>
+</ul>
+<p>*5.3.0</p>
+<pre><code>Update to 5.3.0
+</code></pre>
+<p>*5.2.0</p>
+<ul>
+<li>
+<p>[HorizonTileView] Implement RequestListRefresh</p>
+</li>
+<li>
+<p>[HorizonListViewItemWidget] Implement IsHovered by checking if Button_ClickArea is focused</p>
+</li>
+<li>
+<p>[New][HorizonTileView] Remove PreviousSelectedItem from selection when NavigateToAndSelectIndex &lt; 0</p>
+</li>
+<li>
+<p>[New][HorizonDialogueMsgTextBlock] Implement Dynamic SizeBox Override and SetTextAndRebuildDialogueImmediately</p>
+</li>
+</ul>
+<p>*5.1.0</p>
+<ul>
+<li>
+<p>[New][HorizonDialogueMsgTextBlock][MsgSpaceDecorator] SpaceDecorator bWithSpaceL should skip Non-Alphabetic character</p>
+</li>
+<li>
+<p>[Refactor][HorizonDialogueMsgTextBlock] Refactor TextOverflowWarpNormal CodePoint check</p>
+</li>
+<li>
+<p>[Refactor][MsgTextBlock] Refactor BlueprintCallable to BlueprintPure and constness</p>
+</li>
+<li>
+<p>[New][HorizonDialogueMsgTextBlock] Implement BlinkingCursor</p>
+</li>
+<li>
+<p>[New][DialogueMsgTextBlock] Implement Size to content support</p>
+</li>
+<li>
+<p>[New][DialogueMsgTextBlock] Implement VerticalPanel support with VerticalAlignment</p>
+</li>
+<li>
+<p>[New][TileView] Support focus and button events for ItemWidget and Reroute Input to TileView</p>
+</li>
+</ul>
+<p>*5.0.1</p>
+<ul>
+<li>
+<p>[BugFix][HorizonDialogueMsgTextBlock] Fix MemoryLeak when parse segmentStr using FXmlFile</p>
+</li>
+<li>
+<p>[New][DialogueMsgTextBlock] Implement SpaceDecorator and Add Tag param to Segment</p>
+</li>
+<li>
+<p>[New][DialogueMsgTextBlock] Add BuildSegment call for Decorator class and rename BuildDecoration to BuildBlockDecoration</p>
+</li>
+</ul>
+<p>*5.0.0</p>
+<ul>
+<li>
+<p>[BugFix] Fix UE5 compile warning and error and refactor UnrealFileSystem</p>
+</li>
+<li>
+<p>AB#2384 [BugFix][HorizonDialogueMsgTextBlock] Fix wrong widgetWidth</p>
+</li>
+<li>
+<p>[Refactor] Remove Deprecated code</p>
+</li>
+<li>
+<p>[BugFix] Hotfix Explicit PCH compile error</p>
+</li>
+<li>
+<p>AB#2233 [Optimization] Add PrivatePCHHeaderFile to .Build.cs to optimizae build speed</p>
+</li>
+<li>
+<p>[New][Build] PublicDefinitions.Add(“WITH_HORIZONUI=1”)</p>
+</li>
+<li>
+<p>Refactor HORIZONUI_STRINGIZE</p>
+</li>
+<li>
+<p>AB#2186 [New] Add SCOPED_NAMED_EVENT_TEXT and DECLARE_SCOPE_CYCLE_COUNTER to some functions for performance measure</p>
+</li>
+<li>
+<p>AB#2177 [BugFix] TextOverflowWarpNormal should break segment text to next line</p>
+</li>
+<li>
+<p>[New] Expose LoadTexture2DImplement</p>
+</li>
+<li>
+<p>[New][WidgetFunctionLibrary] Add bInHideCursorDuringCapture param to SetInputMode</p>
+</li>
+</ul>
+<p>*4.27.0</p>
+<ul>
+<li>
+<p>AB#2120 [New][HorizonWidgetFunctionLibrary] Implement SetInputMode</p>
+</li>
+<li>
+<p>AB#2117 [HorizonMultiToggleButtonWidget] Change HorizonMultiToggleButtonState’s TextColor to White</p>
+</li>
+<li>
+<p>AB#2118 [HorizonTileView] Remove constructor, so inherited class can use default constructor without compiler error</p>
+</li>
+<li>
+<p>AB#1990 [BugFix][HorizonRadioButtonUserWidge] Should not get multiple checked radio button when use IsChecked in OnCheckedDelegate</p>
+</li>
+<li>
+<p>AB#1957 [BugFix] Set HorizonButton, HorizonMultiToggleButton, and HorizonRadioButton as bIsFocusable and Visible by default</p>
+</li>
+<li>
+<p>AB#1954 AB#1955 AB#1956 [BugFix] Fix widget callbacks added multiple times by move binding to NativeOnInitialized</p>
+</li>
+<li>
+<p>AB#1952 [New][HorizonDialogueMsgTextBlock] Implement Force setter for SetShadowColorAndOpacity, SetShadowOffset, SetFont, SetJustification, and SetDialogueMsgSpeed.</p>
+</li>
+<li>
+<p>AB#1950 AB#1951 [BugFix][HorizonDialogueMsgTextBlock] OnDialoguePageEndFunction and OnDialogueMsgLoopFunction not work as expected</p>
+</li>
+<li>
+<p>AB#1949 [New][HorizonTileView] Implement OnRefreshDesignerItems, so we don’t need to implement it in every child widget</p>
+</li>
+<li>
+<p>AB#1948 [New][HorizonTileView] Expose GetNumGeneratedChildren from slate</p>
+</li>
+<li>
+<p>AB#1947 [New][TileView] Expose IsPendingRefresh to TileView Widget from slate</p>
+</li>
+<li>
+<p>AB#1944 [New][HorizonTileView] Focus EntryWidget when HandleListEntryHovered</p>
+</li>
+<li>
+<p>AB#1943 [New][HorizonTileView] Implement NavigateToAndSelectIndex</p>
+</li>
+<li>
+<p>AB#1937 [New][HorizonFlipbookWidget] Implement OnAnimationStart and OnAnimationFinished</p>
+</li>
+<li>
+<p>AB#1941 [Bugfix] Failed to load /Script/HorizonUI.HorizonDialogueMsgTextBlock Referenced by WidgetTree</p>
+</li>
+<li>
+<p>AB#1877 [BugFix][HorizonDialogueMsgTextBlock] AutoPage line should fill up entire page</p>
+</li>
+<li>
+<p>AB#1862 AB#1863 [HorizonDialogueMsgTextBlock] Implement GetNumPage and SkipCurrentDialoguePage when DialogueMsgSpeed less then 0</p>
+</li>
+<li>
+<p>AB#2177 [BugFix] TextOverflowWarpNormal should break segment text to next line</p>
+</li>
+<li>
+<p>AB#2186 [New] Add SCOPED_NAMED_EVENT_TEXT and DECLARE_SCOPE_CYCLE_COUNTER to some functions for performance measure</p>
+</li>
+<li>
+<p>[Refactor] Remove Deprecated code</p>
+</li>
+<li>
+<p>[BugFix] Hotfix Explicit PCH compile error</p>
+</li>
+<li>
+<p>AB#2233 [Optimization] Add PrivatePCHHeaderFile to .Build.cs to optimizae build speed</p>
+</li>
+<li>
+<p>[New][Build] PublicDefinitions.Add(“WITH_HORIZONUI=1”)</p>
+</li>
+</ul>
+<p>*4.26.1</p>
+<ul>
+<li>
+<p>[BugFix][HorizonDialogueMsgTextBlock] AutoPage line should fill up entire page</p>
+</li>
+<li>
+<p>[HorizonDialogueMsgTextBlock] Implement GetNumPage and SkipCurrentDialoguePage when DialogueMsgSpeed less then 0</p>
+</li>
+</ul>
+<p>*4.26.0</p>
+<ul>
+<li>
+<p>[Refactor] Fix Typo from EHorizonDialogueTextOverflowWarpMethod to EHorizonDialogueTextOverflowWrapMethod</p>
+</li>
+<li>
+<p>[New][HorizonDialogueMsgTextBlock] Russian OverflowWrap support</p>
+</li>
+<li>
+<p>GITHUB#6 [BugFix] Remove empty line with only space and skip space char at beginning of line for some edge case</p>
+</li>
+<li>
+<p>[New][HorizonDialogueMsgTextBlock] Implement NewPage tag </p><p></p>
+</li>
+<li>
+<p>[New][HorizonDialogueMsgTextBlock] Add bForceRebuildDialogueMsgText as workaround that geometry.Size.X is 0 in some case</p>
+</li>
+<li>
+<p>[BugFix][HorizonFlipbookWidget] GetPaletteCategory</p>
+</li>
+<li>
+<p>[BugFix] Fix AddBackgroundButton BlockSize</p>
+</li>
+<li>
+<p>[BugFix][HorizonDialogueMsgTextBlock] Flipbook should be able loaded using filePath</p>
+</li>
+<li>
+<p>[New][HorizonDialogueMsgTextBlock] Implement PreBuildDecoration</p>
+</li>
+<li>
+<p>[New][HorizonDialogueMsgTextBlock] RubyText Implmenetation</p>
+</li>
+<li>
+<p>[BugFix][HotFix][HorizonDialogueMsgTextBlock] Don’t crash</p>
+</li>
+<li>
+<p>[BugFix][HorizonDialogueMsgTextBlock] Fix Create BlockInfo’s CurrentLineWidth calculation when Decoration change block size</p>
+</li>
+<li>
+<p>[BugFix][HorizonButton] RemoveDynamic before AddDynamic for delegates</p>
+</li>
+<li>
+<p>[BugFix][HorizonDialogueMsgTextBlock] Fix auto page padding bugs</p>
+</li>
+<li>
+<p>[Refactor][HorizonDialogueMsgTextBlock] Add meta = (TitleProperty = “StyleName”) for SegmentStyleList</p>
+</li>
+<li>
+<p>[UHorizonDialogueMsgTextBlock] RebuildBlockInfoDecoration to public</p>
+</li>
+<li>
+<p>[New][UHorizonDialogueMsgTextBlock] Implement HorizonDialogueMsgDecorator</p>
+</li>
+<li>
+<p>[Refactor] Coding style</p>
+</li>
+<li>
+<p>[New] Implement HorizonMultiToggleButtonWidget</p>
+</li>
+<li>
+<p>[BugFix][HorizonDialogueMsgTextBlock] Fix SkipDialogue, NextDialogueMsgPage and PrevDialogueMsgPage didn’t work as intend</p>
+<ol>
+<li>Should not call SetDialogueMsgPage if current page didn’t change</li>
+<li>SetDialogueMsgPage should reset CurrentDialogueLineIndex to StartLineIndex ,CurrentDialogueBlockIndex to 0 and CurrentCharIndex to  0</li>
+<li>SetIsStartTickDialogueMsg should has bShouldResetDialogue, that user can choose when to reset dialogue index.</li>
+</ol>
+</li>
+<li>
+<p>[New] Expose FHorizonDialogueBlockInfo and FHorizonDialogueLineInfo to BP and adjust category</p>
+</li>
+<li>
+<p>[Refactor][HorizonMultiToggleButtonWidget] Adjust Some assumption and api usage</p>
+</li>
+</ul>
+<p>*4.25.0<br/>
+Update to 4.25</p>
+<pre><code>New: [UHorizonDialogueMsgTextBlock] Move semantics version of SetTextAndRebuildDialogue
+
+New: [UHorizonWidgetFunctionLibrary] GetUserIndex
+
+New: [UHorizonWidgetFunctionLibrary] IsChildWidget
+
+New: [UHorizonWidgetFunctionLibrary] Implement ContainWidgetType
+
+New: [HorizonWidgetFunctionLibrary] GetInputMode
+
+New: [UHorizonButtonUserWidget] Implement UHorizonButtonUserWidget::NativeOnFocusReceived for Button_Main focus
+
+BugFix: [UHorizonButtonUserWidget] bFocusOnHovered should trigger OnButtonFocusDelegate &amp;&amp; OnButtonFocusLostDelegate
+
+New: [HorizonTileView]
+
+Refactor: [HorizonFlipbookWidget] Inherited from UImage instead of UCanvasPanel
+
+Refactor: [UHorizonFlipbookWidget] Use SlateAtlasData for SourceUV and SourceSize, so we don't need to bake at editor time anymore
+
+[Refactor][UHorizonFlipbookWidget] Expose Tick to public
+
+[BugFix][HorizonFlipbookWidget] ResetAnimation should set to first frame
+</code></pre>
+<p>*4.24.0</p>
+<pre><code>New: [HorizonRadioButton]   
+
+New: [UHorizonDialogueMsgTextBlock] Implement CharAdvancedDelegate, so user can add the typewriter sound in this callback.  
+
+New: [UHorizonDialogueMsgTextBlock] Add eventPayload for custom evnet(see example 7)
+
+New: [UHorizonDialogueMsgTextBlock] Use CreateDialogueImage, CreateDialogueFlipbook, CreateDialogueTextBlock instead of NewObject for each DialogueBlockInfo, so it can be customizable in child class.  
+
+BugFix: [UHorizonDialogueMsgTextBlock] Should not call AddBackgroundButton if segInfo.HypertextReference not set
+</code></pre>
+<p>*4.23.0</p>
+<pre><code>BugFix: Size to Content not working   
+
+BugFix: Fix using Flipbook in UHorizonDialogueMsgTextBlock  
+
+Bugfix: [UHorizonDialogueMsgTextBlock] remove DefaultButtonStyleWidgetClass
+</code></pre>
+<p>*4.22.1</p>
+<pre><code>BugFix: Size to Content not working  
+</code></pre>
+<p>*4.22.0</p>
+<pre><code>NEW: Implement HorizonDesignableUserWidget, HorizonUserWidget and HorizonButtonUserWidget
+
+NEW: HorizonButtonUserWidget  
+
+NEW: [UHorizonDialogueMsgTextBlock] Implement SkipDialogue and SkipCurrentPage  
+
+NEW: [UHorizonDialogueMsgTextBlock] Implement DefaultButtonStyleWidget for href  
+
+NEW: [UHorizonDialogueMsgTextBlock] implement Wait for Dialogue Segment, ex: &lt;text wait=&quot;2.5&quot;>1234&lt;/text> will wait 2.5 second before display next msg block.    	
+BugFix: href DefaultButtonStyleWidgetClass should not apply to other block  
+
+BugFix: [UHorizonDialogueMsgTextBlock] SetTextAndRebuildDialogue Should Build Text only after we get correct CachedGeometry  
+</code></pre>
+<p>*4.21.2</p>
+<pre><code>NEW: [UHorizonDialogueMsgTextBlock] CustomEventDelegate will be triggered, if there is an eventName specified in segment tags.  
+
+NEW: [UHorizonDialogueMsgTextBlock] Implement SkipDialogue and SkipCurrentPage  
+</code></pre>
+<p>*4.21.1</p>
+<pre><code>New: [UHorizonDialogueMsgTextBlock] pause and resume dialogue
+
+BugFix: RebuildFlipbook
+
+BugFix: Rebuild Only check GetCachedGeometry().Size.X > 0
+</code></pre>
+<p>*4.21.0</p>
+<pre><code>New: [HorizonDialogueMsgTextBlock] Add OnRebuildDialogueDelegate callback.  
+
+BugFix: [HorizonDialogueMsgTextBlock] under scalebox.  
+
+BugFix: [HorizonDialogueMsgTextBlock] Didn't advance to next char when segStartCharIndex == segCharIndex.  
+
+BugFix: [HorizonDialogueMsgTextBlock] GetCurrentPageTextLength crash when no page.  
+
+Refactor: [HorizonDialogueMsgTextBlock] Remove UCanvasPanel dependency and fix Behavior under SizeBox.  
+
+Refactor: [HorizonDialogueMsgTextBlock] Adjust Warning message when style not found,  
+
+Refactor: [HorizonDialogueMsgTextBlock] Put all seperate .cpp code into HorizonDialogueMsgTextBlock.cpp.  
+
+New: [UHorizonFlipbookWidget] Remove Dependency from UCanvasPanelSlot* pCanvasPanelSlot, now this widget can be used under any panel widget.  
+</code></pre>
+<p>*4.20.0</p>
+<pre><code>New: Sprite support for UHorizonDialogueMsgTextBlock.  
+
+New: GlobalTimeDilation Support in UHorizonDialogueMsgTextBlock Tick.  
+
+New: UHorizonDialogueMsgTextBlock::GetCurrentPageTextLength.  
+
+New: UHorizonDialogueMsgTextBlock::GetPageTextByIndex.  
+
+BugFix: Fix first line and first word overflow for UHorizonDialogueMsgTextBlock.  
+
+BugFix: Crash when hypertext is click and change text in UHorizonDialogueMsgTextBlock.  
+
+Refactor: Use Emplace instead of Add for TArray for UHorizonDialogueMsgTextBlock.  
+</code></pre>
+<p>*4.19.0</p>
+<pre><code>New: UHorizonDialogueMsgTextBlock [Auto Page](https://www.youtube.com/watch?v=kbjyGSoLpCk&amp;feature=youtu.be) will split Dialogue Text into multiple pages.  
+
+New: UHorizonDialogueMsgTextBlock::IsDialogueMsgCompleted.  
+
+New: UHorizonWidgetFunctionLibrary::GetWidgetFromNameRecursively.  
+
+New: UVRegion for UHorizonImage.  
+
+New: UHorizonDialogueMsgTextBlock [Justification](https://www.dropbox.com/s/lp9i2qlkcb3j3ut/HorizonUI_HorizonDialogueMsgTextBlock_Justification.png?dl=0) for Left, Right and Center.  
+
+Refactor: C++ Classes folders Reorganized.  
+
+Refactor: Use TSoftObjectPtr for assets refenence in StyleInfo.  
+
+BugFix: SegmentStyleList are overrided by one of StyleInfoClassList.  
+
+BugFix: Style referenced assets are not loaded in some case.  
+
+BugFix: Break all for non english character in TextOverflowWarpNormal_Implement.  
+</code></pre>
+<p>*4.18.0</p>
+<pre><code>New: Implement Hypertext for HorizonDialogueMsgTextBlock：you will be able to use all button's features in dialogue segments.
+
+New: Implement Sound trigger for HorizonDialogueMsgTextBlock.
+
+New: Implement DialogueStyleInfo as Blueprintable UObject: Now you can management all HorizonDialogueSegmentInfoStyle in one or more BP class and apply to all HorizonDialogueMsgTextBlock.
+
+New: Crash when  tried add a new style and set its color.
+
+BugFix: Should ignore space at end of line for TextOverflowWarpNormal.(Empty new line bug)
+
+BugFix: Duplicate HorizonDialogueMsgTextBlock crash bug
+
+BugFix: LineWidth when adjust widget anchor
+</code></pre>
+<p>*4.17.0<br/>
+UPDATE: update to engine 4.17.0, and plugin’s VersionName will also follow engine’s version.</p>
+<pre><code>FIX: DialogueMsgSpeed crash when set the value to 0
+
+NEW: implement UHorizonDialogueMsgTextBlock::SetTextAndRebuildDialogue for Blueprints user, please use this method instead of SetText if you want to change Dialogue text at runtime.
+NEW: implement UHorizonFlipbookWidget::SetFlipbookSource for blueprints user, now you can adjust FlipbookSource UV and Size in blueprint. 
+
+NEW: 
+implement HorizonDialogueTextOverflowWarpMethod for UHorizonDialogueMsgTextBlock. You will be able to select &quot;Normal&quot; or &quot;BreakAll&quot; method, by default, plugin will change default warp method from BreakAll to Normal. 
+
+Normal Warp method means if the word overflow current line width(for both CJK or non-CJK), it will try move to next line and use BreakAll rule in next line. BreakAll method is plugin's previously implementation, the word will break at any character when text overflow occur.   
+</code></pre>
+<p>*1.3.0</p>
+<pre><code>UPDATE: update to engine 4.16
+NEW: implement StartDialogue and StopDialogue for HorizonDialogueMsgTextBlock
+</code></pre>
+<p>*1.2.4</p>
+<pre><code>UPDATE: update to engine 4.15
+</code></pre>
+<p>*1.2.1</p>
+<pre><code>FIX: The times HorizonFlipbookWidget NumOfLoop for flipbook animation plays incorrectly.
+	
+</code></pre>
+<p>*1.2.0</p>
+<pre><code>NEW: HorizonFlipbookWidget: 
+	1. Add NumOfLoop that you can specify how much loop this Flipbook will play.
+	2. Expose Blueprint Method: ResetAnimation, PlayAnimation, StopAnimation, PauseAnimation, ResumeAnimation.
+</code></pre>
+<p>*1.1.0</p>
+<pre><code>NEW: Add style feature for HorizonDialogueMsgTextBlock
+FIX: 
+	1. Fix Crash when putting a flipbook nested in a button.
+	2. Fix ensureMsgf check fail by set widget outer to WidgetTree.
+	3. Fix some display bug in UMG Hierarchy. Don't call RebuildSegmentInfoList if it is created from palette. 
+REFACTOR: 
+	1. Move HorizonUI module from Source/HorizonUI to Source/Runtime/HorizonUI
+	2. Rename Blueprint UPROPERTY Category for class members in HorizonFlipbookWidget and HorizonDialogueMsgTextBlock
+	3. Minor code refactoring
+</code></pre>
+<p>1.0.0</p>
+<pre><code>NEW: First Version including core features.
+		1. HorizonFlipbookWidget
+		2. HorizonDialogueMsgTextBlock
+</code></pre></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>Graph View</h3><div class="graph-outer"><div id="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false}"></div><button id="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div id="global-graph-outer"><div id="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" id="toc" class aria-controls="toc-content" aria-expanded="true"><h3>Table of Contents</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div id="toc-content" class><ul class="overflow"><li class="depth-0"><a href="#system-requirements" data-for="system-requirements">System Requirements</a></li><li class="depth-0"><a href="#installation-guide" data-for="installation-guide">Installation Guide</a></li><li class="depth-0"><a href="#user-guide-horizonflipbookwidget" data-for="user-guide-horizonflipbookwidget">User Guide: HorizonFlipbookWidget</a></li><li class="depth-0"><a href="#user-guide-horizondialoguemsgtextblock" data-for="user-guide-horizondialoguemsgtextblock">User Guide: HorizonDialogueMsgTextBlock</a></li><li class="depth-0"><a href="#technical-details" data-for="technical-details">Technical Details</a></li><li class="depth-0"><a href="#what-does-your-plugin-dowhat-is-the-intent-of-your-plugin" data-for="what-does-your-plugin-dowhat-is-the-intent-of-your-plugin">What does your plugin do/What is the intent of your plugin</a></li><li class="depth-0"><a href="#contact-and-support" data-for="contact-and-support">Contact and Support</a></li><li class="depth-0"><a href="#version-history" data-for="version-history">Version History</a></li></ul></div></div><div class="backlinks"><h3>Backlinks</h3><ul class="overflow"><li><a href="./" class="internal">HorizonUIPluginDemo Release</a></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.4.0</a> © 2026</p><ul><li><a href="https://github.com/jackyzha0/quartz">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript">function c(){let t=this.parentElement;t.classList.toggle("is-collapsed");let l=t.classList.contains("is-collapsed")?this.scrollHeight:t.scrollHeight;t.style.maxHeight=l+"px";let o=t,e=t.parentElement;for(;e;){if(!e.classList.contains("callout"))return;let n=e.classList.contains("is-collapsed")?e.scrollHeight:e.scrollHeight+o.scrollHeight;e.style.maxHeight=n+"px",o=e,e=e.parentElement}}function i(){let t=document.getElementsByClassName("callout is-collapsible");for(let s of t){let l=s.firstElementChild;if(l){l.addEventListener("click",c),window.addCleanup(()=>l.removeEventListener("click",c));let e=s.classList.contains("is-collapsed")?l.scrollHeight:s.scrollHeight;s.style.maxHeight=e+"px"}}}document.addEventListener("nav",i);window.addEventListener("resize",i);
+</script><script type="module">
+          let mermaidImport = undefined
+          document.addEventListener('nav', async () => {
+            if (document.querySelector("code.mermaid")) {
+              mermaidImport ||= await import('https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.7.0/mermaid.esm.min.mjs')
+              const mermaid = mermaidImport.default
+              const darkMode = document.documentElement.getAttribute('saved-theme') === 'dark'
+              mermaid.initialize({
+                startOnLoad: false,
+                securityLevel: 'loose',
+                theme: darkMode ? 'dark' : 'default'
+              })
+
+              await mermaid.run({
+                querySelector: '.mermaid'
+              })
+            }
+          });
+          </script><script src="./postscript.js" type="module"></script></html>
