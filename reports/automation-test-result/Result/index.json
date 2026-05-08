@@ -1,15 +1,15 @@
 {
 	"devices": [
 		{
-			"deviceName": "PC-DORGONCHANG-",
-			"instance": "E1C2549644ED8A2B462C8BB358C6AA0C",
-			"instanceName": "PC-DORGONCHANG--56896",
+			"deviceName": "redacted-device",
+			"instance": "redacted-instance",
+			"instanceName": "redacted-instance",
 			"platform": "Windows",
-			"oSVersion": "Windows 11 (25H2) [10.0.26200.8328] ",
-			"model": "Default",
-			"gPU": "Microsoft Remote Display Adapter",
-			"cPUModel": "AMD Ryzen 9 5950X 16-Core Processor            ",
-			"rAMInGB": 128,
+			"oSVersion": "Windows (redacted)",
+			"model": "redacted-model",
+			"gPU": "redacted-gpu",
+			"cPUModel": "redacted-cpu",
+			"rAMInGB": "redacted",
 			"renderMode": "D3D12_SM6",
 			"rHI": "D3D12 (SM6)",
 			"appInstanceLog": ""
@@ -23,7 +23,7 @@
 	"inProcess": 0,
 	"totalDuration": 19.39022445678711,
 	"comparisonExported": true,
-	"comparisonExportDirectory": "H:/EpicGames/Installed/UE_5.7/HorizonUIPluginDemo/Intermediate/BuildPackage/Win64/main/588/Development/StandaloneTestReport/Result/imageCompare/51494982",
+	"comparisonExportDirectory": "[redacted-path]",
 	"tests": [
 		{
 			"testDisplayName": "EnumValidation",
