@@ -29,7 +29,7 @@ def projectConfig() {
         reportRoot:         'Intermediate/BuildPackage',
         slug:               'HorizonUIPluginDemo',
         workspaceSlot:      'Package',
-        win64SharedWorkspaceRoot: 'C:/J/ws',
+        win64SharedWorkspaceRoot: 'C:/_agent/_jenkins/agent/workspace/HorizonPlugin',
         macSharedWorkspaceRoot: '/Users/Shared/jenkins/agent/workspace/HorizonPlugin',
         linuxSharedWorkspaceRoot: '/var/jenkins/home/ws/HorizonPlugin',
 
