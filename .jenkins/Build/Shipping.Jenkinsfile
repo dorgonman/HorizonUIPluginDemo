@@ -80,8 +80,6 @@ pipeline {
                         bBuildPluginLinux: params.bBuildPluginLinux,
                         // Config
                         bRunTestWin64Standalone: false,  // Shipping cannot run automation tests
-                        win64SharedWorkspaceRoot: sharedWorkspaceRoot,
-                        workspaceSlot: sharedWorkspaceSlot,
                         buildConfiguration: 'Shipping',
                     ])
                     unrealPipeline(config)
