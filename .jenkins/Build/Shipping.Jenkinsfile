@@ -3,14 +3,13 @@
 
 @Library('jenkins-unreal-pipeline-library') _
 
-def sharedWorkspaceRoot = 'C:/J/ws'
-def sharedWorkspaceSlot = 'HUI/Ship'
+def sharedWorkspaceRoot = 'C:/_agent/_jenkins/agent/workspace'
 
 pipeline {
     agent {
         node {
             label 'unreal-win64'
-            customWorkspace "${sharedWorkspaceRoot}/${sharedWorkspaceSlot}"
+            customWorkspace "${sharedWorkspaceRoot}/HorizonPlugin/HorizonUIPluginDemo/Build/PackagedBuild"
         }
     }
 
