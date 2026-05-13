@@ -86,3 +86,26 @@ The following features are not part of the current implementation:
 
 - **Notification Systems**: Integration with Slack, email, or other messaging services.
 - **Live Jenkins Runtime Validation**: The pipeline logic is provided as-is without active validation on a live Jenkins instance.
+
+
+### Loading `.jenkins/config.groovy`
+
+Consumer Jenkinsfiles should avoid top-level `load '.jenkins/config.groovy'`.
+Jenkins `load` requires a workspace (`hudson.FilePath`), while Pipeline-from-SCM
+may only perform lightweight checkout before execution.
+
+Preferred UGS entrypoint pattern:
+
+```groovy
+unrealUgsBuildPipeline(
+    projectConfigPath: '.jenkins/config.groovy',
+    configOverrides: [
+        windowsAgentLabel: 'pc-dorgonchang-rtx3090.local',
+        win64UgsAgentLabel: 'pc-dorgonchang-rtx3090.local',
+        aggregateAgentLabel: 'pc-dorgonchang-rtx3090.local',
+    ]
+)
+```
+
+For Declarative jobs that still load project config directly, do it inside a
+stage after `checkout scm`, not at Pipeline top level.

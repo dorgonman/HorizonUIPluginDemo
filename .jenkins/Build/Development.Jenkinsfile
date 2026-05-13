@@ -81,6 +81,9 @@ pipeline {
         stage('Build') {
             steps {
                 script {
+                    // Root agent has skipDefaultCheckout(true); checkout is required before load.
+                    checkout scm
+
                     def configLoader = load '.jenkins/config.groovy'
                     def cfg = configLoader.projectConfig()
                     def config = unrealConfig(cfg + [
