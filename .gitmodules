@@ -6,3 +6,4 @@
 	path = Build/Base
 	url = https://dev.azure.com/kanohorizonia/EpicGames/_git/KanoUnrealBuildTool
 
+	branch = main

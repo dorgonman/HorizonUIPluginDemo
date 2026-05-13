@@ -2,15 +2,6 @@
 	"folders": [
 		{
 			"path": "."
-		},
-		{
-			"path": "H:/EpicGames/Installed/UE_5.7"
-		},
-		{
-			"path": "../../UnrealEngine"
-		},
-		{
-			"path": "C:/Users/dorgon.chang/.agents/skills/kano/kano-jenkins-skill"
 		}
 	],
 	"settings": {}
