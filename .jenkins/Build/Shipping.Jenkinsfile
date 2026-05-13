@@ -3,14 +3,11 @@
 
 @Library('jenkins-unreal-pipeline-library') _
 
-def sharedWorkspaceRoot = 'C:/_agent/_jenkins/agent/workspace'
-
 pipeline {
-    agent {
-        node {
-            label 'windows && unreal'
-            customWorkspace "${sharedWorkspaceRoot}/HorizonPlugin/HorizonUIPluginDemo/Build/PackagedBuild"
-        }
+    agent none
+
+    options {
+        skipDefaultCheckout(true)
     }
 
     parameters {
@@ -41,47 +38,46 @@ pipeline {
         booleanParam name: 'bBuildPluginPS5', defaultValue: false, description: 'Build PS5 Plugin Shipping'
         booleanParam name: 'bBuildPluginSwitch2', defaultValue: false, description: 'Build Switch 2 Plugin Shipping'
         booleanParam name: 'bBuildPluginLinux', defaultValue: false, description: 'Build Linux Plugin Shipping'
-
     }
 
     stages {
         stage('Build') {
             steps {
                 script {
-                    def configLoader = load '.jenkins/config.groovy'
-                    def cfg = configLoader.projectConfig()
-                    def config = unrealConfig(cfg + [
-                        // Platform
-                        bBuildStandaloneWin64: params.bBuildStandaloneWin64,
-                        bBuildServerWin64: params.bBuildServerWin64,
-                        bBuildStandaloneAndroid: params.bBuildStandaloneAndroid,
-                        bBuildServerAndroid: params.bBuildServerAndroid,
-                        bBuildStandaloneIOS: params.bBuildStandaloneIOS,
-                        bBuildServerIOS: params.bBuildServerIOS,
-                        bBuildStandaloneMac: params.bBuildStandaloneMac,
-                        bBuildServerMac: params.bBuildServerMac,
-                        bBuildStandaloneXSX: params.bBuildStandaloneXSX,
-                        bBuildServerXSX: params.bBuildServerXSX,
-                        bBuildStandalonePS5: params.bBuildStandalonePS5,
-                        bBuildServerPS5: params.bBuildServerPS5,
-                        bBuildStandaloneSwitch2: params.bBuildStandaloneSwitch2,
-                        bBuildServerSwitch2: params.bBuildServerSwitch2,
-                        bBuildStandaloneLinux: params.bBuildStandaloneLinux,
-                        bBuildServerLinux: params.bBuildServerLinux,
-                        // Plugin
-                        bBuildPluginWin64: params.bBuildPluginWin64,
-                        bBuildPluginAndroid: params.bBuildPluginAndroid,
-                        bBuildPluginIOS: params.bBuildPluginIOS,
-                        bBuildPluginMac: params.bBuildPluginMac,
-                        bBuildPluginXSX: params.bBuildPluginXSX,
-                        bBuildPluginPS5: params.bBuildPluginPS5,
-                        bBuildPluginSwitch2: params.bBuildPluginSwitch2,
-                        bBuildPluginLinux: params.bBuildPluginLinux,
-                        // Config
-                        bRunTestWin64Standalone: false,  // Shipping cannot run automation tests
-                        buildConfiguration: 'Shipping',
-                    ])
-                    unrealPipeline(config)
+                    unrealPipelineFromProjectConfig(
+                        projectConfigPath: '.jenkins/config.groovy',
+                        configOverrides: [
+                            // Platform
+                            bBuildStandaloneWin64: params.bBuildStandaloneWin64,
+                            bBuildServerWin64: params.bBuildServerWin64,
+                            bBuildStandaloneAndroid: params.bBuildStandaloneAndroid,
+                            bBuildServerAndroid: params.bBuildServerAndroid,
+                            bBuildStandaloneIOS: params.bBuildStandaloneIOS,
+                            bBuildServerIOS: params.bBuildServerIOS,
+                            bBuildStandaloneMac: params.bBuildStandaloneMac,
+                            bBuildServerMac: params.bBuildServerMac,
+                            bBuildStandaloneXSX: params.bBuildStandaloneXSX,
+                            bBuildServerXSX: params.bBuildServerXSX,
+                            bBuildStandalonePS5: params.bBuildStandalonePS5,
+                            bBuildServerPS5: params.bBuildServerPS5,
+                            bBuildStandaloneSwitch2: params.bBuildStandaloneSwitch2,
+                            bBuildServerSwitch2: params.bBuildServerSwitch2,
+                            bBuildStandaloneLinux: params.bBuildStandaloneLinux,
+                            bBuildServerLinux: params.bBuildServerLinux,
+                            // Plugin
+                            bBuildPluginWin64: params.bBuildPluginWin64,
+                            bBuildPluginAndroid: params.bBuildPluginAndroid,
+                            bBuildPluginIOS: params.bBuildPluginIOS,
+                            bBuildPluginMac: params.bBuildPluginMac,
+                            bBuildPluginXSX: params.bBuildPluginXSX,
+                            bBuildPluginPS5: params.bBuildPluginPS5,
+                            bBuildPluginSwitch2: params.bBuildPluginSwitch2,
+                            bBuildPluginLinux: params.bBuildPluginLinux,
+                            // Config
+                            bRunTestWin64Standalone: false,
+                            buildConfiguration: 'Shipping',
+                        ]
+                    )
                 }
             }
         }

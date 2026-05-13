@@ -3,19 +3,16 @@
 
 @Library('jenkins-unreal-pipeline-library') _
 
-def sharedWorkspaceRoot = 'C:/_agent/_jenkins/agent/workspace'
-
 pipeline {
-    agent {
-        node {
-            label 'windows && unreal'
-            customWorkspace "${sharedWorkspaceRoot}/HorizonPlugin/HorizonUIPluginDemo"
-        }
-    }
+    agent none
 
     environment {
-        SENTRY_AUTH_INFO = credentials('SENTRY_AUTH_INFO')
+        UNREAL_BUILD_MACHINE = '1'
         PATH = "C:\\Program Files\\Git\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\dorgon.chang\\.pixi\\bin;C:\\Windows\\System32;C:\\Windows;C:\\Windows\\System32\\Wbem;${env.PATH}"
+    }
+
+    options {
+        skipDefaultCheckout(true)
     }
 
     parameters {
@@ -66,55 +63,54 @@ pipeline {
     }
 
     stages {
-        stage('Load Config') {
+        stage('Build') {
             steps {
                 script {
-                    def configLoader = load '.jenkins/config.groovy'
-                    def cfg = configLoader.projectConfig()
-                    def config = unrealConfig(cfg + [
-                        // Platform
-                        bBuildStandaloneWin64: params.bBuildStandaloneWin64,
-                        bBuildServerWin64: params.bBuildServerWin64,
-                        bBuildStandaloneAndroid: params.bBuildStandaloneAndroid,
-                        bBuildServerAndroid: params.bBuildServerAndroid,
-                        bBuildStandaloneIOS: params.bBuildStandaloneIOS,
-                        bBuildServerIOS: params.bBuildServerIOS,
-                        bBuildStandaloneMac: params.bBuildStandaloneMac,
-                        bBuildServerMac: params.bBuildServerMac,
-                        bBuildStandaloneXSX: params.bBuildStandaloneXSX,
-                        bBuildServerXSX: params.bBuildServerXSX,
-                        bBuildStandalonePS5: params.bBuildStandalonePS5,
-                        bBuildServerPS5: params.bBuildServerPS5,
-                        bBuildStandaloneSwitch2: params.bBuildStandaloneSwitch2,
-                        bBuildServerSwitch2: params.bBuildServerSwitch2,
-                        bBuildStandaloneLinux: params.bBuildStandaloneLinux,
-                        bBuildServerLinux: params.bBuildServerLinux,
-                        // Plugin
-                        bBuildPluginWin64: params.bBuildPluginWin64,
-                        bBuildPluginAndroid: params.bBuildPluginAndroid,
-                        bBuildPluginIOS: params.bBuildPluginIOS,
-                        bBuildPluginMac: params.bBuildPluginMac,
-                        bBuildPluginXSX: params.bBuildPluginXSX,
-                        bBuildPluginPS5: params.bBuildPluginPS5,
-                        bBuildPluginSwitch2: params.bBuildPluginSwitch2,
-                        bBuildPluginLinux: params.bBuildPluginLinux,
-                        // Test
-                        bRunTestWin64Standalone: params.bRunTestWin64Standalone,
-                        // Sentry
-                        bDeploySentrySymbols: params.bDeploySentrySymbols,
-                        bDeploySentryBundleSources: params.bDeploySentryBundleSources,
-                        bDeploySentryForeignUnrealEngineSymbols: false,
-                        sentryCredentialId: params.SENTRY_CREDENTIAL_ID?.trim() ?: cfg.sentryCredentialId,
-                        sentryOrg: params.SENTRY_ORG?.trim() ?: cfg.sentryOrg,
-                        sentryProject: params.SENTRY_PROJECT?.trim() ?: cfg.sentryProject,
-                        sentryForeignProject: cfg.sentryForeignProject,
-                        sentryEnvironment: params.SENTRY_ENVIRONMENT?.trim() ?: cfg.sentryEnvironment,
-                        // PreCompileEngine
-                        bCopyPreCompileEngine: params.bCopyPreCompileEngine,
-                        // PreArchive
-                        preArchiveCopyStep: params.PRE_ARCHIVE_COPY_STEP?.trim() ?: cfg.preArchiveCopyStep,
-                    ])
-                    unrealPipeline(config: config)
+                    unrealPipelineFromProjectConfig(
+                        projectConfigPath: '.jenkins/config.groovy',
+                        configOverrides: [
+                            // Platform
+                            bBuildStandaloneWin64: params.bBuildStandaloneWin64,
+                            bBuildServerWin64: params.bBuildServerWin64,
+                            bBuildStandaloneAndroid: params.bBuildStandaloneAndroid,
+                            bBuildServerAndroid: params.bBuildServerAndroid,
+                            bBuildStandaloneIOS: params.bBuildStandaloneIOS,
+                            bBuildServerIOS: params.bBuildServerIOS,
+                            bBuildStandaloneMac: params.bBuildStandaloneMac,
+                            bBuildServerMac: params.bBuildServerMac,
+                            bBuildStandaloneXSX: params.bBuildStandaloneXSX,
+                            bBuildServerXSX: params.bBuildServerXSX,
+                            bBuildStandalonePS5: params.bBuildStandalonePS5,
+                            bBuildServerPS5: params.bBuildServerPS5,
+                            bBuildStandaloneSwitch2: params.bBuildStandaloneSwitch2,
+                            bBuildServerSwitch2: params.bBuildServerSwitch2,
+                            bBuildStandaloneLinux: params.bBuildStandaloneLinux,
+                            bBuildServerLinux: params.bBuildServerLinux,
+                            // Plugin
+                            bBuildPluginWin64: params.bBuildPluginWin64,
+                            bBuildPluginAndroid: params.bBuildPluginAndroid,
+                            bBuildPluginIOS: params.bBuildPluginIOS,
+                            bBuildPluginMac: params.bBuildPluginMac,
+                            bBuildPluginXSX: params.bBuildPluginXSX,
+                            bBuildPluginPS5: params.bBuildPluginPS5,
+                            bBuildPluginSwitch2: params.bBuildPluginSwitch2,
+                            bBuildPluginLinux: params.bBuildPluginLinux,
+                            // Test
+                            bRunTestWin64Standalone: params.bRunTestWin64Standalone,
+                            // Sentry
+                            bDeploySentrySymbols: params.bDeploySentrySymbols,
+                            bDeploySentryBundleSources: params.bDeploySentryBundleSources,
+                            bDeploySentryForeignUnrealEngineSymbols: false,
+                            sentryCredentialId: params.SENTRY_CREDENTIAL_ID?.trim(),
+                            sentryOrg: params.SENTRY_ORG?.trim(),
+                            sentryProject: params.SENTRY_PROJECT?.trim(),
+                            sentryEnvironment: params.SENTRY_ENVIRONMENT?.trim(),
+                            // PreCompileEngine
+                            bCopyPreCompileEngine: params.bCopyPreCompileEngine,
+                            // PreArchive
+                            preArchiveCopyStep: params.PRE_ARCHIVE_COPY_STEP?.trim(),
+                        ]
+                    )
                 }
             }
         }

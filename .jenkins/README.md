@@ -12,6 +12,19 @@ The following Jenkinsfiles serve as entrypoints for different CI/CD needs:
 - `.jenkins/Build/UGSBuild.Jenkinsfile` — UGS artifact and NuGet package producer.
 - `.jenkins/Release/Publish.Jenkinsfile` — Release publish pipeline; consumes Development + UGSBuild artifacts, syncs GitHub, pushes NuGet, and publishes curated public GitHub Pages content.
 
+Normal build entrypoints should use the shared project config wrapper instead of owning a root build workspace:
+
+```groovy
+unrealPipelineFromProjectConfig(
+    projectConfigPath: '.jenkins/config.groovy',
+    configOverrides: [
+        buildConfiguration: 'Development',
+    ]
+)
+```
+
+This keeps Development, Shipping, and Test Jenkinsfiles as thin copyable templates. The wrapper performs checkout, loads `.jenkins/config.groovy`, infers project metadata where possible, merges job-specific overrides, and delegates to the shared Unreal pipeline.
+
 ## Configuration Guide
 
 Global settings are managed in `.jenkins/config.groovy`. Key parameters include:
@@ -23,7 +36,7 @@ Global settings are managed in `.jenkins/config.groovy`. Key parameters include:
 - `bRunTestWin64Standalone`: Runs the Win64 standalone test job.
 - QA rerun parameters: `bConsumeUpstreamStandaloneTar` copies/unpacks the upstream Build artifact tar; `bRunTestWin64Standalone` selects the currently implemented rerun platform.
 - Coverage is derived internally by the shared library. It is no longer a user-facing Jenkins parameter.
-- Consumer Jenkinsfiles should load `.jenkins/config.groovy` and only pass job-specific overrides to `unrealConfig(...)`. Do not copy the full config map into each Jenkinsfile.
+- Consumer Jenkinsfiles should call `unrealPipelineFromProjectConfig(...)` and only pass job-specific overrides. Do not call top-level `load '.jenkins/config.groovy'` from project Jenkinsfiles.
 
 ## Adding a New Platform
 
@@ -36,7 +49,7 @@ Follow these steps to extend the pipeline for a new platform:
 
 ## Shared Workspace Layout
 
-Windows Jenkins jobs use the shared workspace owned by the shared library. Consumer Jenkinsfiles should stay thin, load `.jenkins/config.groovy`, and avoid legacy root aliases such as `buildArchiveRoot`, `buildPackageRoot`, `buildPluginRoot`, and `buildUgsRoot`.
+Windows Jenkins jobs use the shared workspace owned by the shared library. Consumer Jenkinsfiles should stay thin, call `unrealPipelineFromProjectConfig(...)`, and avoid legacy root aliases such as `buildArchiveRoot`, `buildPackageRoot`, `buildPluginRoot`, and `buildUgsRoot`.
 
 ## Report Structure
 
@@ -60,6 +73,8 @@ Recommended Windows node labels:
 ```text
 windows unreal autosdk ugs deploy gpu
 ```
+
+All build agents may also include `lightweight` if they are allowed to run bootstrap/config-loading work. The shared wrapper defaults `bootstrapAgentLabel` to `lightweight`, so Built-In/Controller executors can eventually be set to `0` once all project Jenkinsfiles use the wrapper.
 
 `autosdk` marks Windows Unreal build agents that can build AutoSDK-managed target platforms such as Android, Linux target, PS5, XSX, and Switch2. `linux` should still mean a Linux host agent, not a Linux target build.
 
@@ -112,9 +127,18 @@ The following features are not part of the current implementation:
 
 ### Loading `.jenkins/config.groovy`
 
-Consumer Jenkinsfiles should avoid top-level `load '.jenkins/config.groovy'`.
-Jenkins `load` requires a workspace (`hudson.FilePath`), while Pipeline-from-SCM
-may only perform lightweight checkout before execution.
+Do not call top-level `load '.jenkins/config.groovy'` from project Jenkinsfiles. Jenkins `load` requires a workspace (`hudson.FilePath`), while Pipeline-from-SCM may only perform lightweight checkout before execution.
+
+Preferred normal build entrypoint pattern:
+
+```groovy
+unrealPipelineFromProjectConfig(
+    projectConfigPath: '.jenkins/config.groovy',
+    configOverrides: [
+        buildConfiguration: 'Development',
+    ]
+)
+```
 
 Preferred UGS entrypoint pattern:
 
@@ -143,5 +167,4 @@ iosAgentLabel         : 'mac && unreal',
 
 Use `linuxTargetAgentLabel` for Linux target cross-compilation. Keep `linuxAgentLabel` for Linux host agents only.
 
-For Declarative jobs that still load project config directly, do it inside a
-stage after `checkout scm`, not at Pipeline top level.
+If a legacy Declarative job still loads project config directly, do it inside a stage after `checkout scm`, not at Pipeline top level. Prefer migrating it to `unrealPipelineFromProjectConfig(...)` instead.

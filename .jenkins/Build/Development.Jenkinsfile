@@ -4,26 +4,12 @@
 @Library('jenkins-unreal-pipeline-library') _
 
 pipeline {
+    agent none
+
     environment {
         UNREAL_BUILD_MACHINE = '1'
-        SENTRY_AUTH_INFO = credentials('SENTRY_AUTH_INFO')
         PATH = "C:\\Program Files\\Git\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\dorgon.chang\\.pixi\\bin;C:\\Windows\\System32;C:\\Windows;C:\\Windows\\System32\\Wbem;${env.PATH}"
     }
-
-    agent { label 'built-in' }
-    // Root orchestration uses Jenkins controller (built-in).
-    // This does NOT consume a build agent executor slot.
-    //
-    // Platform branches inside unrealPipeline() use their own
-    // node{} blocks with explicit platform labels, so they land
-    // on the correct build agents (Windows/Mac/Linux).
-    //
-    // Using a build agent as root (e.g., 'windows && unreal') caused
-    // executor starvation: root consumed 1 of 2 Windows executors
-    // while appearing idle, leaving 0 free for the Windows build branch.
-    //
-    // 'built-in' = Jenkins controller node, separate from all
-    // build agents, so no executor starvation.
 
     options {
         skipDefaultCheckout(true)
@@ -81,44 +67,40 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // Root agent has skipDefaultCheckout(true); checkout is required before load.
-                    checkout scm
-
-                    def configLoader = load '.jenkins/config.groovy'
-                    def cfg = configLoader.projectConfig()
-                    def config = unrealConfig(cfg + [
-                        bCleanSCM: params.bCleanSCM,
-                        bInstallPrerequisites: params.bInstallPrerequisites,
-                        bBuildStandaloneWin64: params.bBuildStandaloneWin64,
-                        bBuildStandaloneAndroid: params.bBuildStandaloneAndroid,
-                        bBuildStandaloneIOS: params.bBuildStandaloneIOS,
-                        bBuildStandaloneMac: params.bBuildStandaloneMac,
-                        bBuildStandaloneLinux: params.bBuildStandaloneLinux,
-                        bBuildPluginWin64: params.bBuildPluginWin64,
-                        bBuildPluginAndroid: params.bBuildPluginAndroid,
-                        bBuildPluginIOS: params.bBuildPluginIOS,
-                        bBuildPluginMac: params.bBuildPluginMac,
-                        bBuildPluginLinux: params.bBuildPluginLinux,
-                        bRunTestWin64Standalone: params.bRunTestWin64Standalone,
-                        bArchiveTar: params.bArchiveTar,
-                        bDeploySentrySymbols: params.bDeploySentrySymbols,
-                        bDeploySentryForeignUnrealEngineSymbols: false,
-                        bDeploySentryBundleSources: params.bDeploySentryBundleSources,
-                        sentryCredentialId: params.SENTRY_CREDENTIAL_ID?.trim() ?: cfg.sentryCredentialId,
-                        sentryOrg: params.SENTRY_ORG?.trim() ?: cfg.sentryOrg,
-                        sentryProject: params.SENTRY_PROJECT?.trim() ?: cfg.sentryProject,
-                        sentryForeignProject: cfg.sentryForeignProject,
-                        sentryEnvironment: params.SENTRY_ENVIRONMENT?.trim() ?: cfg.sentryEnvironment,
-                        bCopyPreCompileEngine: params.bCopyPreCompileEngine,
-                        preArchiveCopyStep: params.PRE_ARCHIVE_COPY_STEP?.trim() ?: cfg.preArchiveCopyStep,
-                        bFailFast: params.bFailFast,
-                        win64SharedWorkspaceRoot: params.WIN64_SHARED_WORKSPACE_ROOT?.trim() ?: cfg.win64SharedWorkspaceRoot,
-                        macSharedWorkspaceRoot: params.MAC_SHARED_WORKSPACE_ROOT?.trim() ?: cfg.macSharedWorkspaceRoot,
-                        linuxSharedWorkspaceRoot: params.LINUX_SHARED_WORKSPACE_ROOT?.trim() ?: cfg.linuxSharedWorkspaceRoot,
-                        workspaceSlot: 'Package',
-                        buildConfiguration: 'Development',
-                    ])
-                    unrealPipeline(config)
+                    unrealPipelineFromProjectConfig(
+                        projectConfigPath: '.jenkins/config.groovy',
+                        configOverrides: [
+                            bCleanSCM: params.bCleanSCM,
+                            bInstallPrerequisites: params.bInstallPrerequisites,
+                            bBuildStandaloneWin64: params.bBuildStandaloneWin64,
+                            bBuildStandaloneAndroid: params.bBuildStandaloneAndroid,
+                            bBuildStandaloneIOS: params.bBuildStandaloneIOS,
+                            bBuildStandaloneMac: params.bBuildStandaloneMac,
+                            bBuildStandaloneLinux: params.bBuildStandaloneLinux,
+                            bBuildPluginWin64: params.bBuildPluginWin64,
+                            bBuildPluginAndroid: params.bBuildPluginAndroid,
+                            bBuildPluginIOS: params.bBuildPluginIOS,
+                            bBuildPluginMac: params.bBuildPluginMac,
+                            bBuildPluginLinux: params.bBuildPluginLinux,
+                            bRunTestWin64Standalone: params.bRunTestWin64Standalone,
+                            bArchiveTar: params.bArchiveTar,
+                            bDeploySentrySymbols: params.bDeploySentrySymbols,
+                            bDeploySentryForeignUnrealEngineSymbols: false,
+                            bDeploySentryBundleSources: params.bDeploySentryBundleSources,
+                            sentryCredentialId: params.SENTRY_CREDENTIAL_ID?.trim(),
+                            sentryOrg: params.SENTRY_ORG?.trim(),
+                            sentryProject: params.SENTRY_PROJECT?.trim(),
+                            sentryEnvironment: params.SENTRY_ENVIRONMENT?.trim(),
+                            bCopyPreCompileEngine: params.bCopyPreCompileEngine,
+                            preArchiveCopyStep: params.PRE_ARCHIVE_COPY_STEP?.trim(),
+                            bFailFast: params.bFailFast,
+                            win64SharedWorkspaceRoot: params.WIN64_SHARED_WORKSPACE_ROOT?.trim(),
+                            macSharedWorkspaceRoot: params.MAC_SHARED_WORKSPACE_ROOT?.trim(),
+                            linuxSharedWorkspaceRoot: params.LINUX_SHARED_WORKSPACE_ROOT?.trim(),
+                            workspaceSlot: 'Package',
+                            buildConfiguration: 'Development',
+                        ]
+                    )
                 }
             }
         }
