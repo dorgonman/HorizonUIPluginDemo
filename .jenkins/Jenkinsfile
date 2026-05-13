@@ -48,7 +48,7 @@ pipeline {
         booleanParam name: 'bBuildPluginLinux', defaultValue: false, description: 'Build Linux Plugin Shipping'
 
         // === Test ===
-        booleanParam name: 'bRunTestStandaloneWin64', defaultValue: true, description: 'Run Win64 standalone tests'
+        booleanParam name: 'bRunTestWin64Standalone', defaultValue: true, description: 'Run Win64 standalone tests'
 
         // === Sentry Deploy Symbols ===
         booleanParam name: 'bDeploySentrySymbols', defaultValue: true, description: 'After standalone builds, create Sentry release/deploy records and upload debug symbols'
@@ -99,7 +99,7 @@ pipeline {
                         bBuildPluginSwitch2: params.bBuildPluginSwitch2,
                         bBuildPluginLinux: params.bBuildPluginLinux,
                         // Test
-                        bRunTestStandaloneWin64: params.bRunTestStandaloneWin64,
+                        bRunTestWin64Standalone: params.bRunTestWin64Standalone,
                         // Sentry
                         bDeploySentrySymbols: params.bDeploySentrySymbols,
                         bDeploySentryBundleSources: params.bDeploySentryBundleSources,

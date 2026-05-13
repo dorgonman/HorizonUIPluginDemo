@@ -45,7 +45,7 @@
 //        booleanParam name: 'bBuildPluginLinux', defaultValue: false, description: 'Build Linux Plugin Shipping'
 //
 //        // === Test ===
-//        booleanParam name: 'bRunTestStandaloneWin64', defaultValue: true, description: 'Run Win64 standalone tests'
+//        booleanParam name: 'bRunTestWin64Standalone', defaultValue: true, description: 'Run Win64 standalone tests'
 //    }
 //
 //    stages {
@@ -82,7 +82,7 @@
 //                        bBuildPluginSwitch2: params.bBuildPluginSwitch2,
 //                        bBuildPluginLinux: params.bBuildPluginLinux,
 //                        // Test
-//                        bRunTestStandaloneWin64: params.bRunTestStandaloneWin64,
+//                        bRunTestWin64Standalone: params.bRunTestWin64Standalone,
 //                        // Config
 //                        buildConfiguration: 'Test',
 //                    ])

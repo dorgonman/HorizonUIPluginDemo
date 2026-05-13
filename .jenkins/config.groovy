@@ -79,7 +79,7 @@ def projectConfig() {
         bRunBuildGraphAggregation: false,
 
         // === Test + Coverage ===
-        bRunTestStandaloneWin64: true,
+        bRunTestWin64Standalone: true,
         coverageFormat:     ['xml', 'html'],
         buildConfiguration: 'Development',
         bDeploySentrySymbols: true,

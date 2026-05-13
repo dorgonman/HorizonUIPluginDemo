@@ -16,13 +16,14 @@ The following Jenkinsfiles serve as entrypoints for different CI/CD needs:
 
 Global settings are managed in `.jenkins/config.groovy`. Key parameters include:
 
-- `agentLabel`: Must match your Jenkins agent pool name (e.g., `unreal-win64`).
+- `windowsAgentLabel` / `macAgentLabel` / `linuxAgentLabel`: Must match your Jenkins agent pool names (for example, `unreal-win64`, `unreal-mac`).
 - `projectRoot`: The path to the project root, currently `.` so the shared library can relocate the workspace safely.
 - `unrealHordeServer`: Default Horde URL for UGS-related publishing, default `http://unrealhorde.local/`.
 - `bBuildStandalone<Platform>` / `bBuildServer<Platform>`: Target-specific build toggles for the build matrix.
 - `bRunTestWin64Standalone`: Runs the Win64 standalone test job.
 - QA rerun parameters: `bConsumeUpstreamStandaloneTar` copies/unpacks the upstream Build artifact tar; `bRunTestWin64Standalone` selects the currently implemented rerun platform.
 - Coverage is derived internally by the shared library. It is no longer a user-facing Jenkins parameter.
+- Consumer Jenkinsfiles should load `.jenkins/config.groovy` and only pass job-specific overrides to `unrealConfig(...)`. Do not copy the full config map into each Jenkinsfile.
 
 ## Adding a New Platform
 
@@ -35,7 +36,7 @@ Follow these steps to extend the pipeline for a new platform:
 
 ## Shared Workspace Layout
 
-Windows Jenkins jobs use the shared workspace owned by the shared library. Consumer Jenkinsfiles should stay thin and should not implement their own workspace helpers.
+Windows Jenkins jobs use the shared workspace owned by the shared library. Consumer Jenkinsfiles should stay thin, load `.jenkins/config.groovy`, and avoid legacy root aliases such as `buildArchiveRoot`, `buildPackageRoot`, `buildPluginRoot`, and `buildUgsRoot`.
 
 ## Report Structure
 
