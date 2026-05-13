@@ -28,6 +28,8 @@ def projectConfig() {
         scriptRoot:         'Build',
         reportRoot:         'Intermediate/BuildPackage',
         slug:               'HorizonUIPluginDemo',
+        scmCredentialId:    'dorgonman_azuredevops',
+        macLoginKeychainCredentialId: 'MAC_LOGIN_USER',
         workspaceSlot:      'Package',
         win64SharedWorkspaceRoot: 'C:/_agent/_jenkins/agent/workspace/HorizonPlugin',
         macSharedWorkspaceRoot: '/Users/Shared/jenkins/agent/workspace/HorizonPlugin',

@@ -23,6 +23,8 @@ properties([
 def cfg = [
     projectRoot: '.',
     sharedLibraryName: 'jenkins-unreal-pipeline-library',
+    scmCredentialId: 'dorgonman_azuredevops',
+    macLoginKeychainCredentialId: 'MAC_LOGIN_USER',
     // UGS aggregate and NuGet stages share a Deploy workspace; keep Windows work on one node.
     windowsAgentLabel: 'pc-dorgonchang-rtx3090.local',
     macAgentLabel: 'unreal-mac',

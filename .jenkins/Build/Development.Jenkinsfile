@@ -84,6 +84,8 @@ pipeline {
                     def cfg = [
                         projectRoot: '.',
                         sharedLibraryName: 'jenkins-unreal-pipeline-library',
+                        scmCredentialId: 'dorgonman_azuredevops',
+                        macLoginKeychainCredentialId: 'MAC_LOGIN_USER',
                         windowsAgentLabel: 'unreal-win64',
                         macAgentLabel: 'unreal-mac',
                         linuxAgentLabel: 'unreal-linux',
