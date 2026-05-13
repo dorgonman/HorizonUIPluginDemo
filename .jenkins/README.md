@@ -58,8 +58,10 @@ Use capability labels instead of physical node names.
 Recommended Windows node labels:
 
 ```text
-windows unreal ugs deploy gpu
+windows unreal autosdk ugs deploy gpu
 ```
+
+`autosdk` marks Windows Unreal build agents that can build AutoSDK-managed target platforms such as Android, Linux target, PS5, XSX, and Switch2. `linux` should still mean a Linux host agent, not a Linux target build.
 
 Recommended Mac node labels:
 
@@ -75,7 +77,7 @@ Do not put physical hostnames in reusable Jenkinsfiles.
 The following steps are required before the first run:
 
 1. **Global Pipeline Library**: Configure `jenkins-unreal-pipeline-library` as a Global Trusted Pipeline Library in **Manage Jenkins** → **Configure System**.
-2. **Win64 Agent**: Set up Windows Unreal build agents with labels such as `windows unreal ugs deploy gpu`.
+2. **Win64 Agent**: Set up Windows Unreal build agents with labels such as `windows unreal autosdk ugs deploy gpu`.
 3. **Required Plugins**: Ensure the following plugins are installed:
    - `pipeline`
    - `junit`
@@ -128,13 +130,18 @@ unrealUgsBuildPipeline(
 Agent routing belongs in `.jenkins/config.groovy` as capability label expressions, for example:
 
 ```groovy
-windowsAgentLabel   : 'windows && unreal',
-win64UgsAgentLabel  : 'windows && unreal && ugs',
-ugsDeployAgentLabel : 'windows && unreal && deploy',
-macAgentLabel       : 'mac && unreal',
-macDeployAgentLabel : 'mac && unreal && deploy',
-iosAgentLabel       : 'mac && unreal',
+windowsAgentLabel     : 'windows && unreal',
+win64UgsAgentLabel    : 'windows && unreal && ugs',
+ugsDeployAgentLabel   : 'windows && unreal && deploy',
+gpuTestAgentLabel     : 'windows && unreal && gpu',
+autoSdkAgentLabel     : 'windows && unreal && autosdk',
+linuxTargetAgentLabel : 'windows && unreal && autosdk',
+macAgentLabel         : 'mac && unreal',
+macDeployAgentLabel   : 'mac && unreal && deploy',
+iosAgentLabel         : 'mac && unreal',
 ```
+
+Use `linuxTargetAgentLabel` for Linux target cross-compilation. Keep `linuxAgentLabel` for Linux host agents only.
 
 For Declarative jobs that still load project config directly, do it inside a
 stage after `checkout scm`, not at Pipeline top level.

@@ -78,6 +78,17 @@ def projectConfig() {
         macDeployAgentLabel:    'mac && unreal && deploy',
         iosAgentLabel:          'mac && unreal',
         gpuTestAgentLabel:      'windows && unreal && gpu',
+
+        // AutoSDK target builds. Linux target is cross-compiled through Windows AutoSDK;
+        // linuxAgentLabel remains reserved for Linux host agents.
+        autoSdkAgentLabel:      'windows && unreal && autosdk',
+        androidAgentLabel:      'windows && unreal && autosdk',
+        linuxTargetAgentLabel:  'windows && unreal && autosdk',
+        linuxTargetHostPlatform: 'Win64',
+        ps5AgentLabel:          'windows && unreal && autosdk',
+        xsxAgentLabel:          'windows && unreal && autosdk',
+        switch2AgentLabel:      'windows && unreal && autosdk',
+
         deployWorkspace:        '',  // Auto-resolved if empty: "${sharedWorkspaceRoot}/HorizonPlugin/HorizonUIPluginDemo/Deploy"
         bRunBuildGraphAggregation: false,
 
@@ -94,7 +105,6 @@ def projectConfig() {
         sentryProject: 'horizonuiplugindemo',
         sentryForeignProject: 'unrealengine',
         sentryEnvironment: 'dev',
-        bUploadToUnrealHordeServer: false,
         bDeployUnrealHordeServer: false,
         unrealHordeServer:  'http://unrealhorde.local/',
         hordeToken:        '',  // Set via HORDE_TOKEN Jenkins parameter; empty here
