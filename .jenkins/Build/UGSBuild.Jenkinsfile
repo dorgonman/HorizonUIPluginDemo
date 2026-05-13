@@ -12,10 +12,7 @@ env.GIT_CONFIG_VALUE_0 = 'true'
 unrealUgsBuildPipeline(
     projectConfigPath: '.jenkins/config.groovy',
     configOverrides: [
-        // UGS aggregate and NuGet stages share a Deploy workspace; keep Windows work on one node.
-        windowsAgentLabel: 'pc-dorgonchang-rtx3090.local',
-        win64UgsAgentLabel: 'pc-dorgonchang-rtx3090.local',
-        aggregateAgentLabel: 'pc-dorgonchang-rtx3090.local',
+        // Job-specific toggle only; agent routing comes from .jenkins/config.groovy capability labels.
         bDeployUnrealHordeServer: true,
     ]
 )

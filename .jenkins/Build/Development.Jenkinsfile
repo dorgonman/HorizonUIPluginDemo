@@ -18,7 +18,7 @@ pipeline {
     // node{} blocks with explicit platform labels, so they land
     // on the correct build agents (Windows/Mac/Linux).
     //
-    // Using a build agent as root (e.g., 'unreal-win64') caused
+    // Using a build agent as root (e.g., 'windows && unreal') caused
     // executor starvation: root consumed 1 of 2 Windows executors
     // while appearing idle, leaving 0 free for the Windows build branch.
     //

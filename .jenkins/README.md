@@ -16,7 +16,7 @@ The following Jenkinsfiles serve as entrypoints for different CI/CD needs:
 
 Global settings are managed in `.jenkins/config.groovy`. Key parameters include:
 
-- `windowsAgentLabel` / `macAgentLabel` / `linuxAgentLabel`: Must match your Jenkins agent pool names (for example, `unreal-win64`, `unreal-mac`).
+- `windowsAgentLabel` / `macAgentLabel` / `linuxAgentLabel`: Use Jenkins capability label expressions, for example `windows && unreal` or `mac && unreal`. Avoid physical node names in project Jenkinsfiles.
 - `projectRoot`: The path to the project root, currently `.` so the shared library can relocate the workspace safely.
 - `unrealHordeServer`: Default Horde URL for UGS-related publishing, default `http://unrealhorde.local/`.
 - `bBuildStandalone<Platform>` / `bBuildServer<Platform>`: Target-specific build toggles for the build matrix.
@@ -50,12 +50,32 @@ The pipeline generates and archives reports in the following locations:
 - **Archived report metadata**: `Build/build_metadata.json`
 - **Archived public docs**: `Build/doc/`
 
+
+## Jenkins Node Labels
+
+Use capability labels instead of physical node names.
+
+Recommended Windows node labels:
+
+```text
+windows unreal ugs deploy gpu
+```
+
+Recommended Mac node labels:
+
+```text
+mac unreal deploy
+```
+
+The project config should use label expressions such as `windows && unreal && ugs`.
+Do not put physical hostnames in reusable Jenkinsfiles.
+
 ## Jenkins Admin Setup
 
 The following steps are required before the first run:
 
 1. **Global Pipeline Library**: Configure `jenkins-unreal-pipeline-library` as a Global Trusted Pipeline Library in **Manage Jenkins** → **Configure System**.
-2. **Win64 Agent**: Set up a Windows agent with the label `unreal-win64`.
+2. **Win64 Agent**: Set up Windows Unreal build agents with labels such as `windows unreal ugs deploy gpu`.
 3. **Required Plugins**: Ensure the following plugins are installed:
    - `pipeline`
    - `junit`
@@ -100,11 +120,20 @@ Preferred UGS entrypoint pattern:
 unrealUgsBuildPipeline(
     projectConfigPath: '.jenkins/config.groovy',
     configOverrides: [
-        windowsAgentLabel: 'pc-dorgonchang-rtx3090.local',
-        win64UgsAgentLabel: 'pc-dorgonchang-rtx3090.local',
-        aggregateAgentLabel: 'pc-dorgonchang-rtx3090.local',
+        bDeployUnrealHordeServer: true,
     ]
 )
+```
+
+Agent routing belongs in `.jenkins/config.groovy` as capability label expressions, for example:
+
+```groovy
+windowsAgentLabel   : 'windows && unreal',
+win64UgsAgentLabel  : 'windows && unreal && ugs',
+ugsDeployAgentLabel : 'windows && unreal && deploy',
+macAgentLabel       : 'mac && unreal',
+macDeployAgentLabel : 'mac && unreal && deploy',
+iosAgentLabel       : 'mac && unreal',
 ```
 
 For Declarative jobs that still load project config directly, do it inside a

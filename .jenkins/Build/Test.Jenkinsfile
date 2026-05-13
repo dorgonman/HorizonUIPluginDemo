@@ -10,7 +10,7 @@
 //pipeline {
 //    agent {
 //        node {
-//            label 'unreal-win64'
+//            label 'windows && unreal'
 //            customWorkspace "${sharedWorkspaceRoot}/HorizonPlugin/HorizonUIPluginDemo/Package"
 //        }
 //    }
