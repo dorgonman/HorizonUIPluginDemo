@@ -30,6 +30,7 @@ pipeline {
         booleanParam name: 'bBuildServerLinux', defaultValue: false, description: 'Build Linux server target'
 
         // === Plugin Booleans ===
+        booleanParam name: 'bValidatePlugins', defaultValue: true, description: 'Run plugin BuildPlugin validation. Plugin target toggles are ignored unless this is enabled.'
         booleanParam name: 'bBuildPluginWin64', defaultValue: true, description: 'Build Win64 Plugin Shipping'
         booleanParam name: 'bBuildPluginAndroid', defaultValue: false, description: 'Build Android Plugin Shipping'
         booleanParam name: 'bBuildPluginIOS', defaultValue: false, description: 'Build iOS Plugin Shipping'
@@ -66,6 +67,7 @@ pipeline {
                             bBuildStandaloneLinux: params.bBuildStandaloneLinux,
                             bBuildServerLinux: params.bBuildServerLinux,
                             // Plugin
+                            bValidatePlugins: params.bValidatePlugins,
                             bBuildPluginWin64: params.bBuildPluginWin64,
                             bBuildPluginAndroid: params.bBuildPluginAndroid,
                             bBuildPluginIOS: params.bBuildPluginIOS,

@@ -23,6 +23,7 @@ pipeline {
         booleanParam name: 'bBuildStandaloneLinux', defaultValue: false, description: 'Build Linux standalone target'
 
         // === Plugin Booleans ===
+        booleanParam name: 'bValidatePlugins', defaultValue: true, description: 'Run plugin BuildPlugin validation. Plugin target toggles are ignored unless this is enabled.'
         booleanParam name: 'bBuildPluginWin64', defaultValue: true, description: 'Build Win64 Plugin Shipping'
         booleanParam name: 'bBuildPluginAndroid', defaultValue: true, description: 'Build Android Plugin Shipping (requires Win64 agent + AutoSDK)'
         booleanParam name: 'bBuildPluginIOS', defaultValue: true, description: 'Build iOS Plugin Shipping (requires Mac agent + Apple Developer Plan)'
@@ -77,6 +78,7 @@ pipeline {
                             bBuildStandaloneIOS: params.bBuildStandaloneIOS,
                             bBuildStandaloneMac: params.bBuildStandaloneMac,
                             bBuildStandaloneLinux: params.bBuildStandaloneLinux,
+                            bValidatePlugins: params.bValidatePlugins,
                             bBuildPluginWin64: params.bBuildPluginWin64,
                             bBuildPluginAndroid: params.bBuildPluginAndroid,
                             bBuildPluginIOS: params.bBuildPluginIOS,
