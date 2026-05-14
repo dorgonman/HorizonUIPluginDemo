@@ -64,6 +64,12 @@ The pipeline generates and archives reports in the following locations:
 - **Archived public docs**: `Build/doc/`
 
 
+## Environment Policy
+
+Do not set OS-specific `PATH` values in project Jenkinsfiles. Jenkinsfiles may run their bootstrap/orchestration stage on any configured bootstrap node, so Windows-only paths must not be injected globally.
+
+Configure tool paths on the matching Jenkins node or in the shared library target-specific execution step instead. For example, Windows Git/Pixi paths belong on Windows nodes, while macOS agents should expose `/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin` through their node environment or launch configuration.
+
 ## Jenkins Node Labels
 
 Use capability labels instead of physical node names.
@@ -74,7 +80,7 @@ Recommended Windows node labels:
 windows unreal autosdk ugs deploy gpu
 ```
 
-All build agents may also include `lightweight` if they are allowed to run bootstrap/config-loading work. The shared wrapper defaults `bootstrapAgentLabel` to `lightweight`, so Built-In/Controller executors can eventually be set to `0` once all project Jenkinsfiles use the wrapper.
+All build agents may also include `lightweight` if they are allowed to run bootstrap/config-loading work. The shared wrapper defaults `bootstrapAgentLabel` to `lightweight`. All real agents that are safe for config-loading/bootstrap work should carry this label. Built-In/Controller executors can eventually be set to `0` once all project Jenkinsfiles use the wrapper.
 
 `autosdk` marks Windows Unreal build agents that can build AutoSDK-managed target platforms such as Android, Linux target, PS5, XSX, and Switch2. `linux` should still mean a Linux host agent, not a Linux target build.
 
@@ -168,3 +174,19 @@ iosAgentLabel         : 'mac && unreal',
 Use `linuxTargetAgentLabel` for Linux target cross-compilation. Keep `linuxAgentLabel` for Linux host agents only.
 
 If a legacy Declarative job still loads project config directly, do it inside a stage after `checkout scm`, not at Pipeline top level. Prefer migrating it to `unrealPipelineFromProjectConfig(...)` instead.
+
+### Bootstrap agent for thin build entrypoints
+
+`unrealPipelineFromProjectConfig()` currently uses a bootstrap/orchestration node for checkout,
+config loading, and root pipeline steps. Set it explicitly in project Jenkinsfiles while
+normal build orchestration still requires a workspace context:
+
+```groovy
+unrealPipelineFromProjectConfig(
+    bootstrapAgentLabel: 'lightweight',
+    projectConfigPath: '.jenkins/config.groovy',
+    configOverrides: [...]
+)
+```
+
+Keeping the bootstrap label as `lightweight` intentionally allows bootstrap/config-loading to run on any lightweight-capable agent. This helps expose node environment issues early instead of hiding them behind controller-only routing. Once wrapper-based build entrypoints are stable, the Built-In Node executor can be set to `0`.

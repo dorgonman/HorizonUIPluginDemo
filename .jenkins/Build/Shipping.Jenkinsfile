@@ -45,6 +45,7 @@ pipeline {
             steps {
                 script {
                     unrealPipelineFromProjectConfig(
+                        bootstrapAgentLabel: 'lightweight',
                         projectConfigPath: '.jenkins/config.groovy',
                         configOverrides: [
                             // Platform

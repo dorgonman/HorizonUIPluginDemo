@@ -8,7 +8,6 @@ pipeline {
 
     environment {
         UNREAL_BUILD_MACHINE = '1'
-        PATH = "C:\\Program Files\\Git\\bin;C:\\Program Files\\Git\\usr\\bin;C:\\Users\\dorgon.chang\\.pixi\\bin;C:\\Windows\\System32;C:\\Windows;C:\\Windows\\System32\\Wbem;${env.PATH}"
     }
 
     options {
@@ -68,6 +67,7 @@ pipeline {
             steps {
                 script {
                     unrealPipelineFromProjectConfig(
+                        bootstrapAgentLabel: 'lightweight',
                         projectConfigPath: '.jenkins/config.groovy',
                         configOverrides: [
                             bCleanSCM: params.bCleanSCM,
