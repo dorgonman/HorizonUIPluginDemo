@@ -97,7 +97,7 @@ Do not put physical hostnames in reusable Jenkinsfiles.
 
 The following steps are required before the first run:
 
-1. **Global Pipeline Library**: Configure `jenkins-unreal-pipeline-library` as a Global Trusted Pipeline Library in **Manage Jenkins** → **Configure System**.
+1. **Global Pipeline Library**: Configure `kano-jenkins-unreal-pipeline-library` as a Global Trusted Pipeline Library in **Manage Jenkins** → **Configure System**.
 2. **Win64 Agent**: Set up Windows Unreal build agents with labels such as `windows unreal autosdk ugs deploy gpu`.
 3. **Required Plugins**: Ensure the following plugins are installed:
    - `pipeline`

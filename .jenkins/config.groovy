@@ -5,7 +5,7 @@ def projectConfig() {
     return [
         // === Required (unrealConfig will fail-fast if missing) ===
         projectRoot:        '.',
-        sharedLibraryName:   'jenkins-unreal-pipeline-library',
+        sharedLibraryName:   'kano-jenkins-unreal-pipeline-library',
 
         // === Agent Selection ===
         windowsAgentLabel:   'windows && unreal',
