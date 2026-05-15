@@ -1,7 +1,7 @@
 // .jenkins/Build/Test.Jenkinsfile
 // Copyable test-focused consumer entrypoint.
 
-@Library('jenkins-unreal-pipeline-library') _
+@Library('kano-jenkins-unreal-pipeline-library') _
 
 pipeline {
     agent none

@@ -1,7 +1,7 @@
 // .jenkins/Build/UGSBuild.Jenkinsfile
 // Thin consumer entrypoint for shared UGSBuild orchestration.
 
-@Library('jenkins-unreal-pipeline-library') _
+@Library('kano-jenkins-unreal-pipeline-library') _
 
 // Azure DevOps may require credential.useHttpPath=true when multiple repos share
 // the same host with different credentials. Keep this scoped to this Pipeline run.

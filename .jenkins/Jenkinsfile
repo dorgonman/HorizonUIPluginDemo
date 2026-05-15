@@ -1,7 +1,7 @@
 // .jenkins/Jenkinsfile
 // Primary all-in-one pipeline entrypoint for HorizonUIPluginDemo.
 
-@Library('jenkins-unreal-pipeline-library') _
+@Library('kano-jenkins-unreal-pipeline-library') _
 
 pipeline {
     agent none

@@ -1,7 +1,7 @@
 // .jenkins/Build/Development.Jenkinsfile
 // Thin consumer entrypoint for the Development build config.
 
-@Library('jenkins-unreal-pipeline-library') _
+@Library('kano-jenkins-unreal-pipeline-library') _
 
 pipeline {
     agent none
