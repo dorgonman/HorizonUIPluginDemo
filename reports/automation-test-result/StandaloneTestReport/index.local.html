@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HorizonUIPluginDemoTest Reports</title>
+  <style>
+:root {
+  color-scheme: light dark;
+  --bg: #0b1020;
+  --panel: color-mix(in srgb, canvas 92%, #5b7fff 8%);
+  --panel-strong: color-mix(in srgb, canvas 84%, #5b7fff 16%);
+  --text: canvastext;
+  --muted: color-mix(in srgb, canvastext 68%, transparent);
+  --border: color-mix(in srgb, canvastext 12%, transparent);
+  --accent: #6a8cff;
+  --accent-soft: color-mix(in srgb, #6a8cff 20%, transparent);
+  --good: #1f8f4e;
+  --warn: #b98500;
+  --bad: #c13232;
+  --shadow: 0 18px 44px rgba(8, 12, 24, 0.14);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Inter, Segoe UI, Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(106, 140, 255, 0.12), transparent 32%),
+    linear-gradient(180deg, color-mix(in srgb, canvas 97%, #0b1020 3%), canvas 20%);
+}
+
+a { color: var(--accent); }
+code, pre { font-family: Consolas, SFMono-Regular, monospace; }
+code {
+  font-size: 0.95em;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+.page {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 32px 24px 48px;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.08;
+}
+
+.hero p {
+  margin: 12px 0 0;
+  max-width: 74ch;
+  color: var(--muted);
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, canvas 90%, #6a8cff 10%);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.section {
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  overflow-x: auto;
+}
+
+.section h2 {
+  margin: 0 0 14px;
+  font-size: 20px;
+}
+
+.muted { color: var(--muted); }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: color-mix(in srgb, canvas 92%, #6a8cff 8%);
+}
+
+.card .label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.card .value {
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.card .value.compact {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.card .detail {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.link-list {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.link-card {
+  display: block;
+  padding: 16px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, canvas 88%, #6a8cff 12%);
+  transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+
+.link-card:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+  background: color-mix(in srgb, canvas 84%, #6a8cff 16%);
+}
+
+.link-card strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.link-card span {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.coverage-report-table {
+  table-layout: fixed;
+}
+
+.coverage-report-table col.file-col { width: 62%; }
+.coverage-report-table col.name-col { width: 26%; }
+.coverage-report-table col.line-col { width: 6%; }
+.coverage-report-table col.branch-col { width: 6%; }
+
+.coverage-report-table td code {
+  display: block;
+  max-width: 100%;
+}
+
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+thead th {
+  background: color-mix(in srgb, canvas 82%, #6a8cff 18%);
+  font-size: 13px;
+}
+
+tbody tr:hover td {
+  background: color-mix(in srgb, canvas 92%, #6a8cff 8%);
+}
+
+.metric-good { color: var(--good); }
+.metric-warn { color: var(--warn); }
+.metric-bad { color: var(--bad); }
+.metric-na { color: var(--muted); }
+
+.report-card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.report-card {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: color-mix(in srgb, canvas 92%, #6a8cff 8%);
+}
+
+.report-card h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.report-card ul {
+  margin: 12px 0 0;
+  padding-left: 18px;
+}
+
+.footer {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.breadcrumbs a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs .sep {
+  opacity: 0.65;
+}
+
+@media (max-width: 720px) {
+  .page { padding: 24px 16px 36px; }
+  .section { padding: 16px; }
+  th, td { padding: 9px 10px; }
+}
+</style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Kano C++ Test Reports</p>
+        <h1>HorizonUIPluginDemoTest Reports</h1>
+        <p>Static report site root for Gauntlet, screenshot compare, JUnit, and coverage artifacts.</p>
+      </div>
+      <div class="chip-row"><span class="chip">Links: 6</span><span class="chip">Local</span></div>
+    </header>
+    
+<section class="section">
+  <h2>Reports</h2>
+  <div class="report-card-list"><article class="report-card">
+  <h2><a href="./Result/index.html">Unreal raw Gauntlet report</a></h2>
+  <p>Original Unreal Automation/Gauntlet HTML report, including raw assets.</p>
+  <p><span class="badge status-passed">Available</span> <code>./Result/index.html</code></p>
+</article><article class="report-card">
+  <h2><a href="./ResultStatic/HorizonUIPluginDemoTest/index.local.html">Parsed test report with screenshots</a></h2>
+  <p>Local-file version with screenshot assets copied next to the report so fil[redacted-path] browsing does not cross origins.</p>
+  <p><span class="badge status-passed">Available</span> <code>./ResultStatic/HorizonUIPluginDemoTest/index.local.html</code></p>
+</article><article class="report-card">
+  <h2><a href="./Result/junit-report.xml">JUnit XML</a></h2>
+  <p>Jenkins-consumable JUnit test result XML.</p>
+  <p><span class="badge status-passed">Available</span> <code>./Result/junit-report.xml</code></p>
+</article><article class="report-card">
+  <h2><a href="./Coverage/HorizonUIPluginDemoTest/index.html">Coverage index</a></h2>
+  <p>Coverage landing page with Cobertura XML, summary, and HTML links.</p>
+  <p><span class="badge status-passed">Available</span> <code>./Coverage/HorizonUIPluginDemoTest/index.html</code></p>
+</article><article class="report-card">
+  <h2><a href="./Coverage/HorizonUIPluginDemoTest/report-html/index.local.html">Coverage HTML report</a></h2>
+  <p>Local-file coverage report entry point.</p>
+  <p><span class="badge status-passed">Available</span> <code>./Coverage/HorizonUIPluginDemoTest/report-html/index.local.html</code></p>
+</article><article class="report-card">
+  <h2><a href="./Coverage/HorizonUIPluginDemoTest/native-html/index.local.html">Native OpenCppCoverage HTML</a></h2>
+  <p>Local-file OpenCppCoverage entry point with inline script externalized.</p>
+  <p><span class="badge status-passed">Available</span> <code>./Coverage/HorizonUIPluginDemoTest/native-html/index.local.html</code></p>
+</article></div>
+</section>
+<section class="section">
+  <h2>Published root</h2>
+  <p>This page is generated at the root of the package-owned static report site, normally <code>Intermediate/BuildPackage/&lt;Platform&gt;/&lt;Branch&gt;/&lt;Revision&gt;/&lt;Configuration&gt;/StandaloneTestReport</code>, so Jenkins HTML Publisher archives the whole static site, including screenshot PNG assets under <code>Result/imageCompare</code> and embedded coverage source pages under <code>Coverage/*/report-html/files</code>.</p>
+</section>
+
+<section class="section">
+  <h2>Local browsing</h2>
+  <p>This page is optimized for opening directly from disk with <code>fil[redacted-path]</code>. Links are explicitly relative to this directory so copied report folders remain browseable without Jenkins.</p>
+</section>
+
+
+  </main>
+  
+</body>
+</html>
