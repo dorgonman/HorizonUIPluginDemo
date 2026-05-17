@@ -73,7 +73,9 @@ def projectConfig() {
         nugetFeed:              'https://api.nuget.org/v3/index.json',
 
         // === Aggregate stage (Job D) ===
-        // Workspace for UGS aggregation / NuGet / deploy. Use a deploy-capable label, not a physical node name.
+        // Workspace for UGS aggregation / NuGet / deploy. Use deploy-capable labels, not physical node names.
+        // UGS producers stash only ArchiveForUGS/Staging/** from buildUgsArtifactRoot, then the
+        // deploy workspace unstashes Win64/Mac/Linux into buildUgsArtifactRoot/ArchiveForUGS/Staging.
         ugsDeployAgentLabel:    'windows && unreal && deploy',
         macDeployAgentLabel:    'mac && unreal && deploy',
         iosAgentLabel:          'mac && unreal',
@@ -89,8 +91,17 @@ def projectConfig() {
         xsxAgentLabel:          'windows && unreal && autosdk',
         switch2AgentLabel:      'windows && unreal && autosdk',
 
-        deployWorkspace:        '',  // Auto-resolved if empty: "${sharedWorkspaceRoot}/HorizonPlugin/HorizonUIPluginDemo/Deploy"
+        // Keep Deploy explicit for HR-TSK-0005: UGS aggregate/NuGet/Horde stages share this workspace.
+        // Effective UGS staging path: deployWorkspace/buildUgsArtifactRoot/ArchiveForUGS/Staging.
+        deployWorkspace:        'C:/_agent/_jenkins/agent/workspace/HorizonPlugin/HorizonUIPluginDemo/Deploy',
         bRunBuildGraphAggregation: false,
+
+        // === Deploy boundary policy ===
+        // UGSBuild may prepare NuGet packages and upload to Horde when its job parameter enables it.
+        // NuGet push and Perforce publish stay disabled by default; modern Deploy Targets stay dry-run only.
+        bRunDeployTargets: false,
+        bDeployTargetsDryRunOnly: true,
+        bAllowRealDeployTargets: false,
 
         // === Test + Coverage ===
         bRunTestWin64Standalone: true,

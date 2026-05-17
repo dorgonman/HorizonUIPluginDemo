@@ -51,6 +51,20 @@ Follow these steps to extend the pipeline for a new platform:
 
 Windows Jenkins jobs use the shared workspace owned by the shared library. Consumer Jenkinsfiles should stay thin, call `unrealPipelineFromProjectConfig(...)`, and avoid legacy root aliases such as `buildArchiveRoot`, `buildPackageRoot`, `buildPluginRoot`, and `buildUgsRoot`.
 
+UGSBuild uses separate Win64, Mac, and Linux producer workspaces, then stashes only `ArchiveForUGS/Staging/**` from `Intermediate/BuildUGS`. The `UGS Deploy Workspace` stage unstashes those producer artifacts into the explicit deploy workspace from `.jenkins/config.groovy`:
+
+```text
+C:/_agent/_jenkins/agent/workspace/HorizonPlugin/HorizonUIPluginDemo/Deploy
+```
+
+The resulting aggregate staging root is:
+
+```text
+Intermediate/BuildUGS/ArchiveForUGS/Staging
+```
+
+NuGet packaging runs from that deploy workspace when `bCreateNuGetPackage` is enabled. NuGet push and Perforce publish remain disabled by default in the project entrypoint; Horde upload is controlled by the `bDeployUnrealHordeServer` UGSBuild job parameter. Modern Deploy Targets remain disconnected from real runtime by default (`bRunDeployTargets=false`, `bDeployTargetsDryRunOnly=true`, `bAllowRealDeployTargets=false`).
+
 ## Report Structure
 
 The pipeline generates and archives reports in the following locations:
@@ -62,6 +76,8 @@ The pipeline generates and archives reports in the following locations:
 - **Archived report tar**: `Build/StandaloneTestReport.tar`
 - **Archived report metadata**: `Build/build_metadata.json`
 - **Archived public docs**: `Build/doc/`
+- **UGS aggregate staging root**: `Intermediate/BuildUGS/ArchiveForUGS/Staging`
+- **UGS NuGet packages**: `Intermediate/BuildUGS/NuGet/*.nupkg`
 
 
 ## Environment Policy

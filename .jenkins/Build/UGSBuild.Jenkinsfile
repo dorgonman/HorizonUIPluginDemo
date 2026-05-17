@@ -12,7 +12,14 @@ env.GIT_CONFIG_VALUE_0 = 'true'
 unrealUgsBuildPipeline(
     projectConfigPath: '.jenkins/config.groovy',
     configOverrides: [
-        // Job-specific toggle only; agent routing comes from .jenkins/config.groovy capability labels.
+        // Job-specific defaults only; agent routing comes from .jenkins/config.groovy capability labels.
+        // HR-TSK-0005 requires all three UGS producer families to feed the Deploy workspace.
+        bBuildUGSStageWin64: true,
+        bBuildUGSStageMac: true,
+        bBuildUGSStageLinux: true,
+        bCreateNuGetPackage: true,
+        bDeployNuGetPackage: false,
+        bDeployPerforce: false,
         bDeployUnrealHordeServer: true,
     ]
 )
