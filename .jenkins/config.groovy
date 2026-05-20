@@ -64,6 +64,8 @@ def projectConfig() {
 
         // === UGS phase toggles ===
         bRunBuildPhase:         true,
+        bBuildUGSStageWin64:    true,
+        bBuildUGSStageMac:      true,
         bBuildUGSStageLinux:    false,
         bRunAggregatePhase:     false,  // Set to true to enable Job D aggregate stage
         bRunPrepareDeployPhase: false,
