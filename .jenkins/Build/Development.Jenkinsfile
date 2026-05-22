@@ -96,9 +96,9 @@ pipeline {
                             bCopyPreCompileEngine: params.bCopyPreCompileEngine,
                             preArchiveCopyStep: params.PRE_ARCHIVE_COPY_STEP?.trim(),
                             bFailFast: params.bFailFast,
-                            win64SharedWorkspaceRoot: params.WIN64_SHARED_WORKSPACE_ROOT?.trim(),
-                            macSharedWorkspaceRoot: params.MAC_SHARED_WORKSPACE_ROOT?.trim(),
-                            linuxSharedWorkspaceRoot: params.LINUX_SHARED_WORKSPACE_ROOT?.trim(),
+                            win64SharedWorkspaceRoot: params.WIN64_SHARED_WORKSPACE_ROOT?.trim() ? params.WIN64_SHARED_WORKSPACE_ROOT?.trim() : null,
+                            macSharedWorkspaceRoot: params.MAC_SHARED_WORKSPACE_ROOT?.trim() ? params.MAC_SHARED_WORKSPACE_ROOT?.trim() : null,
+                            linuxSharedWorkspaceRoot: params.LINUX_SHARED_WORKSPACE_ROOT?.trim() ? params.LINUX_SHARED_WORKSPACE_ROOT?.trim() : null,
                             workspaceSlot: 'Package',
                             buildConfiguration: 'Development',
                         ]
