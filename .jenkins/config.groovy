@@ -31,9 +31,9 @@ def projectConfig() {
         scmCredentialId:    'dorgonman_azuredevops',
         macLoginKeychainCredentialId: 'MAC_LOGIN_USER',
         workspaceSlot:      'Package',
-        win64SharedWorkspaceRoot: 'C:/_agent/_jenkins/agent/workspace/HorizonPlugin',
-        macSharedWorkspaceRoot: '/Users/Shared/jenkins/agent/workspace/HorizonPlugin',
-        linuxSharedWorkspaceRoot: '/var/jenkins/home/ws/HorizonPlugin',
+        win64SharedWorkspaceRoot: 'C:/_agent/jenkins_ws/HorizonPlugin',
+        macSharedWorkspaceRoot: '/Users/Shared/agent/jenkins_ws/HorizonPlugin',
+        linuxSharedWorkspaceRoot: '/var/jenkins/home/_ws/HorizonPlugin',
 
         // === Build Intermediate Paths ===
         // Resolved relative to projectRoot at runtime; exported as env vars by unrealPipeline
