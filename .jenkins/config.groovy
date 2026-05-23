@@ -125,6 +125,7 @@ def projectConfig() {
         unrealHordeServer:  'http://unrealhorde.local/',
         hordeToken:        '',  // Set via HORDE_TOKEN Jenkins parameter; empty here
         hordeGitStreamRepo: 'https://dev.azure.com/kanohorizonia/UEHorizonPlugin/_git/HorizonUIPluginDemo',  // Repo URL for Horde stream ID (without trailing .git)
+        ugsProjectKey: '//UEHorizonPlugin/HorizonUIPluginDemo/main/HorizonUIPluginDemo.uproject',
 
         // === Plugin Validation ===
         // Plugin validation is opt-in in the shared library. This PluginDemo project enables it explicitly.
