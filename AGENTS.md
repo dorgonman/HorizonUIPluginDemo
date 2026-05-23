@@ -19,7 +19,7 @@ From repo root (Git Bash on Windows):
 ```sh
 cd Build/Base
 pixi run <task>
-# Example: UNREAL_ENGINE_ROOT="D:/_work/UnrealEngine" pixi run editor-dev
+# Example: UNREAL_ENGINE_ROOT="D:/_work/UnrealEngine" pixi run build-editor-development
 ```
 
 **Pixi configuration location:** `Build/Base/pixi.toml`
@@ -29,10 +29,10 @@ pixi run <task>
 - Source engine: `D:/_work/UnrealEngine` (set `UNREAL_ENGINE_ROOT` env var)
 
 **Key tasks:**
-- `editor-dev` — Editor development build
-- `standalone-dev` — Standalone game development build
-- `plugin-ship` — Plugin shipping build
-- `server-dev` — Server development build (NOTE: not applicable for plugin demo projects - no server target exists)
+- `build-editor-development` — Editor development build
+- `build-standalone-development` — Standalone game development build
+- `build-plugin-shipping` — Plugin shipping build
+- `build-server-development` — Server development build (NOTE: not applicable for plugin demo projects - no server target exists)
 
 **Source Engine Location:** `D:/_work/UnrealEngine` (set via `UNREAL_ENGINE_ROOT` env var)
 
@@ -48,12 +48,12 @@ pixi info               # Show pixi environment info
 
 **Run full test suite:**
 ```sh
-cd Build/Base && pixi run standalone-test-opencppcoverage
+cd Build/Base && pixi run run-gauntlet-test-with-opencppcoverage
 ```
 
 **Run single automation test:**
 ```sh
-cd Build/Base && EXTRA_PARAMETERS='-ExecCmds="Automation RunTests Plugin.SmokeTest.HorizonUI.Success; Quit"' pixi run standalone-test-no-coverage
+cd Build/Base && EXTRA_PARAMETERS='-ExecCmds="Automation RunTests Plugin.SmokeTest.HorizonUI.Success; Quit"' pixi run run-gauntlet-test-no-coverage
 ```
 
 Available tests:
