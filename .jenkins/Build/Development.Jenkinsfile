@@ -67,41 +67,68 @@ pipeline {
         stage('Build') {
             steps {
                 script {
+                    String projectConfigRaw = readFile('.jenkins/config.groovy')
+                    List<String> forbiddenLegacyWorkspaceRoots = [
+                        'C:/_agent/_jenkins/agent/workspace/HorizonPlugin',
+                        '/Users/Shared/_jenkins/agent/workspace/HorizonPlugin',
+                        '/var/jenkins/home/_jenkins/agent/workspace/HorizonPlugin',
+                    ]
+                    List<String> matchedLegacyWorkspaceRoots = forbiddenLegacyWorkspaceRoots.findAll { legacyRoot ->
+                        projectConfigRaw.contains(legacyRoot)
+                    }
+                    if (matchedLegacyWorkspaceRoots) {
+                        error("Legacy shared workspace roots detected in .jenkins/config.groovy: ${matchedLegacyWorkspaceRoots.join(', ')}")
+                    }
+
+                    Map runtimeOverrides = [
+                        bCleanSCM: params.bCleanSCM,
+                        bInstallPrerequisites: params.bInstallPrerequisites,
+                        bBuildStandaloneWin64: params.bBuildStandaloneWin64,
+                        bBuildStandaloneAndroid: params.bBuildStandaloneAndroid,
+                        bBuildStandaloneIOS: params.bBuildStandaloneIOS,
+                        bBuildStandaloneMac: params.bBuildStandaloneMac,
+                        bBuildStandaloneLinux: params.bBuildStandaloneLinux,
+                        bValidatePlugins: params.bValidatePlugins,
+                        bBuildPluginWin64: params.bBuildPluginWin64,
+                        bBuildPluginAndroid: params.bBuildPluginAndroid,
+                        bBuildPluginIOS: params.bBuildPluginIOS,
+                        bBuildPluginMac: params.bBuildPluginMac,
+                        bBuildPluginLinux: params.bBuildPluginLinux,
+                        bRunTestWin64Standalone: params.bRunTestWin64Standalone,
+                        bArchiveTar: params.bArchiveTar,
+                        bDeploySentrySymbols: params.bDeploySentrySymbols,
+                        bDeploySentryForeignUnrealEngineSymbols: false,
+                        bDeploySentryBundleSources: params.bDeploySentryBundleSources,
+                        sentryCredentialId: params.SENTRY_CREDENTIAL_ID?.trim(),
+                        sentryOrg: params.SENTRY_ORG?.trim(),
+                        sentryProject: params.SENTRY_PROJECT?.trim(),
+                        sentryEnvironment: params.SENTRY_ENVIRONMENT?.trim(),
+                        bCopyPreCompileEngine: params.bCopyPreCompileEngine,
+                        preArchiveCopyStep: params.PRE_ARCHIVE_COPY_STEP?.trim(),
+                        bFailFast: params.bFailFast,
+                        workspaceSlot: 'Package',
+                        buildConfiguration: 'Development',
+                    ]
+
+                    String win64WorkspaceRootOverride = params.WIN64_SHARED_WORKSPACE_ROOT?.trim()
+                    if (win64WorkspaceRootOverride) {
+                        runtimeOverrides.win64SharedWorkspaceRoot = win64WorkspaceRootOverride
+                    }
+
+                    String macWorkspaceRootOverride = params.MAC_SHARED_WORKSPACE_ROOT?.trim()
+                    if (macWorkspaceRootOverride) {
+                        runtimeOverrides.macSharedWorkspaceRoot = macWorkspaceRootOverride
+                    }
+
+                    String linuxWorkspaceRootOverride = params.LINUX_SHARED_WORKSPACE_ROOT?.trim()
+                    if (linuxWorkspaceRootOverride) {
+                        runtimeOverrides.linuxSharedWorkspaceRoot = linuxWorkspaceRootOverride
+                    }
+
                     unrealPipelineFromProjectConfig(
                         bootstrapAgentLabel: 'lightweight',
                         projectConfigPath: '.jenkins/config.groovy',
-                        configOverrides: [
-                            bCleanSCM: params.bCleanSCM,
-                            bInstallPrerequisites: params.bInstallPrerequisites,
-                            bBuildStandaloneWin64: params.bBuildStandaloneWin64,
-                            bBuildStandaloneAndroid: params.bBuildStandaloneAndroid,
-                            bBuildStandaloneIOS: params.bBuildStandaloneIOS,
-                            bBuildStandaloneMac: params.bBuildStandaloneMac,
-                            bBuildStandaloneLinux: params.bBuildStandaloneLinux,
-                            bValidatePlugins: params.bValidatePlugins,
-                            bBuildPluginWin64: params.bBuildPluginWin64,
-                            bBuildPluginAndroid: params.bBuildPluginAndroid,
-                            bBuildPluginIOS: params.bBuildPluginIOS,
-                            bBuildPluginMac: params.bBuildPluginMac,
-                            bBuildPluginLinux: params.bBuildPluginLinux,
-                            bRunTestWin64Standalone: params.bRunTestWin64Standalone,
-                            bArchiveTar: params.bArchiveTar,
-                            bDeploySentrySymbols: params.bDeploySentrySymbols,
-                            bDeploySentryForeignUnrealEngineSymbols: false,
-                            bDeploySentryBundleSources: params.bDeploySentryBundleSources,
-                            sentryCredentialId: params.SENTRY_CREDENTIAL_ID?.trim(),
-                            sentryOrg: params.SENTRY_ORG?.trim(),
-                            sentryProject: params.SENTRY_PROJECT?.trim(),
-                            sentryEnvironment: params.SENTRY_ENVIRONMENT?.trim(),
-                            bCopyPreCompileEngine: params.bCopyPreCompileEngine,
-                            preArchiveCopyStep: params.PRE_ARCHIVE_COPY_STEP?.trim(),
-                            bFailFast: params.bFailFast,
-                            win64SharedWorkspaceRoot: params.WIN64_SHARED_WORKSPACE_ROOT?.trim() ? params.WIN64_SHARED_WORKSPACE_ROOT?.trim() : null,
-                            macSharedWorkspaceRoot: params.MAC_SHARED_WORKSPACE_ROOT?.trim() ? params.MAC_SHARED_WORKSPACE_ROOT?.trim() : null,
-                            linuxSharedWorkspaceRoot: params.LINUX_SHARED_WORKSPACE_ROOT?.trim() ? params.LINUX_SHARED_WORKSPACE_ROOT?.trim() : null,
-                            workspaceSlot: 'Package',
-                            buildConfiguration: 'Development',
-                        ]
+                        configOverrides: runtimeOverrides
                     )
                 }
             }
