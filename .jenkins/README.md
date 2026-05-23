@@ -51,10 +51,12 @@ Follow these steps to extend the pipeline for a new platform:
 
 Windows Jenkins jobs use the shared workspace owned by the shared library. Consumer Jenkinsfiles should stay thin, call `unrealPipelineFromProjectConfig(...)`, and avoid legacy root aliases such as `buildArchiveRoot`, `buildPackageRoot`, `buildPluginRoot`, and `buildUgsRoot`.
 
-UGSBuild uses separate Win64, Mac, and Linux producer workspaces, then stashes only `ArchiveForUGS/Staging/**` from `Intermediate/BuildUGS`. The `UGS Deploy Workspace` stage unstashes those producer artifacts into the explicit deploy workspace from `.jenkins/config.groovy`:
+UGSBuild uses separate Win64, Mac, and Linux producer workspaces, then stashes only `ArchiveForUGS/Staging/**` from `Intermediate/BuildUGS`. The `UGS Deploy Workspace` stage unstashes those producer artifacts into a platform-derived deploy workspace based on shared roots in `.jenkins/config.groovy`:
 
 ```text
-C:/_agent/_jenkins/agent/workspace/HorizonPlugin/HorizonUIPluginDemo/Deploy
+Win64: C:/_agent/jenkins_ws/HorizonPlugin/HorizonUIPluginDemo/Deploy
+Mac: /Users/Shared/agent/jenkins_ws/HorizonPlugin/HorizonUIPluginDemo/Deploy
+Linux: /var/jenkins/home/_ws/HorizonPlugin/HorizonUIPluginDemo/Deploy
 ```
 
 The resulting aggregate staging root is:
@@ -168,10 +170,14 @@ Preferred UGS entrypoint pattern:
 unrealUgsBuildPipeline(
     projectConfigPath: '.jenkins/config.groovy',
     configOverrides: [
-        bDeployUnrealHordeServer: true,
+        bCleanSCM: params.bCleanSCM,
+        bDeployUnrealHordeServer: params.bDeployUnrealHordeServer,
+        bFailFast: params.bFailFast,
     ]
 )
 ```
+
+`bFailFast` is exposed on UGSBuild jobs and forwarded into the shared library config so Jenkins parallel fail-fast behavior is controlled by the job parameter instead of being hardcoded in the job body.
 
 Agent routing belongs in `.jenkins/config.groovy` as capability label expressions, for example:
 

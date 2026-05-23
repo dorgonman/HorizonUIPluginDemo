@@ -94,9 +94,11 @@ def projectConfig() {
         xsxAgentLabel:          'windows && unreal && autosdk',
         switch2AgentLabel:      'windows && unreal && autosdk',
 
-        // Keep Deploy explicit for HR-TSK-0005: UGS aggregate/NuGet/Horde stages share this workspace.
-        // Effective UGS staging path: deployWorkspace/buildUgsArtifactRoot/ArchiveForUGS/Staging.
-        deployWorkspace:        'C:/_agent/_jenkins/agent/workspace/HorizonPlugin/HorizonUIPluginDemo/Deploy',
+        // UGS aggregate/NuGet/Horde stages share one Deploy workspace.
+        // Workspace is derived by shared library from platform shared roots:
+        //   <platformSharedWorkspaceRoot>/<projectName>/Deploy
+        // Effective UGS staging path:
+        //   <derivedDeployWorkspace>/buildUgsArtifactRoot/ArchiveForUGS/Staging
         bRunBuildGraphAggregation: false,
 
         // === Deploy boundary policy ===
