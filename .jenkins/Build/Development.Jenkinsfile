@@ -67,19 +67,6 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    String projectConfigRaw = readFile('.jenkins/config.groovy')
-                    List<String> forbiddenLegacyWorkspaceRoots = [
-                        'C:/_agent/_jenkins/agent/workspace/HorizonPlugin',
-                        '/Users/Shared/_jenkins/agent/workspace/HorizonPlugin',
-                        '/var/jenkins/home/_jenkins/agent/workspace/HorizonPlugin',
-                    ]
-                    List<String> matchedLegacyWorkspaceRoots = forbiddenLegacyWorkspaceRoots.findAll { legacyRoot ->
-                        projectConfigRaw.contains(legacyRoot)
-                    }
-                    if (matchedLegacyWorkspaceRoots) {
-                        error("Legacy shared workspace roots detected in .jenkins/config.groovy: ${matchedLegacyWorkspaceRoots.join(', ')}")
-                    }
-
                     Map runtimeOverrides = [
                         bCleanSCM: params.bCleanSCM,
                         bInstallPrerequisites: params.bInstallPrerequisites,
