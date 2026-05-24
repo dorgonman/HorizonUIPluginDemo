@@ -23,5 +23,5 @@ if [[ "${OSTYPE:-}" == darwin* ]]; then
 else
     source "${SCRIPT_DIR}/../common.sh"
     export KANOBUILD_REMOTE_SYNC_BACK_PROFILE="BuildPlugin"
-    horizon_mac_remote_build "Build/Script/platform/mac/plugin/shipping.sh" "$@"
+    horizon_mac_remote_build "Build/Script/platform/mac/plugin/build_shipping.sh" "$@"
 fi

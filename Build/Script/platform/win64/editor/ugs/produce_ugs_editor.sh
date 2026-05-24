@@ -17,4 +17,4 @@ if [[ -f "${BUILD_ROOT}/common.sh" ]]; then
     source "${BUILD_ROOT}/common.sh"
 fi
 
-source "${BASE_SCRIPT_ROOT}/platform/win64/editor/ugs/stage.sh"
+source "${BASE_SCRIPT_ROOT}/platform/win64/editor/ugs/produce_ugs_editor.sh"

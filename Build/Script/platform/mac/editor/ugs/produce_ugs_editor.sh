@@ -13,9 +13,9 @@ if [[ "${OSTYPE:-}" == darwin* ]]; then
         source "${BUILD_SCRIPT_ROOT}/common.sh"
     fi
 
-    source "${BASE_SCRIPT_ROOT}/platform/mac/editor/ugs/stage.sh"
+    source "${BASE_SCRIPT_ROOT}/platform/mac/editor/ugs/produce_ugs_editor.sh"
 else
     source "${SCRIPT_DIR}/../../common.sh"
     export KANOBUILD_REMOTE_SYNC_BACK_PROFILE="BuildUGS"
-    horizon_mac_remote_build "Build/Script/platform/mac/editor/ugs/stage.sh" "$@"
+    horizon_mac_remote_build "Build/Script/platform/mac/editor/ugs/produce_ugs_editor.sh" "$@"
 fi

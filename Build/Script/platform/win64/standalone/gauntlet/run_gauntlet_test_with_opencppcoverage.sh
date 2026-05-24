@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Build/Script/platform/win64/standalone/gauntlet/test_opencppcoverage.sh
+# Build/Script/platform/win64/standalone/gauntlet/run_gauntlet_test_with_opencppcoverage.sh
 # Local override for gauntlet test execution with OpenCppCoverage.
-# Delegates to Build/Base/.../gauntlet/test_opencppcoverage.sh
+# Delegates to Build/Base/.../gauntlet/run_gauntlet_test_with_opencppcoverage.sh
 # then writes Jenkins JUnit XML to the canonical Result/junit-report.xml path.
 
 set -euo pipefail

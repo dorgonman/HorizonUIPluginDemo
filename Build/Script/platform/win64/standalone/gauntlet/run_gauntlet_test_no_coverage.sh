@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Build/Script/platform/win64/standalone/gauntlet/test_no_coverage.sh
+# Build/Script/platform/win64/standalone/gauntlet/run_gauntlet_test_no_coverage.sh
 # Local override for gauntlet test execution.
-# Delegates to Build/Base/.../gauntlet/test_no_coverage.sh
+# Delegates to Build/Base/.../gauntlet/run_gauntlet_test_no_coverage.sh
 # then writes Jenkins JUnit XML to the canonical Result/junit-report.xml path.
 
 set -euo pipefail
