@@ -33,11 +33,21 @@
 
   <!-- InstalledBuild: reference pre-built DLLs (UNREAL_INSTALLED_BUILD=1) -->
   <ItemGroup Condition="'$(UNREAL_INSTALLED_BUILD)' == '1'">
-    <Reference Include="$(UnrealEngineRoot)\Engine\Binaries\DotNET\AutomationTool\AutomationScripts\Gauntlet\Gauntlet.Automation.dll" />
-    <Reference Include="$(UnrealEngineRoot)\Engine\Binaries\DotNET\AutomationTool\AutomationUtils\AutomationUtils.Automation.dll" />
-    <Reference Include="$(UnrealEngineRoot)\Engine\Binaries\DotNET\AutomationTool\AutomationScripts\Scripts\AutomationScripts.Automation.dll" />
-    <Reference Include="$(UnrealEngineRoot)\Engine\Binaries\DotNET\AutomationTool\EpicGames.Build.dll" />
-    <Reference Include="$(UnrealEngineRoot)\Engine\Binaries\DotNET\AutomationTool\EpicGames.Core.dll" />
+    <Reference Include="Gauntlet.Automation">
+      <HintPath>$(UnrealEngineRoot)\Engine\Binaries\DotNET\AutomationTool\AutomationScripts\Gauntlet\Gauntlet.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="AutomationUtils.Automation">
+      <HintPath>$(UnrealEngineRoot)\Engine\Binaries\DotNET\AutomationTool\AutomationUtils\AutomationUtils.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="AutomationScripts.Automation">
+      <HintPath>$(UnrealEngineRoot)\Engine\Binaries\DotNET\AutomationTool\AutomationScripts\Scripts\AutomationScripts.Automation.dll</HintPath>
+    </Reference>
+    <Reference Include="EpicGames.Build">
+      <HintPath>$(UnrealEngineRoot)\Engine\Binaries\DotNET\AutomationTool\EpicGames.Build.dll</HintPath>
+    </Reference>
+    <Reference Include="EpicGames.Core">
+      <HintPath>$(UnrealEngineRoot)\Engine\Binaries\DotNET\AutomationTool\EpicGames.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <!-- SourceBuild: compile from source csprojs (UNREAL_INSTALLED_BUILD!=1, default) -->
