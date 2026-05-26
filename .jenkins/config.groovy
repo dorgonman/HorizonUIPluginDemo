@@ -11,6 +11,8 @@ def projectConfig() {
         windowsAgentLabel:   'windows && unreal',
         macAgentLabel:       'mac && unreal',
         linuxAgentLabel:     'linux && unreal',
+        unrealEngineRoot:    'H:/EpicGames/Installed/UE_5.7',
+        qaUnrealEngineRoot:  'H:/EpicGames/Installed/UE_5.7',
 
         // === Producer/aggregate routing labels (optional overrides) ===
         // Use these to route specific producer types to separate agent pools.
