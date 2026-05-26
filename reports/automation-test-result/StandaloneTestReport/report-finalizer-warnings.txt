@@ -1,0 +1,2 @@
+Generated fallback parsed test report: Intermediate/BuildPackage/Win64/main/644/Development/StandaloneTestReport/ResultStatic/Win64-StandaloneTest/index.html
+Missing report-site evidence: Result/ClientOutput.log

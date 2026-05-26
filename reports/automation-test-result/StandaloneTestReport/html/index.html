@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HorizonUIPluginDemoTest Reports</title>
+  <style>
+:root {
+  color-scheme: light dark;
+  --bg: #0b1020;
+  --panel: color-mix(in srgb, canvas 92%, #5b7fff 8%);
+  --panel-strong: color-mix(in srgb, canvas 84%, #5b7fff 16%);
+  --text: canvastext;
+  --muted: color-mix(in srgb, canvastext 68%, transparent);
+  --border: color-mix(in srgb, canvastext 12%, transparent);
+  --accent: #6a8cff;
+  --accent-soft: color-mix(in srgb, #6a8cff 20%, transparent);
+  --good: #1f8f4e;
+  --warn: #b98500;
+  --bad: #c13232;
+  --shadow: 0 18px 44px rgba(8, 12, 24, 0.14);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Inter, Segoe UI, Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(106, 140, 255, 0.12), transparent 32%),
+    linear-gradient(180deg, color-mix(in srgb, canvas 97%, #0b1020 3%), canvas 20%);
+}
+
+a { color: var(--accent); }
+code, pre { font-family: Consolas, SFMono-Regular, monospace; }
+code {
+  font-size: 0.95em;
+  word-break: break-all;
+  white-space: pre-wrap;
+}
+
+.page {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 32px 24px 48px;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 40px);
+  line-height: 1.08;
+}
+
+.hero p {
+  margin: 12px 0 0;
+  max-width: 74ch;
+  color: var(--muted);
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, canvas 90%, #6a8cff 10%);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.section {
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  overflow-x: auto;
+}
+
+.section h2 {
+  margin: 0 0 14px;
+  font-size: 20px;
+}
+
+.muted { color: var(--muted); }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+.card {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: color-mix(in srgb, canvas 92%, #6a8cff 8%);
+}
+
+.card .label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.card .value {
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.card .value.compact {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.card .detail {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.link-list {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.link-card {
+  display: block;
+  padding: 16px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, canvas 88%, #6a8cff 12%);
+  transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+
+.link-card:hover {
+  transform: translateY(-1px);
+  border-color: color-mix(in srgb, var(--accent) 40%, var(--border));
+  background: color-mix(in srgb, canvas 84%, #6a8cff 16%);
+}
+
+.link-card strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 16px;
+}
+
+.link-card span {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.coverage-report-table {
+  table-layout: fixed;
+}
+
+.coverage-report-table col.file-col { width: 62%; }
+.coverage-report-table col.name-col { width: 26%; }
+.coverage-report-table col.line-col { width: 6%; }
+.coverage-report-table col.branch-col { width: 6%; }
+
+.coverage-report-table td code {
+  display: block;
+  max-width: 100%;
+}
+
+th, td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+thead th {
+  background: color-mix(in srgb, canvas 82%, #6a8cff 18%);
+  font-size: 13px;
+}
+
+tbody tr:hover td {
+  background: color-mix(in srgb, canvas 92%, #6a8cff 8%);
+}
+
+.metric-good { color: var(--good); }
+.metric-warn { color: var(--warn); }
+.metric-bad { color: var(--bad); }
+.metric-na { color: var(--muted); }
+
+.report-card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.report-card {
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: color-mix(in srgb, canvas 92%, #6a8cff 8%);
+}
+
+.report-card h2 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+
+.report-card ul {
+  margin: 12px 0 0;
+  padding-left: 18px;
+}
+
+.footer {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.breadcrumbs a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumbs .sep {
+  opacity: 0.65;
+}
+
+@media (max-width: 720px) {
+  .page { padding: 24px 16px 36px; }
+  .section { padding: 16px; }
+  th, td { padding: 9px 10px; }
+}
+.badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+.status-passed { background: #1f8f4e33; color: #1f8f4e; }
+.status-warning { background: #b9850033; color: #b98500; }
+.status-failed { background: #c1323233; color: #c13232; }
+.status-other { background: #6663; color: inherit; }
+.report-card .badge { margin-right: 8px; }
+ul { margin: 0; padding-left: 18px; }</style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Kano Report Site</p>
+        <h1>HorizonUIPluginDemoTest Reports</h1>
+        <p>Generated at 2026-05-26T03:54:54Z. Report root: ..</p>
+      </div>
+      <div class="chip-row"><span class="chip">Cards: 5</span><span class="chip">Overall: PASS</span><span class="chip">Coverage: VALID</span></div>
+    </header>
+    
+<section class="section">
+    <h2>Overview</h2>
+    <div class="card-grid">
+        <div class="card"><span class="label">Overall</span><div class="value status-passed">PASS</div><div class="detail">Feature-first status</div></div>
+        <div class="card"><span class="label">Coverage</span><div class="value status-passed">VALID</div><div class="detail">Coverage report contains valid line data</div></div>
+        <div class="card"><span class="label">Uncategorized</span><div class="value metric-good">0</div><div class="detail">Tests needing suite mapping cleanup</div></div>
+    </div>
+</section>
+<section class="section">
+    <h2>Lane Metadata</h2>
+    <table>
+        <thead><tr><th>Field</th><th>Value</th></tr></thead>
+        <tbody>
+            <tr><td>testLane</td><td><code>n/a</code></td></tr>
+            <tr><td>testCommand</td><td><code>n/a</code></td></tr>
+            <tr><td>reportCommand</td><td><code>n/a</code></td></tr>
+        </tbody>
+    </table>
+</section>
+<section class="section">
+    <h2>Feature Suite Summary</h2>
+    <table>
+        <thead><tr><th>Feature Suite</th><th>Status</th><th>Passed</th><th>Failed</th><th>Errors</th><th>Skipped</th><th>Collapsed</th><th>Displayed</th></tr></thead>
+        <tbody><tr><td>CLI Core</td><td><span class="badge status-warning">WARN</span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Repo Discovery</td><td><span class="badge status-warning">WARN</span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Status / Log</td><td><span class="badge status-warning">WARN</span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Fetch / Sync</td><td><span class="badge status-warning">WARN</span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Commit / Push</td><td><span class="badge status-warning">WARN</span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Commit Plan</td><td><span class="badge status-warning">WARN</span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Export / Package</td><td><span class="badge status-warning">WARN</span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>TUI</td><td><span class="badge status-warning">WARN</span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Coverage / PGO</td><td><span class="badge status-passed">PASS</span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Infra</td><td><span class="badge status-warning">WARN</span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Generated / Property</td><td><span class="badge status-warning">WARN</span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>External Optional</td><td><span class="badge status-warning">WARN</span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Uncategorized</td><td><span class="badge status-warning">WARN</span></td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr></tbody>
+    </table>
+</section>
+<section class="section">
+    <h2>Top Failures by Feature Suite</h2>
+    <p class="muted">No failures reported.</p>
+</section>
+<section class="section">
+    <h2>Test parser details</h2>
+  <p class="muted">No JUnit-style test results were available.</p>
+</section>
+<section class="section">
+    <h2>Coverage parser details</h2>
+  <p class="muted">No Cobertura coverage data was available.</p>
+</section>
+<section class="section">
+  <h2>Artifact links</h2>
+  <div class="report-card-list"><article class="report-card">
+  <h2>JUnit test results</h2>
+  <p>Test Results · status: present · required · junit-xml</p>
+  <p><span class="badge status-passed">present</span> <code>Result/junit-report.xml</code></p>
+</article><article class="report-card">
+  <h2>Cobertura coverage data</h2>
+  <p>Coverage Data · status: present · cobertura-xml</p>
+  <p><span class="badge status-passed">present</span> <code>Coverage/HorizonUIPluginDemoTest/cobertura.xml</code></p>
+</article><article class="report-card">
+  <h2>Coverage HTML report</h2>
+  <p>Coverage Html · status: present · html</p>
+  <p><span class="badge status-passed">present</span> <code>Coverage/HorizonUIPluginDemoTest/report-html/index.html</code></p>
+</article><article class="report-card">
+  <h2>Native provider HTML</h2>
+  <p>Native Html · status: present · html</p>
+  <p><span class="badge status-passed">present</span> <code>Coverage/HorizonUIPluginDemoTest/native-html/index.html</code></p>
+</article><article class="report-card">
+  <h2>Coverage summary</h2>
+  <p>Raw Evidence · status: present · text</p>
+  <p><span class="badge status-passed">present</span> <code>Coverage/HorizonUIPluginDemoTest/summary.txt</code></p>
+</article></div>
+</section>
+<section class="section">
+    <h2>Failure details (raw parser)</h2>
+  <p class="muted">No failure details were reported.</p>
+</section>
+<section class="section">
+  <h2>Exit code classifications</h2>
+  <table>
+  <thead><tr><th>Case</th><th>Exit code</th><th>Evidence</th><th>Classification</th></tr></thead>
+  <tbody><tr>
+  <td><code>observed-run</code></td>
+  <td>missing</td>
+  <td>present</td>
+  <td><span class="badge status-warning">UNKNOWN</span></td>
+</tr><tr>
+  <td><code>exit-code-0-with-evidence</code></td>
+  <td>0</td>
+  <td>fresh-required-evidence</td>
+  <td><span class="badge status-passed">PASS</span></td>
+</tr><tr>
+  <td><code>exit-code-152-with-raw-evidence</code></td>
+  <td>152</td>
+  <td>report-or-raw-evidence</td>
+  <td><span class="badge status-warning">SOFT_FAIL</span></td>
+</tr><tr>
+  <td><code>exit-code-6</code></td>
+  <td>6</td>
+  <td>any</td>
+  <td><span class="badge status-failed">HARD_FAIL</span></td>
+</tr><tr>
+  <td><code>missing-exit-code</code></td>
+  <td>missing</td>
+  <td>present</td>
+  <td><span class="badge status-warning">UNKNOWN</span></td>
+</tr></tbody>
+</table>
+</section>
+<p class="footer">Generated from <code>kano-report-site-v1.json</code> using relative artifact links only.</p>
+
+  </main>
+  
+</body>
+</html>

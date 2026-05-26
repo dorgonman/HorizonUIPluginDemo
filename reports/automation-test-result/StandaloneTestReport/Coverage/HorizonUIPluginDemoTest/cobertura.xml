@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<coverage line-rate="0.6311" branch-rate="0.0000" complexity="0" branches-covered="0" branches-valid="0" timestamp="1778990011" lines-covered="1637" lines-valid="2594" version="0">
-  <sources><source>C:\_agent\_jenkins\agent\workspace\Unreal\HorizonUIPluginDemo\Build\PackagedBuild</source></sources><packages><package name="C:\_agent\_jenkins\agent\workspace\Unreal\HorizonUIPluginDemo\Build\PackagedBuild\Saved\StagedBuilds\Windows\HorizonUIPluginDemo\Binaries\Win64\HorizonUIPluginDemo.exe" line-rate="0.6311" branch-rate="0.0000" complexity="0" lines-covered="1637" lines-valid="2594" branches-covered="0" branches-valid="0">
+<coverage line-rate="0.6311" branch-rate="0.0000" complexity="0" branches-covered="0" branches-valid="0" timestamp="1779767672" lines-covered="1637" lines-valid="2594" version="0">
+  <sources><source>C:\_agent\jenkins_ws\HorizonPlugin\HorizonUIPluginDemo\Build\PackagedBuild</source></sources><packages><package name="C:\_agent\jenkins_ws\HorizonPlugin\HorizonUIPluginDemo\Build\PackagedBuild\Saved\StagedBuilds\Windows\HorizonUIPluginDemo\Binaries\Win64\HorizonUIPluginDemo.exe" line-rate="0.6311" branch-rate="0.0000" complexity="0" lines-covered="1637" lines-valid="2594" branches-covered="0" branches-valid="0">
       <classes><class name="HorizonDialogueMsgSpaceDecorator.cpp" filename="PackagedBuild/Plugins/HorizonUIPlugin/Source/HorizonUI/Private/Decorator/HorizonDialogueMsgSpaceDecorator.cpp" line-rate="0.8696" branch-rate="0.0000" complexity="0" lines-covered="20" lines-valid="23" branches-covered="0" branches-valid="0">
           <methods />
           <lines>
@@ -2630,20 +2630,20 @@
             <line number="311" hits="1" />
             <line number="362" hits="1" />
             <line number="365" hits="0" />
-            <line number="626" hits="0" />
-            <line number="865" hits="1" />
-            <line number="871" hits="1" />
-            <line number="879" hits="1" />
-            <line number="883" hits="1" />
-            <line number="895" hits="1" />
-            <line number="918" hits="1" />
-            <line number="922" hits="1" />
-            <line number="926" hits="1" />
-            <line number="929" hits="1" />
-            <line number="931" hits="1" />
-            <line number="935" hits="1" />
-            <line number="937" hits="1" />
-            <line number="940" hits="1" />
+            <line number="625" hits="0" />
+            <line number="864" hits="1" />
+            <line number="870" hits="1" />
+            <line number="878" hits="1" />
+            <line number="882" hits="1" />
+            <line number="894" hits="1" />
+            <line number="917" hits="1" />
+            <line number="921" hits="1" />
+            <line number="925" hits="1" />
+            <line number="928" hits="1" />
+            <line number="930" hits="1" />
+            <line number="934" hits="1" />
+            <line number="936" hits="1" />
+            <line number="939" hits="1" />
           </lines>
         </class>
         <class name="HorizonFlipbookWidget.h" filename="PackagedBuild/Plugins/HorizonUIPlugin/Source/HorizonUI/Public/Widget/Components/HorizonFlipbookWidget.h" line-rate="0.5000" branch-rate="0.0000" complexity="0" lines-covered="3" lines-valid="6" branches-covered="0" branches-valid="0">

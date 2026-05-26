@@ -1,0 +1,11 @@
+{
+  "schemaName": "kano.bdd.summary",
+  "schemaVersion": 1,
+  "scenarios": [],
+  "validation": {
+    "errors": [],
+    "warnings": [],
+    "errorCount": 0,
+    "warningCount": 0
+  }
+}

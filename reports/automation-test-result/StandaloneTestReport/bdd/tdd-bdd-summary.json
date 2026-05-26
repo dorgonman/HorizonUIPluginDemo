@@ -1,0 +1,44 @@
+{
+  "schemaName": "kano.tdd.bdd.summary",
+  "schemaVersion": 1,
+  "totals": {
+    "scenarios": 0,
+    "bdd": 0,
+    "tdd": 0,
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "missing": 0
+  },
+  "bddResults": {
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "missing": 0
+  },
+  "tddResults": {
+    "passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "missing": 0
+  },
+  "artifacts": {
+    "bddDocsPath": "bdd/index.md",
+    "scenarioDocsPath": "bdd/scenarios",
+    "scenarioDocsCount": 0,
+    "featureDocsPath": "bdd/features",
+    "featureDocsCount": 0,
+    "mermaidDiagramsPath": "bdd/diagrams",
+    "mermaidDiagramCount": 0,
+    "coverageHealth": "VALID",
+    "scenarioCoverageHealth": [],
+    "featureHighlightsSourceJsonPath": "bdd/feature-highlights-source.json",
+    "featureHighlightsSourceMdPath": "bdd/feature-highlights-source.md"
+  },
+  "featureCoverage": {
+    "featureCount": 0,
+    "featuresWithBdd": 0,
+    "featuresWithTdd": 0
+  },
+  "featureMapping": []
+}

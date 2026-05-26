@@ -1,0 +1,19 @@
+{
+  "id": "external-optional",
+  "title": "External Optional",
+  "status": "WARN",
+  "tests": 0,
+  "passed": 0,
+  "failed": 0,
+  "errors": 0,
+  "skipped": 0,
+  "syntheticCollapsed": 0,
+  "displayedCases": 0,
+  "rawReports": [
+    "Result/junit-report.xml",
+    "Coverage/HorizonUIPluginDemoTest/cobertura.xml",
+    "Coverage/HorizonUIPluginDemoTest/report-html/index.html",
+    "Coverage/HorizonUIPluginDemoTest/native-html/index.html",
+    "Coverage/HorizonUIPluginDemoTest/summary.txt"
+  ]
+}
