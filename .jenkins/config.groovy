@@ -28,6 +28,7 @@ def projectConfig() {
         // === Consumer metadata ===
         scriptRoot:         'Build',
         reportRoot:         'Intermediate/BuildPackage',
+        kanoReportRendererMode: 'auto',
         slug:               'HorizonUIPluginDemo',
         scmCredentialId:    'dorgonman_azuredevops',
         macLoginKeychainCredentialId: 'MAC_LOGIN_USER',
