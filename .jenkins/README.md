@@ -71,10 +71,10 @@ NuGet packaging runs from that deploy workspace when `bCreateNuGetPackage` is en
 
 The pipeline generates and archives reports in the following locations:
 
-- **Standalone test report site**: `Intermediate/BuildPackage/<Platform>/<Branch>/<Revision>/<Configuration>/StandaloneTestReport/index.html`
-- **Test XML**: `Intermediate/BuildPackage/<Platform>/<Branch>/<Revision>/<Configuration>/StandaloneTestReport/Result/junit-report.xml`
-- **Coverage XML**: `Intermediate/BuildPackage/<Platform>/<Branch>/<Revision>/<Configuration>/StandaloneTestReport/Coverage/<slug>Test/cobertura.xml`
-- **Coverage HTML**: `Intermediate/BuildPackage/<Platform>/<Branch>/<Revision>/<Configuration>/StandaloneTestReport/Coverage/<slug>Test/report-html/index.html`
+- **Standalone test report site**: `Intermediate/BuildArtifacts/BuildPackage/<Platform>/<Branch>/<Revision>/<Configuration>/StandaloneTestReport/index.html`
+- **Test XML**: `Intermediate/BuildArtifacts/BuildPackage/<Platform>/<Branch>/<Revision>/<Configuration>/StandaloneTestReport/Result/junit-report.xml`
+- **Coverage XML**: `Intermediate/BuildArtifacts/BuildPackage/<Platform>/<Branch>/<Revision>/<Configuration>/StandaloneTestReport/Coverage/<slug>Test/cobertura.xml`
+- **Coverage HTML**: `Intermediate/BuildArtifacts/BuildPackage/<Platform>/<Branch>/<Revision>/<Configuration>/StandaloneTestReport/Coverage/<slug>Test/report-html/index.html`
 - **Archived report tar**: `Build/StandaloneTestReport.tar`
 - **Archived report metadata**: `Build/build_metadata.json`
 - **Archived public docs**: `Build/doc/`
