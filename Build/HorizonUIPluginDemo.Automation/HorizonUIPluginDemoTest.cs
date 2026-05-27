@@ -53,11 +53,14 @@ namespace UnrealGame
 			Config.MaxDuration = 5 * 600;		// 5min should be plenty
 			int ClientCount = Context.TestParams.ParseValue("numclients", 1);
 			bool WithServer = Context.TestParams.ParseParam("server");
+			int RequiredClientRoles = (ClientCount <= 0 && !WithServer) ? 1 : ClientCount;
 
-			if (ClientCount > 0)
+			if (RequiredClientRoles > 0)
 			{
-				Config.RequireRoles(UnrealTargetRole.Client, ClientCount);
-				UnrealTestRole ClientRole = Config.RequireRole(UnrealTargetRole.Client);
+				// Standalone packaged tests still need one primary app role even when
+				// callers suppress additional clients via numclients=0.
+				Config.RequireRoles(UnrealTargetRole.Client, RequiredClientRoles);
+				Config.RequireRole(UnrealTargetRole.Client);
 			}
 
 			if (WithServer)
