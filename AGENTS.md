@@ -60,6 +60,25 @@ Available tests:
 - `Plugin.SmokeTest.HorizonUI.Success` (Plugins/HorizonUIPlugin/Source/HorizonUI/Private/Test/SmokeTests.cpp)
 - `Plugin.UnitTests.HorizonUI` (Plugins/HorizonUIPlugin/Source/HorizonUI/Private/Test/ProductTests.cpp)
 
+## Gauntlet Path Invariant (UE 5.7)
+
+For this project on Unreal Engine 5.7, treat the following as a required runtime path topology, not an optional workaround:
+
+- For `-build=local` packaged Gauntlet runs, keep `PROJECT_ROOT`, RunUnreal `-project`, and `-build=<GauntletBuildRoot>` under the same engine-root junction drive (`H:` in current setup).
+- Keep packaged executable `Base Directory` aligned with that same junctioned `-build` root.
+- Keep `-userdir` and screenshot/report output paths compatible with that topology.
+
+Why this matters on 5.7:
+
+- `AutomationControllerManager::GenerateTestPassHtmlIndex()` loads `Engine/Content/Automation/Report-Template.html` via `FPaths::EngineContentDir()`.
+- `FScreenShotManager::CompareScreenshot()` writes/copies report artifacts under `FPaths::AutomationReportsDir()` and path-combines against runtime project/base paths.
+- If `D:`/`H:` topology is mixed, this can produce `Failed to load test report html template` and screenshot copy/move failures even when tests are functionally correct.
+
+Rule for future engine versions:
+
+- Do not change this behavior by assumption.
+- If upgrading beyond UE 5.7 and you want to simplify/alter this topology, first verify engine source behavior (`AutomationController`, `ScreenShotManager`, and `FPaths` path derivation) and then update this document with evidence.
+
 ## Code Style & Conventions
 
 ### Naming (Unreal Standard)
