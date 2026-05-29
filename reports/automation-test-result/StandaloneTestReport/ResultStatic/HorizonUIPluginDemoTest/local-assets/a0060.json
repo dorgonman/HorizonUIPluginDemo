@@ -1,16 +1,16 @@
 {
-	"creationTime": "2026.05.28-23.04.15",
+	"creationTime": "2026.05.29-12.18.59",
 	"sourcePlatform": "Windows",
 	"sourceRHI": "D3D12",
 	"idealApprovedFolderPath": "Test/Screenshots/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple/Windows/D3D12_SM6",
 	"approvedFilePath": "Test/Screenshots/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple/Windows/D3D12_SM6/ufdh6eyf-lipfhy_90fvxg.png",
-	"incomingFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple/Windows/D3D12_SM6/qj2b_ksl9uusjt6q3ho-eq.png",
-	"comparisonFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/Delta/ImageCompare-6E3C5E0E43C41DBF094FAF82BBCE30FB.png",
+	"incomingFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple/Windows/D3D12_SM6/jeagmudgqxraszwmjdjj2q.png",
+	"comparisonFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/Delta/ImageCompare-529C318B426B473FDD4044B2F5D69A9E.png",
 	"reportApprovedFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple/Windows/D3D12_SM6/Approved.png",
 	"reportIncomingFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple/Windows/D3D12_SM6/Incoming.png",
 	"reportComparisonFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple/Windows/D3D12_SM6/Delta.png",
-	"maxLocalDifference": 0.075617283950617287,
-	"globalDifference": 0.0015089699074074074,
+	"maxLocalDifference": 0.11236496913580248,
+	"globalDifference": 0.0022472993827160493,
 	"tolerance":
 	{
 		"red": 16,
@@ -26,7 +26,7 @@
 	},
 	"errorMessage": "",
 	"screenshotPath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple",
-	"comparisonId": "0133CDCD46EDE230CE7A2AB41A88D149",
+	"comparisonId": "17102C2B47DF42A690E4B28DE6ABC6C5",
 	"bSkipAttachingImages": false,
 	"version": 3
 }

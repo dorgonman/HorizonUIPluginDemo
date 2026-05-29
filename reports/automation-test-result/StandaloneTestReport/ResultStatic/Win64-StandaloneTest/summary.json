@@ -24,7 +24,7 @@
     ],
     [
       "Duration (s)",
-      "58.831"
+      "24.947"
     ],
     [
       "Build matrix",
@@ -32,11 +32,11 @@
     ],
     [
       "Selected build root",
-      "H:\\EpicGames\\Installed\\UE_5.7/HorizonUIPluginDemo/Intermediate/BuildArtifacts/BuildPackage/Win64/main/5.7.0.682/Development/Standalone"
+      "H:\\EpicGames\\Installed\\UE_5.7/HorizonUIPluginDemo/Intermediate/BuildArtifacts/BuildPackage/Win64/main/5.7.0.683/Development/Standalone"
     ],
     [
       "Adapter target",
-      "H:\\EpicGames\\Installed\\UE_5.7\\HorizonUIPluginDemo\\Intermediate\\BuildArtifacts\\BuildPackage\\Win64\\main\\5.7.0.682\\Development\\Standalone"
+      "H:\\EpicGames\\Installed\\UE_5.7\\HorizonUIPluginDemo\\Intermediate\\BuildArtifacts\\BuildPackage\\Win64\\main\\5.7.0.683\\Development\\Standalone"
     ],
     [
       "Host machine",
@@ -56,7 +56,7 @@
     ],
     [
       "Host GPU(s)",
-      "NVIDIA GeForce RTX 3090"
+      "Microsoft Remote Display Adapter | NVIDIA GeForce RTX 3090"
     ]
   ]
 }

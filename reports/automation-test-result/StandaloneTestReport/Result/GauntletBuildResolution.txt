@@ -1,13 +1,13 @@
 gauntletBuildResolutionVersion=1
-timestamp=2026-05-28 23:02:28
+timestamp=2026-05-29 12:18:05
 hostMachine=PC-DorgonChang-RTX3090
 requestedBuildArg=-build=local
 normalizedBuildArg=-build=H:\EpicGames\Installed\UE_5.7\HorizonUIPluginDemo\Intermediate\BuildUpstreamInput\GauntletBuildRoot
 normalizedBuildPath=H:\EpicGames\Installed\UE_5.7\HorizonUIPluginDemo\Intermediate\BuildUpstreamInput\GauntletBuildRoot
-selectedStandaloneBuildRoot=H:\EpicGames\Installed\UE_5.7/HorizonUIPluginDemo/Intermediate/BuildArtifacts/BuildPackage/Win64/main/5.7.0.682/Development/Standalone
+selectedStandaloneBuildRoot=H:\EpicGames\Installed\UE_5.7/HorizonUIPluginDemo/Intermediate/BuildArtifacts/BuildPackage/Win64/main/5.7.0.683/Development/Standalone
 adapterRoot=H:\EpicGames\Installed\UE_5.7/HorizonUIPluginDemo/Intermediate/BuildUpstreamInput/GauntletBuildRoot
 adapterLink=H:\EpicGames\Installed\UE_5.7/HorizonUIPluginDemo/Intermediate/BuildUpstreamInput/GauntletBuildRoot/Windows
-adapterResolvedTarget=H:\EpicGames\Installed\UE_5.7\HorizonUIPluginDemo\Intermediate\BuildArtifacts\BuildPackage\Win64\main\5.7.0.682\Development\Standalone
+adapterResolvedTarget=H:\EpicGames\Installed\UE_5.7\HorizonUIPluginDemo\Intermediate\BuildArtifacts\BuildPackage\Win64\main\5.7.0.683\Development\Standalone
 targetPlatform=Win64
 configuration=Development
 buildKind=Standalone
@@ -17,7 +17,7 @@ editorPlatform=<disabled>
 clientPlatform=Win64
 serverPlatform=<disabled>
 artifactName=HorizonUIPluginDemoTest_Win64_Development_standalone-client0
-reportRoot=H:\EpicGames\Installed\UE_5.7\HorizonUIPluginDemo\Intermediate\BuildArtifacts\BuildPackage\Win64\main\5.7.0.682\Development\StandaloneTestReport
+reportRoot=H:\EpicGames\Installed\UE_5.7\HorizonUIPluginDemo\Intermediate\BuildArtifacts\BuildPackage\Win64\main\5.7.0.683\Development\StandaloneTestReport
 testResultReportDirectory=C:\_agent\jenkins_ws\HorizonPlugin\HorizonUIPluginDemo\Build\PackagedBuild\Intermediate\BuildGauntletTestReports\HorizonUIPluginDemoTest_Win64_Development_standalone-client0\AutomationReport
 qaRawLogDirectory=C:\_agent\jenkins_ws\HorizonPlugin\HorizonUIPluginDemo\Build\PackagedBuild\Intermediate\BuildGauntletTestReports
 notes=Device assignment/install target is resolved by Gauntlet runtime per platform and device pool.
@@ -26,4 +26,4 @@ hostOsVersion=10.0.26200
 hostMemoryGiB=127.92
 hostCpuName=AMD Ryzen 9 5950X 16-Core Processor
 hostCpuLogicalCores=32
-hostGpuNames=NVIDIA GeForce RTX 3090
+hostGpuNames=Microsoft Remote Display Adapter | NVIDIA GeForce RTX 3090
