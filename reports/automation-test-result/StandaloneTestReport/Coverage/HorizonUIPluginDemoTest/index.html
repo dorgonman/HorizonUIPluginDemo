@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HorizonUIPluginDemoTest Coverage Summary</title>
+  <style>
+:root {
+  color-scheme: light dark;
+  --text: canvastext;
+  --muted: color-mix(in srgb, canvastext 68%, transparent);
+  --border: color-mix(in srgb, canvastext 14%, transparent);
+  --panel: color-mix(in srgb, canvas 92%, #7da0ff 8%);
+  --panel-strong: color-mix(in srgb, canvas 86%, #7da0ff 14%);
+  --accent: #3d6dff;
+  --good: #1f8f4e;
+  --warn: #b98500;
+  --bad: #c13232;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: Segoe UI, Arial, sans-serif;
+  line-height: 1.5;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top, rgba(61, 109, 255, 0.14), transparent 32%),
+    linear-gradient(180deg, color-mix(in srgb, canvas 98%, #0b1020 2%), canvas 18%);
+}
+main { width: 100%; max-width: 1100px; margin: 0 auto; padding: 32px 20px 48px; }
+.hero { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin-bottom: 24px; }
+.hero h1 { margin: 0; font-size: clamp(28px, 4vw, 40px); line-height: 1.08; }
+.hero p { margin: 10px 0 0; max-width: 72ch; color: var(--muted); }
+.chip-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.chip { display: inline-flex; align-items: center; padding: 8px 12px; border-radius: 999px; border: 1px solid var(--border); background: color-mix(in srgb, canvas 88%, #7da0ff 12%); font-size: 13px; font-weight: 600; }
+.section { margin-top: 22px; padding: 20px; border: 1px solid var(--border); border-radius: 18px; background: var(--panel); }
+.section h2 { margin: 0 0 14px; font-size: 20px; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
+.card { padding: 16px; border: 1px solid var(--border); border-radius: 16px; background: var(--panel-strong); }
+.label { display: block; margin-bottom: 8px; color: var(--muted); font-size: 13px; font-weight: 600; }
+.value { font-size: clamp(22px, 3vw, 30px); font-weight: 800; line-height: 1.1; }
+.detail { margin-top: 8px; color: var(--muted); font-size: 13px; }
+.metric-good { color: var(--good); }
+.metric-warn { color: var(--warn); }
+.metric-bad { color: var(--bad); }
+.metric-muted { color: var(--muted); }
+.link-list { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.link-card { display: block; padding: 16px; border-radius: 16px; text-decoration: none; color: inherit; border: 1px solid var(--border); background: color-mix(in srgb, canvas 88%, #7da0ff 12%); }
+.link-card strong { display: block; margin-bottom: 6px; font-size: 16px; }
+.link-card span, .muted { color: var(--muted); }
+ul { margin: 0; padding-left: 20px; }
+a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div>
+        <p class="muted">Public-safe coverage output</p>
+        <h1>HorizonUIPluginDemoTest Coverage Summary</h1>
+        <p>This page keeps release-facing coverage metrics and machine-readable artifacts while removing all source-browsing HTML and per-file code views from the public site.</p>
+      </div>
+      <div class="chip-row">
+        <span class="chip">Line coverage: 63.11%</span>
+        <span class="chip">Branch coverage: 0.00%</span>
+      </div>
+    </section>
+    <section class="section">
+      <h2>Metrics</h2>
+      <div class="card-grid">
+        <div class="card"><span class="label">Line coverage</span><div class="value metric-warn">63.11%</div><div class="detail">1637/2594 lines covered</div></div>
+        <div class="card"><span class="label">Branch coverage</span><div class="value metric-bad">0.00%</div><div class="detail">Branch instrumentation was not reported for this suite.</div></div>
+        <div class="card"><span class="label">Covered lines</span><div class="value">1637</div><div class="detail">Lines marked as covered.</div></div>
+        <div class="card"><span class="label">Valid lines</span><div class="value">2594</div><div class="detail">Lines considered instrumented.</div></div>
+      </div>
+    </section>
+    <section class="section">
+      <h2>Published artifacts</h2>
+      <div class="link-list"><a class="link-card" href="summary.txt">
+  <strong>Coverage summary</strong>
+  <span>Plain-text aggregate metrics published with the release.</span>
+</a><a class="link-card" href="cobertura.xml">
+  <strong>Cobertura XML</strong>
+  <span>Machine-readable coverage artifact for CI and downstream tooling.</span>
+</a></div>
+    </section>
+    <section class="section">
+      <h2>Public release policy</h2>
+      <ul>
+        <li>Machine-readable coverage files remain available for audit and downstream tooling.</li>
+        <li>Repo-owned and native provider source browsers are removed before GitHub Pages publication.</li>
+        <li>Per-file source listings, annotated code pages, and native HTML coverage trees are not published publicly.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

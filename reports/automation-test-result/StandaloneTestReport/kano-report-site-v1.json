@@ -3,7 +3,7 @@
   "schemaVersion": 1,
   "contractId": "kano-report-site-v1",
   "title": "Win64-Standalone Development Standalone Report",
-  "generatedAt": "2026-05-29T04:23:54Z",
+  "generatedAt": "2026-05-29T07:09:33Z",
   "reportRoot": ".",
   "cards": [
     {
@@ -125,7 +125,7 @@
     "slug": "Win64-Standalone",
     "xmlPath": "Coverage/HorizonUIPluginDemoTest/cobertura.xml",
     "linesValid": 2594,
-    "linesCovered": 1634,
+    "linesCovered": 1637,
     "packageCount": 1,
     "classCount": 43,
     "sourceFileCount": 43

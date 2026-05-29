@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<coverage line-rate="0.6299" branch-rate="0.0000" complexity="0" branches-covered="0" branches-valid="0" timestamp="1780028372" lines-covered="1634" lines-valid="2594" version="0">
-  <sources><source>C:\_agent\jenkins_ws\HorizonPlugin\HorizonUIPluginDemo\Build\PackagedBuild</source></sources><packages><package name="C:\_agent\jenkins_ws\HorizonPlugin\HorizonUIPluginDemo\Build\PackagedBuild\Intermediate\BuildArtifacts\BuildPackage\Win64\main\5.7.0.683\Development\Standalone\HorizonUIPluginDemo\Binaries\Win64\HorizonUIPluginDemo.exe" line-rate="0.6299" branch-rate="0.0000" complexity="0" lines-covered="1634" lines-valid="2594" branches-covered="0" branches-valid="0">
+<coverage line-rate="0.6311" branch-rate="0.0000" complexity="0" branches-covered="0" branches-valid="0" timestamp="1780038311" lines-covered="1637" lines-valid="2594" version="0">
+  <sources><source>C:\_agent\jenkins_ws\HorizonPlugin\HorizonUIPluginDemo\Build\PackagedBuild</source></sources><packages><package name="C:\_agent\jenkins_ws\HorizonPlugin\HorizonUIPluginDemo\Build\PackagedBuild\Intermediate\BuildArtifacts\BuildPackage\Win64\main\5.7.0.683\Development\Standalone\HorizonUIPluginDemo\Binaries\Win64\HorizonUIPluginDemo.exe" line-rate="0.6311" branch-rate="0.0000" complexity="0" lines-covered="1637" lines-valid="2594" branches-covered="0" branches-valid="0">
       <classes><class name="HorizonDialogueMsgSpaceDecorator.cpp" filename="PackagedBuild/Plugins/HorizonUIPlugin/Source/HorizonUI/Private/Decorator/HorizonDialogueMsgSpaceDecorator.cpp" line-rate="0.8696" branch-rate="0.0000" complexity="0" lines-covered="20" lines-valid="23" branches-covered="0" branches-valid="0">
           <methods />
           <lines>
@@ -670,7 +670,7 @@
             <line number="65" hits="0" />
           </lines>
         </class>
-        <class name="HorizonDialogueMsgTextBlock.cpp" filename="PackagedBuild/Plugins/HorizonUIPlugin/Source/HorizonUI/Private/Widget/Components/HorizonDialogueMsgTextBlock.cpp" line-rate="0.7492" branch-rate="0.0000" complexity="0" lines-covered="1117" lines-valid="1491" branches-covered="0" branches-valid="0">
+        <class name="HorizonDialogueMsgTextBlock.cpp" filename="PackagedBuild/Plugins/HorizonUIPlugin/Source/HorizonUI/Private/Widget/Components/HorizonDialogueMsgTextBlock.cpp" line-rate="0.7512" branch-rate="0.0000" complexity="0" lines-covered="1120" lines-valid="1491" branches-covered="0" branches-valid="0">
           <methods />
           <lines>
             <line number="29" hits="1" />
@@ -1313,9 +1313,9 @@
             <line number="1580" hits="0" />
             <line number="1583" hits="0" />
             <line number="1587" hits="0" />
-            <line number="1589" hits="0" />
-            <line number="1591" hits="0" />
-            <line number="1595" hits="0" />
+            <line number="1589" hits="1" />
+            <line number="1591" hits="1" />
+            <line number="1595" hits="1" />
             <line number="1603" hits="1" />
             <line number="1613" hits="1" />
             <line number="1614" hits="1" />
