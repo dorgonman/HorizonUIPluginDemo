@@ -1,100 +1,100 @@
 <?xml version='1.0' encoding='utf-8'?>
-<testsuite name="Unreal Automation" tests="39" failures="0" errors="0" skipped="0" time="60.285037">
-  <testcase classname="Plugin.SmokeTest.HorizonUI" name="Plugin.SmokeTest.HorizonUI.EnumValidation" time="0.010176" />
-  <testcase classname="Plugin.SmokeTest.HorizonUI" name="Plugin.SmokeTest.HorizonUI.ModuleLoad" time="0.004729" />
-  <testcase classname="Plugin.SmokeTest.HorizonUI" name="Plugin.SmokeTest.HorizonUI.StructInstantiation" time="0.016763" />
-  <testcase classname="Plugin.SmokeTest.HorizonUI" name="Plugin.SmokeTest.HorizonUI.Success" time="0.005512" />
-  <testcase classname="Plugin.UnitTests.HorizonUI" name="Plugin.UnitTests.HorizonUI.BlinkingCursor" time="0.012215" />
-  <testcase classname="Plugin.UnitTests.HorizonUI" name="Plugin.UnitTests.HorizonUI.DialogueBlock" time="0.011245" />
-  <testcase classname="Plugin.UnitTests.HorizonUI" name="Plugin.UnitTests.HorizonUI.DialogueLine" time="0.008230" />
-  <testcase classname="Plugin.UnitTests.HorizonUI" name="Plugin.UnitTests.HorizonUI.DialoguePage" time="0.006383" />
-  <testcase classname="Plugin.UnitTests.HorizonUI" name="Plugin.UnitTests.HorizonUI.DialogueSegment" time="0.010763" />
-  <testcase classname="Plugin.UnitTests.HorizonUI" name="Plugin.UnitTests.HorizonUI.TextOverflow" time="0.005475" />
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow" time="5.463273">
+<testsuite name="Unreal Automation" tests="39" failures="0" errors="0" skipped="0" time="58.831447">
+  <testcase classname="Plugin.SmokeTest.HorizonUI" name="Plugin.SmokeTest.HorizonUI.EnumValidation" time="0.006096" />
+  <testcase classname="Plugin.SmokeTest.HorizonUI" name="Plugin.SmokeTest.HorizonUI.ModuleLoad" time="0.003502" />
+  <testcase classname="Plugin.SmokeTest.HorizonUI" name="Plugin.SmokeTest.HorizonUI.StructInstantiation" time="0.014595" />
+  <testcase classname="Plugin.SmokeTest.HorizonUI" name="Plugin.SmokeTest.HorizonUI.Success" time="0.004242" />
+  <testcase classname="Plugin.UnitTests.HorizonUI" name="Plugin.UnitTests.HorizonUI.BlinkingCursor" time="0.010907" />
+  <testcase classname="Plugin.UnitTests.HorizonUI" name="Plugin.UnitTests.HorizonUI.DialogueBlock" time="0.080189" />
+  <testcase classname="Plugin.UnitTests.HorizonUI" name="Plugin.UnitTests.HorizonUI.DialogueLine" time="0.005318" />
+  <testcase classname="Plugin.UnitTests.HorizonUI" name="Plugin.UnitTests.HorizonUI.DialoguePage" time="0.005472" />
+  <testcase classname="Plugin.UnitTests.HorizonUI" name="Plugin.UnitTests.HorizonUI.DialogueSegment" time="0.007124" />
+  <testcase classname="Plugin.UnitTests.HorizonUI" name="Plugin.UnitTests.HorizonUI.TextOverflow" time="0.005003" />
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow" time="5.113697">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox" time="5.179172">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox" time="5.594310">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent" time="10.276924">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent" time="11.969061">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD" time="7.924101">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD" time="5.136275">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot" time="3.398853">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot" time="3.173087">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain" time="2.355079">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain" time="1.830922">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_AutoPageLine" time="3.656311">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_AutoPageLine" time="3.688609">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_AutoPageLine' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_AutopagePadding" time="3.252750">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_AutopagePadding" time="1.404873">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_AutopagePadding' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_EdgeCaseTest" time="0.720730">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_EdgeCaseTest" time="0.803422">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_EdgeCaseTest' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment" time="0.330220">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment" time="0.520379">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto01_Simple" time="0.565712">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto01_Simple" time="0.594430">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto01_Simple' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto02_RichTextSimple" time="0.905912">
-    <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple' was similar!  Global Difference = 0.003994, Max Local Difference = 0.128665</system-out>
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto02_RichTextSimple" time="0.857395">
+    <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple' was similar!  Global Difference = 0.001509, Max Local Difference = 0.075617</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto03_RichTextFont" time="0.721350">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto03_RichTextFont" time="0.858998">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto03_RichTextFont' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto04_RichTextPadding" time="0.346724">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto04_RichTextPadding" time="0.531908">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding' was similar!  Global Difference = 0.000609, Max Local Difference = 0.060909</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter" time="0.423133">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter" time="0.495888">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto06_EventTrigger" time="1.776762">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto06_EventTrigger" time="1.960782">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto06_EventTrigger' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto07_OverflowWarp" time="0.365306">
-    <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp' was similar!  Global Difference = 0.003830, Max Local Difference = 0.132716</system-out>
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto07_OverflowWarp" time="0.510280">
+    <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp' was similar!  Global Difference = 0.002651, Max Local Difference = 0.118152</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto08_HyperText" time="0.820415">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto08_HyperText" time="1.005622">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText' was similar!  Global Difference = 0.001077, Max Local Difference = 0.101273</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto09_Sound" time="2.248780">
-    <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound' was similar!  Global Difference = 0.000480, Max Local Difference = 0.035831</system-out>
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto09_Sound" time="2.444482">
+    <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound' was similar!  Global Difference = 0.000554, Max Local Difference = 0.042872</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto10_StyleInfo" time="0.877621">
-    <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto10_StyleInfo' was similar!  Global Difference = 0.004769, Max Local Difference = 0.196807</system-out>
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto10_StyleInfo" time="1.078514">
+    <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto10_StyleInfo' was similar!  Global Difference = 0.006092, Max Local Difference = 0.255594</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto11_AutoPage" time="1.714249">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto11_AutoPage" time="1.929570">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto11_AutoPage' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto12_AutoPage_Long" time="1.363408">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto12_AutoPage_Long" time="1.311804">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto13_Justification" time="0.770933">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto13_Justification" time="0.808043">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto13_Justification' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto14_SpriteSheet" time="0.824120">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto14_SpriteSheet" time="0.870744">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto14_SpriteSheet' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox" time="0.507343">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox" time="0.620587">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto16_RubyText" time="0.735070">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto16_RubyText" time="0.761162">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto16_RubyText' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto17_Decorator" time="1.368270">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto17_Decorator" time="1.322174">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto17_Decorator' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto18_NewPageTag" time="0.631926">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto18_NewPageTag" time="0.747000">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto18_NewPageTag' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
-  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto20_Binlker" time="0.669101">
+  <testcase classname="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap" name="Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto20_Binlker" time="0.744982">
     <system-out>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto20_Binlker' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</system-out>
   </testcase>
 </testsuite>

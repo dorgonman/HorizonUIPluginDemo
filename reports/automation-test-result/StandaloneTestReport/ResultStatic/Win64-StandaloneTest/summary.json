@@ -1,0 +1,62 @@
+{
+  "title": "Win64-StandaloneTest Test Report",
+  "summary": "Win64-StandaloneTest Test Report",
+  "stats": [
+    [
+      "Total tests",
+      "39"
+    ],
+    [
+      "Passed",
+      "39"
+    ],
+    [
+      "Warnings",
+      "0"
+    ],
+    [
+      "Failed",
+      "0"
+    ],
+    [
+      "Not run",
+      "0"
+    ],
+    [
+      "Duration (s)",
+      "58.831"
+    ],
+    [
+      "Build matrix",
+      "Win64/Development/Standalone (Game/GameStandalone)"
+    ],
+    [
+      "Selected build root",
+      "H:\\EpicGames\\Installed\\UE_5.7/HorizonUIPluginDemo/Intermediate/BuildArtifacts/BuildPackage/Win64/main/5.7.0.682/Development/Standalone"
+    ],
+    [
+      "Adapter target",
+      "H:\\EpicGames\\Installed\\UE_5.7\\HorizonUIPluginDemo\\Intermediate\\BuildArtifacts\\BuildPackage\\Win64\\main\\5.7.0.682\\Development\\Standalone"
+    ],
+    [
+      "Host machine",
+      "PC-DorgonChang-RTX3090"
+    ],
+    [
+      "Host OS",
+      "Microsoft Windows 11 Pro"
+    ],
+    [
+      "Host CPU",
+      "AMD Ryzen 9 5950X 16-Core Processor"
+    ],
+    [
+      "Host memory (GiB)",
+      "127.92"
+    ],
+    [
+      "Host GPU(s)",
+      "NVIDIA GeForce RTX 3090"
+    ]
+  ]
+}

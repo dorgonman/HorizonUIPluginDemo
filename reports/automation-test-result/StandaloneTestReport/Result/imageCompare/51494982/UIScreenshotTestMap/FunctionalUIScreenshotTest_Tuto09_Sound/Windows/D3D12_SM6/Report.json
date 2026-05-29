@@ -1,16 +1,16 @@
 {
-	"creationTime": "2026.05.26-11.54.07",
+	"creationTime": "2026.05.28-23.04.26",
 	"sourcePlatform": "Windows",
 	"sourceRHI": "D3D12",
 	"idealApprovedFolderPath": "Test/Screenshots/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound/Windows/D3D12_SM6",
 	"approvedFilePath": "Test/Screenshots/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound/Windows/D3D12_SM6/ufdh6eyf-lipfhy_90fvxg.png",
-	"incomingFilePath": "../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound/Windows/D3D12_SM6/cxwelehjuy_wungshvh7ma.png",
-	"comparisonFilePath": "../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/Delta/ImageCompare-C20DEA184F61B808F911C485F2718E58.png",
+	"incomingFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound/Windows/D3D12_SM6/qj2b_ksl9uusjt6q3ho-eq.png",
+	"comparisonFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/Delta/ImageCompare-CA4C47DA4C536B49D38DB8B9F8E2D969.png",
 	"reportApprovedFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound/Windows/D3D12_SM6/Approved.png",
 	"reportIncomingFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound/Windows/D3D12_SM6/Incoming.png",
 	"reportComparisonFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound/Windows/D3D12_SM6/Delta.png",
-	"maxLocalDifference": 0.035831404320987657,
-	"globalDifference": 0.00047984182098765433,
+	"maxLocalDifference": 0.042872299382716049,
+	"globalDifference": 0.00055410879629629625,
 	"tolerance":
 	{
 		"red": 16,
@@ -26,7 +26,7 @@
 	},
 	"errorMessage": "",
 	"screenshotPath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound",
-	"comparisonId": "C63F4741470D5AFD56BEE4BBF2B2B989",
+	"comparisonId": "487D2F13428DB1D0D5489F881E2780A6",
 	"bSkipAttachingImages": false,
 	"version": 3
 }

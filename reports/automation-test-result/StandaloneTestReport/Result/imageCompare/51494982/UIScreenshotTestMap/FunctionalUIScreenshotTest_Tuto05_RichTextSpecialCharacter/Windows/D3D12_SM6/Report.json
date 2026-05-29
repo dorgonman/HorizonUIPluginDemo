@@ -1,11 +1,11 @@
 {
-	"creationTime": "2026.05.26-11.53.59",
+	"creationTime": "2026.05.28-23.04.18",
 	"sourcePlatform": "Windows",
 	"sourceRHI": "D3D12",
 	"idealApprovedFolderPath": "Test/Screenshots/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter/Windows/D3D12_SM6",
 	"approvedFilePath": "Test/Screenshots/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter/Windows/D3D12_SM6/ufdh6eyf-lipfhy_90fvxg.png",
-	"incomingFilePath": "../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter/Windows/D3D12_SM6/cxwelehjuy_wungshvh7ma.png",
-	"comparisonFilePath": "../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/Delta/ImageCompare-57DBC68D40537C7E56B6A8A47B7915F1.png",
+	"incomingFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter/Windows/D3D12_SM6/qj2b_ksl9uusjt6q3ho-eq.png",
+	"comparisonFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/Delta/ImageCompare-56FA6C2443D6F60533DE728BC9321834.png",
 	"reportApprovedFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter/Windows/D3D12_SM6/Approved.png",
 	"reportIncomingFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter/Windows/D3D12_SM6/Incoming.png",
 	"reportComparisonFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter/Windows/D3D12_SM6/Delta.png",
@@ -26,7 +26,7 @@
 	},
 	"errorMessage": "",
 	"screenshotPath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter",
-	"comparisonId": "EF74538E47F1B95CB21DC0B40A4B4981",
+	"comparisonId": "8799AE214AA8A62BE4054089F7976248",
 	"bSkipAttachingImages": false,
 	"version": 3
 }

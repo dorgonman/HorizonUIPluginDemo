@@ -1,16 +1,16 @@
 {
-	"creationTime": "2026.05.26-11.54.03",
+	"creationTime": "2026.05.28-23.04.22",
 	"sourcePlatform": "Windows",
 	"sourceRHI": "D3D12",
 	"idealApprovedFolderPath": "Test/Screenshots/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp/Windows/D3D12_SM6",
 	"approvedFilePath": "Test/Screenshots/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp/Windows/D3D12_SM6/ufdh6eyf-lipfhy_90fvxg.png",
-	"incomingFilePath": "../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp/Windows/D3D12_SM6/cxwelehjuy_wungshvh7ma.png",
-	"comparisonFilePath": "../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/Delta/ImageCompare-6A71E03C4138374443CE688625B419BF.png",
+	"incomingFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp/Windows/D3D12_SM6/qj2b_ksl9uusjt6q3ho-eq.png",
+	"comparisonFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/Delta/ImageCompare-450813EB467EC08569F59BA61E57BE73.png",
 	"reportApprovedFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp/Windows/D3D12_SM6/Approved.png",
 	"reportIncomingFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp/Windows/D3D12_SM6/Incoming.png",
 	"reportComparisonFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp/Windows/D3D12_SM6/Delta.png",
-	"maxLocalDifference": 0.13271604938271606,
-	"globalDifference": 0.003830054012345679,
+	"maxLocalDifference": 0.11815200617283951,
+	"globalDifference": 0.0026514274691358023,
 	"tolerance":
 	{
 		"red": 16,
@@ -26,7 +26,7 @@
 	},
 	"errorMessage": "",
 	"screenshotPath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp",
-	"comparisonId": "03DE02FC44100CF28339E7BA3B8EF649",
+	"comparisonId": "2386A7BE4E1899CFCF9F9686472AEC0D",
 	"bSkipAttachingImages": false,
 	"version": 3
 }

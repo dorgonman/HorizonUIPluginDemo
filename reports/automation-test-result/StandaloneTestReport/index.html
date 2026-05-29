@@ -297,7 +297,7 @@ tbody tr:hover td {
         <h1>Win64-Standalone Reports</h1>
         <p>Static report site root for Gauntlet, screenshot compare, JUnit, and coverage artifacts.</p>
       </div>
-      <div class="chip-row"><span class="chip">Links: 8</span><span class="chip">Jenkins</span></div>
+      <div class="chip-row"><span class="chip">Links: 7</span><span class="chip">Jenkins</span></div>
     </header>
     
 <section class="section">
@@ -307,13 +307,9 @@ tbody tr:hover td {
   <p>Alternate index optimized for opening the archived report directory directly from disk with fil[redacted-path]</p>
   <p><span class="badge status-passed">Available</span> <code>index.local.html</code></p>
 </article><article class="report-card">
-  <h2><a href="ResultStatic/HorizonUIPluginDemoTest/index.html">Parsed test report with screenshots</a></h2>
-  <p>Rendered static test report. Screenshot links resolve through the sibling Result/imageCompare folder inside this site.</p>
+  <h2><a href="ResultStatic/HorizonUIPluginDemoTest/index.html">Kano Test Report</a></h2>
+  <p>Rendered static test report. Screenshot links resolve through the sibling Result/imageCompare folder inside this site. Preferred slug: Win64-Standalone. Suppressed 1 alternate parsed report entry to avoid duplicate landing cards.</p>
   <p><span class="badge status-passed">Available</span> <code>ResultStatic/HorizonUIPluginDemoTest/index.html</code></p>
-</article><article class="report-card">
-  <h2><a href="ResultStatic/Win64-StandaloneTest/index.html">Parsed test report with screenshots</a></h2>
-  <p>Rendered static test report. Screenshot links resolve through the sibling Result/imageCompare folder inside this site.</p>
-  <p><span class="badge status-passed">Available</span> <code>ResultStatic/Win64-StandaloneTest/index.html</code></p>
 </article><article class="report-card">
   <h2><a href="Result/index.html">Unreal raw Gauntlet report (local/Jenkins only)</a></h2>
   <p>Original Unreal report depends on external/root-level bower assets and may not render on public GitHub Pages; use the parsed test report above for public viewing.</p>
@@ -327,18 +323,18 @@ tbody tr:hover td {
   <p>Coverage landing page with Cobertura XML, summary, and HTML links.</p>
   <p><span class="badge status-passed">Available</span> <code>Coverage/HorizonUIPluginDemoTest/index.html</code></p>
 </article><article class="report-card">
-  <h2><a href="Coverage/HorizonUIPluginDemoTest/report-html/index.html">Coverage HTML report</a></h2>
+  <h2><a href="Coverage/HorizonUIPluginDemoTest/report-html/index.html">Kano Coverage Report</a></h2>
   <p>Repository-rendered coverage summary HTML.</p>
   <p><span class="badge status-passed">Available</span> <code>Coverage/HorizonUIPluginDemoTest/report-html/index.html</code></p>
 </article><article class="report-card">
-  <h2><a href="Coverage/HorizonUIPluginDemoTest/native-html/index.html">Native OpenCppCoverage HTML</a></h2>
+  <h2><a href="Coverage/HorizonUIPluginDemoTest/native-html/index.html">Kano OpenCppCoverage Report</a></h2>
   <p>OpenCppCoverage provider-native HTML output.</p>
   <p><span class="badge status-passed">Available</span> <code>Coverage/HorizonUIPluginDemoTest/native-html/index.html</code></p>
 </article></div>
 </section>
 <section class="section">
   <h2>Published root</h2>
-  <p>This page is generated at the root of the package-owned static report site, normally <code>Intermediate/BuildPackage/&lt;Platform&gt;/&lt;Branch&gt;/&lt;Revision&gt;/&lt;Configuration&gt;/StandaloneTestReport</code>, so Jenkins HTML Publisher archives the whole static site, including screenshot PNG assets under <code>Result/imageCompare</code> and embedded coverage source pages under <code>Coverage/*/report-html/files</code>.</p>
+    <p>This page is generated at the root of the package-owned static report site, normally <code>Intermediate/BuildArtifacts/BuildPackage/&lt;Platform&gt;/&lt;Branch&gt;/&lt;Revision&gt;/&lt;Configuration&gt;/StandaloneTestReport</code>, so Jenkins HTML Publisher archives the whole static site, including screenshot PNG assets under <code>Result/imageCompare</code> and embedded coverage source pages under <code>Coverage/*/report-html/files</code>.</p>
 </section>
 
 
