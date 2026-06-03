@@ -3,7 +3,6 @@
 
 @Library('kano-jenkins-unreal-pipeline-library') _
 
-unrealQaPipeline(
-	projectName: 'HorizonUIPluginDemo',
-	win64SharedWorkspaceRoot: 'C:/_agent/jenkins_ws/HorizonPlugin'
-)
+unrealQaPipeline(overrides: [
+    qaWorkspacePath: 'C:/_agent/jenkins_ws/HorizonPlugin/HorizonUIPluginDemo/QA/Development'
+])
