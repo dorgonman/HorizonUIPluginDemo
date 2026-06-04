@@ -3,4 +3,6 @@
 // and builds/publishes the public GitHub Pages site.
 @Library('kano-jenkins-unreal-pipeline-library') _
 
-unrealReleaseDeployPipeline()
+unrealReleaseDeployPipeline(
+  githubPagesCname: 'ue-horizonuiplugin.kanohorizonia.com'
+)
