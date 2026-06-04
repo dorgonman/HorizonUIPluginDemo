@@ -3,16 +3,16 @@
   "schemaVersion": 1,
   "contractId": "kano-report-site-v1",
   "title": "Win64-Standalone Development Standalone Report",
-  "generatedAt": "2026-05-29T07:09:33Z",
-  "reportRoot": ".",
+  "generatedAt": "2026-06-04T18:10:39Z",
+  "reportRoot": "StandaloneTestReport",
   "cards": [
     {
-      "id": "cpp-test-results",
+      "id": "junit-results",
       "title": "JUnit test results",
       "kind": "test-results",
       "status": "present",
       "required": true,
-      "sourcePath": "tests.xml",
+      "sourcePath": "Result/junit-report.xml",
       "sourceFormat": "junit-xml",
       "evidenceRole": "test-results",
       "linkPolicy": {
@@ -20,10 +20,10 @@
         "targetExists": true,
         "publishWhenMissing": false
       },
-      "href": "tests.xml"
+      "href": "Result/junit-report.xml"
     },
     {
-      "id": "cpp-cobertura-coverage",
+      "id": "cobertura-coverage",
       "title": "Cobertura coverage data",
       "kind": "coverage-data",
       "status": "present",
@@ -39,7 +39,7 @@
       "href": "Coverage/HorizonUIPluginDemoTest/cobertura.xml"
     },
     {
-      "id": "cpp-coverage-html",
+      "id": "coverage-html",
       "title": "Coverage HTML report",
       "kind": "coverage-html",
       "status": "present",
@@ -55,8 +55,8 @@
       "href": "Coverage/HorizonUIPluginDemoTest/report-html/index.html"
     },
     {
-      "id": "cpp-native-coverage-html",
-      "title": "Native provider HTML",
+      "id": "native-coverage-html",
+      "title": "Native OpenCppCoverage HTML",
       "kind": "native-html",
       "status": "present",
       "required": false,
@@ -71,29 +71,70 @@
       "href": "Coverage/HorizonUIPluginDemoTest/native-html/index.html"
     },
     {
-      "id": "cpp-coverage-summary",
-      "title": "Coverage summary",
+      "id": "raw-gauntlet-report",
+      "title": "Raw Gauntlet report",
       "kind": "raw-evidence",
       "status": "present",
-      "required": false,
-      "sourcePath": "Coverage/HorizonUIPluginDemoTest/summary.txt",
-      "sourceFormat": "text",
-      "evidenceRole": "coverage-summary",
+      "required": true,
+      "sourcePath": "Result/index.html",
+      "sourceFormat": "raw-gauntlet",
+      "evidenceRole": "raw-test-evidence",
       "linkPolicy": {
         "relative": true,
         "targetExists": true,
         "publishWhenMissing": false
       },
-      "href": "Coverage/HorizonUIPluginDemoTest/summary.txt"
+      "href": "Result/index.html"
+    },
+    {
+      "id": "screenshots",
+      "title": "Screenshot comparison artifacts",
+      "kind": "screenshots",
+      "status": "present",
+      "required": false,
+      "sourcePath": "Result/imageCompare",
+      "sourceFormat": "png",
+      "evidenceRole": "visual-diff-evidence",
+      "linkPolicy": {
+        "relative": true,
+        "targetExists": true,
+        "publishWhenMissing": false
+      },
+      "href": "Result/imageCompare/"
+    },
+    {
+      "id": "client-log",
+      "title": "Client output log",
+      "kind": "logs",
+      "status": "missing",
+      "required": false,
+      "sourcePath": "Result/ClientOutput.log",
+      "sourceFormat": "log",
+      "evidenceRole": "diagnostics",
+      "linkPolicy": {
+        "relative": true,
+        "targetExists": false,
+        "publishWhenMissing": false
+      }
+    },
+    {
+      "id": "fallback-parsed-report",
+      "title": "Fallback parsed report",
+      "kind": "parsed-report",
+      "status": "present",
+      "required": false,
+      "sourcePath": "ResultStatic/Win64-StandaloneTest/index.html",
+      "sourceFormat": "fallback-html",
+      "evidenceRole": "fallback-human-report",
+      "linkPolicy": {
+        "relative": true,
+        "targetExists": true,
+        "publishWhenMissing": false
+      },
+      "href": "ResultStatic/Win64-StandaloneTest/index.html"
     }
   ],
   "exitCodeMatrix": [
-    {
-      "case": "observed-run",
-      "exitCode": 0,
-      "evidenceState": "fresh-required-evidence",
-      "classification": "PASS"
-    },
     {
       "case": "exit-code-0-with-evidence",
       "exitCode": 0,
@@ -117,17 +158,24 @@
       "exitCode": null,
       "evidenceState": "present",
       "classification": "UNKNOWN"
+    },
+    {
+      "case": "missing-evidence",
+      "exitCode": 0,
+      "evidenceState": "missing-required-evidence",
+      "classification": "HARD_FAIL"
+    },
+    {
+      "case": "stale-evidence",
+      "exitCode": 0,
+      "evidenceState": "stale-required-evidence",
+      "classification": "HARD_FAIL"
+    },
+    {
+      "case": "contradictory-evidence",
+      "exitCode": 0,
+      "evidenceState": "contradictory",
+      "classification": "HARD_FAIL"
     }
-  ],
-  "coverageHealth": {
-    "status": "VALID",
-    "reason": "Coverage report contains valid line data",
-    "slug": "Win64-Standalone",
-    "xmlPath": "Coverage/HorizonUIPluginDemoTest/cobertura.xml",
-    "linesValid": 2594,
-    "linesCovered": 1637,
-    "packageCount": 1,
-    "classCount": 43,
-    "sourceFileCount": 43
-  }
+  ]
 }

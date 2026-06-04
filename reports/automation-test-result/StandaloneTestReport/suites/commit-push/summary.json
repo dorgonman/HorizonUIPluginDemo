@@ -10,7 +10,7 @@
   "syntheticCollapsed": 0,
   "displayedCases": 0,
   "rawReports": [
-    "Result/junit-report.xml",
+    "ResultStatic/HorizonUIPluginDemoTest/tests.xml",
     "Coverage/HorizonUIPluginDemoTest/cobertura.xml",
     "Coverage/HorizonUIPluginDemoTest/report-html/index.html",
     "Coverage/HorizonUIPluginDemoTest/native-html/index.html",

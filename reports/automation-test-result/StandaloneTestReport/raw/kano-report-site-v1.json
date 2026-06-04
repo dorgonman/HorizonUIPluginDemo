@@ -3,7 +3,7 @@
   "schemaVersion": 1,
   "contractId": "kano-report-site-v1",
   "title": "HorizonUIPluginDemoTest Reports",
-  "generatedAt": "2026-05-29T07:05:31Z",
+  "generatedAt": "2026-06-04T18:05:07Z",
   "reportRoot": ".",
   "cards": [
     {
@@ -12,7 +12,7 @@
       "kind": "test-results",
       "status": "present",
       "required": true,
-      "sourcePath": "Result/junit-report.xml",
+      "sourcePath": "ResultStatic/HorizonUIPluginDemoTest/tests.xml",
       "sourceFormat": "junit-xml",
       "evidenceRole": "test-results",
       "linkPolicy": {
@@ -20,7 +20,7 @@
         "targetExists": true,
         "publishWhenMissing": false
       },
-      "href": "Result/junit-report.xml"
+      "href": "ResultStatic/HorizonUIPluginDemoTest/tests.xml"
     },
     {
       "id": "cpp-cobertura-coverage",
@@ -125,7 +125,7 @@
     "slug": "HorizonUIPluginDemoTest",
     "xmlPath": "Coverage/HorizonUIPluginDemoTest/cobertura.xml",
     "linesValid": 2594,
-    "linesCovered": 1637,
+    "linesCovered": 1634,
     "packageCount": 1,
     "classCount": 43,
     "sourceFileCount": 43
