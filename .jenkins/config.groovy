@@ -33,7 +33,7 @@ def projectConfig() {
         scmCredentialId:    'dorgonman_azuredevops',
         macLoginKeychainCredentialId: 'MAC_LOGIN_USER',
         workspaceSlot:      'Package',
-        win64SharedWorkspaceRoot: 'C:/_agent/jenkins_ws/HorizonPlugin',
+        win64SharedWorkspaceRoot: 'C:/Mount/s/jenkins_ws/HorizonPlugin',
         macSharedWorkspaceRoot: '/Users/Shared/agent/jenkins_ws/HorizonPlugin',
         linuxSharedWorkspaceRoot: '/var/jenkins/home/_ws/HorizonPlugin',
 

@@ -4,5 +4,5 @@
 @Library('kano-jenkins-unreal-pipeline-library') _
 
 unrealQaPipeline(
-    win64SharedWorkspaceRoot: 'D:/_work/_Horizon'
+    win64SharedWorkspaceRoot: 'C:/Mount/s/jenkins_ws/HorizonPlugin'
 )

@@ -54,7 +54,7 @@ Windows Jenkins jobs use the shared workspace owned by the shared library. Consu
 UGSBuild uses separate Win64, Mac, and Linux producer workspaces, then stashes only `ArchiveForUGS/Staging/**` from `Intermediate/BuildUGS`. The `UGS Deploy Workspace` stage unstashes those producer artifacts into a platform-derived deploy workspace based on shared roots in `.jenkins/config.groovy`:
 
 ```text
-Win64: C:/_agent/jenkins_ws/HorizonPlugin/HorizonUIPluginDemo/Deploy
+Win64: C:/Mount/s/jenkins_ws/HorizonPlugin/HorizonUIPluginDemo/Deploy
 Mac: /Users/Shared/agent/jenkins_ws/HorizonPlugin/HorizonUIPluginDemo/Deploy
 Linux: /var/jenkins/home/_ws/HorizonPlugin/HorizonUIPluginDemo/Deploy
 ```
