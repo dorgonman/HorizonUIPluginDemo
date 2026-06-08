@@ -45,7 +45,7 @@ def projectConfig() {
         buildUgsArtifactRoot:    'Intermediate/BuildUGS',
 
         // === build toggles ===
-        bCleanSCM:          false,
+        bCleanBuild:        false,
         bBuildStandaloneWin64: true,
         bBuildServerWin64:  false,
         bBuildPluginWin64:  true,

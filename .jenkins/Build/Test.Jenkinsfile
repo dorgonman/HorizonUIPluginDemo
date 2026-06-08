@@ -42,6 +42,9 @@ pipeline {
 
         // === Test ===
         booleanParam name: 'bRunTestWin64Standalone', defaultValue: true, description: 'Run Win64 standalone tests'
+
+        // === Clean ===
+        booleanParam name: 'bCleanBuild', defaultValue: false, description: 'Run recursive git reset/clean (-ddfx) before building. Leave off for incremental builds.'
     }
 
     stages {
@@ -82,6 +85,7 @@ pipeline {
                             // Test
                             bRunTestWin64Standalone: params.bRunTestWin64Standalone,
                             // Config
+                            bCleanBuild: params.bCleanBuild,
                             buildConfiguration: 'Development',
                             workspaceSlot: 'Test',
                         ]

@@ -170,7 +170,7 @@ Preferred UGS entrypoint pattern:
 unrealUgsBuildPipeline(
     projectConfigPath: '.jenkins/config.groovy',
     configOverrides: [
-        bCleanSCM: params.bCleanSCM,
+        bCleanBuild: params.bCleanBuild,
         bDeployUnrealHordeServer: params.bDeployUnrealHordeServer,
         bFailFast: params.bFailFast,
     ]

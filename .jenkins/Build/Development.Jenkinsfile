@@ -57,7 +57,7 @@ pipeline {
         booleanParam name: 'bInstallPrerequisites', defaultValue: false, description: 'Install prerequisites before building (runs Build/Base/install-prerequisites.sh)'
 
         // === Clean ===
-        booleanParam name: 'bCleanSCM', defaultValue: false, description: 'Run git checkout -f -- . && git clean -ddfx . to wipe all unstaged changes before building (also applies to submodules)'
+        booleanParam name: 'bCleanBuild', defaultValue: false, description: 'Run recursive git reset/clean (-ddfx) before building. Leave off for incremental builds.'
         string name: 'WIN64_SHARED_WORKSPACE_ROOT', defaultValue: '', description: 'Override Win64 shared workspace root. Empty uses config.groovy.'
         string name: 'MAC_SHARED_WORKSPACE_ROOT', defaultValue: '', description: 'Override Mac shared workspace root. Empty uses config.groovy.'
         string name: 'LINUX_SHARED_WORKSPACE_ROOT', defaultValue: '', description: 'Override Linux shared workspace root. Empty uses config.groovy.'
@@ -68,7 +68,7 @@ pipeline {
             steps {
                 script {
                     Map runtimeOverrides = [
-                        bCleanSCM: params.bCleanSCM,
+                        bCleanBuild: params.bCleanBuild,
                         bInstallPrerequisites: params.bInstallPrerequisites,
                         bBuildStandaloneWin64: params.bBuildStandaloneWin64,
                         bBuildStandaloneAndroid: params.bBuildStandaloneAndroid,

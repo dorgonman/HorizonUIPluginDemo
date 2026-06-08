@@ -39,6 +39,9 @@ pipeline {
         booleanParam name: 'bBuildPluginPS5', defaultValue: false, description: 'Build PS5 Plugin Shipping'
         booleanParam name: 'bBuildPluginSwitch2', defaultValue: false, description: 'Build Switch 2 Plugin Shipping'
         booleanParam name: 'bBuildPluginLinux', defaultValue: false, description: 'Build Linux Plugin Shipping'
+
+        // === Clean ===
+        booleanParam name: 'bCleanBuild', defaultValue: false, description: 'Run recursive git reset/clean (-ddfx) before building. Leave off for incremental builds.'
     }
 
     stages {
@@ -77,6 +80,7 @@ pipeline {
                             bBuildPluginSwitch2: params.bBuildPluginSwitch2,
                             bBuildPluginLinux: params.bBuildPluginLinux,
                             // Config
+                            bCleanBuild: params.bCleanBuild,
                             bRunTestWin64Standalone: false,
                             buildConfiguration: 'Shipping',
                         ]
