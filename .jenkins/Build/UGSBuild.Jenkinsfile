@@ -12,7 +12,7 @@ pipeline {
 
     parameters {
         booleanParam name: 'bFailFast', defaultValue: true, description: 'Abort sibling parallel branches in the same fan-out when one branch fails.'
-        booleanParam name: 'bCleanSCM', defaultValue: false, description: 'Run git checkout -f -- . && git clean -ddfx . to wipe all unstaged changes before building (also applies to submodules)'
+        booleanParam name: 'bCleanBuild', defaultValue: false, description: 'Run recursive git reset/clean (-ddfx) before building. Leave off for incremental builds.'
         booleanParam name: 'bDeployUnrealHordeServer', defaultValue: true, description: 'Allow UGSBuild to upload Horde artifacts'
     }
 
@@ -30,7 +30,7 @@ pipeline {
                         projectConfigPath: '.jenkins/config.groovy',
                         configOverrides: [
                             // Job-specific toggles only; agent routing comes from .jenkins/config.groovy capability labels.
-                            bCleanSCM: params.bCleanSCM,
+                            bCleanBuild: params.bCleanBuild,
                             bDeployUnrealHordeServer: params.bDeployUnrealHordeServer,
                             bFailFast: params.bFailFast,
                         ]
