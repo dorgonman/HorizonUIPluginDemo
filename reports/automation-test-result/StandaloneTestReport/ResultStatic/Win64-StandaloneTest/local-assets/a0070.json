@@ -1,16 +1,16 @@
 {
-	"creationTime": "2026.06.05-01.56.44",
+	"creationTime": "2026.06.08-19.56.16",
 	"sourcePlatform": "Windows",
 	"sourceRHI": "D3D12",
 	"idealApprovedFolderPath": "Test/Screenshots/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding/Windows/D3D12_SM6",
 	"approvedFilePath": "Test/Screenshots/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding/Windows/D3D12_SM6/ufdh6eyf-lipfhy_90fvxg.png",
-	"incomingFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding/Windows/D3D12_SM6/x0qrpelrqhg2a8o3empo0a.png",
-	"comparisonFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/Delta/ImageCompare-7974932F41A343068ACDD6B127F8AA48.png",
+	"incomingFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding/Windows/D3D12_SM6/6zyyhktkexo_joohiz0whq.png",
+	"comparisonFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/Delta/ImageCompare-D9EB5F84454D95F65132A18F7075892C.png",
 	"reportApprovedFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding/Windows/D3D12_SM6/Approved.png",
 	"reportIncomingFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding/Windows/D3D12_SM6/Incoming.png",
 	"reportComparisonFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding/Windows/D3D12_SM6/Delta.png",
-	"maxLocalDifference": 0,
-	"globalDifference": 0,
+	"maxLocalDifference": 0.05941358024691358,
+	"globalDifference": 0.00059413580246913582,
 	"tolerance":
 	{
 		"red": 16,
@@ -26,7 +26,7 @@
 	},
 	"errorMessage": "",
 	"screenshotPath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding",
-	"comparisonId": "067C54D6434E813FBAA24A8F4B2E926A",
+	"comparisonId": "392250AB40B428D1A54A6E9248A1F10D",
 	"bSkipAttachingImages": false,
 	"version": 3
 }

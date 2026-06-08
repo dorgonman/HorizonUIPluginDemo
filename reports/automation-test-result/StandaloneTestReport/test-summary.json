@@ -1,7 +1,7 @@
 {
   "schemaName": "kano.test.summary",
   "schemaVersion": 1,
-  "overall": "PASS",
+  "overall": "UNSTABLE",
   "coverage": {
     "status": "VALID",
     "reason": "Coverage report contains valid line data"
@@ -10,7 +10,7 @@
     {
       "id": "cli-core",
       "title": "CLI Core",
-      "status": "WARN",
+      "status": "SKIPPED",
       "tests": 0,
       "passed": 0,
       "failed": 0,
@@ -29,7 +29,7 @@
     {
       "id": "repo-discovery",
       "title": "Repo Discovery",
-      "status": "WARN",
+      "status": "SKIPPED",
       "tests": 0,
       "passed": 0,
       "failed": 0,
@@ -48,14 +48,14 @@
     {
       "id": "status-log",
       "title": "Status / Log",
-      "status": "WARN",
-      "tests": 0,
-      "passed": 0,
+      "status": "PASS",
+      "tests": 5,
+      "passed": 5,
       "failed": 0,
       "errors": 0,
       "skipped": 0,
       "syntheticCollapsed": 0,
-      "displayedCases": 0,
+      "displayedCases": 5,
       "rawReports": [
         "ResultStatic/HorizonUIPluginDemoTest/tests.xml",
         "Coverage/HorizonUIPluginDemoTest/cobertura.xml",
@@ -67,7 +67,7 @@
     {
       "id": "fetch-sync",
       "title": "Fetch / Sync",
-      "status": "WARN",
+      "status": "SKIPPED",
       "tests": 0,
       "passed": 0,
       "failed": 0,
@@ -86,7 +86,7 @@
     {
       "id": "commit-push",
       "title": "Commit / Push",
-      "status": "WARN",
+      "status": "SKIPPED",
       "tests": 0,
       "passed": 0,
       "failed": 0,
@@ -105,7 +105,7 @@
     {
       "id": "commit-plan",
       "title": "Commit Plan",
-      "status": "WARN",
+      "status": "SKIPPED",
       "tests": 0,
       "passed": 0,
       "failed": 0,
@@ -124,14 +124,14 @@
     {
       "id": "export-package",
       "title": "Export / Package",
-      "status": "WARN",
-      "tests": 0,
-      "passed": 0,
+      "status": "PASS",
+      "tests": 4,
+      "passed": 4,
       "failed": 0,
       "errors": 0,
       "skipped": 0,
       "syntheticCollapsed": 0,
-      "displayedCases": 0,
+      "displayedCases": 4,
       "rawReports": [
         "ResultStatic/HorizonUIPluginDemoTest/tests.xml",
         "Coverage/HorizonUIPluginDemoTest/cobertura.xml",
@@ -143,7 +143,7 @@
     {
       "id": "tui",
       "title": "TUI",
-      "status": "WARN",
+      "status": "SKIPPED",
       "tests": 0,
       "passed": 0,
       "failed": 0,
@@ -181,7 +181,7 @@
     {
       "id": "infra",
       "title": "Infra",
-      "status": "WARN",
+      "status": "SKIPPED",
       "tests": 0,
       "passed": 0,
       "failed": 0,
@@ -200,7 +200,7 @@
     {
       "id": "generated-property",
       "title": "Generated / Property",
-      "status": "WARN",
+      "status": "SKIPPED",
       "tests": 0,
       "passed": 0,
       "failed": 0,
@@ -219,7 +219,7 @@
     {
       "id": "external-optional",
       "title": "External Optional",
-      "status": "WARN",
+      "status": "SKIPPED",
       "tests": 0,
       "passed": 0,
       "failed": 0,
@@ -239,13 +239,13 @@
       "id": "uncategorized",
       "title": "Uncategorized",
       "status": "WARN",
-      "tests": 0,
-      "passed": 0,
+      "tests": 30,
+      "passed": 30,
       "failed": 0,
       "errors": 0,
       "skipped": 0,
       "syntheticCollapsed": 0,
-      "displayedCases": 0,
+      "displayedCases": 30,
       "rawReports": [
         "ResultStatic/HorizonUIPluginDemoTest/tests.xml",
         "Coverage/HorizonUIPluginDemoTest/cobertura.xml",
@@ -257,8 +257,29 @@
   ],
   "topFailures": [],
   "uncategorized": {
-    "count": 0,
-    "samples": []
+    "count": 30,
+    "samples": [
+      "Plugin.UnitTests.HorizonUI.Plugin.UnitTests.HorizonUI.BlinkingCursor",
+      "Plugin.UnitTests.HorizonUI.Plugin.UnitTests.HorizonUI.TextOverflow",
+      "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox",
+      "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent",
+      "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD",
+      "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot",
+      "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain",
+      "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_AutoPageLine",
+      "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_AutopagePadding",
+      "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_EdgeCaseTest",
+      "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment",
+      "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto01_Simple",
+      "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto02_RichTextSimple",
+      "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto03_RichTextFont",
+      "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto04_RichTextPadding",
+      "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter",
+      "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto06_EventTrigger",
+      "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto07_OverflowWarp",
+      "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto08_HyperText",
+      "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto09_Sound"
+    ]
   },
   "rawArtifacts": [
     "ResultStatic/HorizonUIPluginDemoTest/tests.xml",

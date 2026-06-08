@@ -15,13 +15,13 @@
 			"appInstanceLog": ""
 		}
 	],
-	"reportCreatedOn": "2026.06.04-17.57.12",
+	"reportCreatedOn": "2026.06.08-11.56.39",
 	"succeeded": 39,
 	"succeededWithWarnings": 0,
 	"failed": 0,
 	"notRun": 0,
 	"inProcess": 0,
-	"totalDuration": 66.30718994140625,
+	"totalDuration": 22.379663467407227,
 	"comparisonExported": true,
 	"comparisonExportDirectory": "[redacted-path]",
 	"tests": [
@@ -31,10 +31,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 0.007429298013448715,
-			"dateTime": "2026.06.04-17.55.49",
+			"duration": 0.009617097675800323,
+			"dateTime": "2026.06.08-11.55.55",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -46,10 +46,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 0.004536297172307968,
-			"dateTime": "2026.06.04-17.55.51",
+			"duration": 0.004767701029777527,
+			"dateTime": "2026.06.08-11.55.57",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -61,10 +61,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 0.019374899566173553,
-			"dateTime": "2026.06.04-17.55.51",
+			"duration": 0.01463409885764122,
+			"dateTime": "2026.06.08-11.55.57",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -76,10 +76,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 0.005079500377178192,
-			"dateTime": "2026.06.04-17.55.51",
+			"duration": 0.005059000104665756,
+			"dateTime": "2026.06.08-11.55.58",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -91,10 +91,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 0.013843696564435959,
-			"dateTime": "2026.06.04-17.55.52",
+			"duration": 0.01238660141825676,
+			"dateTime": "2026.06.08-11.55.58",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -106,10 +106,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 0.01257849857211113,
-			"dateTime": "2026.06.04-17.55.52",
+			"duration": 0.010288499295711517,
+			"dateTime": "2026.06.08-11.55.58",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -121,10 +121,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 0.007632602006196976,
-			"dateTime": "2026.06.04-17.55.52",
+			"duration": 0.008010100573301315,
+			"dateTime": "2026.06.08-11.55.58",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -136,10 +136,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 0.008035801351070404,
-			"dateTime": "2026.06.04-17.55.52",
+			"duration": 0.006730496883392334,
+			"dateTime": "2026.06.08-11.55.59",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -151,10 +151,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 0.010198302567005157,
-			"dateTime": "2026.06.04-17.55.52",
+			"duration": 0.010456100106239319,
+			"dateTime": "2026.06.08-11.55.59",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -166,10 +166,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 0.005369998514652252,
-			"dateTime": "2026.06.04-17.55.53",
+			"duration": 0.006357699632644653,
+			"dateTime": "2026.06.08-11.55.59",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -181,28 +181,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 6.348438262939453,
-			"dateTime": "2026.06.04-17.55.53",
+			"duration": 1.0027858018875122,
+			"dateTime": "2026.06.08-11.55.59",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "10705E554ADD11D1B2C6FDA639FFE4BA"
+						"artifact": "DB2202944DDC7F8FCEF855896A5413D1"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.55.59"
+					"timestamp": "2026.06.08-11.56.00"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "10705E554ADD11D1B2C6FDA639FFE4BA",
+					"iD": "DB2202944DDC7F8FCEF855896A5413D1",
 					"name": "UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow",
 					"type": "Comparison",
 					"files": {
@@ -219,28 +219,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 6.315678119659424,
-			"dateTime": "2026.06.04-17.55.59",
+			"duration": 0.5754625201225281,
+			"dateTime": "2026.06.08-11.56.01",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "4DBE988247549FE191BB54B796810149"
+						"artifact": "79AD5C8F4A8B8C627EE114A50E93141B"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.56.05"
+					"timestamp": "2026.06.08-11.56.02"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "4DBE988247549FE191BB54B796810149",
+					"iD": "79AD5C8F4A8B8C627EE114A50E93141B",
 					"name": "UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox",
 					"type": "Comparison",
 					"files": {
@@ -257,28 +257,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 13.252168655395508,
-			"dateTime": "2026.06.04-17.56.06",
+			"duration": 1.268271803855896,
+			"dateTime": "2026.06.08-11.56.02",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "1EBC91034488B77A697D609E69820485"
+						"artifact": "888DF181484E66063D9D75AB8EFD4FD4"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.56.19"
+					"timestamp": "2026.06.08-11.56.04"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "1EBC91034488B77A697D609E69820485",
+					"iD": "888DF181484E66063D9D75AB8EFD4FD4",
 					"name": "UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent",
 					"type": "Comparison",
 					"files": {
@@ -295,28 +295,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 3.9224817752838135,
-			"dateTime": "2026.06.04-17.56.19",
+			"duration": 0.47627711296081543,
+			"dateTime": "2026.06.08-11.56.04",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "591D1AB748358074EA01CE9F758B08EB"
+						"artifact": "D2A0DF634CFEF477D2963D8AB959C776"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.56.23"
+					"timestamp": "2026.06.08-11.56.05"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "591D1AB748358074EA01CE9F758B08EB",
+					"iD": "D2A0DF634CFEF477D2963D8AB959C776",
 					"name": "UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD",
 					"type": "Comparison",
 					"files": {
@@ -333,28 +333,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 3.0063908100128174,
-			"dateTime": "2026.06.04-17.56.24",
+			"duration": 0.47830748558044434,
+			"dateTime": "2026.06.08-11.56.05",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "161E492C4D77A08EB8FD31804B90ECA1"
+						"artifact": "5A30C1D44630FD133D86AEB1DCB74DF6"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.56.26"
+					"timestamp": "2026.06.08-11.56.06"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "161E492C4D77A08EB8FD31804B90ECA1",
+					"iD": "5A30C1D44630FD133D86AEB1DCB74DF6",
 					"name": "UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot",
 					"type": "Comparison",
 					"files": {
@@ -371,28 +371,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 2.373185396194458,
-			"dateTime": "2026.06.04-17.56.27",
+			"duration": 0.5328416228294373,
+			"dateTime": "2026.06.08-11.56.06",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "CBC80CEC4B0E3A1F74E978AFFCD58817"
+						"artifact": "F70CA8714E6AF215BC57B19D3BD3DA02"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.56.29"
+					"timestamp": "2026.06.08-11.56.07"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "CBC80CEC4B0E3A1F74E978AFFCD58817",
+					"iD": "F70CA8714E6AF215BC57B19D3BD3DA02",
 					"name": "UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain",
 					"type": "Comparison",
 					"files": {
@@ -409,28 +409,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 4.562442779541016,
-			"dateTime": "2026.06.04-17.56.30",
+			"duration": 0.7557287812232971,
+			"dateTime": "2026.06.08-11.56.07",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_AutoPageLine' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "8052FEA149B5798DAA9EECA83B389354"
+						"artifact": "5212D7554B09438115BACCA772909CE6"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.56.34"
+					"timestamp": "2026.06.08-11.56.08"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "8052FEA149B5798DAA9EECA83B389354",
+					"iD": "5212D7554B09438115BACCA772909CE6",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_AutoPageLine",
 					"type": "Comparison",
 					"files": {
@@ -447,28 +447,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 1.129873275756836,
-			"dateTime": "2026.06.04-17.56.34",
+			"duration": 0.6706814169883728,
+			"dateTime": "2026.06.08-11.56.09",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_AutopagePadding' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "82C8BA974B78355FF82DF4AA63242562"
+						"artifact": "3DCAF64D4DD806260563EFA0EB8AAA8C"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.56.36"
+					"timestamp": "2026.06.08-11.56.10"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "82C8BA974B78355FF82DF4AA63242562",
+					"iD": "3DCAF64D4DD806260563EFA0EB8AAA8C",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_AutopagePadding",
 					"type": "Comparison",
 					"files": {
@@ -485,28 +485,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 1.0372116565704346,
-			"dateTime": "2026.06.04-17.56.36",
+			"duration": 0.6334741115570068,
+			"dateTime": "2026.06.08-11.56.10",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_EdgeCaseTest' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "2438FBAC4BFCD2F077AEA3990D9D8344"
+						"artifact": "714CDBA647E5D41C22C064A31D1F2BA9"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.56.37"
+					"timestamp": "2026.06.08-11.56.11"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "2438FBAC4BFCD2F077AEA3990D9D8344",
+					"iD": "714CDBA647E5D41C22C064A31D1F2BA9",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_EdgeCaseTest",
 					"type": "Comparison",
 					"files": {
@@ -523,28 +523,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 0.6208751201629639,
-			"dateTime": "2026.06.04-17.56.38",
+			"duration": 0.4416581094264984,
+			"dateTime": "2026.06.08-11.56.11",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "7F1293EA4F949E2D61E81FAF2C89B770"
+						"artifact": "8F83F40A469F7570FC46759CBD5748C6"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.56.38"
+					"timestamp": "2026.06.08-11.56.12"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "7F1293EA4F949E2D61E81FAF2C89B770",
+					"iD": "8F83F40A469F7570FC46759CBD5748C6",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment",
 					"type": "Comparison",
 					"files": {
@@ -561,28 +561,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 0.8376827836036682,
-			"dateTime": "2026.06.04-17.56.39",
+			"duration": 0.473488986492157,
+			"dateTime": "2026.06.08-11.56.12",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto01_Simple' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "659672AE420CF2E5232BBF84E3E70CA6"
+						"artifact": "1B0A77C94E404CA387EE338061DBB3FA"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.56.40"
+					"timestamp": "2026.06.08-11.56.13"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "659672AE420CF2E5232BBF84E3E70CA6",
+					"iD": "1B0A77C94E404CA387EE338061DBB3FA",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto01_Simple",
 					"type": "Comparison",
 					"files": {
@@ -599,28 +599,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 1.368274450302124,
-			"dateTime": "2026.06.04-17.56.40",
+			"duration": 0.7428464889526367,
+			"dateTime": "2026.06.08-11.56.13",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
-						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple' was similar!  Global Difference = 0.001890, Max Local Difference = 0.094522",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple' was similar!  Global Difference = 0.002294, Max Local Difference = 0.100309",
 						"context": "",
-						"artifact": "3B3C63B94AF01993AB1DEDAD70A277E5"
+						"artifact": "20048E794CC89C2501167AA6978C2A22"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.56.41"
+					"timestamp": "2026.06.08-11.56.14"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "3B3C63B94AF01993AB1DEDAD70A277E5",
+					"iD": "20048E794CC89C2501167AA6978C2A22",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple",
 					"type": "Comparison",
 					"files": {
@@ -637,28 +637,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 1.319626808166504,
-			"dateTime": "2026.06.04-17.56.42",
+			"duration": 0.5852763056755066,
+			"dateTime": "2026.06.08-11.56.15",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto03_RichTextFont' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "6BC88A5A40E75A6E8976DCB2E11471D3"
+						"artifact": "8B2B74F04B2E2E7CC62AF6BB0D82C1F6"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.56.43"
+					"timestamp": "2026.06.08-11.56.15"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "6BC88A5A40E75A6E8976DCB2E11471D3",
+					"iD": "8B2B74F04B2E2E7CC62AF6BB0D82C1F6",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto03_RichTextFont",
 					"type": "Comparison",
 					"files": {
@@ -675,28 +675,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 0.612065315246582,
-			"dateTime": "2026.06.04-17.56.44",
+			"duration": 0.38892650604248047,
+			"dateTime": "2026.06.08-11.56.16",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
-						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding' was similar!  Global Difference = 0.000594, Max Local Difference = 0.059414",
 						"context": "",
-						"artifact": "067C54D6434E813FBAA24A8F4B2E926A"
+						"artifact": "392250AB40B428D1A54A6E9248A1F10D"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.56.44"
+					"timestamp": "2026.06.08-11.56.16"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "067C54D6434E813FBAA24A8F4B2E926A",
+					"iD": "392250AB40B428D1A54A6E9248A1F10D",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding",
 					"type": "Comparison",
 					"files": {
@@ -713,28 +713,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 0.9166222214698792,
-			"dateTime": "2026.06.04-17.56.45",
+			"duration": 0.35544610023498535,
+			"dateTime": "2026.06.08-11.56.17",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "531368F6486E67D1FDA6588445E9A036"
+						"artifact": "E7D09D5B420602DB7CD047AD228DB149"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.56.46"
+					"timestamp": "2026.06.08-11.56.17"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "531368F6486E67D1FDA6588445E9A036",
+					"iD": "E7D09D5B420602DB7CD047AD228DB149",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter",
 					"type": "Comparison",
 					"files": {
@@ -751,28 +751,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 2.048464775085449,
-			"dateTime": "2026.06.04-17.56.46",
+			"duration": 1.451880931854248,
+			"dateTime": "2026.06.08-11.56.18",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto06_EventTrigger' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "D595523A4E59351E2889E3B33AC4F91C"
+						"artifact": "15423FCF455E498ADAA23E91073FDC82"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.56.48"
+					"timestamp": "2026.06.08-11.56.19"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "D595523A4E59351E2889E3B33AC4F91C",
+					"iD": "15423FCF455E498ADAA23E91073FDC82",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto06_EventTrigger",
 					"type": "Comparison",
 					"files": {
@@ -789,28 +789,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 0.6673762798309326,
-			"dateTime": "2026.06.04-17.56.49",
+			"duration": 0.4061639904975891,
+			"dateTime": "2026.06.08-11.56.20",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
-						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp' was similar!  Global Difference = 0.002532, Max Local Difference = 0.112172",
 						"context": "",
-						"artifact": "1DC2CEA84DDC1805A08A83915449A036"
+						"artifact": "4BAB0138458DBA9C3D4A92913907D54F"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.56.50"
+					"timestamp": "2026.06.08-11.56.20"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "1DC2CEA84DDC1805A08A83915449A036",
+					"iD": "4BAB0138458DBA9C3D4A92913907D54F",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp",
 					"type": "Comparison",
 					"files": {
@@ -827,33 +827,33 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 1.1663007736206055,
-			"dateTime": "2026.06.04-17.56.50",
+			"duration": 0.739913284778595,
+			"dateTime": "2026.06.08-11.56.21",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
-						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText' was similar!  Global Difference = 0.002068, Max Local Difference = 0.200135",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText' was similar!  Global Difference = 0.001102, Max Local Difference = 0.104360",
 						"context": "",
-						"artifact": "F9DA095F459DD99F58420E852F32149D"
+						"artifact": "54E7657E4A5538F49066D2AE140BCD58"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.56.51"
+					"timestamp": "2026.06.08-11.56.22"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "F9DA095F459DD99F58420E852F32149D",
+					"iD": "54E7657E4A5538F49066D2AE140BCD58",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText",
 					"type": "Comparison",
 					"files": {
-						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText/Windows/D3D12_SM6/Incoming.png",
 						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText/Windows/D3D12_SM6/Delta.png",
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText/Windows/D3D12_SM6/Incoming.png",
 						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText/Windows/D3D12_SM6/Approved.png"
 					}
 				}
@@ -865,33 +865,33 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 2.5899319648742676,
-			"dateTime": "2026.06.04-17.56.52",
+			"duration": 1.8886768817901611,
+			"dateTime": "2026.06.08-11.56.22",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
-						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound' was similar!  Global Difference = 0.000480, Max Local Difference = 0.035831",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound' was similar!  Global Difference = 0.000499, Max Local Difference = 0.038580",
 						"context": "",
-						"artifact": "12C04EC746EE3C79808B5D9C3C6C132A"
+						"artifact": "C847C18C4F5DA2D271E5F8AE978D51D5"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.56.54"
+					"timestamp": "2026.06.08-11.56.24"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "12C04EC746EE3C79808B5D9C3C6C132A",
+					"iD": "C847C18C4F5DA2D271E5F8AE978D51D5",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound",
 					"type": "Comparison",
 					"files": {
-						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound/Windows/D3D12_SM6/Incoming.png",
 						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound/Windows/D3D12_SM6/Delta.png",
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound/Windows/D3D12_SM6/Incoming.png",
 						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound/Windows/D3D12_SM6/Approved.png"
 					}
 				}
@@ -903,28 +903,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 1.1356297731399536,
-			"dateTime": "2026.06.04-17.56.55",
+			"duration": 0.8387669920921326,
+			"dateTime": "2026.06.08-11.56.25",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
-						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto10_StyleInfo' was similar!  Global Difference = 0.006281, Max Local Difference = 0.257571",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto10_StyleInfo' was similar!  Global Difference = 0.006454, Max Local Difference = 0.249662",
 						"context": "",
-						"artifact": "6374479F4ED3EA07D75CA69488C2F6A2"
+						"artifact": "89576B31488D6402771BAC9588307923"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.56.56"
+					"timestamp": "2026.06.08-11.56.26"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "6374479F4ED3EA07D75CA69488C2F6A2",
+					"iD": "89576B31488D6402771BAC9588307923",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto10_StyleInfo",
 					"type": "Comparison",
 					"files": {
@@ -941,28 +941,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 2.0488288402557373,
-			"dateTime": "2026.06.04-17.56.56",
+			"duration": 1.5021785497665405,
+			"dateTime": "2026.06.08-11.56.26",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto11_AutoPage' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "924FE5834DA0BC8E69A3DB9A89EDA40D"
+						"artifact": "40261F2F47B5C1326920CFA8753B8FFA"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.56.59"
+					"timestamp": "2026.06.08-11.56.28"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "924FE5834DA0BC8E69A3DB9A89EDA40D",
+					"iD": "40261F2F47B5C1326920CFA8753B8FFA",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto11_AutoPage",
 					"type": "Comparison",
 					"files": {
@@ -979,28 +979,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 1.8149305582046509,
-			"dateTime": "2026.06.04-17.56.59",
+			"duration": 1.1539958715438843,
+			"dateTime": "2026.06.08-11.56.28",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "B315BE4549925BFE7F10578D59F03429"
+						"artifact": "B6CB19D54C4B88CF928730A7028A4AE3"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.57.01"
+					"timestamp": "2026.06.08-11.56.29"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "B315BE4549925BFE7F10578D59F03429",
+					"iD": "B6CB19D54C4B88CF928730A7028A4AE3",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long",
 					"type": "Comparison",
 					"files": {
@@ -1017,28 +1017,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 0.9158746004104614,
-			"dateTime": "2026.06.04-17.57.01",
+			"duration": 0.6896882057189941,
+			"dateTime": "2026.06.08-11.56.30",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto13_Justification' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "B34A23204E71A2266DD9EBB32BE66DE4"
+						"artifact": "7E36940C41EEDB035A423183FAF690FC"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.57.02"
+					"timestamp": "2026.06.08-11.56.31"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "B34A23204E71A2266DD9EBB32BE66DE4",
+					"iD": "7E36940C41EEDB035A423183FAF690FC",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto13_Justification",
 					"type": "Comparison",
 					"files": {
@@ -1055,28 +1055,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 0.9226545095443726,
-			"dateTime": "2026.06.04-17.57.03",
+			"duration": 0.6172080039978027,
+			"dateTime": "2026.06.08-11.56.31",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto14_SpriteSheet' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "B93BA1E0444B840133AC9F98EAB2D88F"
+						"artifact": "C1E7398046F47137399C36B9A53A9451"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.57.04"
+					"timestamp": "2026.06.08-11.56.32"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "B93BA1E0444B840133AC9F98EAB2D88F",
+					"iD": "C1E7398046F47137399C36B9A53A9451",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto14_SpriteSheet",
 					"type": "Comparison",
 					"files": {
@@ -1093,28 +1093,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 0.6788194179534912,
-			"dateTime": "2026.06.04-17.57.04",
+			"duration": 0.4798387885093689,
+			"dateTime": "2026.06.08-11.56.32",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "0BD3932540478C9420D3478FC17BE8C5"
+						"artifact": "2089278048F9C3F57971EB9C71DF96DD"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.57.05"
+					"timestamp": "2026.06.08-11.56.33"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "0BD3932540478C9420D3478FC17BE8C5",
+					"iD": "2089278048F9C3F57971EB9C71DF96DD",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox",
 					"type": "Comparison",
 					"files": {
@@ -1131,28 +1131,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 0.9563218951225281,
-			"dateTime": "2026.06.04-17.57.05",
+			"duration": 0.5894472002983093,
+			"dateTime": "2026.06.08-11.56.33",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto16_RubyText' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "97A503674E5FA411CA65A5AD2082ADB1"
+						"artifact": "EFCA086E43C9313C9961D3824E903649"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.57.07"
+					"timestamp": "2026.06.08-11.56.34"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "97A503674E5FA411CA65A5AD2082ADB1",
+					"iD": "EFCA086E43C9313C9961D3824E903649",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto16_RubyText",
 					"type": "Comparison",
 					"files": {
@@ -1169,28 +1169,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 1.677071452140808,
-			"dateTime": "2026.06.04-17.57.07",
+			"duration": 1.253815770149231,
+			"dateTime": "2026.06.08-11.56.35",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto17_Decorator' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "9D82E6574A48F8A98BBD0CA218C0569F"
+						"artifact": "E218539842DE9C4C5CBD2AA0C38469BD"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.57.09"
+					"timestamp": "2026.06.08-11.56.36"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "9D82E6574A48F8A98BBD0CA218C0569F",
+					"iD": "E218539842DE9C4C5CBD2AA0C38469BD",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto17_Decorator",
 					"type": "Comparison",
 					"files": {
@@ -1207,28 +1207,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 0.9954668283462524,
-			"dateTime": "2026.06.04-17.57.09",
+			"duration": 0.6536335945129395,
+			"dateTime": "2026.06.08-11.56.36",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto18_NewPageTag' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "3B493A074A965635C7D70AAFA4331D22"
+						"artifact": "F1E704D84A4EBFE5709903A0B35440BB"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.57.10"
+					"timestamp": "2026.06.08-11.56.37"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "3B493A074A965635C7D70AAFA4331D22",
+					"iD": "F1E704D84A4EBFE5709903A0B35440BB",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto18_NewPageTag",
 					"type": "Comparison",
 					"files": {
@@ -1245,28 +1245,28 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"7FD505E94D22BD0E34905EB1BE97ABAB"
+				"F4FEEECD45556DB1DE1A4A85A19956C7"
 			],
-			"duration": 0.9724165201187134,
-			"dateTime": "2026.06.04-17.57.11",
+			"duration": 0.6446741223335266,
+			"dateTime": "2026.06.08-11.56.38",
 			"entries": [
 				{
 					"event": {
 						"type": "Info",
 						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto20_Binlker' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
 						"context": "",
-						"artifact": "7521DAF84315CB6C7923378E4D81B74F"
+						"artifact": "D572B4EF4804A35144FB248A35912CAC"
 					},
 					"filename": "",
 					"lineNumber": -1,
-					"timestamp": "2026.06.04-17.57.12"
+					"timestamp": "2026.06.08-11.56.38"
 				}
 			],
 			"warnings": 0,
 			"errors": 0,
 			"artifacts": [
 				{
-					"iD": "7521DAF84315CB6C7923378E4D81B74F",
+					"iD": "D572B4EF4804A35144FB248A35912CAC",
 					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto20_Binlker",
 					"type": "Comparison",
 					"files": {

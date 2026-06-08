@@ -1,14 +1,14 @@
 {
   "id": "export-package",
   "title": "Export / Package",
-  "status": "WARN",
-  "tests": 0,
-  "passed": 0,
+  "status": "PASS",
+  "tests": 4,
+  "passed": 4,
   "failed": 0,
   "errors": 0,
   "skipped": 0,
   "syntheticCollapsed": 0,
-  "displayedCases": 0,
+  "displayedCases": 4,
   "rawReports": [
     "ResultStatic/HorizonUIPluginDemoTest/tests.xml",
     "Coverage/HorizonUIPluginDemoTest/cobertura.xml",

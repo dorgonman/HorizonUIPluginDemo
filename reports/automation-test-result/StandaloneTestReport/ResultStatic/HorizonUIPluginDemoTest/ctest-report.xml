@@ -53,7 +53,7 @@
       <FullName>Plugin.SmokeTest.HorizonUI.EnumValidation</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.007429298013448715</Value>
+          <Value>0.009617097675800323</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -71,10 +71,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.007429298013448715</ExecutionTime>
+      <ExecutionTime>0.009617097675800323</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Plugin.SmokeTest.HorizonUI.ModuleLoad</Name>
@@ -82,7 +82,7 @@
       <FullName>Plugin.SmokeTest.HorizonUI.ModuleLoad</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.004536297172307968</Value>
+          <Value>0.004767701029777527</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -100,10 +100,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.004536297172307968</ExecutionTime>
+      <ExecutionTime>0.004767701029777527</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Plugin.SmokeTest.HorizonUI.StructInstantiation</Name>
@@ -111,7 +111,7 @@
       <FullName>Plugin.SmokeTest.HorizonUI.StructInstantiation</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.019374899566173553</Value>
+          <Value>0.01463409885764122</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -129,10 +129,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.019374899566173553</ExecutionTime>
+      <ExecutionTime>0.01463409885764122</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Plugin.SmokeTest.HorizonUI.Success</Name>
@@ -140,7 +140,7 @@
       <FullName>Plugin.SmokeTest.HorizonUI.Success</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.005079500377178192</Value>
+          <Value>0.005059000104665756</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -158,10 +158,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.005079500377178192</ExecutionTime>
+      <ExecutionTime>0.005059000104665756</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Plugin.UnitTests.HorizonUI.BlinkingCursor</Name>
@@ -169,7 +169,7 @@
       <FullName>Plugin.UnitTests.HorizonUI.BlinkingCursor</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.013843696564435959</Value>
+          <Value>0.01238660141825676</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -187,10 +187,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.013843696564435959</ExecutionTime>
+      <ExecutionTime>0.01238660141825676</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Plugin.UnitTests.HorizonUI.DialogueBlock</Name>
@@ -198,7 +198,7 @@
       <FullName>Plugin.UnitTests.HorizonUI.DialogueBlock</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.01257849857211113</Value>
+          <Value>0.010288499295711517</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -216,10 +216,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.01257849857211113</ExecutionTime>
+      <ExecutionTime>0.010288499295711517</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Plugin.UnitTests.HorizonUI.DialogueLine</Name>
@@ -227,7 +227,7 @@
       <FullName>Plugin.UnitTests.HorizonUI.DialogueLine</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.007632602006196976</Value>
+          <Value>0.008010100573301315</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -245,10 +245,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.007632602006196976</ExecutionTime>
+      <ExecutionTime>0.008010100573301315</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Plugin.UnitTests.HorizonUI.DialoguePage</Name>
@@ -256,7 +256,7 @@
       <FullName>Plugin.UnitTests.HorizonUI.DialoguePage</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.008035801351070404</Value>
+          <Value>0.006730496883392334</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -274,10 +274,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.008035801351070404</ExecutionTime>
+      <ExecutionTime>0.006730496883392334</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Plugin.UnitTests.HorizonUI.DialogueSegment</Name>
@@ -285,7 +285,7 @@
       <FullName>Plugin.UnitTests.HorizonUI.DialogueSegment</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.010198302567005157</Value>
+          <Value>0.010456100106239319</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -303,10 +303,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.010198302567005157</ExecutionTime>
+      <ExecutionTime>0.010456100106239319</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Plugin.UnitTests.HorizonUI.TextOverflow</Name>
@@ -314,7 +314,7 @@
       <FullName>Plugin.UnitTests.HorizonUI.TextOverflow</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.005369998514652252</Value>
+          <Value>0.006357699632644653</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -332,10 +332,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.005369998514652252</ExecutionTime>
+      <ExecutionTime>0.006357699632644653</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow</Name>
@@ -343,7 +343,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>6.348438262939453</Value>
+          <Value>1.0027858018875122</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -361,10 +361,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>6.348438262939453</ExecutionTime>
+      <ExecutionTime>1.0027858018875122</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox</Name>
@@ -372,7 +372,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>6.315678119659424</Value>
+          <Value>0.5754625201225281</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -390,10 +390,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>6.315678119659424</ExecutionTime>
+      <ExecutionTime>0.5754625201225281</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent</Name>
@@ -401,7 +401,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>13.252168655395508</Value>
+          <Value>1.268271803855896</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -419,10 +419,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>13.252168655395508</ExecutionTime>
+      <ExecutionTime>1.268271803855896</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD</Name>
@@ -430,7 +430,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>3.9224817752838135</Value>
+          <Value>0.47627711296081543</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -448,10 +448,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>3.9224817752838135</ExecutionTime>
+      <ExecutionTime>0.47627711296081543</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot</Name>
@@ -459,7 +459,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>3.0063908100128174</Value>
+          <Value>0.47830748558044434</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -477,10 +477,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>3.0063908100128174</ExecutionTime>
+      <ExecutionTime>0.47830748558044434</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain</Name>
@@ -488,7 +488,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>2.373185396194458</Value>
+          <Value>0.5328416228294373</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -506,10 +506,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>2.373185396194458</ExecutionTime>
+      <ExecutionTime>0.5328416228294373</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_AutoPageLine</Name>
@@ -517,7 +517,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_AutoPageLine</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>4.562442779541016</Value>
+          <Value>0.7557287812232971</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -535,10 +535,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>4.562442779541016</ExecutionTime>
+      <ExecutionTime>0.7557287812232971</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_AutopagePadding</Name>
@@ -546,7 +546,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_AutopagePadding</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>1.129873275756836</Value>
+          <Value>0.6706814169883728</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -564,10 +564,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>1.129873275756836</ExecutionTime>
+      <ExecutionTime>0.6706814169883728</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_EdgeCaseTest</Name>
@@ -575,7 +575,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_EdgeCaseTest</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>1.0372116565704346</Value>
+          <Value>0.6334741115570068</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -593,10 +593,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>1.0372116565704346</ExecutionTime>
+      <ExecutionTime>0.6334741115570068</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment</Name>
@@ -604,7 +604,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.6208751201629639</Value>
+          <Value>0.4416581094264984</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -622,10 +622,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.6208751201629639</ExecutionTime>
+      <ExecutionTime>0.4416581094264984</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto01_Simple</Name>
@@ -633,7 +633,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto01_Simple</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.8376827836036682</Value>
+          <Value>0.473488986492157</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -651,10 +651,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.8376827836036682</ExecutionTime>
+      <ExecutionTime>0.473488986492157</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto02_RichTextSimple</Name>
@@ -662,7 +662,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto02_RichTextSimple</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>1.368274450302124</Value>
+          <Value>0.7428464889526367</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -674,16 +674,16 @@
           <Value>0</Value>
         </NamedMeasurement>
         <Measurement>
-          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple' was similar!  Global Difference = 0.001890, Max Local Difference = 0.094522</Value>
+          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple' was similar!  Global Difference = 0.002294, Max Local Difference = 0.100309</Value>
         </Measurement>
       </Results>
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>1.368274450302124</ExecutionTime>
+      <ExecutionTime>0.7428464889526367</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto03_RichTextFont</Name>
@@ -691,7 +691,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto03_RichTextFont</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>1.319626808166504</Value>
+          <Value>0.5852763056755066</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -709,10 +709,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>1.319626808166504</ExecutionTime>
+      <ExecutionTime>0.5852763056755066</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto04_RichTextPadding</Name>
@@ -720,7 +720,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto04_RichTextPadding</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.612065315246582</Value>
+          <Value>0.38892650604248047</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -732,16 +732,16 @@
           <Value>0</Value>
         </NamedMeasurement>
         <Measurement>
-          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</Value>
+          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding' was similar!  Global Difference = 0.000594, Max Local Difference = 0.059414</Value>
         </Measurement>
       </Results>
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.612065315246582</ExecutionTime>
+      <ExecutionTime>0.38892650604248047</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter</Name>
@@ -749,7 +749,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.9166222214698792</Value>
+          <Value>0.35544610023498535</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -767,10 +767,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.9166222214698792</ExecutionTime>
+      <ExecutionTime>0.35544610023498535</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto06_EventTrigger</Name>
@@ -778,7 +778,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto06_EventTrigger</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>2.048464775085449</Value>
+          <Value>1.451880931854248</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -796,10 +796,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>2.048464775085449</ExecutionTime>
+      <ExecutionTime>1.451880931854248</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto07_OverflowWarp</Name>
@@ -807,7 +807,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto07_OverflowWarp</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.6673762798309326</Value>
+          <Value>0.4061639904975891</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -819,16 +819,16 @@
           <Value>0</Value>
         </NamedMeasurement>
         <Measurement>
-          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</Value>
+          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp' was similar!  Global Difference = 0.002532, Max Local Difference = 0.112172</Value>
         </Measurement>
       </Results>
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.6673762798309326</ExecutionTime>
+      <ExecutionTime>0.4061639904975891</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto08_HyperText</Name>
@@ -836,7 +836,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto08_HyperText</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>1.1663007736206055</Value>
+          <Value>0.739913284778595</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -848,16 +848,16 @@
           <Value>0</Value>
         </NamedMeasurement>
         <Measurement>
-          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText' was similar!  Global Difference = 0.002068, Max Local Difference = 0.200135</Value>
+          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText' was similar!  Global Difference = 0.001102, Max Local Difference = 0.104360</Value>
         </Measurement>
       </Results>
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>1.1663007736206055</ExecutionTime>
+      <ExecutionTime>0.739913284778595</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto09_Sound</Name>
@@ -865,7 +865,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto09_Sound</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>2.5899319648742676</Value>
+          <Value>1.8886768817901611</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -877,16 +877,16 @@
           <Value>0</Value>
         </NamedMeasurement>
         <Measurement>
-          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound' was similar!  Global Difference = 0.000480, Max Local Difference = 0.035831</Value>
+          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound' was similar!  Global Difference = 0.000499, Max Local Difference = 0.038580</Value>
         </Measurement>
       </Results>
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>2.5899319648742676</ExecutionTime>
+      <ExecutionTime>1.8886768817901611</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto10_StyleInfo</Name>
@@ -894,7 +894,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto10_StyleInfo</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>1.1356297731399536</Value>
+          <Value>0.8387669920921326</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -906,16 +906,16 @@
           <Value>0</Value>
         </NamedMeasurement>
         <Measurement>
-          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto10_StyleInfo' was similar!  Global Difference = 0.006281, Max Local Difference = 0.257571</Value>
+          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto10_StyleInfo' was similar!  Global Difference = 0.006454, Max Local Difference = 0.249662</Value>
         </Measurement>
       </Results>
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>1.1356297731399536</ExecutionTime>
+      <ExecutionTime>0.8387669920921326</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto11_AutoPage</Name>
@@ -923,7 +923,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto11_AutoPage</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>2.0488288402557373</Value>
+          <Value>1.5021785497665405</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -941,10 +941,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>2.0488288402557373</ExecutionTime>
+      <ExecutionTime>1.5021785497665405</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto12_AutoPage_Long</Name>
@@ -952,7 +952,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto12_AutoPage_Long</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>1.8149305582046509</Value>
+          <Value>1.1539958715438843</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -970,10 +970,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>1.8149305582046509</ExecutionTime>
+      <ExecutionTime>1.1539958715438843</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto13_Justification</Name>
@@ -981,7 +981,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto13_Justification</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.9158746004104614</Value>
+          <Value>0.6896882057189941</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -999,10 +999,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.9158746004104614</ExecutionTime>
+      <ExecutionTime>0.6896882057189941</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto14_SpriteSheet</Name>
@@ -1010,7 +1010,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto14_SpriteSheet</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.9226545095443726</Value>
+          <Value>0.6172080039978027</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -1028,10 +1028,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.9226545095443726</ExecutionTime>
+      <ExecutionTime>0.6172080039978027</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox</Name>
@@ -1039,7 +1039,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.6788194179534912</Value>
+          <Value>0.4798387885093689</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -1057,10 +1057,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.6788194179534912</ExecutionTime>
+      <ExecutionTime>0.4798387885093689</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto16_RubyText</Name>
@@ -1068,7 +1068,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto16_RubyText</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.9563218951225281</Value>
+          <Value>0.5894472002983093</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -1086,10 +1086,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.9563218951225281</ExecutionTime>
+      <ExecutionTime>0.5894472002983093</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto17_Decorator</Name>
@@ -1097,7 +1097,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto17_Decorator</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>1.677071452140808</Value>
+          <Value>1.253815770149231</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -1115,10 +1115,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>1.677071452140808</ExecutionTime>
+      <ExecutionTime>1.253815770149231</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto18_NewPageTag</Name>
@@ -1126,7 +1126,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto18_NewPageTag</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.9954668283462524</Value>
+          <Value>0.6536335945129395</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -1144,10 +1144,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.9954668283462524</ExecutionTime>
+      <ExecutionTime>0.6536335945129395</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto20_Binlker</Name>
@@ -1155,7 +1155,7 @@
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto20_Binlker</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.9724165201187134</Value>
+          <Value>0.6446741223335266</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -1173,10 +1173,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.9724165201187134</ExecutionTime>
+      <ExecutionTime>0.6446741223335266</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-04T18:05:00Z</StartTime>
-      <EndTime>2026-06-04T18:05:00Z</EndTime>
+      <StartTime>2026-06-08T12:05:39Z</StartTime>
+      <EndTime>2026-06-08T12:05:39Z</EndTime>
     </Test>
   </Testing>
 </Site>
