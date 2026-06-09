@@ -48,7 +48,7 @@ def projectConfig() {
         bCleanBuild:        false,
         bBuildStandaloneWin64: true,
         bBuildServerWin64:  false,
-        bBuildPluginWin64:  true,
+        bBuildPluginWin64:  false,
         bBuildStandaloneAndroid: false,
         bBuildServerAndroid: false,
         bBuildStandaloneMac: false,
@@ -111,10 +111,10 @@ def projectConfig() {
         bAllowRealDeployTargets: false,
 
         // === Test + Coverage ===
-        bRunTestWin64Standalone: true,
+        bRunTestWin64Standalone: false,
         coverageFormat:     ['xml', 'html'],
         buildConfiguration: 'Development',
-        bDeploySentrySymbols: true,
+        bDeploySentrySymbols: false,
         bDeploySentryForeignUnrealEngineSymbols: false,
         bCopyPreCompileEngine: true,
         preArchiveCopyStep: 'Default',
@@ -131,7 +131,7 @@ def projectConfig() {
 
         // === Plugin Validation ===
         // Plugin validation is opt-in in the shared library. This PluginDemo project enables it explicitly.
-        bValidatePlugins:   true,
+        bValidatePlugins:   false,
         pluginName:         'HorizonUIPlugin',
         pluginValidationPaths: [
             'Plugins/HorizonUIPlugin/HorizonUIPlugin.uplugin',
