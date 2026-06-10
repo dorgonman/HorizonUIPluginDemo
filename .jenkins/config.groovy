@@ -111,7 +111,7 @@ def projectConfig() {
         bAllowRealDeployTargets: false,
 
         // === Test + Coverage ===
-        bRunTestWin64Standalone: false,
+        bRunTestWin64Standalone: true,
         coverageFormat:     ['xml', 'html'],
         buildConfiguration: 'Development',
         bDeploySentrySymbols: false,
