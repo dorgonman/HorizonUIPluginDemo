@@ -21,7 +21,7 @@ pipeline {
     parameters {
         // === Standalone / Server Matrix ===
         booleanParam name: 'bBuildStandaloneWin64', defaultValue: true, description: 'Build Win64 standalone target'
-        booleanParam name: 'bBuildStandaloneAndroid', defaultValue: false, description: 'Build Android standalone target'
+        booleanParam name: 'bBuildStandaloneAndroid', defaultValue: true, description: 'Build Android standalone target'
         booleanParam name: 'bBuildStandaloneIOS', defaultValue: false, description: 'Build iOS standalone target (requires Mac agent + Apple Developer Plan)'
         booleanParam name: 'bBuildStandaloneMac', defaultValue: false, description: 'Build Mac standalone target (requires Mac agent)'
         booleanParam name: 'bBuildStandaloneLinux', defaultValue: false, description: 'Build Linux standalone target'
@@ -30,25 +30,25 @@ pipeline {
         booleanParam name: 'bBuildStandaloneSwitch2', defaultValue: false, description: 'Build Nintendo Switch 2 standalone target'
 
         // === Plugin Booleans ===
-        booleanParam name: 'bValidatePlugins', defaultValue: false, description: 'Run plugin BuildPlugin validation. Plugin target toggles are ignored unless this is enabled.'
-        booleanParam name: 'bBuildPluginWin64', defaultValue: false, description: 'Build Win64 Plugin Shipping'
-        booleanParam name: 'bBuildPluginAndroid', defaultValue: false, description: 'Build Android Plugin Shipping (requires Win64 agent + AutoSDK)'
-        booleanParam name: 'bBuildPluginIOS', defaultValue: false, description: 'Build iOS Plugin Shipping (requires Mac agent + Apple Developer Plan)'
-        booleanParam name: 'bBuildPluginMac', defaultValue: false, description: 'Build Mac Plugin Shipping (requires Mac agent + Apple Developer Plan)'
+        booleanParam name: 'bValidatePlugins', defaultValue: true, description: 'Run plugin BuildPlugin validation. Plugin target toggles are ignored unless this is enabled.'
+        booleanParam name: 'bBuildPluginWin64', defaultValue: true, description: 'Build Win64 Plugin Shipping'
+        booleanParam name: 'bBuildPluginAndroid', defaultValue: true, description: 'Build Android Plugin Shipping (requires Win64 agent + AutoSDK)'
+        booleanParam name: 'bBuildPluginIOS', defaultValue: true, description: 'Build iOS Plugin Shipping (requires Mac agent + Apple Developer Plan)'
+        booleanParam name: 'bBuildPluginMac', defaultValue: true, description: 'Build Mac Plugin Shipping (requires Mac agent + Apple Developer Plan)'
         booleanParam name: 'bBuildPluginLinux', defaultValue: false, description: 'Build Linux Plugin Shipping'
         booleanParam name: 'bBuildPluginXSX', defaultValue: false, description: 'Build Xbox Series X Plugin Shipping'
         booleanParam name: 'bBuildPluginPS5', defaultValue: false, description: 'Build PS5 Plugin Shipping'
         booleanParam name: 'bBuildPluginSwitch2', defaultValue: false, description: 'Build Switch 2 Plugin Shipping'
 
         // === Test ===
-        booleanParam name: 'bRunTestWin64Standalone', defaultValue: false, description: 'Run Win64 standalone tests'
+        booleanParam name: 'bRunTestWin64Standalone', defaultValue: true, description: 'Run Win64 standalone tests'
 
         // === Artifact archival ===
         booleanParam name: 'bArchiveTar', defaultValue: true, description: 'Archive PrepareDeploy tar/manifest artifacts. Disable for fast test/coverage iterations.'
 
         // === Sentry Deploy Symbols ===
-        booleanParam name: 'bDeploySentrySymbols', defaultValue: false, description: 'After standalone builds, create Sentry release/deploy records and upload debug symbols'
-        booleanParam name: 'bDeploySentryBundleSources', defaultValue: false, description: 'Run sentry-cli difutil bundle-sources and upload source context with debug symbols. Enable only for projects allowed to upload source code.'
+        booleanParam name: 'bDeploySentrySymbols', defaultValue: true, description: 'After standalone builds, create Sentry release/deploy records and upload debug symbols'
+        booleanParam name: 'bDeploySentryBundleSources', defaultValue: true, description: 'Run sentry-cli difutil bundle-sources and upload source context with debug symbols. Enable only for projects allowed to upload source code.'
         string name: 'SENTRY_CREDENTIAL_ID', defaultValue: 'SENTRY_AUTH_INFO', description: 'Jenkins username/password credential: username=SENTRY_URL, password=SENTRY_AUTH_TOKEN'
         string name: 'SENTRY_ORG', defaultValue: 'kanohorizonia', description: 'Sentry organization slug for this project'
         string name: 'SENTRY_PROJECT', defaultValue: 'horizonuiplugindemo', description: 'Sentry project slug for this project'
