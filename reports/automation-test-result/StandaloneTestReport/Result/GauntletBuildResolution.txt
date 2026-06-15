@@ -1,0 +1,29 @@
+gauntletBuildResolutionVersion=1
+timestamp=2026-06-15 17:10:21
+hostMachine=PC-TiffanyHo
+requestedBuildArg=-build=local
+normalizedBuildArg=-build=H:\EpicGames\Installed\UE_5.7\HorizonUIPluginDemo\Intermediate\BuildUpstreamInput\GauntletBuildRoot
+normalizedBuildPath=H:\EpicGames\Installed\UE_5.7\HorizonUIPluginDemo\Intermediate\BuildUpstreamInput\GauntletBuildRoot
+selectedStandaloneBuildRoot=H:\EpicGames\Installed\UE_5.7/HorizonUIPluginDemo/Intermediate/BuildArtifacts/BuildPackage/Win64/main/5.7.0.725/Development/Standalone
+adapterRoot=H:\EpicGames\Installed\UE_5.7/HorizonUIPluginDemo/Intermediate/BuildUpstreamInput/GauntletBuildRoot
+adapterLink=H:\EpicGames\Installed\UE_5.7/HorizonUIPluginDemo/Intermediate/BuildUpstreamInput/GauntletBuildRoot/Windows
+adapterResolvedTarget=H:\EpicGames\Installed\UE_5.7\HorizonUIPluginDemo\Intermediate\BuildArtifacts\BuildPackage\Win64\main\5.7.0.725\Development\Standalone
+targetPlatform=Win64
+configuration=Development
+buildKind=Standalone
+targetType=Game
+testTopology=GameStandalone
+editorPlatform=<disabled>
+clientPlatform=Win64
+serverPlatform=<disabled>
+artifactName=HorizonUIPluginDemoTest_Win64_Development_standalone-client0
+reportRoot=H:\EpicGames\Installed\UE_5.7\HorizonUIPluginDemo\Intermediate\BuildArtifacts\BuildPackage\Win64\main\5.7.0.725\Development\StandaloneTestReport
+testResultReportDirectory=C:\Mount\s\jenkins_ws\HorizonPlugin\HorizonUIPluginDemo\Package\Intermediate\BuildGauntletTestReports\HorizonUIPluginDemoTest_Win64_Development_standalone-client0\AutomationReport
+qaRawLogDirectory=C:\Mount\s\jenkins_ws\HorizonPlugin\HorizonUIPluginDemo\Package\Intermediate\BuildGauntletTestReports
+notes=Device assignment/install target is resolved by Gauntlet runtime per platform and device pool.
+hostOsCaption=Microsoft Windows 10 ±M·~ª©
+hostOsVersion=10.0.19045
+hostMemoryGiB=31.96
+hostCpuName=Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz
+hostCpuLogicalCores=8
+hostGpuNames=NVIDIA GeForce RTX 3070

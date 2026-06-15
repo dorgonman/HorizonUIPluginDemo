@@ -1,0 +1,32 @@
+{
+	"creationTime": "2026.06.15-17.10.58",
+	"sourcePlatform": "Windows",
+	"sourceRHI": "D3D12",
+	"idealApprovedFolderPath": "Test/Screenshots/UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment/Windows/D3D12_SM6",
+	"approvedFilePath": "Test/Screenshots/UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment/Windows/D3D12_SM6/ufdh6eyf-lipfhy_90fvxg.png",
+	"incomingFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment/Windows/D3D12_SM6/h74yku9cr-6jfuihwk96kg.png",
+	"comparisonFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/Delta/ImageCompare-615C00A84449A194C2FAC096E1130C0C.png",
+	"reportApprovedFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment/Windows/D3D12_SM6/Approved.png",
+	"reportIncomingFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment/Windows/D3D12_SM6/Incoming.png",
+	"reportComparisonFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment/Windows/D3D12_SM6/Delta.png",
+	"maxLocalDifference": 0,
+	"globalDifference": 0,
+	"tolerance":
+	{
+		"red": 16,
+		"green": 16,
+		"blue": 16,
+		"alpha": 16,
+		"minBrightness": 16,
+		"maxBrightness": 240,
+		"ignoreAntiAliasing": true,
+		"ignoreColors": false,
+		"maximumLocalError": 0.10000000149011612,
+		"maximumGlobalError": 0.019999999552965164
+	},
+	"errorMessage": "",
+	"screenshotPath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment",
+	"comparisonId": "F18372394FD97CEC5E9EFC89B44C8FB0",
+	"bSkipAttachingImages": false,
+	"version": 3
+}

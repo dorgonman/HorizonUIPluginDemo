@@ -1,0 +1,1281 @@
+{
+	"devices": [
+		{
+			"deviceName": "redacted-device",
+			"instance": "redacted-instance",
+			"instanceName": "redacted-instance",
+			"platform": "Windows",
+			"oSVersion": "Windows (redacted)",
+			"model": "redacted-model",
+			"gPU": "redacted-gpu",
+			"cPUModel": "redacted-cpu",
+			"rAMInGB": "redacted",
+			"renderMode": "D3D12_SM6",
+			"rHI": "D3D12 (SM6)",
+			"appInstanceLog": ""
+		}
+	],
+	"reportCreatedOn": "2026.06.15-09.11.23",
+	"succeeded": 39,
+	"succeededWithWarnings": 0,
+	"failed": 0,
+	"notRun": 0,
+	"inProcess": 0,
+	"totalDuration": 31.0201358795166,
+	"comparisonExported": true,
+	"comparisonExportDirectory": "[redacted-path]",
+	"tests": [
+		{
+			"testDisplayName": "EnumValidation",
+			"fullTestPath": "Plugin.SmokeTest.HorizonUI.EnumValidation",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.004484597593545914,
+			"dateTime": "2026.06.15-09.10.47",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ModuleLoad",
+			"fullTestPath": "Plugin.SmokeTest.HorizonUI.ModuleLoad",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.0038946010172367096,
+			"dateTime": "2026.06.15-09.10.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "StructInstantiation",
+			"fullTestPath": "Plugin.SmokeTest.HorizonUI.StructInstantiation",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.010155998170375824,
+			"dateTime": "2026.06.15-09.10.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Success",
+			"fullTestPath": "Plugin.SmokeTest.HorizonUI.Success",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.0034686997532844543,
+			"dateTime": "2026.06.15-09.10.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "BlinkingCursor",
+			"fullTestPath": "Plugin.UnitTests.HorizonUI.BlinkingCursor",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.008571900427341461,
+			"dateTime": "2026.06.15-09.10.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "DialogueBlock",
+			"fullTestPath": "Plugin.UnitTests.HorizonUI.DialogueBlock",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.008766401559114456,
+			"dateTime": "2026.06.15-09.10.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "DialogueLine",
+			"fullTestPath": "Plugin.UnitTests.HorizonUI.DialogueLine",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.0059654004871845245,
+			"dateTime": "2026.06.15-09.10.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "DialoguePage",
+			"fullTestPath": "Plugin.UnitTests.HorizonUI.DialoguePage",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.005216900259256363,
+			"dateTime": "2026.06.15-09.10.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "DialogueSegment",
+			"fullTestPath": "Plugin.UnitTests.HorizonUI.DialogueSegment",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.007844500243663788,
+			"dateTime": "2026.06.15-09.10.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "TextOverflow",
+			"fullTestPath": "Plugin.UnitTests.HorizonUI.TextOverflow",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.004507098346948624,
+			"dateTime": "2026.06.15-09.10.48",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 1.0753133296966553,
+			"dateTime": "2026.06.15-09.10.48",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "ABC21CBC4E989ADA4FDE7CA6802C5921"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.10.49"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "ABC21CBC4E989ADA4FDE7CA6802C5921",
+					"name": "UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.7901666760444641,
+			"dateTime": "2026.06.15-09.10.50",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "437C489140A0EB61CAF0628A2445BCAD"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.10.50"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "437C489140A0EB61CAF0628A2445BCAD",
+					"name": "UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox",
+					"type": "Comparison",
+					"files": {
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox/Windows/D3D12_SM6/Delta.png",
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox/Windows/D3D12_SM6/Incoming.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 1.80315101146698,
+			"dateTime": "2026.06.15-09.10.50",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "B2B4094649851F828E6892A2EBABFC2E"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.10.52"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "B2B4094649851F828E6892A2EBABFC2E",
+					"name": "UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.6370570063591003,
+			"dateTime": "2026.06.15-09.10.52",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "F4B265034BE0C04291AD9C8B330D70B3"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.10.53"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "F4B265034BE0C04291AD9C8B330D70B3",
+					"name": "UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.6138997077941895,
+			"dateTime": "2026.06.15-09.10.53",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "A489671443F8C6EEB02B1288EEF9EDF9"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.10.54"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "A489671443F8C6EEB02B1288EEF9EDF9",
+					"name": "UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.6635271906852722,
+			"dateTime": "2026.06.15-09.10.54",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "DA78EE764A76CE1BAB5FE0B7AE7D1471"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.10.55"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "DA78EE764A76CE1BAB5FE0B7AE7D1471",
+					"name": "UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain",
+					"type": "Comparison",
+					"files": {
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain/Windows/D3D12_SM6/Delta.png",
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain/Windows/D3D12_SM6/Incoming.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_AutoPageLine",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_AutoPageLine",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 1.0855084657669067,
+			"dateTime": "2026.06.15-09.10.55",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_AutoPageLine' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "CEE03FB44F09C8619F1D258EB758FA14"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.10.56"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "CEE03FB44F09C8619F1D258EB758FA14",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_AutoPageLine",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_AutoPageLine/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_AutoPageLine/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_AutoPageLine/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_AutopagePadding",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_AutopagePadding",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.9100432991981506,
+			"dateTime": "2026.06.15-09.10.56",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_AutopagePadding' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "600509274CF21CE3C037A08F43287909"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.10.57"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "600509274CF21CE3C037A08F43287909",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_AutopagePadding",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_AutopagePadding/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_AutopagePadding/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_AutopagePadding/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_EdgeCaseTest",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_EdgeCaseTest",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.8377069234848022,
+			"dateTime": "2026.06.15-09.10.57",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_EdgeCaseTest' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "374A09EC4C24DA86F6B9EFA492481680"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.10.58"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "374A09EC4C24DA86F6B9EFA492481680",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_EdgeCaseTest",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_EdgeCaseTest/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_EdgeCaseTest/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_EdgeCaseTest/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.5200657844543457,
+			"dateTime": "2026.06.15-09.10.58",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "F18372394FD97CEC5E9EFC89B44C8FB0"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.10.58"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "F18372394FD97CEC5E9EFC89B44C8FB0",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_Tuto01_Simple",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto01_Simple",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.7099615931510925,
+			"dateTime": "2026.06.15-09.10.59",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto01_Simple' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "7395B4984DE1DD05B43AEFBDFB72F620"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.10.59"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "7395B4984DE1DD05B43AEFBDFB72F620",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto01_Simple",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto01_Simple/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto01_Simple/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto01_Simple/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_Tuto02_RichTextSimple",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto02_RichTextSimple",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 1.0896382331848145,
+			"dateTime": "2026.06.15-09.10.59",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple' was similar!  Global Difference = 0.002247, Max Local Difference = 0.112365",
+						"context": "",
+						"artifact": "F467704D4F285DEF5B532FA5724E00FA"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.11.01"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "F467704D4F285DEF5B532FA5724E00FA",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_Tuto03_RichTextFont",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto03_RichTextFont",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.846930980682373,
+			"dateTime": "2026.06.15-09.11.01",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto03_RichTextFont' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "60570F6D4C35B605514BC5BF81E234EC"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.11.02"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "60570F6D4C35B605514BC5BF81E234EC",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto03_RichTextFont",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto03_RichTextFont/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto03_RichTextFont/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto03_RichTextFont/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_Tuto04_RichTextPadding",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto04_RichTextPadding",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.40790408849716187,
+			"dateTime": "2026.06.15-09.11.02",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding' was similar!  Global Difference = 0.000603, Max Local Difference = 0.060282",
+						"context": "",
+						"artifact": "CCAD73C342137256C6F2DF86C3784F23"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.11.02"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "CCAD73C342137256C6F2DF86C3784F23",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.4000082015991211,
+			"dateTime": "2026.06.15-09.11.02",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "95063F0B4E48ADE41935858BD1B6BF88"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.11.03"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "95063F0B4E48ADE41935858BD1B6BF88",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_Tuto06_EventTrigger",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto06_EventTrigger",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 2.8973922729492188,
+			"dateTime": "2026.06.15-09.11.03",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto06_EventTrigger' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "326FD4D14C0A5AF339A654A2D7241B91"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.11.06"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "326FD4D14C0A5AF339A654A2D7241B91",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto06_EventTrigger",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto06_EventTrigger/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto06_EventTrigger/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto06_EventTrigger/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_Tuto07_OverflowWarp",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto07_OverflowWarp",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.4028280973434448,
+			"dateTime": "2026.06.15-09.11.06",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp' was similar!  Global Difference = 0.001545, Max Local Difference = 0.049527",
+						"context": "",
+						"artifact": "958563794F9D7F8AD9ABB7A531653A7D"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.11.06"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "958563794F9D7F8AD9ABB7A531653A7D",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_Tuto08_HyperText",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto08_HyperText",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.9400662183761597,
+			"dateTime": "2026.06.15-09.11.06",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText' was similar!  Global Difference = 0.001088, Max Local Difference = 0.103636",
+						"context": "",
+						"artifact": "D9F79EA5415345DB7FDDF492F13F2F94"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.11.07"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "D9F79EA5415345DB7FDDF492F13F2F94",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText",
+					"type": "Comparison",
+					"files": {
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText/Windows/D3D12_SM6/Delta.png",
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText/Windows/D3D12_SM6/Incoming.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_Tuto09_Sound",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto09_Sound",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 3.2159812450408936,
+			"dateTime": "2026.06.15-09.11.07",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "CAFC15714431A93F39913FB16A402507"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.11.11"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "CAFC15714431A93F39913FB16A402507",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound",
+					"type": "Comparison",
+					"files": {
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound/Windows/D3D12_SM6/Delta.png",
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound/Windows/D3D12_SM6/Incoming.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_Tuto10_StyleInfo",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto10_StyleInfo",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 1.3015507459640503,
+			"dateTime": "2026.06.15-09.11.11",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto10_StyleInfo' was similar!  Global Difference = 0.005614, Max Local Difference = 0.230131",
+						"context": "",
+						"artifact": "2AC26F584EA38DCEA3746C9CB5976E63"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.11.12"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "2AC26F584EA38DCEA3746C9CB5976E63",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto10_StyleInfo",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto10_StyleInfo/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto10_StyleInfo/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto10_StyleInfo/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_Tuto11_AutoPage",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto11_AutoPage",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 2.502218008041382,
+			"dateTime": "2026.06.15-09.11.12",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto11_AutoPage' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "FE08C1434A762C375EE47C8A8B5341B6"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.11.15"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "FE08C1434A762C375EE47C8A8B5341B6",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto11_AutoPage",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto11_AutoPage/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto11_AutoPage/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto11_AutoPage/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_Tuto12_AutoPage_Long",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto12_AutoPage_Long",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 1.7907203435897827,
+			"dateTime": "2026.06.15-09.11.15",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "3325FBBE41F6D98C9138CFA280C9646E"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.11.17"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "3325FBBE41F6D98C9138CFA280C9646E",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_Tuto13_Justification",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto13_Justification",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.864002525806427,
+			"dateTime": "2026.06.15-09.11.17",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto13_Justification' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "FF935DB64A6D99FD82111086C0C08A81"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.11.18"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "FF935DB64A6D99FD82111086C0C08A81",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto13_Justification",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto13_Justification/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto13_Justification/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto13_Justification/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_Tuto14_SpriteSheet",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto14_SpriteSheet",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.9296742081642151,
+			"dateTime": "2026.06.15-09.11.18",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto14_SpriteSheet' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "AE26DC8B4285B0607CC073BF7398ED7F"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.11.19"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "AE26DC8B4285B0607CC073BF7398ED7F",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto14_SpriteSheet",
+					"type": "Comparison",
+					"files": {
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto14_SpriteSheet/Windows/D3D12_SM6/Delta.png",
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto14_SpriteSheet/Windows/D3D12_SM6/Incoming.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto14_SpriteSheet/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.6446473002433777,
+			"dateTime": "2026.06.15-09.11.19",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "B2F865074F55D311B81A839F276704F2"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.11.19"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "B2F865074F55D311B81A839F276704F2",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_Tuto16_RubyText",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto16_RubyText",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.6485430002212524,
+			"dateTime": "2026.06.15-09.11.20",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto16_RubyText' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "AEAAF4864D577410D11C83AEBFA9BF6C"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.11.20"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "AEAAF4864D577410D11C83AEBFA9BF6C",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto16_RubyText",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto16_RubyText/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto16_RubyText/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto16_RubyText/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_Tuto17_Decorator",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto17_Decorator",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 1.1616644859313965,
+			"dateTime": "2026.06.15-09.11.20",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto17_Decorator' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "4C8935A743250256CE7C7FBE89F51779"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.11.22"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "4C8935A743250256CE7C7FBE89F51779",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto17_Decorator",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto17_Decorator/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto17_Decorator/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto17_Decorator/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_Tuto18_NewPageTag",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto18_NewPageTag",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.601865828037262,
+			"dateTime": "2026.06.15-09.11.22",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto18_NewPageTag' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "B0F2EBC2489E3545225489A8794A7B2A"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.11.22"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "B0F2EBC2489E3545225489A8794A7B2A",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto18_NewPageTag",
+					"type": "Comparison",
+					"files": {
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto18_NewPageTag/Windows/D3D12_SM6/Incoming.png",
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto18_NewPageTag/Windows/D3D12_SM6/Delta.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto18_NewPageTag/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		},
+		{
+			"testDisplayName": "FunctionalUIScreenshotTest_Tuto20_Binlker",
+			"fullTestPath": "Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto20_Binlker",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"7645008A48115E03CA9DED824E3242B0"
+			],
+			"duration": 0.6652246713638306,
+			"dateTime": "2026.06.15-09.11.22",
+			"entries": [
+				{
+					"event": {
+						"type": "Info",
+						"message": "Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto20_Binlker' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000",
+						"context": "",
+						"artifact": "ACCD87AD4B61D78B9E1BEFBD0655A924"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.06.15-09.11.23"
+				}
+			],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": [
+				{
+					"iD": "ACCD87AD4B61D78B9E1BEFBD0655A924",
+					"name": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto20_Binlker",
+					"type": "Comparison",
+					"files": {
+						"difference": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto20_Binlker/Windows/D3D12_SM6/Delta.png",
+						"unapproved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto20_Binlker/Windows/D3D12_SM6/Incoming.png",
+						"approved": "imageCompare/51494982/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto20_Binlker/Windows/D3D12_SM6/Approved.png"
+					}
+				}
+			]
+		}
+	]
+}
