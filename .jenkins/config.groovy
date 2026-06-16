@@ -6,12 +6,26 @@ def projectConfig() {
         // === Required (unrealConfig will fail-fast if missing) ===
         projectRoot:        '.',
         sharedLibraryName:   'kano-jenkins-unreal-pipeline-library',
+        branchPolicy: [
+            parameterName: 'SOURCE_BRANCH',
+            defaultBranch: 'main',
+            mode: 'git-parameter',
+            type: 'PT_BRANCH',
+            branchFilter: 'origin/(.*)',
+            useRepository: 'https://dev.azure.com/kanohorizonia/UEHorizonPlugin/_git/HorizonUIPluginDemo',
+            selectedValue: 'DEFAULT',
+            sortMode: 'DESCENDING_SMART',
+            quickFilterEnabled: true,
+            listSize: '20',
+            allowedRegex: '^[A-Za-z0-9._/-]+$',
+        ],
 
         // === Agent Selection ===
         windowsAgentLabel:   'windows && unreal',
         macAgentLabel:       'mac && unreal',
         linuxAgentLabel:     'linux && unreal',
-        unrealEngineRoot:    'H:/EpicGames/Installed/UE_5.7',
+        unrealEngineRoot:    'H:/EpicGames/Installed/UE_5.8',
+        kanobuildUbtArgs:    '-CompilerVersion=14.51.36231',
 
         // === Producer/aggregate routing labels (optional overrides) ===
         // Use these to route specific producer types to separate agent pools.

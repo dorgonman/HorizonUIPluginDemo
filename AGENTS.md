@@ -1,6 +1,6 @@
 # AGENTS.md — HorizonUIPluginDemo
 
-Unreal Engine 5.7 plugin demo project. Build/test via `Build/Script/` local overrides and `Build/Base/Script/` shared scripts.
+Unreal Engine 5.8 plugin demo project. Build/test via `Build/Script/` local overrides and `Build/Base/Script/` shared scripts.
 
 ## Quick Start
 
@@ -36,6 +36,10 @@ pixi run <task>
 
 **Source Engine Location:** `D:/_work/UnrealEngine` (set via `UNREAL_ENGINE_ROOT` env var)
 
+### Installed Engine Upgrade SOP
+
+See `Docs/installed-engine-upgrade-sop.md` before changing the project to a newer installed engine version.
+
 ### Pixi Task Discovery
 
 ```sh
@@ -60,15 +64,15 @@ Available tests:
 - `Plugin.SmokeTest.HorizonUI.Success` (Plugins/HorizonUIPlugin/Source/HorizonUI/Private/Test/SmokeTests.cpp)
 - `Plugin.UnitTests.HorizonUI` (Plugins/HorizonUIPlugin/Source/HorizonUI/Private/Test/ProductTests.cpp)
 
-## Gauntlet Path Invariant (UE 5.7)
+## Gauntlet Path Invariant (UE 5.8)
 
-For this project on Unreal Engine 5.7, treat the following as a required runtime path topology, not an optional workaround:
+For this project on Unreal Engine 5.8, treat the following as a required runtime path topology, not an optional workaround:
 
 - For `-build=local` packaged Gauntlet runs, keep `PROJECT_ROOT`, RunUnreal `-project`, and `-build=<GauntletBuildRoot>` under the same engine-root junction drive (`H:` in current setup).
 - Keep packaged executable `Base Directory` aligned with that same junctioned `-build` root.
 - Keep `-userdir` and screenshot/report output paths compatible with that topology.
 
-Why this matters on 5.7:
+Why this matters on 5.8:
 
 - `AutomationControllerManager::GenerateTestPassHtmlIndex()` loads `Engine/Content/Automation/Report-Template.html` via `FPaths::EngineContentDir()`.
 - `FScreenShotManager::CompareScreenshot()` writes/copies report artifacts under `FPaths::AutomationReportsDir()` and path-combines against runtime project/base paths.
@@ -77,7 +81,7 @@ Why this matters on 5.7:
 Rule for future engine versions:
 
 - Do not change this behavior by assumption.
-- If upgrading beyond UE 5.7 and you want to simplify/alter this topology, first verify engine source behavior (`AutomationController`, `ScreenShotManager`, and `FPaths` path derivation) and then update this document with evidence.
+- If upgrading beyond UE 5.8 and you want to simplify/alter this topology, first verify engine source behavior (`AutomationController`, `ScreenShotManager`, and `FPaths` path derivation) and then update this document with evidence.
 
 ## Code Style & Conventions
 
