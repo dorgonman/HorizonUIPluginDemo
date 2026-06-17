@@ -35,7 +35,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
   
 ----------------------------------------------
               HorizonUIPlugin
-                 5.7.0
+                 5.8.0
          http://dorgon.horizon-studio.net
           	dorgonman@hotmail.com
 ----------------------------------------------
@@ -44,7 +44,7 @@ How to Run Demo Project before purchase:(Only for Win64 editor build, no source 
 System Requirements
 -----------------------
 
-Supported UnrealEngine version: 4.11-5.7
+Supported UnrealEngine version: 4.11-5.8
  
 
 -----------------------
@@ -341,6 +341,10 @@ email: dorgonman@hotmail.com
  Version History
 -----------------------
 
+
+*5.8.0
+
+	Upgrade to 5.8.0
 
 *5.7.0
 
