@@ -1,11 +1,11 @@
 {
-	"creationTime": "2026.06.15-17.10.58",
+	"creationTime": "2026.06.18-22.11.24",
 	"sourcePlatform": "Windows",
 	"sourceRHI": "D3D12",
 	"idealApprovedFolderPath": "Test/Screenshots/UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment/Windows/D3D12_SM6",
 	"approvedFilePath": "Test/Screenshots/UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment/Windows/D3D12_SM6/ufdh6eyf-lipfhy_90fvxg.png",
-	"incomingFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment/Windows/D3D12_SM6/h74yku9cr-6jfuihwk96kg.png",
-	"comparisonFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/Delta/ImageCompare-615C00A84449A194C2FAC096E1130C0C.png",
+	"incomingFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment/Windows/D3D12_SM6/zn4tcuu8-donqckedchrjq.png",
+	"comparisonFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/Delta/ImageCompare-35F7AC804C4D8796FA55FD8A82600D5D.png",
 	"reportApprovedFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment/Windows/D3D12_SM6/Approved.png",
 	"reportIncomingFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment/Windows/D3D12_SM6/Incoming.png",
 	"reportComparisonFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment/Windows/D3D12_SM6/Delta.png",
@@ -26,7 +26,7 @@
 	},
 	"errorMessage": "",
 	"screenshotPath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment",
-	"comparisonId": "F18372394FD97CEC5E9EFC89B44C8FB0",
+	"comparisonId": "286ED77341318BCE1F5D26AC38E5FE03",
 	"bSkipAttachingImages": false,
 	"version": 3
 }

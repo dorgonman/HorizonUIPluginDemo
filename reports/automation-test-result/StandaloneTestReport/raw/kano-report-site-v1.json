@@ -3,7 +3,7 @@
   "schemaVersion": 1,
   "contractId": "kano-report-site-v1",
   "title": "HorizonUIPluginDemoTest Reports",
-  "generatedAt": "2026-06-15T09:11:45Z",
+  "generatedAt": "2026-06-18T14:12:09Z",
   "reportRoot": ".",
   "cards": [
     {
@@ -124,10 +124,10 @@
     "reason": "Coverage report contains valid line data",
     "slug": "HorizonUIPluginDemoTest",
     "xmlPath": "Coverage/HorizonUIPluginDemoTest/cobertura.xml",
-    "linesValid": 2594,
-    "linesCovered": 1637,
+    "linesValid": 2575,
+    "linesCovered": 1617,
     "packageCount": 1,
-    "classCount": 43,
-    "sourceFileCount": 43
+    "classCount": 37,
+    "sourceFileCount": 37
   }
 }

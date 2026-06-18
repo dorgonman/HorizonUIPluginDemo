@@ -1,16 +1,16 @@
 {
-	"creationTime": "2026.06.15-17.11.17",
+	"creationTime": "2026.06.18-22.11.42",
 	"sourcePlatform": "Windows",
 	"sourceRHI": "D3D12",
 	"idealApprovedFolderPath": "Test/Screenshots/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long/Windows/D3D12_SM6",
 	"approvedFilePath": "Test/Screenshots/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long/Windows/D3D12_SM6/ufdh6eyf-lipfhy_90fvxg.png",
-	"incomingFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long/Windows/D3D12_SM6/h74yku9cr-6jfuihwk96kg.png",
-	"comparisonFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/Delta/ImageCompare-88D512ED41FDA2403BEC9190DD5F59F7.png",
+	"incomingFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long/Windows/D3D12_SM6/zn4tcuu8-donqckedchrjq.png",
+	"comparisonFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/Delta/ImageCompare-7598F94F46D4D8850AA272BA52240426.png",
 	"reportApprovedFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long/Windows/D3D12_SM6/Approved.png",
 	"reportIncomingFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long/Windows/D3D12_SM6/Incoming.png",
 	"reportComparisonFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long/Windows/D3D12_SM6/Delta.png",
-	"maxLocalDifference": 0,
-	"globalDifference": 0,
+	"maxLocalDifference": 0.17062114197530864,
+	"globalDifference": 0.0017066936728395061,
 	"tolerance":
 	{
 		"red": 16,
@@ -26,7 +26,7 @@
 	},
 	"errorMessage": "",
 	"screenshotPath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto12_AutoPage_Long",
-	"comparisonId": "3325FBBE41F6D98C9138CFA280C9646E",
+	"comparisonId": "3DD9A87A4E6FF00F4AA67B9A8FFA4444",
 	"bSkipAttachingImages": false,
 	"version": 3
 }

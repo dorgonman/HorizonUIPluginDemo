@@ -8,7 +8,7 @@
     ],
     [
       "Passed",
-      "39"
+      "38"
     ],
     [
       "Warnings",
@@ -16,7 +16,7 @@
     ],
     [
       "Failed",
-      "0"
+      "1"
     ],
     [
       "Not run",
@@ -24,7 +24,7 @@
     ],
     [
       "Duration (s)",
-      "31.020"
+      "32.031"
     ],
     [
       "Build matrix",
@@ -32,11 +32,11 @@
     ],
     [
       "Selected build root",
-      "H:\\EpicGames\\Installed\\UE_5.7/HorizonUIPluginDemo/Intermediate/BuildArtifacts/BuildPackage/Win64/main/5.7.0.725/Development/Standalone"
+      "H:\\EpicGames\\Installed\\UE_5.8/HorizonUIPluginDemo/Intermediate/BuildArtifacts/BuildPackage/Win64/main/5.8.0.736/Development/Standalone"
     ],
     [
       "Adapter target",
-      "H:\\EpicGames\\Installed\\UE_5.7\\HorizonUIPluginDemo\\Intermediate\\BuildArtifacts\\BuildPackage\\Win64\\main\\5.7.0.725\\Development\\Standalone"
+      "H:\\EpicGames\\Installed\\UE_5.8\\HorizonUIPluginDemo\\Intermediate\\BuildArtifacts\\BuildPackage\\Win64\\main\\5.8.0.736\\Development\\Standalone"
     ],
     [
       "Host machine",

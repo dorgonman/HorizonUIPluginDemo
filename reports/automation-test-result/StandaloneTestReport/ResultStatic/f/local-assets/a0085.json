@@ -1,16 +1,16 @@
 {
-	"creationTime": "2026.06.15-17.11.06",
+	"creationTime": "2026.06.18-22.11.32",
 	"sourcePlatform": "Windows",
 	"sourceRHI": "D3D12",
 	"idealApprovedFolderPath": "Test/Screenshots/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp/Windows/D3D12_SM6",
 	"approvedFilePath": "Test/Screenshots/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp/Windows/D3D12_SM6/ufdh6eyf-lipfhy_90fvxg.png",
-	"incomingFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp/Windows/D3D12_SM6/h74yku9cr-6jfuihwk96kg.png",
-	"comparisonFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/Delta/ImageCompare-32F166894B9602F024A8528974E3EE1C.png",
+	"incomingFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp/Windows/D3D12_SM6/zn4tcuu8-donqckedchrjq.png",
+	"comparisonFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/Delta/ImageCompare-0FDD7B094A5DFCC9FB3DD4A00D338724.png",
 	"reportApprovedFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp/Windows/D3D12_SM6/Approved.png",
 	"reportIncomingFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp/Windows/D3D12_SM6/Incoming.png",
 	"reportComparisonFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp/Windows/D3D12_SM6/Delta.png",
-	"maxLocalDifference": 0.049527391975308643,
-	"globalDifference": 0.0015451388888888889,
+	"maxLocalDifference": 0.13271604938271606,
+	"globalDifference": 0.0072926311728395065,
 	"tolerance":
 	{
 		"red": 16,
@@ -26,7 +26,7 @@
 	},
 	"errorMessage": "",
 	"screenshotPath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp",
-	"comparisonId": "958563794F9D7F8AD9ABB7A531653A7D",
+	"comparisonId": "3E487D3246A430DB9130A388ADEBBD4D",
 	"bSkipAttachingImages": false,
 	"version": 3
 }

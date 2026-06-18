@@ -1,13 +1,13 @@
 gauntletBuildResolutionVersion=1
-timestamp=2026-06-15 17:10:21
+timestamp=2026-06-18 22:10:42
 hostMachine=PC-TiffanyHo
 requestedBuildArg=-build=local
-normalizedBuildArg=-build=H:\EpicGames\Installed\UE_5.7\HorizonUIPluginDemo\Intermediate\BuildUpstreamInput\GauntletBuildRoot
-normalizedBuildPath=H:\EpicGames\Installed\UE_5.7\HorizonUIPluginDemo\Intermediate\BuildUpstreamInput\GauntletBuildRoot
-selectedStandaloneBuildRoot=H:\EpicGames\Installed\UE_5.7/HorizonUIPluginDemo/Intermediate/BuildArtifacts/BuildPackage/Win64/main/5.7.0.725/Development/Standalone
-adapterRoot=H:\EpicGames\Installed\UE_5.7/HorizonUIPluginDemo/Intermediate/BuildUpstreamInput/GauntletBuildRoot
-adapterLink=H:\EpicGames\Installed\UE_5.7/HorizonUIPluginDemo/Intermediate/BuildUpstreamInput/GauntletBuildRoot/Windows
-adapterResolvedTarget=H:\EpicGames\Installed\UE_5.7\HorizonUIPluginDemo\Intermediate\BuildArtifacts\BuildPackage\Win64\main\5.7.0.725\Development\Standalone
+normalizedBuildArg=-build=H:\EpicGames\Installed\UE_5.8\HorizonUIPluginDemo\Intermediate\BuildUpstreamInput\GauntletBuildRoot
+normalizedBuildPath=H:\EpicGames\Installed\UE_5.8\HorizonUIPluginDemo\Intermediate\BuildUpstreamInput\GauntletBuildRoot
+selectedStandaloneBuildRoot=H:\EpicGames\Installed\UE_5.8/HorizonUIPluginDemo/Intermediate/BuildArtifacts/BuildPackage/Win64/main/5.8.0.736/Development/Standalone
+adapterRoot=H:\EpicGames\Installed\UE_5.8/HorizonUIPluginDemo/Intermediate/BuildUpstreamInput/GauntletBuildRoot
+adapterLink=H:\EpicGames\Installed\UE_5.8/HorizonUIPluginDemo/Intermediate/BuildUpstreamInput/GauntletBuildRoot/Windows
+adapterResolvedTarget=H:\EpicGames\Installed\UE_5.8\HorizonUIPluginDemo\Intermediate\BuildArtifacts\BuildPackage\Win64\main\5.8.0.736\Development\Standalone
 targetPlatform=Win64
 configuration=Development
 buildKind=Standalone
@@ -17,7 +17,7 @@ editorPlatform=<disabled>
 clientPlatform=Win64
 serverPlatform=<disabled>
 artifactName=HorizonUIPluginDemoTest_Win64_Development_standalone-client0
-reportRoot=H:\EpicGames\Installed\UE_5.7\HorizonUIPluginDemo\Intermediate\BuildArtifacts\BuildPackage\Win64\main\5.7.0.725\Development\StandaloneTestReport
+reportRoot=H:\EpicGames\Installed\UE_5.8\HorizonUIPluginDemo\Intermediate\BuildArtifacts\BuildPackage\Win64\main\5.8.0.736\Development\StandaloneTestReport
 testResultReportDirectory=C:\Mount\s\jenkins_ws\HorizonPlugin\HorizonUIPluginDemo\Package\Intermediate\BuildGauntletTestReports\HorizonUIPluginDemoTest_Win64_Development_standalone-client0\AutomationReport
 qaRawLogDirectory=C:\Mount\s\jenkins_ws\HorizonPlugin\HorizonUIPluginDemo\Package\Intermediate\BuildGauntletTestReports
 notes=Device assignment/install target is resolved by Gauntlet runtime per platform and device pool.

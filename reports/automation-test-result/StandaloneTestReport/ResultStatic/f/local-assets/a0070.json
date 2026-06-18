@@ -1,16 +1,16 @@
 {
-	"creationTime": "2026.06.15-17.11.02",
+	"creationTime": "2026.06.18-22.11.27",
 	"sourcePlatform": "Windows",
 	"sourceRHI": "D3D12",
 	"idealApprovedFolderPath": "Test/Screenshots/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding/Windows/D3D12_SM6",
 	"approvedFilePath": "Test/Screenshots/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding/Windows/D3D12_SM6/ufdh6eyf-lipfhy_90fvxg.png",
-	"incomingFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding/Windows/D3D12_SM6/h74yku9cr-6jfuihwk96kg.png",
-	"comparisonFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/Delta/ImageCompare-BC4B735245D1552866B9849A7AB242BF.png",
+	"incomingFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding/Windows/D3D12_SM6/zn4tcuu8-donqckedchrjq.png",
+	"comparisonFilePath": "../../../../../../GauntletTemp/DeviceCache/Win64/LocalDevice0/UserDir/Saved/Automation/Tmp/Delta/ImageCompare-3A0E7F364E964A49E0A0B489A71E1DCF.png",
 	"reportApprovedFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding/Windows/D3D12_SM6/Approved.png",
 	"reportIncomingFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding/Windows/D3D12_SM6/Incoming.png",
 	"reportComparisonFilePath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding/Windows/D3D12_SM6/Delta.png",
-	"maxLocalDifference": 0.060281635802469133,
-	"globalDifference": 0.00060281635802469132,
+	"maxLocalDifference": 0.058207947530864196,
+	"globalDifference": 0.00058207947530864194,
 	"tolerance":
 	{
 		"red": 16,
@@ -26,7 +26,7 @@
 	},
 	"errorMessage": "",
 	"screenshotPath": "UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding",
-	"comparisonId": "CCAD73C342137256C6F2DF86C3784F23",
+	"comparisonId": "F09AF82E4DC20608F8149D8D0E738614",
 	"bSkipAttachingImages": false,
 	"version": 3
 }
