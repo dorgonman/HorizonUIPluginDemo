@@ -25,7 +25,9 @@ def projectConfig() {
         macAgentLabel:       'mac && unreal',
         linuxAgentLabel:     'linux && unreal',
         unrealEngineRoot:    'H:/EpicGames/Installed/UE_5.8',
-        kanobuildUbtArgs:    '-CompilerVersion=14.51.36231',
+        // Leave compiler selection to UE/AutoSDK by default. Build/Base preflight
+        // fails non-preferred explicit -CompilerVersion values before UBT.
+        kanobuildUbtArgs:    '',
 
         // === Producer/aggregate routing labels (optional overrides) ===
         // Use these to route specific producer types to separate agent pools.
