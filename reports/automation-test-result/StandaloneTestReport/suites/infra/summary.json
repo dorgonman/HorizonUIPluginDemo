@@ -1,7 +1,7 @@
 {
   "id": "infra",
   "title": "Infra",
-  "status": "WARN",
+  "status": "SKIPPED",
   "tests": 0,
   "passed": 0,
   "failed": 0,

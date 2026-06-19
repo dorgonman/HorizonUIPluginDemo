@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<coverage line-rate="0.6280" branch-rate="0.0000" complexity="0" branches-covered="0" branches-valid="0" timestamp="1781791916" lines-covered="1617" lines-valid="2575" version="0">
-  <sources><source>E:\jenkins_ws\HorizonPlugin\HorizonUIPluginDemo\Package</source></sources><packages><package name="E:\jenkins_ws\HorizonPlugin\HorizonUIPluginDemo\Package\Intermediate\BuildArtifacts\BuildPackage\Win64\main\5.8.0.736\Development\Standalone\HorizonUIPluginDemo\Binaries\Win64\HorizonUIPluginDemo.exe" line-rate="0.6280" branch-rate="0.0000" complexity="0" lines-covered="1617" lines-valid="2575" branches-covered="0" branches-valid="0">
+<coverage line-rate="0.6280" branch-rate="0.0000" complexity="0" branches-covered="0" branches-valid="0" timestamp="1781818869" lines-covered="1617" lines-valid="2575" version="0">
+  <sources><source>E:\jenkins_ws\HorizonPlugin\HorizonUIPluginDemo\Package</source></sources><packages><package name="E:\jenkins_ws\HorizonPlugin\HorizonUIPluginDemo\Package\Intermediate\BuildArtifacts\BuildPackage\Win64\main\5.8.0.738\Development\Standalone\HorizonUIPluginDemo\Binaries\Win64\HorizonUIPluginDemo.exe" line-rate="0.6280" branch-rate="0.0000" complexity="0" lines-covered="1617" lines-valid="2575" branches-covered="0" branches-valid="0">
       <classes><class name="HorizonDialogueMsgSpaceDecorator.cpp" filename="Package/Plugins/HorizonUIPlugin/Source/HorizonUI/Private/Decorator/HorizonDialogueMsgSpaceDecorator.cpp" line-rate="0.8696" branch-rate="0.0000" complexity="0" lines-covered="20" lines-valid="23" branches-covered="0" branches-valid="0">
           <methods />
           <lines>

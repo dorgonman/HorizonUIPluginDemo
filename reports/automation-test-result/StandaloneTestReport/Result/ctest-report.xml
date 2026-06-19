@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<Site BuildName="Windows" BuildStamp="0001.01.01-00.00.00" Generator="UE4_Automation_System" CompilerName="" CompilerVersion="" OSName="Windows" Hostname="PC-TiffanyHo" OSRelease="10" OSVersion="10.0.19045" OSPlatform="Windows" Is64Bits="1" VendorString="Intel64 Family 6 Model 158 Stepping 9, GenuineIntel" VendorID="Intel64 Family 6 Model 158 Stepping 9, GenuineIntel" FamilyID="" ModelID="" ProcessorCacheSize="" NumberOfLogicalCPU="8" NumberOfPhysicalCPU="" TotalVirtualMemory="" TotalPhysicalMemory="" LogicalProcessorsPerPhysical="" ProcessorClockFrequency="">
+<Site BuildName="Windows" BuildStamp="0001.01.01-00.00.00" Generator="UE4_Automation_System" CompilerName="" CompilerVersion="" OSName="Windows" Hostname="DESKTOP-576FRHA" OSRelease="11" OSVersion="10.0.26200" OSPlatform="Windows" Is64Bits="1" VendorString="AMD64 Family 25 Model 33 Stepping 0, AuthenticAMD" VendorID="AMD64 Family 25 Model 33 Stepping 0, AuthenticAMD" FamilyID="" ModelID="" ProcessorCacheSize="" NumberOfLogicalCPU="32" NumberOfPhysicalCPU="" TotalVirtualMemory="" TotalPhysicalMemory="" LogicalProcessorsPerPhysical="" ProcessorClockFrequency="">
   <Testing>
     <StartDateTime>0001.01.01-00.00.00</StartDateTime>
     <StartTestTime>0</StartTestTime>
@@ -53,7 +53,7 @@
       <FullName>Plugin.SmokeTest.HorizonUI.EnumValidation</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.01218859851360321</Value>
+          <Value>0.0049994029104709625</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -71,10 +71,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.01218859851360321</ExecutionTime>
+      <ExecutionTime>0.0049994029104709625</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Plugin.SmokeTest.HorizonUI.ModuleLoad</Name>
@@ -82,7 +82,7 @@
       <FullName>Plugin.SmokeTest.HorizonUI.ModuleLoad</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.00452829897403717</Value>
+          <Value>0.004921700805425644</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -100,10 +100,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.00452829897403717</ExecutionTime>
+      <ExecutionTime>0.004921700805425644</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Plugin.SmokeTest.HorizonUI.StructInstantiation</Name>
@@ -111,7 +111,7 @@
       <FullName>Plugin.SmokeTest.HorizonUI.StructInstantiation</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.01478869840502739</Value>
+          <Value>0.011825498193502426</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -129,10 +129,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.01478869840502739</ExecutionTime>
+      <ExecutionTime>0.011825498193502426</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Plugin.SmokeTest.HorizonUI.Success</Name>
@@ -140,7 +140,7 @@
       <FullName>Plugin.SmokeTest.HorizonUI.Success</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.00364840030670166</Value>
+          <Value>0.00346369668841362</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -158,10 +158,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.00364840030670166</ExecutionTime>
+      <ExecutionTime>0.00346369668841362</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Plugin.UnitTests.HorizonUI.BlinkingCursor</Name>
@@ -169,7 +169,7 @@
       <FullName>Plugin.UnitTests.HorizonUI.BlinkingCursor</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.009727198630571365</Value>
+          <Value>0.00884849950671196</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -187,10 +187,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.009727198630571365</ExecutionTime>
+      <ExecutionTime>0.00884849950671196</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Plugin.UnitTests.HorizonUI.DialogueBlock</Name>
@@ -198,7 +198,7 @@
       <FullName>Plugin.UnitTests.HorizonUI.DialogueBlock</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.009784802794456482</Value>
+          <Value>0.011906798928976059</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -216,10 +216,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.009784802794456482</ExecutionTime>
+      <ExecutionTime>0.011906798928976059</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Plugin.UnitTests.HorizonUI.DialogueLine</Name>
@@ -227,7 +227,7 @@
       <FullName>Plugin.UnitTests.HorizonUI.DialogueLine</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.006489802151918411</Value>
+          <Value>0.005513198673725128</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -245,10 +245,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.006489802151918411</ExecutionTime>
+      <ExecutionTime>0.005513198673725128</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Plugin.UnitTests.HorizonUI.DialoguePage</Name>
@@ -256,7 +256,7 @@
       <FullName>Plugin.UnitTests.HorizonUI.DialoguePage</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.00619710236787796</Value>
+          <Value>0.00836380198597908</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -274,10 +274,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.00619710236787796</ExecutionTime>
+      <ExecutionTime>0.00836380198597908</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Plugin.UnitTests.HorizonUI.DialogueSegment</Name>
@@ -285,7 +285,7 @@
       <FullName>Plugin.UnitTests.HorizonUI.DialogueSegment</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.00801040232181549</Value>
+          <Value>0.008490197360515594</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -303,10 +303,10 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.00801040232181549</ExecutionTime>
+      <ExecutionTime>0.008490197360515594</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Plugin.UnitTests.HorizonUI.TextOverflow</Name>
@@ -314,7 +314,7 @@
       <FullName>Plugin.UnitTests.HorizonUI.TextOverflow</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.00552000105381012</Value>
+          <Value>0.004781901836395264</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -332,104 +332,39 @@
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.00552000105381012</ExecutionTime>
+      <ExecutionTime>0.004781901836395264</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
-    <Test Status="failed">
+    <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow</Name>
       <Path>BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow</Path>
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>1.1161364316940308</Value>
+          <Value>0.9758548140525818</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
-          <Value>failed</Value>
+          <Value>passed</Value>
         </NamedMeasurement>
         <NamedMeasurement type="numeric/int" name="Warnings">
           <Value>0</Value>
         </NamedMeasurement>
         <NamedMeasurement type="numeric/int" name="Errors">
-          <Value>1</Value>
+          <Value>0</Value>
         </NamedMeasurement>
         <Measurement>
-          <Value>[Info] LogConsoleManager: Trying to Replace Cvar=r.AntiAliasingMethod Set By Constructor Value implicitly by calling SetWithCurrentPriority or ReplaceCurrentPriorityAndTag.
-This is not allowed, possible solutions:
-1. Use SetWithCurrentPriority or ReplaceCurrentPriorityAndTag with explicit MinPriority and MaxPriority values, with MinPriority &gt;= ECVF_SetByScalability.
-2. Use explicit Set, Cvar-&gt;Set(&lt;Value&gt;, &lt;SetByPriority&gt;) | Context: log
-[Info] LogConsoleManager: Trying to Replace Cvar=r.ContactShadows Set By Constructor Value implicitly by calling SetWithCurrentPriority or ReplaceCurrentPriorityAndTag.
-This is not allowed, possible solutions:
-1. Use SetWithCurrentPriority or ReplaceCurrentPriorityAndTag with explicit MinPriority and MaxPriority values, with MinPriority &gt;= ECVF_SetByScalability.
-2. Use explicit Set, Cvar-&gt;Set(&lt;Value&gt;, &lt;SetByPriority&gt;) | Context: log
-[Info] LogConsoleManager: Trying to Replace Cvar=r.TonemapperGamma Set By Constructor Value implicitly by calling SetWithCurrentPriority or ReplaceCurrentPriorityAndTag.
-This is not allowed, possible solutions:
-1. Use SetWithCurrentPriority or ReplaceCurrentPriorityAndTag with explicit MinPriority and MaxPriority values, with MinPriority &gt;= ECVF_SetByScalability.
-2. Use explicit Set, Cvar-&gt;Set(&lt;Value&gt;, &lt;SetByPriority&gt;) | Context: log
-[Info] LogConsoleManager: Trying to Replace Cvar=r.DynamicRes.TestScreenPercentage Set By Constructor Value implicitly by calling SetWithCurrentPriority or ReplaceCurrentPriorityAndTag.
-This is not allowed, possible solutions:
-1. Use SetWithCurrentPriority or ReplaceCurrentPriorityAndTag with explicit MinPriority and MaxPriority values, with MinPriority &gt;= ECVF_SetByScalability.
-2. Use explicit Set, Cvar-&gt;Set(&lt;Value&gt;, &lt;SetByPriority&gt;) | Context: log
-[Info] LogConsoleManager: Trying to Replace Cvar=r.DynamicRes.OperationMode Set By Constructor Value implicitly by calling SetWithCurrentPriority or ReplaceCurrentPriorityAndTag.
-This is not allowed, possible solutions:
-1. Use SetWithCurrentPriority or ReplaceCurrentPriorityAndTag with explicit MinPriority and MaxPriority values, with MinPriority &gt;= ECVF_SetByScalability.
-2. Use explicit Set, Cvar-&gt;Set(&lt;Value&gt;, &lt;SetByPriority&gt;) | Context: log
-[Info] LogConsoleManager: Trying to Replace Cvar=r.ScreenPercentage Set By Constructor Value implicitly by calling SetWithCurrentPriority or ReplaceCurrentPriorityAndTag.
-This is not allowed, possible solutions:
-1. Use SetWithCurrentPriority or ReplaceCurrentPriorityAndTag with explicit MinPriority and MaxPriority values, with MinPriority &gt;= ECVF_SetByScalability.
-2. Use explicit Set, Cvar-&gt;Set(&lt;Value&gt;, &lt;SetByPriority&gt;) | Context: log
-[Info] LogConsoleManager: Trying to Replace Cvar=r.SecondaryScreenPercentage.GameViewport Set By Constructor Value implicitly by calling SetWithCurrentPriority or ReplaceCurrentPriorityAndTag.
-This is not allowed, possible solutions:
-1. Use SetWithCurrentPriority or ReplaceCurrentPriorityAndTag with explicit MinPriority and MaxPriority values, with MinPriority &gt;= ECVF_SetByScalability.
-2. Use explicit Set, Cvar-&gt;Set(&lt;Value&gt;, &lt;SetByPriority&gt;) | Context: log
-[Info] LogSlate: Synchronously lazy loading font file '../../../Engine/Content/EngineFonts/Faces/RobotoRegular.ufont' with subface index 0 in Game thread. | Context: log
-[Info] LogSlate: Took 0.000184 seconds to synchronously load lazily loaded font '../../../Engine/Content/EngineFonts/Faces/RobotoRegular.ufont' (155K) on Game thread. | Context: log
-[Info] LogSlate: Freetype font face in memory successfully created with synchronously loaded cooked font file '../../../Engine/Content/EngineFonts/Faces/RobotoRegular.ufont' subface 0 in Game thread. | Context: log
-[Info] LogSlate: Font face '../../../Engine/Content/EngineFonts/Faces/RobotoRegular.ufont' subface index 0 successfully added to font face map in Game thread. | Context: log
-[Info] LogSlate: Synchronously lazy loading font file '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' with subface index 0 in Game thread. | Context: log
-[Info] LogSlate: Took 0.000211 seconds to synchronously load lazily loaded font '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' (160K) on Game thread. | Context: log
-[Info] LogSlate: Freetype font face in memory successfully created with synchronously loaded raw font file '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' subface 0 in Game thread. | Context: log
-[Info] LogSlate: Font face '../../../Engine/Content/Slate/Fonts/Roboto-Bold.ttf' subface index 0 successfully added to font face map in Game thread. | Context: log
-[Error] LogAudioMixer: FMixerNullCallback: Large time delta between simulated audio clock and realtime [-208ms], ThreadID=14976 | Context: log
-[Info] Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000
-[Info] LogConsoleManager: Trying to Replace Cvar=r.AntiAliasingMethod Set By Constructor Value implicitly by calling SetWithCurrentPriority or ReplaceCurrentPriorityAndTag.
-This is not allowed, possible solutions:
-1. Use SetWithCurrentPriority or ReplaceCurrentPriorityAndTag with explicit MinPriority and MaxPriority values, with MinPriority &gt;= ECVF_SetByScalability.
-2. Use explicit Set, Cvar-&gt;Set(&lt;Value&gt;, &lt;SetByPriority&gt;) | Context: log
-[Info] LogConsoleManager: Trying to Replace Cvar=r.ContactShadows Set By Constructor Value implicitly by calling SetWithCurrentPriority or ReplaceCurrentPriorityAndTag.
-This is not allowed, possible solutions:
-1. Use SetWithCurrentPriority or ReplaceCurrentPriorityAndTag with explicit MinPriority and MaxPriority values, with MinPriority &gt;= ECVF_SetByScalability.
-2. Use explicit Set, Cvar-&gt;Set(&lt;Value&gt;, &lt;SetByPriority&gt;) | Context: log
-[Info] LogConsoleManager: Trying to Replace Cvar=r.TonemapperGamma Set By Constructor Value implicitly by calling SetWithCurrentPriority or ReplaceCurrentPriorityAndTag.
-This is not allowed, possible solutions:
-1. Use SetWithCurrentPriority or ReplaceCurrentPriorityAndTag with explicit MinPriority and MaxPriority values, with MinPriority &gt;= ECVF_SetByScalability.
-2. Use explicit Set, Cvar-&gt;Set(&lt;Value&gt;, &lt;SetByPriority&gt;) | Context: log
-[Info] LogConsoleManager: Trying to Replace Cvar=r.ScreenPercentage Set By Constructor Value implicitly by calling SetWithCurrentPriority or ReplaceCurrentPriorityAndTag.
-This is not allowed, possible solutions:
-1. Use SetWithCurrentPriority or ReplaceCurrentPriorityAndTag with explicit MinPriority and MaxPriority values, with MinPriority &gt;= ECVF_SetByScalability.
-2. Use explicit Set, Cvar-&gt;Set(&lt;Value&gt;, &lt;SetByPriority&gt;) | Context: log
-[Info] LogConsoleManager: Trying to Replace Cvar=r.DynamicRes.OperationMode Set By Constructor Value implicitly by calling SetWithCurrentPriority or ReplaceCurrentPriorityAndTag.
-This is not allowed, possible solutions:
-1. Use SetWithCurrentPriority or ReplaceCurrentPriorityAndTag with explicit MinPriority and MaxPriority values, with MinPriority &gt;= ECVF_SetByScalability.
-2. Use explicit Set, Cvar-&gt;Set(&lt;Value&gt;, &lt;SetByPriority&gt;) | Context: log
-[Info] LogConsoleManager: Trying to Replace Cvar=r.DynamicRes.TestScreenPercentage Set By Constructor Value implicitly by calling SetWithCurrentPriority or ReplaceCurrentPriorityAndTag.
-This is not allowed, possible solutions:
-1. Use SetWithCurrentPriority or ReplaceCurrentPriorityAndTag with explicit MinPriority and MaxPriority values, with MinPriority &gt;= ECVF_SetByScalability.
-2. Use explicit Set, Cvar-&gt;Set(&lt;Value&gt;, &lt;SetByPriority&gt;) | Context: log
-[Info] LogConsoleManager: Trying to Replace Cvar=r.SecondaryScreenPercentage.GameViewport Set By Constructor Value implicitly by calling SetWithCurrentPriority or ReplaceCurrentPriorityAndTag.
-This is not allowed, possible solutions:
-1. Use SetWithCurrentPriority or ReplaceCurrentPriorityAndTag with explicit MinPriority and MaxPriority values, with MinPriority &gt;= ECVF_SetByScalability.
-2. Use explicit Set, Cvar-&gt;Set(&lt;Value&gt;, &lt;SetByPriority&gt;) | Context: log</Value>
+          <Value>[Info] Screenshot 'UIScreenshotTestMap/BP_FunctionalUIScreenshotTest_BugReport_WBP_DialogueWindow' was similar!  Global Difference = 0.000000, Max Local Difference = 0.000000</Value>
         </Measurement>
       </Results>
       <Labels />
-      <Status>failed</Status>
-      <CompletionStatus>failed</CompletionStatus>
-      <ExecutionTime>1.1161364316940308</ExecutionTime>
+      <Status>passed</Status>
+      <CompletionStatus>passed</CompletionStatus>
+      <ExecutionTime>0.9758548140525818</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox</Name>
@@ -437,7 +372,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_DynamicSizeBox</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.8948423862457275</Value>
+          <Value>0.5261170268058777</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -455,10 +390,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.8948423862457275</ExecutionTime>
+      <ExecutionTime>0.5261170268058777</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent</Name>
@@ -466,7 +401,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_SizeToContent</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>1.604894995689392</Value>
+          <Value>0.9722706079483032</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -484,10 +419,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>1.604894995689392</ExecutionTime>
+      <ExecutionTime>0.9722706079483032</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD</Name>
@@ -495,7 +430,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_TileViewTestHUD</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.7735739946365356</Value>
+          <Value>0.41940799355506897</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -513,10 +448,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.7735739946365356</ExecutionTime>
+      <ExecutionTime>0.41940799355506897</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot</Name>
@@ -524,7 +459,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_BugReport_WBP_VerticalSlot</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.6790180802345276</Value>
+          <Value>0.42754700779914856</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -542,10 +477,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.6790180802345276</ExecutionTime>
+      <ExecutionTime>0.42754700779914856</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain</Name>
@@ -553,7 +488,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.BP_FunctionalUIScreenshotTest_WBP_RadioButtonMain</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.7218452095985413</Value>
+          <Value>0.45310890674591064</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -571,10 +506,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.7218452095985413</ExecutionTime>
+      <ExecutionTime>0.45310890674591064</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_AutoPageLine</Name>
@@ -582,7 +517,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_AutoPageLine</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>1.2482521533966064</Value>
+          <Value>0.608837902545929</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -600,10 +535,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>1.2482521533966064</ExecutionTime>
+      <ExecutionTime>0.608837902545929</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_AutopagePadding</Name>
@@ -611,7 +546,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_AutopagePadding</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>1.008237361907959</Value>
+          <Value>0.5352120995521545</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -629,10 +564,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>1.008237361907959</ExecutionTime>
+      <ExecutionTime>0.5352120995521545</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_EdgeCaseTest</Name>
@@ -640,7 +575,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_EdgeCaseTest</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.9280303716659546</Value>
+          <Value>0.4974345862865448</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -658,10 +593,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.9280303716659546</ExecutionTime>
+      <ExecutionTime>0.4974345862865448</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment</Name>
@@ -669,7 +604,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_TextOverflowWarpNormal_WithTextSegment</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.4437200129032135</Value>
+          <Value>0.31230708956718445</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -687,10 +622,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.4437200129032135</ExecutionTime>
+      <ExecutionTime>0.31230708956718445</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto01_Simple</Name>
@@ -698,7 +633,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto01_Simple</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.6054866909980774</Value>
+          <Value>0.44119590520858765</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -716,10 +651,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.6054866909980774</ExecutionTime>
+      <ExecutionTime>0.44119590520858765</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto02_RichTextSimple</Name>
@@ -727,7 +662,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto02_RichTextSimple</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>1.023719310760498</Value>
+          <Value>0.6493917107582092</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -739,16 +674,16 @@ This is not allowed, possible solutions:
           <Value>0</Value>
         </NamedMeasurement>
         <Measurement>
-          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple' was similar!  Global Difference = 0.001698, Max Local Difference = 0.085359</Value>
+          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto02_RichTextSimple' was similar!  Global Difference = 0.003929, Max Local Difference = 0.095968</Value>
         </Measurement>
       </Results>
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>1.023719310760498</ExecutionTime>
+      <ExecutionTime>0.6493917107582092</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto03_RichTextFont</Name>
@@ -756,7 +691,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto03_RichTextFont</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.9400749802589417</Value>
+          <Value>0.5071582198143005</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -774,10 +709,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.9400749802589417</ExecutionTime>
+      <ExecutionTime>0.5071582198143005</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto04_RichTextPadding</Name>
@@ -785,7 +720,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto04_RichTextPadding</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.42697450518608093</Value>
+          <Value>0.3140895962715149</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -797,16 +732,16 @@ This is not allowed, possible solutions:
           <Value>0</Value>
         </NamedMeasurement>
         <Measurement>
-          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding' was similar!  Global Difference = 0.000582, Max Local Difference = 0.058208</Value>
+          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto04_RichTextPadding' was similar!  Global Difference = 0.000594, Max Local Difference = 0.059414</Value>
         </Measurement>
       </Results>
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.42697450518608093</ExecutionTime>
+      <ExecutionTime>0.3140895962715149</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter</Name>
@@ -814,7 +749,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto05_RichTextSpecialCharacter</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.4233736991882324</Value>
+          <Value>0.3272894024848938</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -832,10 +767,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.4233736991882324</ExecutionTime>
+      <ExecutionTime>0.3272894024848938</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto06_EventTrigger</Name>
@@ -843,7 +778,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto06_EventTrigger</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>3.8910810947418213</Value>
+          <Value>1.1380716562271118</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -861,10 +796,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>3.8910810947418213</ExecutionTime>
+      <ExecutionTime>1.1380716562271118</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto07_OverflowWarp</Name>
@@ -872,7 +807,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto07_OverflowWarp</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.49547380208969116</Value>
+          <Value>0.30605170130729675</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -884,16 +819,16 @@ This is not allowed, possible solutions:
           <Value>0</Value>
         </NamedMeasurement>
         <Measurement>
-          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp' was similar!  Global Difference = 0.007293, Max Local Difference = 0.132716</Value>
+          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto07_OverflowWarp' was similar!  Global Difference = 0.005623, Max Local Difference = 0.111834</Value>
         </Measurement>
       </Results>
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.49547380208969116</ExecutionTime>
+      <ExecutionTime>0.30605170130729675</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto08_HyperText</Name>
@@ -901,7 +836,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto08_HyperText</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>1.04643976688385</Value>
+          <Value>0.5530449151992798</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -913,16 +848,16 @@ This is not allowed, possible solutions:
           <Value>0</Value>
         </NamedMeasurement>
         <Measurement>
-          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText' was similar!  Global Difference = 0.000201, Max Local Difference = 0.020062</Value>
+          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto08_HyperText' was similar!  Global Difference = 0.001256, Max Local Difference = 0.100019</Value>
         </Measurement>
       </Results>
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>1.04643976688385</ExecutionTime>
+      <ExecutionTime>0.5530449151992798</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto09_Sound</Name>
@@ -930,7 +865,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto09_Sound</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>2.9275872707366943</Value>
+          <Value>1.3924829959869385</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -942,16 +877,16 @@ This is not allowed, possible solutions:
           <Value>0</Value>
         </NamedMeasurement>
         <Measurement>
-          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound' was similar!  Global Difference = 0.000554, Max Local Difference = 0.042872</Value>
+          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto09_Sound' was similar!  Global Difference = 0.000480, Max Local Difference = 0.035831</Value>
         </Measurement>
       </Results>
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>2.9275872707366943</ExecutionTime>
+      <ExecutionTime>1.3924829959869385</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto10_StyleInfo</Name>
@@ -959,7 +894,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto10_StyleInfo</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>1.229989767074585</Value>
+          <Value>0.6419299244880676</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -971,16 +906,16 @@ This is not allowed, possible solutions:
           <Value>0</Value>
         </NamedMeasurement>
         <Measurement>
-          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto10_StyleInfo' was similar!  Global Difference = 0.006605, Max Local Difference = 0.237027</Value>
+          <Value>[Info] Screenshot 'UIScreenshotTestMap/FunctionalUIScreenshotTest_Tuto10_StyleInfo' was similar!  Global Difference = 0.006051, Max Local Difference = 0.218220</Value>
         </Measurement>
       </Results>
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>1.229989767074585</ExecutionTime>
+      <ExecutionTime>0.6419299244880676</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto11_AutoPage</Name>
@@ -988,7 +923,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto11_AutoPage</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>2.2149240970611572</Value>
+          <Value>1.2252583503723145</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -1006,10 +941,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>2.2149240970611572</ExecutionTime>
+      <ExecutionTime>1.2252583503723145</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto12_AutoPage_Long</Name>
@@ -1017,7 +952,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto12_AutoPage_Long</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>1.4329982995986938</Value>
+          <Value>0.897944986820221</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -1035,10 +970,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>1.4329982995986938</ExecutionTime>
+      <ExecutionTime>0.897944986820221</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto13_Justification</Name>
@@ -1046,7 +981,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto13_Justification</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.7966632843017578</Value>
+          <Value>0.5230038166046143</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -1064,10 +999,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.7966632843017578</ExecutionTime>
+      <ExecutionTime>0.5230038166046143</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto14_SpriteSheet</Name>
@@ -1075,7 +1010,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto14_SpriteSheet</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.8462927937507629</Value>
+          <Value>0.49891501665115356</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -1093,10 +1028,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.8462927937507629</ExecutionTime>
+      <ExecutionTime>0.49891501665115356</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox</Name>
@@ -1104,7 +1039,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto15_NoCanvasPanelAndSizeBox</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.6564276218414307</Value>
+          <Value>0.41955849528312683</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -1122,10 +1057,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.6564276218414307</ExecutionTime>
+      <ExecutionTime>0.41955849528312683</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto16_RubyText</Name>
@@ -1133,7 +1068,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto16_RubyText</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.8928074836730957</Value>
+          <Value>0.579423725605011</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -1151,10 +1086,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.8928074836730957</ExecutionTime>
+      <ExecutionTime>0.579423725605011</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto17_Decorator</Name>
@@ -1162,7 +1097,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto17_Decorator</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>1.331422209739685</Value>
+          <Value>0.8624154925346375</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -1180,10 +1115,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>1.331422209739685</ExecutionTime>
+      <ExecutionTime>0.8624154925346375</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto18_NewPageTag</Name>
@@ -1191,7 +1126,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto18_NewPageTag</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.6460729241371155</Value>
+          <Value>0.4887508153915405</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -1209,10 +1144,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.6460729241371155</ExecutionTime>
+      <ExecutionTime>0.4887508153915405</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
     <Test Status="passed">
       <Name>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto20_Binlker</Name>
@@ -1220,7 +1155,7 @@ This is not allowed, possible solutions:
       <FullName>Project.Functional Tests.TestMaps.Map.FunctionalTest.UIScreenshotTestMap.FunctionalUIScreenshotTest_Tuto20_Binlker</FullName>
       <Results>
         <NamedMeasurement type="numeric/double" name="Execution Time">
-          <Value>0.7042046189308167</Value>
+          <Value>0.5333349108695984</Value>
         </NamedMeasurement>
         <NamedMeasurement type="text/string" name="Completion Status">
           <Value>passed</Value>
@@ -1238,10 +1173,10 @@ This is not allowed, possible solutions:
       <Labels />
       <Status>passed</Status>
       <CompletionStatus>passed</CompletionStatus>
-      <ExecutionTime>0.7042046189308167</ExecutionTime>
+      <ExecutionTime>0.5333349108695984</ExecutionTime>
       <Command>Unreal Automation</Command>
-      <StartTime>2026-06-18T14:12:04Z</StartTime>
-      <EndTime>2026-06-18T14:12:04Z</EndTime>
+      <StartTime>2026-06-18T21:41:18Z</StartTime>
+      <EndTime>2026-06-18T21:41:18Z</EndTime>
     </Test>
   </Testing>
 </Site>

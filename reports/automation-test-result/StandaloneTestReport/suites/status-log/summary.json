@@ -1,14 +1,14 @@
 {
   "id": "status-log",
   "title": "Status / Log",
-  "status": "WARN",
-  "tests": 0,
-  "passed": 0,
+  "status": "PASS",
+  "tests": 5,
+  "passed": 5,
   "failed": 0,
   "errors": 0,
   "skipped": 0,
   "syntheticCollapsed": 0,
-  "displayedCases": 0,
+  "displayedCases": 5,
   "rawReports": [
     "ResultStatic/HorizonUIPluginDemoTest/tests.xml",
     "Coverage/HorizonUIPluginDemoTest/cobertura.xml",

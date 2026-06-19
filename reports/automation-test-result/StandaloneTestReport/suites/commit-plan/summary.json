@@ -1,7 +1,7 @@
 {
   "id": "commit-plan",
   "title": "Commit Plan",
-  "status": "WARN",
+  "status": "SKIPPED",
   "tests": 0,
   "passed": 0,
   "failed": 0,

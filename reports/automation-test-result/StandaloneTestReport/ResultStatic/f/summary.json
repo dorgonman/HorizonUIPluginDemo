@@ -8,7 +8,7 @@
     ],
     [
       "Passed",
-      "38"
+      "39"
     ],
     [
       "Warnings",
@@ -16,7 +16,7 @@
     ],
     [
       "Failed",
-      "1"
+      "0"
     ],
     [
       "Not run",
@@ -24,7 +24,7 @@
     ],
     [
       "Duration (s)",
-      "32.031"
+      "18.101"
     ],
     [
       "Build matrix",
@@ -32,31 +32,31 @@
     ],
     [
       "Selected build root",
-      "H:\\EpicGames\\Installed\\UE_5.8/HorizonUIPluginDemo/Intermediate/BuildArtifacts/BuildPackage/Win64/main/5.8.0.736/Development/Standalone"
+      "H:\\EpicGames\\Installed\\UE_5.8/HorizonUIPluginDemo/Intermediate/BuildArtifacts/BuildPackage/Win64/main/5.8.0.738/Development/Standalone"
     ],
     [
       "Adapter target",
-      "H:\\EpicGames\\Installed\\UE_5.8\\HorizonUIPluginDemo\\Intermediate\\BuildArtifacts\\BuildPackage\\Win64\\main\\5.8.0.736\\Development\\Standalone"
+      "H:\\EpicGames\\Installed\\UE_5.8\\HorizonUIPluginDemo\\Intermediate\\BuildArtifacts\\BuildPackage\\Win64\\main\\5.8.0.738\\Development\\Standalone"
     ],
     [
       "Host machine",
-      "PC-TiffanyHo"
+      "DESKTOP-576FRHA"
     ],
     [
       "Host OS",
-      "Microsoft Windows 10 �M�~��"
+      "Microsoft Windows 11 Pro"
     ],
     [
       "Host CPU",
-      "Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz"
+      "AMD Ryzen 9 5950X 16-Core Processor"
     ],
     [
       "Host memory (GiB)",
-      "31.96"
+      "127.92"
     ],
     [
       "Host GPU(s)",
-      "NVIDIA GeForce RTX 3070"
+      "NVIDIA GeForce RTX 3090"
     ]
   ]
 }
