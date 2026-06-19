@@ -9,62 +9,62 @@
     <title>Coverage Summary</title>
     <link>https://dorgonman.github.io/HorizonUIPluginDemo/coverage</link>
     <guid>https://dorgonman.github.io/HorizonUIPluginDemo/coverage</guid>
-    <description>Coverage Summary Publish identity FieldValuePublish build[build-pages] deploy-HorizonUIPluginDemo.5.8.0.739.nupkg-126Release version[build-pages] deploy-HorizonUIPluginDemo.5.8.0.739.nupkg-126Published ...</description>
-    <pubDate>Fri, 19 Jun 2026 05:17:18 GMT</pubDate>
+    <description>Coverage Summary Publish identity FieldValuePublish build[build-pages] deploy-HorizonUIPluginDemo.5.8.0.739.nupkg-127Release version[build-pages] deploy-HorizonUIPluginDemo.5.8.0.739.nupkg-127Published ...</description>
+    <pubDate>Fri, 19 Jun 2026 06:18:00 GMT</pubDate>
   </item><item>
     <title>HorizonUIPluginDemo Technical Release</title>
     <link>https://dorgonman.github.io/HorizonUIPluginDemo/</link>
     <guid>https://dorgonman.github.io/HorizonUIPluginDemo/</guid>
     <description>HorizonUIPluginDemo Technical Release HorizonUI is an Unreal Engine UMG plugin demo focused on rich dialogue text, decorators, flipbook widgets, and UI components that are continuously ...</description>
-    <pubDate>Fri, 19 Jun 2026 05:17:18 GMT</pubDate>
+    <pubDate>Fri, 19 Jun 2026 06:18:00 GMT</pubDate>
   </item><item>
     <title>Automation Test Results</title>
     <link>https://dorgonman.github.io/HorizonUIPluginDemo/testing</link>
     <guid>https://dorgonman.github.io/HorizonUIPluginDemo/testing</guid>
-    <description>Automation Test Results Publish identity FieldValuePublish build[build-pages] deploy-HorizonUIPluginDemo.5.8.0.739.nupkg-126Release version[build-pages] deploy-HorizonUIPluginDemo.5.8.0.739.nupkg-126Published ...</description>
-    <pubDate>Fri, 19 Jun 2026 05:17:18 GMT</pubDate>
+    <description>Automation Test Results Publish identity FieldValuePublish build[build-pages] deploy-HorizonUIPluginDemo.5.8.0.739.nupkg-127Release version[build-pages] deploy-HorizonUIPluginDemo.5.8.0.739.nupkg-127Published ...</description>
+    <pubDate>Fri, 19 Jun 2026 06:18:00 GMT</pubDate>
   </item><item>
     <title>readme</title>
     <link>https://dorgonman.github.io/HorizonUIPluginDemo/readme</link>
     <guid>https://dorgonman.github.io/HorizonUIPluginDemo/readme</guid>
     <description>Marketplace Official product page Horizon UI Plugin official product introduction Horizon product pages Horizon UI Plugin — rich UMG dialogue text, decorators, flipbook widgets, ...</description>
-    <pubDate>Fri, 19 Jun 2026 05:17:18 GMT</pubDate>
+    <pubDate>Fri, 19 Jun 2026 06:18:00 GMT</pubDate>
   </item><item>
     <title>project-readme</title>
     <link>https://dorgonman.github.io/HorizonUIPluginDemo/project-readme</link>
     <guid>https://dorgonman.github.io/HorizonUIPluginDemo/project-readme</guid>
     <description>Marketplace Official product page Horizon UI Plugin official product introduction Horizon product pages Horizon UI Plugin — rich UMG dialogue text, decorators, flipbook widgets, ...</description>
-    <pubDate>Fri, 19 Jun 2026 05:17:18 GMT</pubDate>
+    <pubDate>Fri, 19 Jun 2026 06:18:00 GMT</pubDate>
   </item><item>
-    <title>tdd-bdd-summary</title>
-    <link>https://dorgonman.github.io/HorizonUIPluginDemo/reports/automation-test-result/StandaloneTestReport/bdd/tdd-bdd-summary</link>
-    <guid>https://dorgonman.github.io/HorizonUIPluginDemo/reports/automation-test-result/StandaloneTestReport/bdd/tdd-bdd-summary</guid>
-    <description>TDD/BDD Summary (Generated) ⚠️ Auto-generated from executable metadata. Do not edit manually. Scenarios: 0 BDD: 0 TDD: 0 Passed: 0 Failed: 0 Skipped: 0 Missing: 0 Report Artifacts BDD docs path: bdd/index.md Scenario docs: 0 at bdd/scenarios Feature docs: 0 at bdd/features Mermaid diagrams: 0 at bdd/diagrams Coverage health: VALID Scenario coverage health: none Feature highlights source JSON: bdd/feature-highlights-source.json Feature highlights source Markdown: bdd/feature-highlights-source.md BDD Results Passed: 0 Failed: 0 Skipped: 0 Missing: 0 Feature Mapping None .</description>
-    <pubDate>Fri, 19 Jun 2026 05:17:15 GMT</pubDate>
-  </item><item>
-    <title>index</title>
-    <link>https://dorgonman.github.io/HorizonUIPluginDemo/reports/automation-test-result/StandaloneTestReport/bdd/</link>
-    <guid>https://dorgonman.github.io/HorizonUIPluginDemo/reports/automation-test-result/StandaloneTestReport/bdd/</guid>
-    <description>BDD Index (Generated) ⚠️ Auto-generated from executable metadata. Do not edit manually. Total scenarios: 0 Validation errors: 0 Validation warnings: 0 Features None .</description>
-    <pubDate>Fri, 19 Jun 2026 05:17:15 GMT</pubDate>
-  </item><item>
-    <title>feature-highlights-source</title>
-    <link>https://dorgonman.github.io/HorizonUIPluginDemo/reports/automation-test-result/StandaloneTestReport/bdd/feature-highlights-source</link>
-    <guid>https://dorgonman.github.io/HorizonUIPluginDemo/reports/automation-test-result/StandaloneTestReport/bdd/feature-highlights-source</guid>
-    <description>Feature Highlights Source (Generated) ⚠️ Auto-generated from executable metadata. Do not edit manually. None .</description>
-    <pubDate>Fri, 19 Jun 2026 05:17:15 GMT</pubDate>
-  </item><item>
-    <title>bdd-summary</title>
-    <link>https://dorgonman.github.io/HorizonUIPluginDemo/reports/automation-test-result/StandaloneTestReport/bdd/bdd-summary</link>
-    <guid>https://dorgonman.github.io/HorizonUIPluginDemo/reports/automation-test-result/StandaloneTestReport/bdd/bdd-summary</guid>
-    <description>BDD Summary (Generated) ⚠️ Auto-generated from executable metadata. Do not edit manually. Total scenarios: 0 Validation errors: 0 Validation warnings: 0 Scenario Status Scenario IDFeatureStatus.</description>
-    <pubDate>Fri, 19 Jun 2026 05:17:15 GMT</pubDate>
+    <title>test-summary</title>
+    <link>https://dorgonman.github.io/HorizonUIPluginDemo/reports/automation-test-result/StandaloneTestReport/test-summary</link>
+    <guid>https://dorgonman.github.io/HorizonUIPluginDemo/reports/automation-test-result/StandaloneTestReport/test-summary</guid>
+    <description>Test Summary Overall: UNSTABLE Coverage: VALID (Coverage report contains valid line data) Uncategorized: 30 Feature Suites SuiteStatusPassedFailedErrorsSkippedCollapsedDisplayedCLI ...</description>
+    <pubDate>Fri, 19 Jun 2026 06:17:59 GMT</pubDate>
   </item><item>
     <title>test-gap-backlog</title>
     <link>https://dorgonman.github.io/HorizonUIPluginDemo/reports/automation-test-result/StandaloneTestReport/Coverage/test-gap-backlog</link>
     <guid>https://dorgonman.github.io/HorizonUIPluginDemo/reports/automation-test-result/StandaloneTestReport/Coverage/test-gap-backlog</guid>
     <description>Coverage Test Gap Backlog TDD / unit suggestions Package/Plugins/HorizonUIPlugin/Source/HorizonUI/Private/Widget/Blueprint/HorizonMultiToggleButtonWidget.cpp (0/71, ...</description>
-    <pubDate>Fri, 19 Jun 2026 05:17:15 GMT</pubDate>
+    <pubDate>Fri, 19 Jun 2026 06:17:59 GMT</pubDate>
+  </item><item>
+    <title>tdd-bdd-summary</title>
+    <link>https://dorgonman.github.io/HorizonUIPluginDemo/reports/automation-test-result/StandaloneTestReport/bdd/tdd-bdd-summary</link>
+    <guid>https://dorgonman.github.io/HorizonUIPluginDemo/reports/automation-test-result/StandaloneTestReport/bdd/tdd-bdd-summary</guid>
+    <description>TDD/BDD Summary (Generated) ⚠️ Auto-generated from executable metadata. Do not edit manually. Scenarios: 0 BDD: 0 TDD: 0 Passed: 0 Failed: 0 Skipped: 0 Missing: 0 Report Artifacts BDD docs path: bdd/index.md Scenario docs: 0 at bdd/scenarios Feature docs: 0 at bdd/features Mermaid diagrams: 0 at bdd/diagrams Coverage health: VALID Scenario coverage health: none Feature highlights source JSON: bdd/feature-highlights-source.json Feature highlights source Markdown: bdd/feature-highlights-source.md BDD Results Passed: 0 Failed: 0 Skipped: 0 Missing: 0 Feature Mapping None .</description>
+    <pubDate>Fri, 19 Jun 2026 06:17:59 GMT</pubDate>
+  </item><item>
+    <title>index</title>
+    <link>https://dorgonman.github.io/HorizonUIPluginDemo/reports/automation-test-result/StandaloneTestReport/bdd/</link>
+    <guid>https://dorgonman.github.io/HorizonUIPluginDemo/reports/automation-test-result/StandaloneTestReport/bdd/</guid>
+    <description>BDD Index (Generated) ⚠️ Auto-generated from executable metadata. Do not edit manually. Total scenarios: 0 Validation errors: 0 Validation warnings: 0 Features None .</description>
+    <pubDate>Fri, 19 Jun 2026 06:17:59 GMT</pubDate>
+  </item><item>
+    <title>feature-highlights-source</title>
+    <link>https://dorgonman.github.io/HorizonUIPluginDemo/reports/automation-test-result/StandaloneTestReport/bdd/feature-highlights-source</link>
+    <guid>https://dorgonman.github.io/HorizonUIPluginDemo/reports/automation-test-result/StandaloneTestReport/bdd/feature-highlights-source</guid>
+    <description>Feature Highlights Source (Generated) ⚠️ Auto-generated from executable metadata. Do not edit manually. None .</description>
+    <pubDate>Fri, 19 Jun 2026 06:17:59 GMT</pubDate>
   </item>
     </channel>
   </rss>
